@@ -1,0 +1,29 @@
+import React from 'react'
+import SectionTitle from '../ui/SectionTitle'
+import { selectionProcedureData } from '../../data/selection/selectionProcedureData'
+import SelectionEle from '../ui/selectionProcedure/SelectionEle'
+import Curve from '../ui/selectionProcedure/Curve'
+
+function Selection() {
+    return (
+        <section className="pt-20">
+            <SectionTitle title='선발절차' />
+            <div className='flex justify-center container mx-auto gap-0 my-16'>
+                {
+                    selectionProcedureData.map((data) => (
+                        <React.Fragment key={data.id}>
+                            <SelectionEle title={data.title} />
+                            <Curve id={data.id} />
+                        </React.Fragment>
+                    ))
+                }
+            </div>
+            <div className='container mx-auto px-64 text-xl'>
+                <p>교육과정 신청 후 순차적으로 이메일 안내 진행 예정입니다.</p>
+                <p>내일배움카드는 교육 시작 전 발급 필수이며, 상세내용은 FAQ 확인 또는 문의처로 문의 부탁드립니다.</p>
+            </div>
+        </section>
+    )
+}
+
+export default Selection
