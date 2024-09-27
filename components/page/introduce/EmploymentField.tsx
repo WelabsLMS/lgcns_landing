@@ -4,7 +4,7 @@ import React from 'react'
 function EmploymentField() {
     return (
         <div className='mt-20'>
-            <div className='flex gap-4'>
+            <div className='flex gap-4 items-center'>
                 <Image src="assets/images/introduce/circle_check.svg" alt="circlecheck" width={50} height={50} />
                 <p className='text-3xl font-extrabold text-[#5984EC]'>취업분야</p>
             </div>

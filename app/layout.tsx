@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/layouts/Header";
-import Footer from "@/components/layouts/Footer";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -10,18 +9,18 @@ import Footer from "@/components/layouts/Footer";
 //   weight: "100 900",
 // });
 
-const mkFont = localFont({
-  src: [
-    {
-      path: "./fonts/mk-regular.woff",
-      weight: "400",
-    },
-    {
-      path: "./fonts/mk-bold.woff",
-      weight: "700",
-    }
-  ]
-});
+// const mkFont = localFont({
+//   src: [
+//     {
+//       path: "./fonts/mk-regular.woff",
+//       weight: "400",
+//     },
+//     {
+//       path: "./fonts/mk-bold.woff",
+//       weight: "700",
+//     }
+//   ]
+// });
 
 const lgFont = localFont({
   src: [
