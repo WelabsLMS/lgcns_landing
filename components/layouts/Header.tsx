@@ -25,10 +25,10 @@ function Header() {
                     </ul>
                 </nav>
                 <div className='basis-1/4 flex justify-evenly text-2xl font-semibold'>
-                    <button className=' border-orange-200 border-2 rounded-full w-32 hover:text-white hover:bg-gradient-to-r from-[#E2275488] to-[#FFD028]'>
+                    <button className='text-white rounded-2xl w-32 bg-gradient-to-r from-[#E2275488] to-[#FFD028] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]'>
                         <Link href={'https://wsts.kr'}>LMS</Link>
                         </button>
-                    <button className='text-white rounded-full w-32 bg-gradient-to-r from-[#E2275488] hover:from-white hover:to-white to-[#FFD028] hover:text-black hover:border-orange-200 hover:border-2'>
+                    <button className='text-white rounded-2xl w-32 bg-gradient-to-r from-[#E2275488] to-[#FFD028] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]'>
                         <Link href={'/apply'}>수강신청</Link>
                         </button>
                 </div>
