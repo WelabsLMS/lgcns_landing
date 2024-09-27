@@ -1,8 +1,8 @@
+import SectionTitle from '@/components/ui/SectionTitle'
+import Curve from '@/components/ui/selectionProcedure/Curve'
+import SelectionEle from '@/components/ui/selectionProcedure/SelectionEle'
+import { selectionProcedureData } from '@/data/selection/selectionProcedureData'
 import React from 'react'
-import SectionTitle from '../ui/SectionTitle'
-import { selectionProcedureData } from '../../data/selection/selectionProcedureData'
-import SelectionEle from '../ui/selectionProcedure/SelectionEle'
-import Curve from '../ui/selectionProcedure/Curve'
 
 function Selection() {
     return (
