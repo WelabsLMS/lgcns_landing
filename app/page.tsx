@@ -6,8 +6,9 @@ import CoreProgram from "@/components/page/coreprogram/CoreProgram";
 import CenterImageList from "@/components/page/imageofcenter/CenterImageList";
 import Introduce from "@/components/page/introduce/Introduce";
 import Location from "@/components/page/location/Location";
+import MainApply from "@/components/page/mainApply/MainApply";
 import OverView from "@/components/page/overview/OverView";
-import Selection from "@/components/selection/Selection";
+import Selection from "@/components/page/selection/Selection";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <MainBanner />
       <OverView />
       <Introduce />
+      <MainApply />
       <CampBenefit />
       <CoreProgram />
       <Selection />
