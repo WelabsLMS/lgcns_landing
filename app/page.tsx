@@ -3,6 +3,7 @@ import MainBanner from "@/components/page/Banner/MainBanner";
 import CampBenefit from "@/components/page/campbenefit/CampBenefit";
 import Contact from "@/components/page/contact/Contact";
 import CoreProgram from "@/components/page/coreprogram/CoreProgram";
+import Faq from "@/components/page/faq/Faq";
 import CenterImageList from "@/components/page/imageofcenter/CenterImageList";
 import Introduce from "@/components/page/introduce/Introduce";
 import Location from "@/components/page/location/Location";
@@ -20,6 +21,7 @@ export default function Home() {
       <CampBenefit />
       <CoreProgram />
       <Selection />
+      <Faq />
       <Location />
       <CenterImageList />
       <Contact />

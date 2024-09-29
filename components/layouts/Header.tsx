@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 function Header() {
     return (
-        <header className='w-full sticky top-0 left-0 bg-white border-b-[1px] border-gray-200 z-[99999] px-40 transition-all'>
+        <header className='w-full sticky top-0 left-0 bg-white border-b-[1px] border-gray-200 z-[99999] px-40'>
             <div className='h-min container mx-auto py-5 flex flex-row justify-between'>
                 <div className='basis-1/5'>
                     <Link href='/'>
