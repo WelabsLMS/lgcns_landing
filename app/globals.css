@@ -5,6 +5,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  scrollbar-width: none;
+  scrollbar-gutter: none;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -17,7 +19,12 @@
 body {
   color: var(--foreground);
   background: var(--background);
+  -ms-overflow-style: none;
   /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .section {
@@ -63,6 +70,7 @@ body {
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
   transform: translate(-40%, -50%);
+  z-index: 20;
 }
 
 #curriculumSwiper .swiper-button-prev:after, .button-prev::after {
@@ -76,10 +84,22 @@ body {
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
   transform: translate(-60%, -50%);
+  z-index: 10;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding: 3rem 1rem;
   }
 }
