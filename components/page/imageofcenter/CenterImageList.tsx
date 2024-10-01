@@ -7,7 +7,7 @@ function CenterImageList() {
     return (
         <section className="h-max">
             <SectionTitle title="교육장 사진" />
-            <div className='my-16 container mx-auto flex flex-wrap content-around justify-center gap-y-16'>
+            <div className='my-16 container mx-auto flex flex-wrap flex-col md:flex-row content-around justify-center gap-y-16'>
                 {
                     centerImagesData.map((image) => (
                         <CampImageEle key={image.id} img={image.img} />

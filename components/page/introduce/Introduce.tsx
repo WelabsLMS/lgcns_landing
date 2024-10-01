@@ -14,7 +14,7 @@ function Introduce() {
                     <p className='mb-2 text-lg md:text-2xl font-bold'>LG CNS의 <br className='md:hidden'/> SW, AM(Application Modernization) 인재 육성 노하우를 그대로 녹인</p>
                     <span className="rounded-xl px-2 text-2xl md:text-5xl font-extrabold bg-[#99B4F2]">Real AM 전문 인재 양성과정</span>
                 </div>
-                <div className='w-full md:w-3/4 lg:w-1/2 mx-auto'>
+                <div className='w-full md:w-3/4 lg:w-2/3 mx-auto'>
                     <Summary />
                     <EmploymentField />
                     <TechStack />

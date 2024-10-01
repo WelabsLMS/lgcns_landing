@@ -4,13 +4,15 @@ import { useState } from 'react'
 import SectionTitle from '../../ui/SectionTitle'
 import Image from 'next/image'
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react'
-import { Navigation } from 'swiper/modules'
-import "swiper/css"
-import "swiper/css/navigation"
+import { Navigation, Pagination } from 'swiper/modules'
 import { curriculumStepData } from '@/data/curriculum/curriculumStepperData'
 import { curriculumData } from '@/data/curriculum/curriculumData'
 import CourseStepEle from '../../ui/curriculum/CourseStepEle'
 import CurriculumProject from './CurriculumProject'
+
+import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
 
 function Curriculum() {
     const [swiper, setSwiper] = useState<SwiperClass>()
@@ -44,41 +46,41 @@ function Curriculum() {
                 <span className="rounded-xl px-2 text-3xl md:text-5xl font-extrabold">단계별 프로젝트를 통해 <br className='md:hidden' /> 포트폴리오 완벽 준비!</span>
             </div>
 
-            <div className='container mx-auto px-4 md:px-20'>
-                <div className="relative flex my-10 text-nowrap px-4 overflow-x-auto">
-                    {
-                        curriculumStepData.map((data, index) => (
-                            <CourseStepEle
-                                key={index}
-                                title={data.title}
-                                index={data.id - 1}
-                                activeSlide={slideIndex}
-                                handleCourseClick={handleCourseClick}
-                            />
-                        ))
-                    }
-                    <div className='relative bottom-5 w-28 h-28 lg:w-32 lg:h-32 flex-shrink-0'> {/* 이미지 크기 조정 및 마진 조정 */}
-                        <Image
-                            src='assets/images/curriculum/trophy.svg'
-                            alt='curriculum'
-                            width={150} // 이미지 너비 조정
-                            height={150} // 이미지 높이 조정
-                            className='object-contain' // 이미지가 잘리지 않도록 설정
+            <div className="hidden md:flex justify-center items-center my-10 mx-10 overflow-x-auto">
+                {
+                    curriculumStepData.map((data, index) => (
+                        <CourseStepEle
+                            key={index}
+                            title={data.title}
+                            index={data.id - 1}
+                            activeSlide={slideIndex}
+                            handleCourseClick={handleCourseClick}
                         />
-                    </div>
+                    ))
+                }
+                <div className='w-20 h-20 lg:w-32 lg:h-32 flex-shrink-0'> {/* 이미지 크기 조정 및 마진 조정 */}
+                    <Image
+                        src='assets/images/curriculum/trophy.svg'
+                        alt='curriculum'
+                        width={150} // 이미지 너비 조정
+                        height={150} // 이미지 높이 조정
+                        className='object-contain' // 이미지가 잘리지 않도록 설정
+                    />
                 </div>
+            </div>
 
-
+            <div className='container mx-auto px-4 md:px-20'>
                 {/* Slider */}
-                <div className='flex items-center md:px-20'>
-                    <div className={`prev-button-wrap relative left-5 w-8 h-8 md:w-10 md:h-10 rounded-xl ${isBeginning ? 'bg-[#C2D3FF50]' : 'bg-[#A5B4FC] cursor-pointer'}`}>
+                <div className='relative flex items-center'>
+                    <div className={`prev-button-wrap relative invisible md:visible left-5 w-8 h-8 md:w-10 md:h-10 rounded-xl ${isBeginning ? 'bg-[#C2D3FF50]' : 'bg-[#A5B4FC] cursor-pointer'}`}>
                         <div id='curriculumSwiper' className='button-prev'></div>
                     </div>
-                    <div className='bg-[#C2D3FF50] w-full px-4 md:px-0 md:w-4/5 mx-auto rounded-2xl'>
+                    <div className='bg-[#C2D3FF50] w-full px-4 md:px-0 md:w-4/5 lg:h-[60vh] mx-auto rounded-2xl whitespace-pre-line text-pretty'>
                         <Swiper
                             id='curriculumSwiper'
                             slidesPerView={1}
-                            modules={[Navigation]}
+                            pagination
+                            modules={[Navigation, Pagination]}
                             navigation={{
                                 nextEl: '.next-button-wrap',
                                 prevEl: '.prev-button-wrap',
@@ -88,20 +90,23 @@ function Curriculum() {
                         >
                             {
                                 curriculumData.map((data, index) => (
-                                    <SwiperSlide key={index} className='py-8 px-6 md:pt-10 md:pb-20 md:px-10 gap-6'>
-                                        <div className='text-xl md:text-3xl font-bold'>
+                                    <SwiperSlide key={index} className='py-8 md:pt-10 md:pb-20 md:px-10 gap-6'>
+                                        <p className='text-xl font-bold md:hidden'>{curriculumStepData[index].title}</p>
+                                        <div className='text-xl md:text-3xl font-bold text-center'>
                                             <p>{data.title}</p>
                                         </div>
                                         <div className='flex flex-col-reverse lg:flex-row text-base md:text-2xl'>
                                             <div className='lg:w-1/2'>{data.desc}</div>
-                                            <div className='h-40 lg:w-1/2'><img src={data.img}></img></div>
+                                            <div className='relative h-[20vh] md:h-[30vh] lg:w-1/2 mb-8'>
+                                                <Image src={'/assets/images/temp.svg'} alt='temp' fill />
+                                            </div>
                                         </div>
                                     </SwiperSlide>
                                 ))
                             }
                         </Swiper>
                     </div>
-                    <div className={`next-button-wrap relative right-5 w-8 h-8 md:w-10 md:h-10 rounded-xl ${isEnd ? 'bg-[#C2D3FF50]' : 'bg-[#A5B4FC] cursor-pointer'}`}>
+                    <div className={`next-button-wrap relative invisible md:visible right-5 w-8 h-8 md:w-10 md:h-10 rounded-xl ${isEnd ? 'bg-[#C2D3FF50]' : 'bg-[#A5B4FC] cursor-pointer'}`}>
                         <div id='curriculumSwiper' className='button-next'></div>
                     </div>
                 </div>

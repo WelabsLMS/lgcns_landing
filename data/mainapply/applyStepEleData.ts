@@ -22,12 +22,12 @@ export const applyStepEleData = [
     {
         id:5,
         title:"교육방식",
-        desc:"온라인(이론)/오프라인(프로젝트)"
+        desc:"온라인(이론) / 오프라인(프로젝트)"
     },
     {
         id:6,
         title:"교육장소",
-        desc:"오프라인(동국대학교 서울캠퍼스)"
+        desc:"오프라인 (동국대학교 서울캠퍼스)"
     },
 
 ]
