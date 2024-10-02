@@ -10,7 +10,7 @@ const faqData = [
     {
         question: '비전공자인데, 수강이 가능할까요??',
         answer:
-            '전공자 뿐만 아니라 비전공자도 지원 가능합니다. \n해당 과정은 기초부터 학습하므로 비전공자도 관심과 열징이 있다면 충분히 수강할 수 있습니다.',
+            '전공자 뿐만 아니라 비전공자도 지원 가능합니다. \n해당 과정은 기초부터 학습하므로 비전공자도 관심과 열정이 있다면 충분히 수강할 수 있습니다.',
     },
     {
         question: '국민취업지원제도와 병행 가능한가요?',
@@ -23,7 +23,7 @@ const faqData = [
             '온라인과 오프라인 병행하여 진행됩니다.',
     },
     {
-        question: '내일배움카드가 있어야 교육을 받을 수 있나요?',
+        question: '내일배움카드가 필수인가요?',
         answer:
             '국민내일배움카드 발급자 및 발급 가능자 모두 지원 가능합니다. \n단, 국민내일배움카드 발급자는 기존에 내일배움카드 교육을 수강하여 지원금 잔액이 0원이라면 고용센터에 확인하시기 바랍니다. \n국민내일배움카드 발급 가능자는 교육 시작일 전에 내일배움카드 발급 및 수령을 권장드립니다.',
     },
@@ -40,16 +40,16 @@ function Faq() {
 
     return (
         <section className="section">
-            <div className='absolute w-[384px] h-[384px] bg-[#5081FF] blur-[400px] -left-1/2' />
+            <div className='absolute w-[192px] h-[192px] lg:w-[384px] lg:h-[384px] bg-[#5081FF] blur-[200px] lg:blur-[400px] left-0 top-1/3 lg:top-1/2 lg:-left-1/4 xl:-left-[192px]' />
             <SectionTitle title="FAQ" />
-            <div className="container mx-auto">
-                <div className="mx-auto my-8 p-4 bg-white shadow-md rounded-lg flex flex-col gap-5 z-20">
+            <div className="container mx-auto lg:px-20 z-20">
+                <div className="mx-auto mt-8 p-2 flex flex-col gap-5">
                     {faqData.map((item, index) => (
                         <FaqItem key={index} question={item.question} answer={item.answer} />
                     ))}
                 </div>
             </div>
-            <div className='absolute w-[384px] h-[384px] bg-[#5081FF] blur-[400px] -right-1/2' />
+            <div className='absolute w-[96px] h-[96px] lg:w-[384px] lg:h-[384px] bg-[#5081FF] blur-[200px] lg:blur-[400px] right-0 top-3/4 lg:top-1/2 lg:-right-1/4 xl:-right-[192px]' />
         </section>
     );
 }

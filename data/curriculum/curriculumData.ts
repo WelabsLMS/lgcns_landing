@@ -1,7 +1,7 @@
 export const curriculumData = [
     {
         id: 1,
-        title: '클라우드와 AI 최신 트렌드 특강,Digital Insight 채우기',
+        title: '클라우드와 AI 최신 트렌드 특강, \nDigital Insight 채우기',
         desc:'실무에서의 클라우드 활용과 생성형 AI 시장에 대한 현직자의 생생한 특강을 통해 최신기술의 업계 트렌드의 이해를 돕습니다.',
         img: 'assets/images/curriculum/curriculum1.svg'
     },
