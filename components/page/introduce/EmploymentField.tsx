@@ -8,7 +8,7 @@ function EmploymentField() {
                 <Image src="assets/images/introduce/circle_check.svg" alt="circlecheck" width={40} height={40} />
                 <p className='text-xl md:text-3xl font-extrabold text-[#5984EC]'>취업분야</p>
             </div>
-            <div className='flex lg:flex-wrap justify-between'>
+            <div className='flex lg:flex-wrap justify-between md:justify-start md:gap-40 lg:justify-start lg:gap-40'>
                 <ol className='list-disc p-4 lg:p-5 text-base md:text-2xl leading-7 md:leading-10'>
                     <li>클라우드 엔지니어</li>
                     <li>DevOps 엔지니어</li>

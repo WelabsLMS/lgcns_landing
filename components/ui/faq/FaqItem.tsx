@@ -24,7 +24,7 @@ export default function FaqItem({ question, answer }: FAQItemProps) {
     }, [isOpen]);
 
     return (
-        <div className="border-b border-gray-300 bg-white w-full h-auto">
+        <div className="bg-white w-full h-auto px-2 lg:px-4">
             <button
                 className="w-full text-left py-4 focus:outline-none flex justify-between items-center"
                 onClick={toggleAccordion}

@@ -39,11 +39,11 @@ function Curriculum() {
     };
 
     return (
-        <section className="relative my-10 md:my-20">
+        <section className="relative mt-10 md:mt-20">
             <SectionTitle title="커리큘럼" />
             <div className='text-center my-8 md:my-16'>
                 <p className='mb-2 text-lg md:text-2xl font-bold'>기초부터 심화까지 <br className='md:hidden' /> 단계적으로 성장할 수 있도록 설계하였습니다.</p>
-                <span className="rounded-xl px-2 text-3xl md:text-5xl font-extrabold">단계별 프로젝트를 통해 <br className='md:hidden' /> 포트폴리오 완벽 준비!</span>
+                <span className="rounded-xl px-2 text-3xl md:text-4xl xl:text-5xl font-extrabold">단계별 프로젝트를 통해 <br className='md:hidden' /> 포트폴리오 완벽 준비!</span>
             </div>
 
             <div className="hidden md:flex justify-center items-center my-10 mx-10 overflow-x-auto">
@@ -58,7 +58,7 @@ function Curriculum() {
                         />
                     ))
                 }
-                <div className='w-20 h-20 lg:w-32 lg:h-32 flex-shrink-0'> {/* 이미지 크기 조정 및 마진 조정 */}
+                <div className='w-20 h-20 md:h-24 lg:w-32 lg:h-32 flex-shrink-0'> {/* 이미지 크기 조정 및 마진 조정 */}
                     <Image
                         src='assets/images/curriculum/trophy.svg'
                         alt='curriculum'
@@ -69,10 +69,10 @@ function Curriculum() {
                 </div>
             </div>
 
-            <div className='container mx-auto px-4 md:px-20'>
+            <div className='container mx-auto px-4 lg:px-20'>
                 {/* Slider */}
                 <div className='relative flex items-center'>
-                    <div className={`prev-button-wrap relative invisible md:visible left-5 w-8 h-8 md:w-10 md:h-10 rounded-xl ${isBeginning ? 'bg-[#C2D3FF50]' : 'bg-[#A5B4FC] cursor-pointer'}`}>
+                    <div className={`prev-button-wrap relative invisible md:visible left-5 w-8 h-8 md:w-10 md:h-10 md:left-0 rounded-xl ${isBeginning ? 'bg-[#C2D3FF50]' : 'bg-[#A5B4FC] cursor-pointer'}`}>
                         <div id='curriculumSwiper' className='button-prev'></div>
                     </div>
                     <div className='bg-[#C2D3FF50] w-full px-4 md:px-0 md:w-4/5 lg:h-[60vh] mx-auto rounded-2xl whitespace-pre-line text-pretty'>
@@ -106,7 +106,7 @@ function Curriculum() {
                             }
                         </Swiper>
                     </div>
-                    <div className={`next-button-wrap relative invisible md:visible right-5 w-8 h-8 md:w-10 md:h-10 rounded-xl ${isEnd ? 'bg-[#C2D3FF50]' : 'bg-[#A5B4FC] cursor-pointer'}`}>
+                    <div className={`next-button-wrap relative invisible md:visible right-5 w-8 h-8 md:w-10 md:h-10 md:right-0 rounded-xl ${isEnd ? 'bg-[#C2D3FF50]' : 'bg-[#A5B4FC] cursor-pointer'}`}>
                         <div id='curriculumSwiper' className='button-next'></div>
                     </div>
                 </div>

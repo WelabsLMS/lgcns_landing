@@ -9,10 +9,10 @@ interface CoreProgramEleProps {
 
 function CoreProgramEle({ data }: { data: CoreProgramEleProps }) {
     return (
-        <div className='w-[18rem] h-[15rem] sm:w-[20rem] sm:h-[18rem] lg:w-[25rem] lg:h-[19rem] border px-5 sm:py-10 sm:px-10 flex flex-col justify-evenly bg-white rounded-2xl drop-shadow-lg'>
-            <h3 className='text-xl sm:text-2xl font-extrabold'>{data.title}</h3>
-            <p className='sm:text-lg font-semibold'>{data.desc}</p>
-            <button className='rounded-2xl border border-[#C2D3FF] px-3 py-1 sm:px-4 sm:py-1 w-3/5 sm:w-1/2 hover:bg-[#C2D3FF]'>
+        <div className='w-[18rem] h-[15rem] md:w-[17rem] md:h-[18rem] lg:w-[20rem] xl:w-[25rem] xl:h-[19rem] border px-5 py-8 lg:px-11 flex flex-col gap-4 justify-evenly bg-white rounded-2xl drop-shadow-lg'>
+            <h3 className='h-1/5 text-xl xl:text-2xl font-extrabold'>{data.title}</h3>
+            <p className='h-3/5 lg:text-lg font-semibold'>{data.desc}</p>
+            <button className='h-1/5 rounded-2xl font-semibold border-2 border-[#C2D3FF] px-3 py-1 sm:px-4 sm:py-1 w-3/5 sm:w-1/2 hover:bg-[#C2D3FF]'>
                 자세히 보기
             </button>
         </div>

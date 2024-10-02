@@ -9,7 +9,7 @@ import Introduce from "@/components/page/introduce/Introduce";
 import Location from "@/components/page/location/Location";
 import MainApply from "@/components/page/mainApply/MainApply";
 import OverView from "@/components/page/overview/OverView";
-import Selection from "@/components/page/selection/Selection";
+import Selection from "@/components/page/selection/Selection"; 
 
 export default function Home() {
   return (
@@ -18,11 +18,12 @@ export default function Home() {
       <OverView />
       <Introduce />
       <MainApply />
-      <CampBenefit />
+      {/* LG와 회의 후 다시 할 예정 */}
+      {/* <CampBenefit /> */}
       <CoreProgram />
       <Selection />
       <Faq />
-      <Location />
+      {/* <Location /> */}
       <CenterImageList />
       <Contact />
       <Footer />

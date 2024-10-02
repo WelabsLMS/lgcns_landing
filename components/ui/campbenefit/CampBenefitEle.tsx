@@ -10,7 +10,7 @@ function CampBenefitEle({ content, img }: { content: string, img: string }) {
                 <Image src={img} alt={imgName} width={80} height={80} />
             </div>
             <div className='h-7'>
-                <p className='text-center text-lg md:text-2xl whitespace-break-spaces'>{content}</p>
+                <p className='text-center text-lg lg:text-xl xl:text-2xl whitespace-break-spaces'>{content}</p>
             </div>
         </div>
     )
