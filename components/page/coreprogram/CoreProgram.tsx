@@ -1,6 +1,6 @@
 import React from 'react'
 import SectionTitle from '../../ui/SectionTitle'
-import { coreProgramData } from '../../../data/coreprogram/coreProgramData'
+import { coreProgramData } from '@/data/staticData'
 import CoreProgramEle from '../../ui/coreprogram/CoreProgramEle'
 
 function CoreProgram() {
@@ -12,7 +12,7 @@ function CoreProgram() {
             <div className='w-[90%] sm:w-[80%] lg:w-[70%] mx-auto'>
                 <div className="flex flex-wrap justify-center gap-5">
                     {
-                        coreProgramData.map((data) => (
+                        coreProgramData[0].map((data) => (
                             <CoreProgramEle key={data.id} data={data} />
                         ))
                     }
