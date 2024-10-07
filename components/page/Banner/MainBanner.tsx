@@ -3,7 +3,7 @@ import React from 'react'
 
 function MainBanner() {
     return (
-        <section className='h-max bg-[#C2D3FF] px-10 pt-10 lg:px-20 lg:py-40'>
+        <section className='h-max bg-[#C2D3FF] px-10 pt-10 lg:px-40 lg:py-40'>
             <div className='container mx-auto h-full flex flex-col lg:flex-row items-center z-20'>
                 <div className='font-bold text-center lg:text-left z-30'>
                     <div className='rounded-2xl bg-white text-center py-1 lg:w-1/3 mx-auto lg:mx-0 my-2 text-lg lg:text-xl'>K-Digital Training</div>

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import { techLogoList } from '@/data/introduce/techLogoList'
+import { techLogoList } from '../../../data/staticData'
 import TechListEle from '../../ui/introduce/TechListEle'
 
 function TechStack() {
@@ -16,7 +16,7 @@ function TechStack() {
             <div className='mt-4 md:mt-8 border rounded-xl md:rounded-2xl py-3 md:py-5 flex flex-col'>
                 <div className='grid grid-cols-3 sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-6 xl:grid-cols-6 justify-items-center gap-y-2 md:gap-y-4'>
                     {
-                        techLogoList.map((img) => (
+                        techLogoList[0].map((img) => (
                             <TechListEle key={img.id} imgSrc={img.img} />
                         ))
                     }

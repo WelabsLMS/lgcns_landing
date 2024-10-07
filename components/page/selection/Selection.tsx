@@ -1,7 +1,7 @@
 import SectionTitle from '@/components/ui/SectionTitle'
 import Curve from '@/components/ui/selectionProcedure/Curve'
 import SelectionEle from '@/components/ui/selectionProcedure/SelectionEle'
-import { selectionProcedureData } from '@/data/selection/selectionProcedureData'
+import { selectionProcedureData } from '@/data/staticData'
 import React from 'react'
 
 function Selection() {
@@ -11,7 +11,7 @@ function Selection() {
             <div className='container mx-auto'>
                 <div className='flex flex-wrap sm:flex-row justify-center items-center lg:gap-12 md:gap-4 my-8 md:my-16'>
                     {
-                        selectionProcedureData.map((data) => (
+                        selectionProcedureData[0].map((data) => (
                             <React.Fragment key={data.id}>
                                 <SelectionEle title={data.title} />
                                 <Curve id={data.id} />

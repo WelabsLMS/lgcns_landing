@@ -1,6 +1,6 @@
 import React from 'react'
 import SectionTitle from '../../ui/SectionTitle'
-import { centerImagesData } from '../../../data/centerimage/centerImagesData'
+import { centerImagesData } from '../../../data/staticData'
 import CampImageEle from '../../ui/imageofcenter/CampImageEle'
 
 function CenterImageList() {

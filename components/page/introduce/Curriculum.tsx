@@ -5,10 +5,9 @@ import SectionTitle from '../../ui/SectionTitle'
 import Image from 'next/image'
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination } from 'swiper/modules'
-import { curriculumStepData } from '@/data/curriculum/curriculumStepperData'
-import { curriculumData } from '@/data/curriculum/curriculumData'
 import CourseStepEle from '../../ui/curriculum/CourseStepEle'
 import CurriculumProject from './CurriculumProject'
+import { curriculumData, curriculumStepData } from '@/data/staticData'
 
 import "swiper/css"
 import "swiper/css/navigation"
@@ -48,7 +47,7 @@ function Curriculum() {
 
             <div className="hidden md:flex justify-center items-center my-10 mx-10 overflow-x-auto">
                 {
-                    curriculumStepData.map((data, index) => (
+                    curriculumStepData[0].map((data, index) => (
                         <CourseStepEle
                             key={index}
                             title={data.title}
@@ -89,9 +88,9 @@ function Curriculum() {
                             onActiveIndexChange={(swiper) => setSlideIndex(swiper.activeIndex)}
                         >
                             {
-                                curriculumData.map((data, index) => (
+                                curriculumData[0].map((data, index) => (
                                     <SwiperSlide key={index} className='py-8 md:pt-10 md:pb-20 md:px-10 gap-6'>
-                                        <p className='text-xl font-bold md:hidden'>{curriculumStepData[index].title}</p>
+                                        <p className='text-xl font-bold md:hidden'>{curriculumStepData[0][index].title}</p>
                                         <div className='text-xl md:text-3xl font-bold text-center'>
                                             <p>{data.title}</p>
                                         </div>

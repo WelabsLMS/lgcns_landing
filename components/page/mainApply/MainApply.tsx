@@ -1,6 +1,6 @@
 import SectionTitle from '@/components/ui/SectionTitle'
 import React from 'react'
-import { applyStepEleData } from '@/data/mainapply/applyStepEleData'
+import { applyStepEleData } from '@/data/staticData'
 import MainApplyEle from '@/components/ui/mainapply/MainApplyEle'
 import Link from 'next/link'
 
@@ -23,7 +23,7 @@ function MainApply() {
                     </div>
                     <div className='flex flex-wrap items-center justify-between py-6 gap-4'>
                         {
-                            applyStepEleData.map((data) => (
+                            applyStepEleData[0].map((data) => (
                                 <MainApplyEle key={data.id} title={data.title} desc={data.desc} />
                             ))
                         }
