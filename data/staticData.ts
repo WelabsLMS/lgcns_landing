@@ -169,6 +169,26 @@ export const curriculumData = [
     ]
 ]
 
+// 커리큘럼 프로젝트 데이터
+export const curriculumProjectData = [
+    {
+        title: '해커톤',
+        img: 'assets/images/curriculum/project/project_hackathon.svg',
+        desc: '공공, 리테일, 금융, 교육, 스마트팩토리, \n스마트모빌리티 분야의 각 산업별 도메인에 따라 \nAI를 활용한 서비스를 개발합니다.',
+        width: { default: 600, md: 600, sm: 500 },
+        height: { default: 200, md: 150, sm: 100 }
+    },
+    {
+        title: '최종 프로젝트',
+        img: 'assets/images/curriculum/project/project_final.svg',
+        desc: 'AM 기반의 최종 프로젝트를 통해 \nLG CNS만의 AM 기술과 Agile 개발방법론을 \n활용하여 AM 프로젝트 사이클을 경험하고 \n시스템을 구축합니다.',
+        width: { default: 700, md: 800, sm: 600 },
+        height: { default: 300, md: 200, sm: 200 }
+    },
+    // 추가 슬라이드 데이터
+]
+
+
 // 교육신청
 export const applyStepEleData = [
     [
@@ -211,25 +231,25 @@ export const coreProgramData = [
         {
             id: 1,
             title: "코드 퀄리티 플랫폼",
-            desc: "클린코드 룰과 시큐어코딩 룰을 적용하여 본인이 작성한 코드의 품질을 높여주는 플랫폼입니다. \n코드 품질 개선을 위한 보고서를 자동 생성하여 안전하고 클린한 코드를 작성할 수 있도록 지원합니다.",
+            desc: "클린코드 룰과 시큐어코딩을 적용하여\n코드를 분석하고, 페어코딩 기능을 통해 \n실시간 코드 리뷰를 지원합니다.",
             link: "/assets/images/coreprogram/program1.jpg"
         },
         {
             id: 2,
             title: "스마트훈련픔랫폼",
-            desc: "인터렉티브한 실시간 온라인 강의를 위한 메타버스 강의장을 통해 학습 효율을 극대화합니다. \n학습 전, 후 진행되는 역량평가의 결과를 바탕으로 1:1 개인 강점 진단 및 커리어 패스 가이드를 제공합니다. \n강의 다시보기, 강의 자료실을 통해 자기주도 및 보충 학습이 가능하도록 지원하며 중도 이탈하지 않도록 꽉 붙잡아 드립니다!",
+            desc: "훈련생-강사-FT-운영진이 실시간으로\n원활하게 소통할 수 있는 메타버스 기반의\n교육용 LMS로 인터랙티브한 실습환경을\n제공합니다.",
             link: "/assets/images/coreprogram/program2.jpg"
         },
         {
             id: 3,
             title: "LG CNS 실무진 멘토링",
-            desc: " LG CNS 실무진의 생생한 현장 멘토링으로 기업 요구사항에 맞는 실무 기반 프로젝트를 진행합니다. \n프로젝트 방향성 확립은 물론 모르는 부분은 멘토님께 직접 여쭤보며 프로젝트를 진행할 수 있어요!",
+            desc: "현업 AM 실무진의 신기술 및 노하우를 \n바탕으로 체계적이고 효율적인\n멘토링을 제공합니다.",
             link: "미래인재 양성 프로그램은 미래 사회를 이끌어갈 인재를 양성하기 위한"
         },
         {
             id: 4,
             title: "LG CNS 수료증",
-            desc: "무사히 과정을 모두 이수한 훈련생에게 LG CNS 인증 수료증을 발급해드립니다.\n(* 교육과정 80% 이상 출석 및 미니 PJT, 최종 PJT 참여자에 한함)",
+            desc: "LG CNS AM Inspire Camp 교육을 \n이수한 훈련생에게 LG CNS 인증 \n수료증을 드립니다.",
             link: "/assets/images/coreprogram/program1.jpg"
         },
     ]
@@ -294,32 +314,27 @@ export const faqData = [
     [
         {
             question: '지원 자격이 어떻게 되나요?',
-            answer: '1. 내일배움카드 발급 가능자 \n2. 대학(원) 졸업 및 졸업예정자 \n나이, 학력 및 전공 제한 없이 지원 가능합니다.',
+            answer: '내일배움카드 발급이 가능하며,\n국내외 대학(원) 졸업(예정)자 및 미취업자라면 \n모두 지원할 수 있습니다.\n나이, 학력 및 전공 제한없이 모두 지원 가능합니다.',
         },
         {
-            question: '비전공자인데, 수강이 가능할까요??',
-            answer:
-                '전공자 뿐만 아니라 비전공자도 지원 가능합니다. \n해당 과정은 기초부터 학습하므로 비전공자도 관심과 열정이 있다면 충분히 수강할 수 있습니다.',
+            question: '비전공자도 지원 가능할까요?',
+            answer:'프로그래밍 관련 경험이 있다면 \n비전공자도 지원 가능합니다.\n\n교육에 대한 의지와 성장 가능성 있는 지원자를 \n선발하므로 지원서에 잘 기입해주시기 바랍니다.',
         },
         {
             question: '국민취업지원제도와 병행 가능한가요?',
-            answer:
-                '국민취업지원제도와 병행하여 수강 가능합니다.',
+            answer: '국민취업지원제도와 KDT 과정은 병행 가능합니다.\n고용센터 담당자와 상담 후 수강 신청 가능하므로 \n빠른 신청을 권장합니다.',
         },
         {
-            question: '온라인으로 교육이 진행되나요?',
-            answer:
-                '온라인과 오프라인 병행하여 진행됩니다.',
-        },
-        {
-            question: '내일배움카드가 필수인가요?',
-            answer:
-                '국민내일배움카드 발급자 및 발급 가능자 모두 지원 가능합니다. \n단, 국민내일배움카드 발급자는 기존에 내일배움카드 교육을 수강하여 지원금 잔액이 0원이라면 고용센터에 확인하시기 바랍니다. \n국민내일배움카드 발급 가능자는 교육 시작일 전에 내일배움카드 발급 및 수령을 권장드립니다.',
+            question: '내일배움카드가 있어야 교육을 받을 수 있나요?',
+            answer:'해당 교육과정은 KDT 과정으로 교육 입과 전 \n내일배움카드를 발급 받으셔야 수강이 가능합니다.\n\n자세한 발급 방법은 고용노동부(1350) 또는 \n직업훈련포털(www.work24.go.kr)에서 확인해주세요.',
         },
         {
             question: '개인 노트북이 있어야 지원 가능한가요?',
-            answer:
-                '교육수강에 필요한 노트북은 제공해드립니다.',
+            answer:'교육에 집중할 수 있도록 LG의 노트북을 지원 \n해드립니다.',
+        },
+        {
+            question: 'KDT 과정을 이전에 수강한 적이 있는데 \n지원 가능한가요?',
+            answer: 'KDT 과정 수강 경험이 있는 분들은 개별적으로 \n고용센터에 문의하여 수강여부를 확인해주세요.',
         },
     ]
 ];
@@ -344,10 +359,6 @@ export const centerImagesData = {
         {
             id: 4,
             img: "assets/images/centerimages/center_294.svg"
-        },
-        {
-            id: 5,
-            img: "assets/images/centerimages/center_hyehwa.svg"
         },
     ],
 }

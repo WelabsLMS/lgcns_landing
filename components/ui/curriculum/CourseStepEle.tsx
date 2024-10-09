@@ -26,12 +26,12 @@ function CourseStepEle({ title, index, activeSlide, handleCourseClick }: { title
     return (
         <div className={`cursor-pointer flex items-center lg:items-start text-nowrap`} onClick={() => handleCourseClick(index)}>
             <div ref={stepRef} className='w-16 md:w-10 xl:w-28 flex flex-col items-center gap-2 md:gap-3'>
-                <div className={`w-4 h-4 md:w-6 md:h-6 lg:w-10 lg:h-10 rounded-full ${index <= activeSlide ? 'bg-[#002278]' : 'bg-[#E0E0E0]'}`} />
+                <div className={`w-4 h-4 md:w-6 md:h-6 lg:w-7 lg:h-7 rounded-full ${index <= activeSlide ? 'bg-[#002278]' : 'bg-[#E0E0E0]'}`} />
                 <div>
                     <p className="text-sm md:text-base xl:text-2xl font-bold text-center">{title}</p>
                 </div>
             </div>
-            <div className="relative bottom-3 md:bottom-5 lg:top-5">
+            <div className="relative bottom-3 md:bottom-5 lg:top-3">
                 <div className={`w-8 md:w-10 h-0.5 ${index <= activeSlide ? 'bg-[#002278]' : 'bg-[#E0E0E0]'}`}></div>
             </div>
         </div>

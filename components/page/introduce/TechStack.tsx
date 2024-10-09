@@ -9,7 +9,7 @@ function TechStack() {
             {/* 제목 부분 */}
             <div className='flex gap-4 items-center'>
                 <Image src="assets/images/introduce/circle_check.svg" alt="circlecheck" width={40} height={40} />
-                <p className='text-xl md:text-3xl font-extrabold text-[#5984EC]'>기술스택</p>
+                <p className='text-2xl md:text-4xl font-extrabold text-[#5984EC]'>기술스택</p>
             </div>
 
             {/* 그리드 및 아이콘 부분 */}

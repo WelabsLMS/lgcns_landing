@@ -6,7 +6,7 @@ function Curve({ id }: { id: number }) {
         <div className=''>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className={`relative w-8 md:w-24 md:h-24 bottom-8 ${id % 2 === 0 ? "-scale-y-100 translate-y-8 md:translate-y-16" : ""} `}
+                className={`relative w-9 md:w-24 md:h-24 bottom-9 ${id % 2 === 0 ? "-scale-y-100 translate-y-9 md:translate-y-16" : ""} `}
                 viewBox="0 0 200 100"
                 fill="none"
                 stroke="gray"
