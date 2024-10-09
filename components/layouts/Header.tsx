@@ -28,10 +28,10 @@ function Header() {
                         </ul>
                     </nav>
                     <div className='basis-1/4 flex justify-evenly text-2xl font-semibold lg:gap-4'>
-                        <button className='text-white rounded-2xl w-32 bg-gradient-to-r from-[#E2275488] to-[#FFD028] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]'>
-                            <Link href={'https://wsts.kr'}>LMS</Link>
-                        </button>
-                        <button className='text-white rounded-2xl w-32 bg-gradient-to-r from-[#E2275488] to-[#FFD028] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]'>
+                    <button className='flex w-[120px] h-[44px] items-center justify-center px-4 rounded-full bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] shadow-[0_4px_10px_rgba(255,95,109,0.4)]'>
+                                <Image src='/assets/images/logo/solutionLms.png' alt='wsts' width={150} height={19} />
+                            </button>
+                        <button className='text-white rounded-full w-32 h-[44px] bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]'>
                             <Link href={'/apply'}>수강신청</Link>
                         </button>
                     </div>
@@ -54,7 +54,7 @@ function Header() {
                     </div>
                 </div>
                 <div className={`absolute top-[79px] bg-white w-full h-max flex flex-col items-center py-4 lg:hidden transition-all duration-500 transform ${subMenuOpen ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0'} origin-top`}>
-                    <ul className='text-center flex flex-col gap-3 text-xl font-bold cursor-pointer'>
+                    <ul className='text-center flex flex-col gap-4 text-xl font-bold cursor-pointer'>
                         <li onClick={() => setSubMenuOpen(!subMenuOpen)}>
                             <Link href='#introduce'>캠프소개</Link>
                         </li>
@@ -64,14 +64,13 @@ function Header() {
                         <li onClick={() => setSubMenuOpen(!subMenuOpen)}>
                             <Link href='#contact'>FAQ</Link>
                         </li>
-                        <li
-                            className='text-white rounded-2xl px-4 py-[1px] bg-gradient-to-r from-[#E2275488] to-[#FFD028] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] font-semibold'
-                            onClick={() => setSubMenuOpen(!subMenuOpen)}
-                        >
-                            <Link href={'https://wsts.kr'}>LMS</Link>
+                        <li onClick={() => setSubMenuOpen(!subMenuOpen)}>
+                        <button className='flex w-[120px] h-[38px] items-center justify-center px-4 rounded-full bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] shadow-[0_4px_10px_rgba(255,95,109,0.4)]'>
+                                <Image src='/assets/images/logo/solutionLms.png' alt='wsts' width={65} height={19} />
+                            </button>
                         </li>
                         <li
-                            className='text-white rounded-2xl px-4 py-[1px] bg-gradient-to-r from-[#E2275488] to-[#FFD028] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] font-semibold'
+                            className='text-white w-[120px] h-[38px] flex items-center justify-center rounded-full px-4 bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] font-semibold'
                             onClick={() => setSubMenuOpen(!subMenuOpen)}
                         >
                             <Link href={'/apply'}>수강신청</Link>

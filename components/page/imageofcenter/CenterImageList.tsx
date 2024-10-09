@@ -8,21 +8,21 @@ function CenterImageList() {
         <section className="section">
             <SectionTitle title="교육장 사진" />
             <div className='container mx-auto'>
-                <div className='flex flex-col-reverse md:flex-col justify-center'>
-                    <div className='flex flex-col gap-5 md:flex-row justify-evenly'>
+                <div className='flex flex-col md:flex-col justify-center'>
+                    <div className='flex flex-col gap-5 md:gap-0 md:flex-row justify-center'>
                         {
                             centerImagesData.first.map((image) => (
                                 <CampImageEle key={image.id} img={image.img} />
                             ))
                         }
                     </div>
-                    <div className='text-xl lg:text-[28px] text-center mb-10 md:my-10'>
+                    <div className='text-xl lg:text-[28px] text-center my-10 md:my-10'>
                         <p className='text-[#002278] font-bold lg:mb-4'>온라인 교육장</p>
                         <p className='font-semibold'>메타버스 게더타운 강의실</p>
                     </div>
                 </div>
-                <div className='flex flex-col-reverse md:flex-col justify-center'>
-                    <div className='flex flex-col gap-5 md:gap-0 md:flex-row justify-evenly'>
+                <div className='flex flex-col md:flex-col justify-center'>
+                    <div className='flex flex-col gap-5 md:gap-0 md:flex-row justify-center'>
                         {
                             centerImagesData.second.map((image) => (
                                 <CampImageEle key={image.id} img={image.img} />
