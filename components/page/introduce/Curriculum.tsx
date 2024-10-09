@@ -86,18 +86,19 @@ function Curriculum() {
                             }}
                             onSwiper={(swiper) => setSwiper(swiper)}
                             onActiveIndexChange={(swiper) => setSlideIndex(swiper.activeIndex)}
+                            className='h-full'
                         >
                             {
                                 curriculumData[0].map((data, index) => (
-                                    <SwiperSlide key={index} className='py-8 md:pt-10 md:pb-20 md:px-10 gap-6'>
+                                    <SwiperSlide key={index} className='py-8 md:py-10 md:px-14 gap-6'>
                                         <p className='text-xl font-bold md:hidden'>{curriculumStepData[0][index].title}</p>
                                         <div className='text-xl md:text-3xl font-bold text-center'>
                                             <p>{data.title}</p>
                                         </div>
-                                        <div className='flex flex-col-reverse lg:flex-row text-base md:text-2xl'>
-                                            <div className='lg:w-1/2'>{data.desc}</div>
-                                            <div className='relative h-[20vh] md:h-[30vh] lg:w-1/2 mb-8'>
-                                                <Image src={'/assets/images/temp.svg'} alt='temp' fill />
+                                        <div className='flex flex-col-reverse h-full items-center lg:flex-row text-base md:text-2xl gap-12'>
+                                            <div className='h-full lg:w-1/2 flex items-center'>{data.desc}</div>
+                                            <div className='relative h-[20vh] md:h-[35vh] lg:w-1/2 bg-white flex justify-center py-2'>
+                                                <Image src={data.img} alt='curriculum_img' width={300} height={100} />
                                             </div>
                                         </div>
                                     </SwiperSlide>
