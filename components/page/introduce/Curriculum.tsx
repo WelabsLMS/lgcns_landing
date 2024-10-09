@@ -68,7 +68,7 @@ function Curriculum() {
                 </div>
             </div>
 
-            <div className='container mx-auto px-4 lg:px-20'>
+            <div className='container mx-auto px-4'>
                 {/* Slider */}
                 <div className='relative flex items-center'>
                     <div className={`prev-button-wrap relative invisible md:visible left-5 w-8 h-8 md:w-10 md:h-10 md:left-0 rounded-xl ${isBeginning ? 'bg-[#C2D3FF50]' : 'bg-[#A5B4FC] cursor-pointer'}`}>
@@ -90,13 +90,13 @@ function Curriculum() {
                         >
                             {
                                 curriculumData[0].map((data, index) => (
-                                    <SwiperSlide key={index} className='py-8 mb-8 md:py-10 md:px-14 gap-6 lg:py-20'>
+                                    <SwiperSlide key={index} className='py-8 mb-8 md:py-10 md:px-14 lg:px-10 gap-6 lg:py-10'>
                                         <p className='text-xl font-bold md:hidden'>{curriculumStepData[0][index].title}</p>
                                         <div className='text-xl md:text-3xl font-bold text-center'>
                                             <p>{data.title}</p>
                                         </div>
-                                        <div className='flex flex-col-reverse h-full items-center lg:flex-row text-base md:text-2xl gap-12'>
-                                            <div className='font-semibold lg:w-1/2 flex items-center'>{data.desc}</div>
+                                        <div className='w-full text-center lg:text-start flex flex-col-reverse h-full items-center  lg:flex-row text-base md:text-2xl gap-14'>
+                                            <div className='font-semibold w-full lg:w-1/2 flex items-center justify-center'>{data.desc}</div>
                                             <div className='relative h-[20vh] md:h-[30vh] lg:w-1/2 bg-white flex justify-center py-2'>
                                                 <Image src={data.img} alt='curriculum_img' width={300} height={100} priority />
                                             </div>
