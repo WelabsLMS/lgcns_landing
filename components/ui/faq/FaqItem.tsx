@@ -31,7 +31,7 @@ export default function FaqItem({ question, answer }: FAQItemProps) {
             >
                 <div>
                     <span className="lg:text-2xl font-bold mr-2 lg:mr-4">Q</span>
-                    <span className="lg:text-lg font-semibold">{question}</span>
+                    <span className="lg:text-xl font-semibold">{question}</span>
                 </div>
                 <svg
                     className={`w-5 h-4 transform transition-transform duration-300 ${isOpen ? '-rotate-180' : ''}`}
@@ -53,7 +53,7 @@ export default function FaqItem({ question, answer }: FAQItemProps) {
                 className={`transition-all duration-300 ease-in-out overflow-hidden`}
                 style={{ height: '0px' }} // 기본 높이를 0으로 설정
             >
-                <p className="py-2 text-sm text-gray-700 whitespace-pre-line">{answer}</p>
+                <p className="py-2 text-lg text-gray-700 whitespace-pre-line">{answer}</p>
             </div>
         </div>
     );

@@ -59,7 +59,7 @@ function Curriculum() {
                 }
                 <div className='w-20 h-20 md:h-24 lg:w-32 lg:h-32 flex-shrink-0'> {/* 이미지 크기 조정 및 마진 조정 */}
                     <Image
-                        src='assets/images/curriculum/trophy.svg'
+                        src='assets/images/curriculum/curriculumstep/trophy.svg'
                         alt='curriculum'
                         width={150} // 이미지 너비 조정
                         height={150} // 이미지 높이 조정
@@ -86,18 +86,19 @@ function Curriculum() {
                             }}
                             onSwiper={(swiper) => setSwiper(swiper)}
                             onActiveIndexChange={(swiper) => setSlideIndex(swiper.activeIndex)}
+                            className='h-full'
                         >
                             {
                                 curriculumData[0].map((data, index) => (
-                                    <SwiperSlide key={index} className='py-8 md:pt-10 md:pb-20 md:px-10 gap-6'>
+                                    <SwiperSlide key={index} className='py-8 md:py-10 md:px-14 gap-6 lg:py-20'>
                                         <p className='text-xl font-bold md:hidden'>{curriculumStepData[0][index].title}</p>
                                         <div className='text-xl md:text-3xl font-bold text-center'>
                                             <p>{data.title}</p>
                                         </div>
-                                        <div className='flex flex-col-reverse lg:flex-row text-base md:text-2xl'>
-                                            <div className='lg:w-1/2'>{data.desc}</div>
-                                            <div className='relative h-[20vh] md:h-[30vh] lg:w-1/2 mb-8'>
-                                                <Image src={'/assets/images/temp.svg'} alt='temp' fill />
+                                        <div className='flex flex-col-reverse h-full items-center lg:flex-row text-base md:text-2xl gap-12'>
+                                            <div className='font-semibold lg:w-1/2 flex items-center'>{data.desc}</div>
+                                            <div className='relative h-[20vh] md:h-[30vh] lg:w-1/2 bg-white flex justify-center py-2'>
+                                                <Image src={data.img} alt='curriculum_img' width={300} height={100} />
                                             </div>
                                         </div>
                                     </SwiperSlide>

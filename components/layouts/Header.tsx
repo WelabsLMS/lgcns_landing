@@ -23,7 +23,7 @@ function Header() {
                                 <a href='#coreprogram'>핵심프로그램</a>
                             </li>
                             <li>
-                                <a href='#contact'>FAQ</a>
+                                <a href='#faq'>FAQ</a>
                             </li>
                         </ul>
                     </nav>
