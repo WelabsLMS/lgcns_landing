@@ -127,43 +127,43 @@ export const curriculumData = [
         {
             id: 1,
             title: '클라우드와 AI 최신 트렌드 특강, \nDigital Insight 채우기',
-            desc: '실무에서의 클라우드 활용과 생성형 AI 시장에 대한 현직자의 생생한 특강을 통해 최신기술의 업계 트렌드의 이해를 돕습니다.',
+            desc: '실무에서의 클라우드 활용과 생성형 AI 시장에 대한 현직자의 생생한 특강을 통해 최신기술의 \n업계 트렌드의 이해를 돕습니다.',
             img: 'assets/images/curriculum/curriculumstep/course1.svg'
         },
         {
             id: 2,
-            title: '풀스택 개발자로 거듭나는 지름길, AI 서비스 개발을 통한 Course 2',
-            desc: '프론트엔드와 백엔드의 기초부터 심화, 생성형 AI 이해를 바탕으로 코드 퀄리티 플랫폼을 활용하여 AI 서비스 개발에 필요한 기술을 습득합니다.',
+            title: '풀스택 개발자로 거듭나는 지름길,\nAI 서비스 개발을 통한 Course 2',
+            desc: '프론트엔드와 백엔드의 기초부터 심화, \n생성형 AI 이해를 바탕으로 코드퀄리티 플랫폼을 \n활용하여 AI 서비스 개발에 필요한 기술을 \n습득합니다.',
             img: 'assets/images/curriculum/curriculumstep/course2.svg'
         },
         {
             id: 3,
-            title: 'AI 기반의 개인 맞춤형 뉴스 애플리케이션 개발로 기본기 잡고가기',
-            desc: 'AI기반의 사용자 맞춤형 콘텐츠를 제공하는 애플리케이션 개발을 통해 배운 내용을 실제로 적용해보며 기본기를 갖춥니다.',
+            title: 'AI 기반의 개인 맞춤형 \n뉴스 애플리케이션 개발로 기본기 잡기',
+            desc: 'AI기반의 사용자 맞춤형 콘텐츠를 제공하는 \n애플리케이션 개발을 통해 배운 내용을 \n실제로 적용해보며 기본기를 갖춥니다.',
             img: 'assets/images/curriculum/curriculumstep/mini1.svg'
         },
         {
             id: 4,
             title: 'AM 기술의 모든 것, LG CNS의 Application Modernization',
-            desc: 'LG CNS 실무진의 CNS Agile 특강부터 MSA 기술 이해와 활용을 통해 AM 전문가로의 기반을 다집니다.',
+            desc: 'LG CNS 실무진의 CNS Agile 특강부터 \nMSA 기술 이해와 활용을 통해 AM 전문가로의 \n기반을 다집니다.',
             img: 'assets/images/curriculum/curriculumstep/course3.svg'
         },
         {
             id: 5,
-            title: 'AM 역량 굳히기, MSA 서비스 개발 및 운영환경 구축',
+            title: 'AM 역량 굳히기 \nMSA 서비스 개발 및 운영환경 구축',
             desc: '미니 프로젝트 1을 기반으로 MSA 서비스 운영환경 구축을 통해 풀스택 기술을 체화합니다.',
             img: 'assets/images/curriculum/curriculumstep/mini2.svg'
         },
         {
             id: 6,
-            title: '프로젝트 전 Warming-up! AI를 활용한 서비스 개발',
-            desc: 'LG CNS의 산업 도메인별 AI를 활용한 서비스 개발을 위한 해커톤을 수행하며 프로젝트 전 프로젝트 사이클을 경험합니다.',
+            title: '프로젝트 전 Warming-up! \nAI를 활용한 서비스 개발',
+            desc: 'LG CNS의 산업 도메인별 AI를 활용한 \n서비스 개발을 위한 해커톤을 수행하며 \n프로젝트 전 프로젝트 사이클을 경험합니다.',
             img: 'assets/images/curriculum/curriculumstep/hackathon.svg'
         },
         {
             id: 7,
-            title: 'LG CNS 실무진과 함께하는 AM 기반의 최종 프로젝트',
-            desc: 'LG CNS가 도출한 도메인별 시나리오를 기반으로 실무와 동일한 환경의 프로젝트 수행과 멘토링을 통해 AM 전문가로 성장을 돕습니다.',
+            title: 'LG CNS 실무진과 함께하는 \nAM 기반의 최종 프로젝트',
+            desc: 'LG CNS가 도출한 도메인별 시나리오를 \n기반으로 실무와 동일한 환경의 프로젝트 수행과 \n멘토링을 통해 AM 전문가로 성장을 돕습니다.',
             img: 'assets/images/curriculum/curriculumstep/final.svg'
         }
     ]
@@ -176,7 +176,7 @@ export const curriculumProjectData = [
         img: 'assets/images/curriculum/project/project_hackathon.svg',
         desc: '공공, 리테일, 금융, 교육, 스마트팩토리, \n스마트모빌리티 분야의 각 산업별 도메인에 따라 \nAI를 활용한 서비스를 개발합니다.',
         width: { default: 600, md: 600, sm: 500 },
-        height: { default: 200, md: 150, sm: 100 }
+        height: { default: 200, md: 200, sm: 100 }
     },
     {
         title: '최종 프로젝트',
@@ -232,25 +232,49 @@ export const coreProgramData = [
             id: 1,
             title: "코드 퀄리티 플랫폼",
             desc: "클린코드 룰과 시큐어코딩을 적용하여\n코드를 분석하고, 페어코딩 기능을 통해 \n실시간 코드 리뷰를 지원합니다.",
-            link: "/assets/images/coreprogram/program1.jpg"
+            modal : [
+                {
+                    title: "코드 퀄리티 플랫폼",
+                    desc: "클린코드 룰과 시큐어코딩을 적용하여\n코드를 분석하고, 페어코딩 기능을 통해 \n실시간 코드 리뷰를 지원합니다.",
+                    image: ["/assets/images/coreprogram/codequlity1.svg", "/assets/images/coreprogram/codequlity1.svg"]
+                },
+            ]
         },
         {
             id: 2,
             title: "스마트훈련픔랫폼",
             desc: "훈련생-강사-FT-운영진이 실시간으로\n원활하게 소통할 수 있는 메타버스 기반의\n교육용 LMS로 인터랙티브한 실습환경을\n제공합니다.",
-            link: "/assets/images/coreprogram/program2.jpg"
+            modal : [
+                {
+                    title: "스마트훈련픔랫폼",
+                    desc: "훈련생-강사-FT-운영진이 실시간으로\n원활하게 소통할 수 있는 메타버스 기반의\n교육용 LMS로 인터랙티브한 실습환경을\n제공합니다.",
+                    image: ["/assets/images/coreprogram/codequlity1.svg"]
+                },
+            ]
         },
         {
             id: 3,
             title: "LG CNS 실무진 멘토링",
             desc: "현업 AM 실무진의 신기술 및 노하우를 \n바탕으로 체계적이고 효율적인\n멘토링을 제공합니다.",
-            link: "미래인재 양성 프로그램은 미래 사회를 이끌어갈 인재를 양성하기 위한"
+            modal : [
+                {
+                    title: "LG CNS 실무진 멘토링",
+                    desc: "현업 AM 실무진의 신기술 및 노하우를 \n바탕으로 체계적이고 효율적인\n멘토링을 제공합니다.",
+                    image: ["/assets/images/coreprogram/codequlity1.svg"]
+                },
+            ]
         },
         {
             id: 4,
             title: "LG CNS 수료증",
             desc: "LG CNS AM Inspire Camp 교육을 \n이수한 훈련생에게 LG CNS 인증 \n수료증을 드립니다.",
-            link: "/assets/images/coreprogram/program1.jpg"
+            modal : [
+                {
+                    title: "LG CNS 수료증",
+                    desc: "LG CNS AM Inspire Camp 교육을 \n이수한 훈련생에게 LG CNS 인증 \n수료증을 드립니다.",
+                    image: ["/assets/images/coreprogram/codequlity1.svg"]
+                },
+            ]
         },
     ]
 ]
