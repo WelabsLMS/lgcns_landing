@@ -30,26 +30,28 @@ function EleModal({ data, modalOpen, setModalOpen }: { data: CoreProgramEleModal
     if (!modalOpen) return null
 
     return (
-        <div className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[100000]'>
-            <div className='w-4/5 h-4/5 bg-white rounded-lg p-5'>
-                <div className='container mx-auto flex flex-col items-center justify-center w-full h-full'>
+        <div className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[100000]' onClick={() => setModalOpen(!modalOpen)}>
+            <div className='w-[96%] h-max md:w-4/5 md:h-[90%] bg-white rounded-lg px-5' onClick={(e) => e.stopPropagation()}>
+                <div className='container mx-auto flex flex-col items-center justify-center w-full h-full gap-10 py-10'>
                     <h2 className='text-3xl font-bold mb-4'>{data.title}</h2>
-                    <Swiper
-                        className='w-full h-[70%]'
-                        navigation
-                        modules={[Navigation]}
-                    >
-                        {
-                            data.image.map((img, index) => (
-                                <SwiperSlide key={index}>
-                                    <Image src={img} alt={data.title} fill />
-                                </SwiperSlide>
-                            ))
-                        }
-                    </Swiper>
-                    <p className='text-2xl font-semibold'>{data.desc}</p>
+                    <div className='w-full h-[60%] hidden md:block'>
+                        <Swiper
+                            className='w-full h-full'
+                            navigation
+                            modules={[Navigation]}
+                        >
+                            {
+                                data.image.map((img, index) => (
+                                    <SwiperSlide key={index}>
+                                        <Image src={img} alt={data.title} fill />
+                                    </SwiperSlide>
+                                ))
+                            }
+                        </Swiper>
+                    </div>
+                    <p className='text-xl text-center font-semibold whitespace-pre-line ' dangerouslySetInnerHTML={{ __html: data.desc }} />
                     <button
-                        className='mt-8 px-4 py-2 bg-blue-500 text-white rounded'
+                        className='px-4 py-2 bg-blue-500 font-semibold text-white rounded'
                         onClick={() => setModalOpen(false)}
                     >
                         닫기
