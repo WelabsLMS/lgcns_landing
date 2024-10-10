@@ -232,23 +232,23 @@ export const coreProgramData = [
             id: 1,
             title: "코드 퀄리티 플랫폼",
             desc: "클린코드 룰과 시큐어코딩을 적용하여\n코드를 분석하고, 페어코딩 기능을 통해 \n실시간 코드 리뷰를 지원합니다.",
-            modal : [
+            modal: [
                 {
                     title: "코드 퀄리티 플랫폼",
                     desc: "클린코드 룰과 시큐어코딩을 적용하여\n코드를 분석하고, 페어코딩 기능을 통해 \n실시간 코드 리뷰를 지원합니다.",
-                    image: ["/assets/images/coreprogram/codequlity1.svg", "/assets/images/coreprogram/codequlity1.svg"]
+                    image: ["/assets/images/coreprogram/codequility1.svg", "/assets/images/coreprogram/codequility2.svg"]
                 },
             ]
         },
         {
             id: 2,
-            title: "스마트훈련픔랫폼",
+            title: "스마트훈련플랫폼",
             desc: "훈련생-강사-FT-운영진이 실시간으로\n원활하게 소통할 수 있는 메타버스 기반의\n교육용 LMS로 인터랙티브한 실습환경을\n제공합니다.",
-            modal : [
+            modal: [
                 {
-                    title: "스마트훈련픔랫폼",
-                    desc: "훈련생-강사-FT-운영진이 실시간으로\n원활하게 소통할 수 있는 메타버스 기반의\n교육용 LMS로 인터랙티브한 실습환경을\n제공합니다.",
-                    image: ["/assets/images/coreprogram/codequlity1.svg"]
+                    title: "스마트훈련플랫폼",
+                    desc: "인터렉티브한 실시간 온라인 강의를 위한 메타버스 강의장을 통해 \n 학습 효율을 극대화합니다. <br/><br/>학습 전, 후 진행되는 역량평가의 결과를 <br class='md:hidden'/> 바탕으로 1:1 개인 강점 진단 및 \n 커리어 패스 가이드를 제공합니다.\n\n강의 다시보기, 강의 자료실을 통해 <br class='md:hidden'/>자기주도 및 보충 학습이 가능하도록 \n 지원하며 중도 이탈하지 않도록 <br class='md:hidden'/> 꽉 붙잡아 드립니다!",
+                    image: ["/assets/images/coreprogram/wsts1.svg", "/assets/images/coreprogram/wsts2.svg"]
                 },
             ]
         },
@@ -256,11 +256,11 @@ export const coreProgramData = [
             id: 3,
             title: "LG CNS 실무진 멘토링",
             desc: "현업 AM 실무진의 신기술 및 노하우를 \n바탕으로 체계적이고 효율적인\n멘토링을 제공합니다.",
-            modal : [
+            modal: [
                 {
                     title: "LG CNS 실무진 멘토링",
-                    desc: "현업 AM 실무진의 신기술 및 노하우를 \n바탕으로 체계적이고 효율적인\n멘토링을 제공합니다.",
-                    image: ["/assets/images/coreprogram/codequlity1.svg"]
+                    desc: "LG CNS 실무진의 생생한 현장 멘토링으로 \n기업 요구사항에 맞는 실무 기반 \n프로젝트를 진행합니다. \n\n프로젝트 방향성 확립은 물론! \n모르는 부분은 멘토님께 직접 여쭤보며 \n프로젝트를 진행할 수 있어요!",
+                    image: ["/assets/images/coreprogram/mentor1.svg", "/assets/images/coreprogram/mentor2.svg"]
                 },
             ]
         },
@@ -268,11 +268,11 @@ export const coreProgramData = [
             id: 4,
             title: "LG CNS 수료증",
             desc: "LG CNS AM Inspire Camp 교육을 \n이수한 훈련생에게 LG CNS 인증 \n수료증을 드립니다.",
-            modal : [
+            modal: [
                 {
                     title: "LG CNS 수료증",
-                    desc: "LG CNS AM Inspire Camp 교육을 \n이수한 훈련생에게 LG CNS 인증 \n수료증을 드립니다.",
-                    image: ["/assets/images/coreprogram/codequlity1.svg"]
+                    desc: "무사히 과정을 모두 이수한 훈련생에게 \nLG CNS 인증 수료증을 발급해드립니다. \n\n* 교육과정 80% 이상 출석</span> \n* 미니 PJT, 최종 PJT 참여자에 한함",
+                    image: ["/assets/images/coreprogram/completion.svg"]
                 },
             ]
         },
@@ -342,7 +342,7 @@ export const faqData = [
         },
         {
             question: '비전공자도 지원 가능할까요?',
-            answer:'프로그래밍 관련 경험이 있다면 \n비전공자도 지원 가능합니다.\n\n교육에 대한 의지와 성장 가능성 있는 지원자를 \n선발하므로 지원서에 잘 기입해주시기 바랍니다.',
+            answer: '프로그래밍 관련 경험이 있다면 \n비전공자도 지원 가능합니다.\n\n교육에 대한 의지와 성장 가능성 있는 지원자를 \n선발하므로 지원서에 잘 기입해주시기 바랍니다.',
         },
         {
             question: '국민취업지원제도와 병행 가능한가요?',
@@ -350,11 +350,11 @@ export const faqData = [
         },
         {
             question: '내일배움카드가 있어야 교육을 받을 수 있나요?',
-            answer:'해당 교육과정은 KDT 과정으로 교육 입과 전 \n내일배움카드를 발급 받으셔야 수강이 가능합니다.\n\n자세한 발급 방법은 고용노동부(1350) 또는 \n직업훈련포털(www.work24.go.kr)에서 확인해주세요.',
+            answer: '해당 교육과정은 KDT 과정으로 교육 입과 전 \n내일배움카드를 발급 받으셔야 수강이 가능합니다.\n\n자세한 발급 방법은 고용노동부(1350) 또는 \n직업훈련포털(www.work24.go.kr)에서 확인해주세요.',
         },
         {
             question: '개인 노트북이 있어야 지원 가능한가요?',
-            answer:'교육에 집중할 수 있도록 LG의 노트북을 지원 \n해드립니다.',
+            answer: '교육에 집중할 수 있도록 LG의 노트북을 지원 \n해드립니다.',
         },
         {
             question: 'KDT 과정을 이전에 수강한 적이 있는데 \n지원 가능한가요?',
