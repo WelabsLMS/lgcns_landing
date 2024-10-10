@@ -12,7 +12,7 @@ function Military() {
             className="border border-gray-300 rounded-lg w-[500px] h-[30px] p-2"
             name="militaryStatus"
           >
-          <option value="" disabled selected>병역 상태를 선택해주세요</option>
+          <option value="" defaultChecked>병역 상태를 선택해주세요</option>
             <option value="completed">군필</option>
             <option value="exempted">미필</option>
             <option value="ongoing">면제</option>
