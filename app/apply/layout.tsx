@@ -29,12 +29,8 @@ export default function layout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="kor" className="scroll-smooth">
-            <body
-                className={`${lgFont.className} antialiased z-[1000]`}
-            >
-                {children}
-            </body>
-        </html>
+        <main>
+            {children}
+        </main>
     );
 }

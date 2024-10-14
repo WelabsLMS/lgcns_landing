@@ -171,3 +171,20 @@ body {
     display: none;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .applyTitle {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .applyContent {
+    font-size: 20px;
+    font-weight: 500;
+    width: 100%;
+    margin-top: 0.25rem;
+    padding: 0.5rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.5rem;
+  }
+}
