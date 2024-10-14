@@ -89,6 +89,31 @@ body {
   z-index: 10;
 }
 
+.applyTitle {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.applyContent {
+  font-size: 24px;
+  font-weight: 500;
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.5rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+}
+
+.applyContent:focus {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(191 219 254 / var(--tw-ring-opacity))
+    /* #bfdbfe */
+  ;
+}
+
 
 @layer utilities {
   .text-balance {
@@ -127,7 +152,7 @@ body {
     position: relative;
     padding: 6.5rem 1rem 0 1rem;
   }
-  
+
 }
 
 @media screen and (min-width: 1281px) {
@@ -138,7 +163,7 @@ body {
     flex-direction: column;
     position: relative;
     padding: 6.5rem 1rem 0 1rem;
-  } 
+  }
 }
 
 @media screen and (min-width: 768px) {
