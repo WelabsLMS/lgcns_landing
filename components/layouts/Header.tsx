@@ -2,12 +2,15 @@
 import Image from 'next/image'
 import React from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 function Header() {
     const [subMenuOpen, setSubMenuOpen] = React.useState(false)
+    const pathname = usePathname()
+    if(pathname === '/apply') return null
     return (
         <>
-            <header className='w-full sticky top-0 left-0 bg-white border border-gray-200 z-[99999] lg:px-20 xl:px-40 h-[80px] lg:h-[100px] flex items-center'>
+            <header className='w-full sticky top-0 left-0 bg-white border border-gray-200 z-[999] lg:px-20 xl:px-40 h-[80px] lg:h-[100px] flex items-center'>
                 <div className='w-full h-min container mx-auto py-5 flex-row justify-between hidden lg:flex'>
                     <div className='basis-1/5'>
                         <Link href='/'>
