@@ -103,7 +103,7 @@ export default function ApplyForm() {
             <div className="text-center h-max mb-16 bg-[#C2D3FF] py-16 px-2">
                 <h2 className="text-4xl lg:text-5xl font-bold">LG CNS AM* Inspire Camp 1기 지원</h2>
                 <p className='text-3xl mb-6'>(Application Modernization)</p>
-                <p className="text-2xl mt-2 font-semibold">LG CNS AM Inspire Camp 1기 지원 페이지입니다.<br />지원서 제출은 1회로 제한하며, 제출 후 수정이 불가하니 신중을 기해 주세요.</p>
+                <p className="text-2xl mt-2 font-semibold">LG CNS AM Inspire Camp <br className="lg:hidden"/> 1기 지원 페이지입니다.<br />지원서 제출은 1회로 제한하며, 제출 후 수정이 불가하니 신중을 기해 주세요.</p>
             </div>
             <div className='container mx-auto px-2 lg:px-80'>
                 <form className="space-y-14" onSubmit={handleSubmit}>
@@ -209,7 +209,7 @@ export default function ApplyForm() {
                             <Input type="checkbox" name="referral" title="지인추천" onChange={handleChange} value="지인추천" />
                             <Input type="checkbox" name="university" title="대학교 설명" onChange={handleChange} value="대학교 설명" />
                             <Input type="checkbox" name="sns" title="SNS 광고 (인스타그램, 블로그 등)" onChange={handleChange} value="SNS 광고" />
-                            <Input type="checkbox" name="website" title="웹사이트 (링크드인, 서치닷컴, 부트캠프 등)" onChange={handleChange} value="웹사이트" />
+                            <Input type="checkbox" name="website" title={`웹사이트 \n (링크드인, 서치닷컴, 부트캠프 등)`} onChange={handleChange} value="웹사이트" />
                             <Input type="checkbox" name="other" title="기타" onChange={handleChange} value="기타" />
                         </div>
                     </div>

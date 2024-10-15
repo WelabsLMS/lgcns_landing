@@ -26,7 +26,7 @@ function Input({
                     </svg>
                 </span>
             </label>
-            <label className="cursor-pointer text-xl lg:text-2xl font-semibold">
+            <label className="cursor-pointer text-xl lg:text-2xl font-semibold whitespace-pre-line">
                 {title}
             </label>
         </div>
