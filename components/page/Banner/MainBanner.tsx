@@ -13,7 +13,7 @@ function MainBanner() {
                     <p className='text-lg lg:text-2xl'>(Application Modernization)</p>
                 </div>
                 <div className='relative lg:absolute lg:right-20 xl:right-40 w-full lg:w-1/2 h-[15rem] lg:h-[40rem]'>
-                    <Image src='assets/images/banner/bannerImg.svg' alt='banner_Image' fill priority/>
+                    <Image src='assets/images/banner/bannerImg.svg' alt='banner_Image' fill priority />
                 </div>
             </div>
         </section>
