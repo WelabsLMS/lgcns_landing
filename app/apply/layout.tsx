@@ -1,27 +1,5 @@
 import React from 'react'
 import "../globals.css";
-import localFont from "next/font/local";
-
-const lgFont = localFont({
-    src: [
-        {
-            path: "../fonts/LGEIText-Regular.otf",
-            weight: "500",
-        },
-        {
-            path: "../fonts/LGEIText-SemiBold.otf",
-            weight: "600",
-        },
-        {
-            path: "../fonts/LGEIText-Light.otf",
-            weight: "400",
-        },
-        {
-            path: "../fonts/LGEIText-Bold.otf",
-            weight: "700",
-        }
-    ]
-})
 
 export default function layout({
     children,
