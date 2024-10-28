@@ -2,7 +2,7 @@
 export const mainBannerData = [
     {
         title: "K-Digital Training",
-        subTitle: "LG CNS AM Inspire Camp",
+        subTitle: "LG CNS\nAM Inspire Camp",
         desc: "(Application Modernization)",
     }
 ]
@@ -38,7 +38,8 @@ export const mainBannerDesc = [
             id: 1,
             img: "assets/images/introduce/circle_check.svg",
             title: "AM(Application Modernization)이란?",
-            desc: "IT 인프라, 플랫폼, 내부 아키텍처, 기존 기능을 최신 기술 스택을 활용하여\n새로운 비즈니스 가치를 창출하도록 클라우드 네이티브 환경으로 현대화하는 프로세스"
+            desc: "IT 인프라, 플랫폼, 내부 아키텍처, 기존 기능을 최신 기술 스택을 활용하여\n새로운 비즈니스 가치를 창출하도록 클라우드 네이티브 환경으로 현대화하는 프로세스",
+            mobileDesc: "IT 인프라, 플랫폼, 내부 아키텍처, 기존 기능을 \n최신 기술 스택을 활용하여 새로운 비즈니스 가치를 \n창출하도록 클라우드 네이티브 환경으로 현대화하는 \n프로세스"
         }
     ]
 ]
@@ -479,7 +480,7 @@ export const faqData = [
         },
         {
             question: '개인 노트북이 있어야 지원 가능한가요?',
-            answer: '교육에 집중할 수 있도록 LG의 노트북을 지원 \n해드립니다.',
+            answer: '교육에 집중할 수 있도록 LG의 노트북을 지원해드립니다.',
         },
         {
             question: 'KDT 과정을 이전에 수강한 적이 있는데 \n지원 가능한가요?',

@@ -18,7 +18,7 @@ function CampBenefitEle({ benefitData }: { benefitData: CampBenefitEleProps }) {
                     <Image src={benefitData.imgSrc} alt={imgName} width={80} height={80} />
                 </div>
                 <div className='text-center'>
-                    <p className='font-semibold text-lg lg:text-2xl whitespace-break-spaces mb-4'>{benefitData.title}</p>
+                    <p className='font-bold text-2xl whitespace-break-spaces mb-4'>{benefitData.title}</p>
                     <p className='text-xl whitespace-pre-line'>{benefitData.content}</p>
                 </div>
             </div>

@@ -8,7 +8,7 @@ function EmploymentField() {
                 <p className='text-2xl lg:text-3xl font-extrabold text-[#5984EC]'>취업분야</p>
             </div>
             <div className='w-full flex items-center justify-center font-medium'>
-                <ol className='list-disc w-full p-4 lg:py-5 px-28 text-xl md:text-2xl leading-7 md:leading-10 grid grid-rows-4 grid-flow-col justify-between'>
+                <ol className='list-disc w-full gap-x-10 py-4 lg:py-5 lg:px-28 text-xl md:text-2xl leading-7 md:leading-10 grid grid-rows-6 lg:grid-rows-4 grid-flow-col justify-center'>
                     {
                         courseEmployFieldData[0].map((data, index) => (
                             <li key={index} className='mb-4'>

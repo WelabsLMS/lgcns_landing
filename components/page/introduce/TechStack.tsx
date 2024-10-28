@@ -12,15 +12,14 @@ function TechStack() {
 
             {/* 그리드 및 아이콘 부분 */}
             <div className='w-full mt-4 md:mt-8 rounded-xl md:rounded-[30px] py-3 md:py-5 flex flex-col bg-white'>
-                <div className='flex flex-wrap justify-center items-center gap-y-2 md:gap-y-4 gap-x-10'>
+                <div className='flex flex-wrap justify-center items-center gap-y-2 md:gap-y-4 lg:gap-x-10 gap-x-7'>
                     {
                         techLogoList[0].map((img, index) => (
                             <React.Fragment key={img.id}>
                                 <TechListEle img={img} />
-                                {index === 4 || index === 8 ? <div className='w-full'></div> : null}
+                                {index === 4 || index === 8 ? <div className='lg:w-full'></div> : null}
                             </React.Fragment>
                         ))
-
                     }
                 </div>
             </div>

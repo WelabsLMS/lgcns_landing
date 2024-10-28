@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import Input from "@/components/ui/apply/Input";
 import ApplyTitle from "@/components/ui/apply/ApplyTitle";
+import { useRouter } from "next/navigation";
+import { resourceUsage } from "process";
 
 // FormData 타입 정의
 interface FormData {
@@ -31,6 +33,8 @@ interface FormData {
 }
 
 export default function ApplyForm() {
+    // 라우터
+    const router = useRouter();
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
     // 상태 관리
@@ -93,7 +97,6 @@ export default function ApplyForm() {
     };
 
     const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
         console.log(formData);
     };
 
@@ -103,10 +106,22 @@ export default function ApplyForm() {
             <div className="text-center h-max mb-16 bg-[#C2D3FF] py-16 px-2">
                 <h2 className="text-4xl lg:text-5xl font-bold">LG CNS AM* Inspire Camp 1기 지원</h2>
                 <p className='text-3xl mb-6'>(Application Modernization)</p>
-                <p className="text-2xl mt-2 font-semibold">LG CNS AM Inspire Camp <br className="lg:hidden"/> 1기 지원 페이지입니다.<br />지원서 제출은 1회로 제한하며, 제출 후 수정이 불가하니 신중을 기해 주세요.</p>
+                <p className="text-2xl mt-2 font-semibold">LG CNS AM Inspire Camp <br className="lg:hidden" /> 1기 지원 페이지입니다.<br />지원서 제출은 1회로 제한하며, 제출 후 수정이 불가하니 신중을 기해 주세요.</p>
             </div>
-            <div className='container mx-auto px-2 lg:px-80'>
-                <form className="space-y-14" onSubmit={handleSubmit}>
+            <div className='container mx-auto px-2 lg:px-64'>
+                <div className="mb-10">
+                    <button
+                        type="button"
+                        className="flex items-center text-3xl font-bold"
+                        onClick={() => router.push('/')}
+                    >
+                        <svg className="w-[52px] h-[52px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="52" height="52" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M5 12l4-4m-4 4 4 4" />
+                        </svg>
+                    뒤로가기
+                    </button>
+                </div>
+                <form className="space-y-14">
                     {/* 지원과정 */}
                     <div>
                         <ApplyTitle title="지원과정" />
@@ -117,10 +132,10 @@ export default function ApplyForm() {
 
                     {/* 성명 */}
                     <div>
-                        <ApplyTitle title="성명" />
+                        <ApplyTitle title="성명" required />
                         <input
                             type="text"
-                            className="applyContent"
+                            className={`applyContent ${formData.name === '' ? 'border-red-500 animate-shake' : ''}`}
                             placeholder="이름을 작성해주세요."
                             name="name"
                             value={formData.name}
@@ -131,7 +146,7 @@ export default function ApplyForm() {
 
                     {/* 성별 */}
                     <div>
-                        <ApplyTitle title="성별" />
+                        <ApplyTitle title="성별" required />
                         <div className="flex flex-col space-y-4 mt-1">
                             <Input type="radio" name="gender" title="남자" value="male" checked={formData.gender === 'male'} onChange={handleChange} required />
                             <Input type="radio" name="gender" title="여자" value="female" checked={formData.gender === 'female'} onChange={handleChange} required />
@@ -140,7 +155,7 @@ export default function ApplyForm() {
 
                     {/* 생년월일 */}
                     <div>
-                        <ApplyTitle title="생년월일" />
+                        <ApplyTitle title="생년월일" required />
                         <input
                             type="date"
                             className="applyContent"
@@ -153,7 +168,7 @@ export default function ApplyForm() {
 
                     {/* 연락처 */}
                     <div>
-                        <ApplyTitle title="연락처" />
+                        <ApplyTitle title="연락처" required />
                         <input
                             type="tel"
                             className="applyContent"
@@ -167,7 +182,7 @@ export default function ApplyForm() {
 
                     {/* 주소 */}
                     <div>
-                        <ApplyTitle title="주소" subTitle="(상세주소는 작성하지 않아도 됩니다.)" />
+                        <ApplyTitle title="주소" subTitle="(상세주소는 작성하지 않아도 됩니다.)" required />
                         <input
                             type="text"
                             className="applyContent"
@@ -181,7 +196,7 @@ export default function ApplyForm() {
 
                     {/* 이메일 */}
                     <div>
-                        <ApplyTitle title="이메일" />
+                        <ApplyTitle title="이메일" required />
                         <input
                             type="email"
                             className="applyContent"
@@ -195,7 +210,7 @@ export default function ApplyForm() {
 
                     {/* 내일배움카드 발급 여부 */}
                     <div>
-                        <ApplyTitle title="내일배움카드 발급 여부" />
+                        <ApplyTitle title="내일배움카드 발급 여부" required />
                         <div className="flex flex-col space-y-4">
                             <Input type="radio" name="card" title="발급" value="issued" checked={formData.card === 'issued'} onChange={handleChange} required />
                             <Input type="radio" name="card" title="미발급" value="notissued" checked={formData.card === 'notissued'} onChange={handleChange} required />
@@ -204,19 +219,19 @@ export default function ApplyForm() {
 
                     {/* 지원경로 */}
                     <div>
-                        <ApplyTitle title="지원경로" subTitle="(최소 1개 선택, 복수 선택 가능합니다.)" />
+                        <ApplyTitle title="지원경로" subTitle="(최소 1개 선택, 복수 선택 가능합니다.)" required />
                         <div className="flex flex-col space-y-2 mt-1">
-                            <Input type="checkbox" name="referral" title="지인추천" onChange={handleChange} value="지인추천" />
-                            <Input type="checkbox" name="university" title="대학교 설명" onChange={handleChange} value="대학교 설명" />
-                            <Input type="checkbox" name="sns" title="SNS 광고 (인스타그램, 블로그 등)" onChange={handleChange} value="SNS 광고" />
-                            <Input type="checkbox" name="website" title={`웹사이트 \n (링크드인, 서치닷컴, 부트캠프 등)`} onChange={handleChange} value="웹사이트" />
-                            <Input type="checkbox" name="other" title="기타" onChange={handleChange} value="기타" />
+                            <Input type="checkbox" name="applyPath" title="지인추천" onChange={handleChange} value="지인추천" />
+                            <Input type="checkbox" name="applyPath" title="대학교 설명" onChange={handleChange} value="대학교 설명" />
+                            <Input type="checkbox" name="applyPath" title="SNS 광고 (인스타그램, 블로그 등)" onChange={handleChange} value="SNS 광고" />
+                            <Input type="checkbox" name="applyPath" title={`웹사이트 \n (링크드인, 서치닷컴, 부트캠프 등)`} onChange={handleChange} value="웹사이트" />
+                            <Input type="checkbox" name="applyPath" title="기타" onChange={handleChange} value="기타" />
                         </div>
                     </div>
 
                     {/* 병역구분 */}
                     <div>
-                        <ApplyTitle title="병역구분" />
+                        <ApplyTitle title="병역구분" required />
                         <select className="applyContent" name="militaryStatus" onChange={handleChange} required>
                             <option value="">선택해주세요</option>
                             <option value="군필">군필</option>
@@ -227,7 +242,7 @@ export default function ApplyForm() {
 
                     {/* 장애 여부 */}
                     <div>
-                        <ApplyTitle title="장애 여부" />
+                        <ApplyTitle title="장애 여부" required />
                         <div className="flex flex-col space-y-2 mt-1">
                             <Input type="radio" name="disabilities" title="대상" value="disabled" checked={formData.disabilities === 'disabled'} onChange={handleChange} required />
                             <Input type="radio" name="disabilities" title="비대상" value="abled" checked={formData.disabilities === 'abled'} onChange={handleChange} required />
@@ -236,7 +251,7 @@ export default function ApplyForm() {
 
                     {/* 학교명 */}
                     <div>
-                        <ApplyTitle title="학교명" />
+                        <ApplyTitle title="학교명" required/>
                         <input
                             type="text"
                             className="applyContent"
@@ -250,7 +265,7 @@ export default function ApplyForm() {
 
                     {/* 전공 */}
                     <div>
-                        <ApplyTitle title="전공" subTitle="(복수전공이 있을 경우, 주전공과 복수전공 모두 작성해주세요.)" />
+                        <ApplyTitle title="전공" subTitle="(복수전공이 있을 경우, 주전공과 복수전공 모두 작성해주세요.)" required/>
                         <input
                             type="text"
                             className="applyContent"
@@ -264,7 +279,7 @@ export default function ApplyForm() {
 
                     {/* 학점 */}
                     <div>
-                        <ApplyTitle title="학점" />
+                        <ApplyTitle title="학점" required/>
                         <input
                             type="text"
                             className="applyContent"
@@ -278,7 +293,7 @@ export default function ApplyForm() {
 
                     {/* 재학상태 */}
                     <div>
-                        <ApplyTitle title="재학상태" />
+                        <ApplyTitle title="재학상태" required/>
                         <select className="applyContent" name="enrollmentStatus" onChange={handleChange} required>
                             <option value="">선택해주세요</option>
                             <option value="재학 중">재학 중</option>
@@ -289,7 +304,7 @@ export default function ApplyForm() {
 
                     {/* 졸업예정일 */}
                     <div>
-                        <ApplyTitle title="졸업(예정)일" />
+                        <ApplyTitle title="졸업(예정)일" required/>
                         <input
                             type="date"
                             className="applyContent"
@@ -302,7 +317,7 @@ export default function ApplyForm() {
 
                     {/* 현재 학기 */}
                     <div>
-                        <ApplyTitle title="현재 학기" />
+                        <ApplyTitle title="현재 학기" required/>
                         <input
                             type="text"
                             className="applyContent"
@@ -316,7 +331,7 @@ export default function ApplyForm() {
 
                     {/* 잔여 학점 */}
                     <div>
-                        <ApplyTitle title="잔여 학점" subTitle="(졸업요건을 충족하기 위한 잔여 학점을 기입해주세요.)" />
+                        <ApplyTitle title="잔여 학점" subTitle="(졸업요건을 충족하기 위한 잔여 학점을 기입해주세요.)" required/>
                         <input
                             type="text"
                             className="applyContent"
@@ -330,14 +345,14 @@ export default function ApplyForm() {
 
                     {/* 활용 가능한 프로그래밍 언어 */}
                     <div>
-                        <ApplyTitle title="활용 가능한 프로그래밍 언어" />
+                        <ApplyTitle title="활용 가능한 프로그래밍 언어" required/>
                         <div className="flex flex-col space-y-2 mt-1">
                             <Input type="checkbox" name="programmingLanguages" title="Python" checked={formData.programmingLanguages.includes('Python')} value="Python" onChange={handleChange} />
                             <Input type="checkbox" name="programmingLanguages" title="Java" checked={formData.programmingLanguages.includes('Java')} value="Java" onChange={handleChange} />
                             <Input type="checkbox" name="programmingLanguages" title="JavaScript" checked={formData.programmingLanguages.includes('JavaScript')} value="JavaScript" onChange={handleChange} />
                             <Input type="checkbox" name="programmingLanguages" title="TypeScript" checked={formData.programmingLanguages.includes('TypeScript')} value="TypeScript" onChange={handleChange} />
-                            <Input type="checkbox" name="programmingLanguages" title="기타" checked={formData.programmingLanguages.includes('etc')} value="etc" onChange={handleChange} />
-                            <Input type="checkbox" name="programmingLanguages" title="없음" checked={formData.programmingLanguages.includes('no')} value="no" onChange={handleChange} />
+                            <Input type="checkbox" name="programmingLanguages" title="기타" checked={formData.programmingLanguages.includes('기타')} value="기타" onChange={handleChange} />
+                            <Input type="checkbox" name="programmingLanguages" title="없음" checked={formData.programmingLanguages.includes('없음')} value="없음" onChange={handleChange} />
                         </div>
                     </div>
 
@@ -350,8 +365,10 @@ export default function ApplyForm() {
                             name="experience"
                             value={formData.experience}
                             onChange={handleChange}
-                            required
                         />
+                        <div className="text-right text-sm text-gray-500">
+                            {formData.experience.length} 글자
+                        </div>
                     </div>
 
                     {/* 자격증 */}
@@ -363,13 +380,15 @@ export default function ApplyForm() {
                             name="certification"
                             value={formData.certification}
                             onChange={handleChange}
-                            required
                         />
+                        <div className="text-right text-sm text-gray-500">
+                            {formData.certification.length} 글자
+                        </div>
                     </div>
 
                     {/* 지원 동기 */}
                     <div>
-                        <ApplyTitle title="지원 동기" />
+                        <ApplyTitle title="지원 동기" required/>
                         <textarea
                             className="applyContent"
                             placeholder="지원 동기를 입력해주세요."
@@ -378,11 +397,14 @@ export default function ApplyForm() {
                             onChange={handleChange}
                             required
                         />
+                        <div className="text-right text-sm text-gray-500">
+                            {formData.experience.length} 글자
+                        </div>
                     </div>
 
                     {/* 장점 */}
                     <div>
-                        <ApplyTitle title="본인의 장점" />
+                        <ApplyTitle title="본인의 장점" required/>
                         <textarea
                             className="applyContent"
                             placeholder="본인의 장점을 입력해주세요."
@@ -391,24 +413,29 @@ export default function ApplyForm() {
                             onChange={handleChange}
                             required
                         />
+                        <div className="text-right text-sm text-gray-500">
+                            {formData.experience.length} 글자
+                        </div>
                     </div>
 
                     {/* 교육 이력 */}
                     <div>
-                        <ApplyTitle title="교육 이력" />
+                        <ApplyTitle title="교육 이력"/>
                         <textarea
                             className="applyContent"
                             placeholder="교육 이력을 입력해주세요."
                             name="trainingHistory"
                             value={formData.trainingHistory}
                             onChange={handleChange}
-                            required
                         />
+                        <div className="text-right text-sm text-gray-500">
+                            {formData.experience.length} 글자
+                        </div>
                     </div>
 
                     {/* 개인정보 수집 및 이용에 대한 동의 */}
                     <div>
-                        <ApplyTitle title="개인정보 수집 및 이용 동의" />
+                        <ApplyTitle title="개인정보 수집 및 이용 동의" required />
                         <div className="w-full bg-white rounded-lg shadow-lg">
                             <div className="flex justify-between items-center p-4 cursor-pointer" id="accordion-header" onClick={() => toggleAccordion()}>
                                 <Input type="checkbox" title="동의합니다!" name="agreeToPrivacyPolicy" checked={formData.agreeToPrivacyPolicy} onChange={handleChange} required />
@@ -436,17 +463,19 @@ export default function ApplyForm() {
                         <ApplyTitle
                             title="제출 전 확인사항"
                             subTitle={`지원서 제출 후 수정이 불가하므로 확인 후 제출해주시기 바랍니다.\n*정확한 이메일 주소를 작성해주셔야 프로세스 안내가 가능합니다.`}
+                            required
                         />
                         <Input type="checkbox" title="네, 확인했습니다!" name="confirmBeforeSubmit" checked={formData.confirmBeforeSubmit} onChange={handleChange} required />
                     </div>
 
-                    {/* 제출 버튼 */}
-                    <div className="w-full flex justify-center">
-                        <button type="submit" className="w-48 h-16 bg-[#002278] text-white font-bold text-3xl p-2 rounded-lg disabled:bg-gray-500 disabled:cursor-pointer" disabled={!formData.agreeToPrivacyPolicy || !formData.confirmBeforeSubmit}>
+                    
+                </form>
+                {/* 제출 버튼 */}
+                <div className="w-full flex justify-center">
+                        <button onClick={handleSubmit} type="submit" title={!formData.agreeToPrivacyPolicy || !formData.confirmBeforeSubmit ? "필수항목에 동의해주세요." : ""} className="w-48 h-16 bg-[#002278] text-white font-bold text-3xl p-2 rounded-lg disabled:bg-gray-500 disabled:cursor-pointer" disabled={!formData.agreeToPrivacyPolicy || !formData.confirmBeforeSubmit}>
                             제출하기
                         </button>
                     </div>
-                </form>
             </div>
         </section>
     );
