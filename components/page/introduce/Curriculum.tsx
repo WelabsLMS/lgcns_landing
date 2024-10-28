@@ -45,26 +45,29 @@ function Curriculum() {
                 <span className="rounded-xl px-2 text-3xl md:text-4xl xl:text-5xl font-extrabold">단계별 프로젝트를 통해 <br className='md:hidden' /> 포트폴리오 완벽 준비!</span>
             </div>
 
-            <div className="hidden md:flex justify-center items-center my-10 mx-10 overflow-x-auto">
-                {
-                    curriculumStepData[0].map((data, index) => (
-                        <CourseStepEle
-                            key={index}
-                            title={data.title}
-                            index={data.id - 1}
-                            activeSlide={slideIndex}
-                            handleCourseClick={handleCourseClick}
+            <div className='flex justify-center'>
+                <div className="hidden w-full md:flex items-start justify-between my-10 px-20">
+                    {
+                        curriculumStepData[0].map((data, index) => (
+                            <CourseStepEle
+                                key={index}
+                                title={data.title}
+                                subtitle={data.subTitle}
+                                index={data.id - 1}
+                                activeSlide={slideIndex}
+                                handleCourseClick={handleCourseClick}
+                            />
+                        ))
+                    }
+                    <div className='relative -top-7 w-20 h-20 md:h-24 lg:w-28 lg:h-28 flex-shrink-0'> {/* 이미지 크기 조정 및 마진 조정 */}
+                        <Image
+                            src='assets/images/curriculum/curriculumstep/trophy.svg'
+                            alt='curriculum'
+                            width={150} // 이미지 너비 조정
+                            height={150} // 이미지 높이 조정
+                            className='object-contain' // 이미지가 잘리지 않도록 설정
                         />
-                    ))
-                }
-                <div className='w-20 h-20 md:h-24 lg:w-32 lg:h-32 flex-shrink-0'> {/* 이미지 크기 조정 및 마진 조정 */}
-                    <Image
-                        src='assets/images/curriculum/curriculumstep/trophy.svg'
-                        alt='curriculum'
-                        width={150} // 이미지 너비 조정
-                        height={150} // 이미지 높이 조정
-                        className='object-contain' // 이미지가 잘리지 않도록 설정
-                    />
+                    </div>
                 </div>
             </div>
 

@@ -1,3 +1,47 @@
+// 메인배너 개요
+export const mainBannerData = [
+    {
+        title: "K-Digital Training",
+        subTitle: "LG CNS AM Inspire Camp",
+        desc: "(Application Modernization)",
+    }
+]
+
+export const mainBannerOverview = [
+    [
+        {
+            id: 1,
+            title: "교육기간",
+            content: "2024.12.20~\n2025.06.25"
+        },
+        {
+            id: 2,
+            title: "모집대상",
+            content: "국내외 대학(원)\n졸업(예정)자"
+        },
+        {
+            id: 3,
+            title: "교육장소",
+            content: "온오프라인\n메타버스/동국대학교"
+        },
+        {
+            id: 4,
+            title: "교육시간",
+            content: "09:00-18:00\n총 960시간"
+        },
+    ]
+]
+
+export const mainBannerDesc = [
+    [
+        {
+            id: 1,
+            img: "assets/images/introduce/circle_check.svg",
+            title: "AM(Application Modernization)이란?",
+            desc: "IT 인프라, 플랫폼, 내부 아키텍처, 기존 기능을 최신 기술 스택을 활용하여\n새로운 비즈니스 가치를 창출하도록 클라우드 네이티브 환경으로 현대화하는 프로세스"
+        }
+    ]
+]
 // 모집개요
 export const overviewData = [
     [
@@ -35,6 +79,55 @@ export const overviewData = [
 ]
 
 // 과정소개
+// 과정소개 - 취업분야
+export const courseEmployFieldData = [
+    [
+        {
+            id: 1,
+            title: "클라우드 엔지니어",
+        },
+        {
+            id: 2,
+            title: "DevOps 엔지니어",
+        },
+        {
+            id: 3,
+            title: "클라우드 아키텍트",
+        },
+        {
+            id: 4,
+            title: "프론트엔드 개발자",
+        },
+        {
+            id: 5,
+            title: "풀스택 개발자",
+        },
+        {
+            id: 6,
+            title: "IT 컨설턴트",
+        },
+        {
+            id: 7,
+            title: "AI 엔지니어",
+        },
+        {
+            id: 8,
+            title: "백엔드 개발자",
+        },
+        {
+            id: 9,
+            title: "SI 개발자",
+        },
+        {
+            id: 10,
+            title: "SM 개발자",
+        },
+        {
+            id: 11,
+            title: "Product Manager",
+        },
+    ]
+]
 // 과정소개 - 기술스택 이미지 리스트
 export const techLogoList = [
     [
@@ -48,43 +141,49 @@ export const techLogoList = [
         },
         {
             id: 3,
-            img: 'assets/images/introduce/logo/js.svg',
-        },
-        {
-            id: 4,
             img: 'assets/images/introduce/logo/ts.svg',
         },
         {
+            id: 4,
+            img: 'assets/images/introduce/logo/js.svg',
+        },
+        {
             id: 5,
-            img: 'assets/images/introduce/logo/react.svg',
-        },
-        {
-            id: 6,
-            img: 'assets/images/introduce/logo/git.svg',
-        },
-        {
-            id: 7,
-            img: 'assets/images/introduce/logo/mysql.svg',
-        },
-        {
-            id: 8,
             img: 'assets/images/introduce/logo/aws.svg',
         },
         {
+            id: 6,
+            img: 'assets/images/introduce/logo/prometheus.svg',
+            row: true
+        },
+        {
+            id: 7,
+            img: 'assets/images/introduce/logo/grafana.svg',
+            row: true
+        },
+        {
+            id: 8,
+            img: 'assets/images/introduce/logo/react.svg',
+            row: true
+        },
+        {
             id: 9,
-            img: 'assets/images/introduce/logo/docker.svg',
+            img: 'assets/images/introduce/logo/k8s.svg',
+            row: true
         },
         {
             id: 10,
-            img: 'assets/images/introduce/logo/k8s.svg',
+            img: 'assets/images/introduce/logo/git.svg',
         },
         {
             id: 11,
-            img: 'assets/images/introduce/logo/prometheus.svg',
+            img: 'assets/images/introduce/logo/docker.svg',
+            row: true
         },
         {
             id: 12,
-            img: 'assets/images/introduce/logo/grafana.svg',
+            img: 'assets/images/introduce/logo/mysql.svg',
+            row: true
         },
     ]
 ]
@@ -94,30 +193,37 @@ export const curriculumStepData = [
         {
             id: 1,
             title: 'Course 1',
+            subTitle: 'Introduce Camp &\nDigital Insight',
         },
         {
             id: 2,
             title: 'Course 2',
+            subTitle: '풀스택(Full-Stack)\nAI 서비스 개발',
         },
         {
             id: 3,
             title: '미니PJT 1',
+            subTitle: 'AI를 활용한\n개인 맞춤형 뉴스\n애플리케이션',
         },
         {
             id: 4,
             title: 'Course 3',
+            subTitle: 'AM(Application\nModernization) 기술\n- MSA, Cloud, Agile',
         },
         {
             id: 5,
             title: '미니PJT 2',
+            subTitle: 'MSA 서비스\n개발 및 운영환경\n구축 프로젝트',
         },
         {
             id: 6,
             title: '해커톤',
+            subTitle: '아이디어톤 기반\n도메인별 AI를\n활용한 서비스',
         },
         {
             id: 7,
             title: '최종프로젝트',
+            subTitle: 'AM 기반의\n최종 프로젝트',
         }
     ]
 ]
@@ -284,19 +390,27 @@ export const selectionProcedureData = [
     [
         {
             id: 1,
-            title: "지원서 접수",
+            imgSrc: "assets/images/selection/resume.svg",
+            title: "지원서 작성",
+            desc: "홈페이지에서\n지원서 작성"
         },
         {
             id: 2,
-            title: "서류 전형",
+            imgSrc: "assets/images/selection/docu.svg",
+            title: "서류전형",
+            desc: "내일배움카드 신청&발급\n합격자에 한해 개별 연락"
         },
         {
             id: 3,
-            title: "면접 전형",
+            imgSrc: "assets/images/selection/interview.svg",
+            title: "면접전형",
+            desc: "합격자에 한해\n개별 인터뷰 진행"
         },
         {
             id: 4,
-            title: "최종합격",
+            imgSrc: "assets/images/selection/final.svg",
+            title: "최종 합격",
+            desc: "최종 합격자에 한해\n교육 진행"
         },
     ]
 
@@ -306,29 +420,40 @@ export const selectionProcedureData = [
 export const campbenefitData = [
     [
         {
-            id: 1,
-            content: "LG CNS 현업 실무자와 함께하는 \n 실무 프로젝트 멘토링",
-            img: "assets/images/campbenefit/mentor.svg"
+            id:1, 
+            imgSrc: "assets/images/campbenefit/add.svg",
+            title: "LG CNS 채용 가산점",
+            content: "우수 수료생 대상 LG CNS 채용 시\n서류전형 가산점 부여",
         },
         {
-            id: 2,
-            content: "실무와 유사한 프로젝트 진행",
-            img: "assets/images/campbenefit/project.svg"
+            id:2, 
+            imgSrc: "assets/images/campbenefit/notebook.svg",
+            title: "LG 노트북 무상 지원",
+            content: "교육에 집중할 수 있도록\n노트북을 교육기간 중 무상 지원"
         },
         {
-            id: 3,
-            content: "맞춤형 특강 & 최적의 학습환경 제공",
-            img: "assets/images/campbenefit/customized.svg"
+            id:3, 
+            imgSrc: "assets/images/campbenefit/cert.svg",
+            title: "LG CNS 인증 수료증",
+            content: "교육 과정을 끝까지 완주한 수료생에게\nLG CNS 인증 수료증을 수여"
         },
         {
-            id: 4,
-            content: "강의 교재 및 다시보기 제공",
-            img: "assets/images/campbenefit/book.svg"
+            id:4, 
+            imgSrc: "assets/images/campbenefit/sup.svg",
+            title: "취업지원 프로그램",
+            content: "성공적인 취업을 위한\nMeet Up Day, 채용설명회 개최"
         },
         {
-            id: 5,
-            content: "취업지원 프로그램 \n (Meet-up Day, 채용설명회)",
-            img: "assets/images/campbenefit/program.svg"
+            id:5, 
+            imgSrc: "assets/images/campbenefit/mentor.svg",
+            title: "LG CNS 전문가 멘토링&포트폴리오",
+            content: "LG CNS 현업 전문가와\n함께하는 실무 프로젝트 멘토링과\n멘토링 기반 포트폴리오 제작"
+        },
+        {
+            id:6, 
+            imgSrc: "assets/images/campbenefit/infra.svg",
+            title: "최적 학습환경&인프라 지원",
+            content: "교육에 집중할 수 있는 학습환경과\n클라우드, 선도기업 제공 인프라 지원"
         },
     ]
 ]

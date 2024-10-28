@@ -1,10 +1,27 @@
+import Image from 'next/image'
 import React from 'react'
 
-function SelectionEle({ title }: { title: string }) {
+interface SelectionEleProps {
+    id: number
+    imgSrc: string
+    title: string
+    desc: string
+}
+
+function SelectionEle({ selectionEle }: { selectionEle: SelectionEleProps }) {
     return (
-        <div className='relative rounded-full flex w-min h-min items-center justify-center mb-8 md:mb-0'>
-            <div className='rounded-full bg-[#E1EAFF] w-14 h-14 md:w-20 md:h-20 blur-[10px] md:blur-[15px]' />
-            <p className='absolute text-lg md:text-2xl lg:text-3xl font-semibold text-nowrap'>{title}</p>
+        <div className='flex flex-col items-center'>
+            <div className='relative rounded-full flex flex-col w-[200px] h-[200px] items-center bg-[#DEE7FF] justify-center mb-3'>
+                <div className='mb-3'>
+                    <Image src={selectionEle.imgSrc} alt={selectionEle.title} width={80} height={80} />
+                </div>
+                <p className='text-lg lg:text-2xl font-semibold text-nowrap'>{selectionEle.title}</p>
+                {
+                    selectionEle.id !== 4 ?
+                        <div className='absolute -right-1/2 w-1/2 h-[3px] bg-[#DEE7FF]'></div> : null
+                }
+            </div>
+            <p className='text-center whitespace-pre-line text-xl font-semibold'>{selectionEle.desc}</p>
         </div>
     )
 }

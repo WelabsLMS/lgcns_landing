@@ -1,6 +1,6 @@
 import Footer from "@/components/layouts/Footer";
 import MainBanner from "@/components/page/Banner/MainBanner";
-// import CampBenefit from "@/components/page/campbenefit/CampBenefit";
+import CampBenefit from "@/components/page/campbenefit/CampBenefit";
 import Contact from "@/components/page/contact/Contact";
 import CoreProgram from "@/components/page/coreprogram/CoreProgram";
 import Faq from "@/components/page/faq/Faq";
@@ -19,10 +19,9 @@ export default function Home() {
       <OverView />
       <Introduce />
       <Curriculum />
-      <MainApply />
-      {/* LG와 회의 후 다시 할 예정 */}
-      {/* <CampBenefit /> */}
-      <CoreProgram />
+      {/* <MainApply /> */}
+      <CampBenefit />
+      {/* <CoreProgram /> */}
       <Selection />
       <Faq />
       {/* <Location /> */}
