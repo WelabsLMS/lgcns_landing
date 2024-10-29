@@ -14,7 +14,7 @@ import Selection from "@/components/page/selection/Selection";
 
 export default function Home() {
   return (
-    <>
+    <main>
       <MainBanner />
       <OverView />
       <Introduce />
@@ -28,6 +28,6 @@ export default function Home() {
       <CenterImageList />
       <Contact />
       <Footer />
-    </>
+    </main>
   );
 }

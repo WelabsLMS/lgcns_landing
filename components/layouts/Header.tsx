@@ -10,15 +10,15 @@ function Header() {
     if (pathname === '/apply') return null
     return (
         <>
-            <header className='w-full sticky top-0 left-0 bg-white border border-gray-200 z-[999] lg:px-10 xl:px-20 h-[80px] lg:h-[100px] flex items-center'>
-                <div className='w-full h-min container mx-auto py-5 flex-row justify-between hidden lg:flex'>
-                    <div className='basis-1/5'>
+            <header className='w-full sticky top-0 left-0 bg-white border border-gray-200 z-[999] lg:px-5 xl:px-20 h-[80px] lg:h-[100px] flex items-center '>
+                <div className='w-full h-min container mx-auto py-5 flex-row hidden lg:flex justify-center items-center lg:gap-4 xl:gap-32'>
+                    <div className='basis-1/6'>
                         <Link href='/'>
                             <Image src={'/assets/images/logo/lg/LGCNS_ROW_ENG.png'} width={200} height={40} alt='lgcns_logo' />
                         </Link>
                     </div>
-                    <nav className='basis-2/5 text-xl'>
-                        <ul className='flex justify-evenly h-full items-center font-bold text-2xl'>
+                    <nav className='basis-3/6 text-xl'>
+                        <ul className='flex justify-evenly h-full items-center font-bold text-2xl '>
                             <li>
                                 <Link href='#introduce'>Camp 소개</Link>
                             </li>
@@ -33,11 +33,11 @@ function Header() {
                             </li>
                         </ul>
                     </nav>
-                    <div className='basis-1/4 flex justify-evenly text-2xl font-semibold lg:gap-4'>
-                        <button className='flex w-[120px] h-[44px] items-center justify-center px-4 rounded-full bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] shadow-[0_4px_10px_rgba(255,95,109,0.4)]'>
+                    <div className='basis-1/6 flex justify-evenly text-2xl font-semibold lg:gap-4'>
+                        <button className='flex lg:w-28 h-[44px] xl:w-32 xl:h-[44px] items-center justify-center px-4 rounded-full bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] shadow-[0_4px_10px_rgba(255,95,109,0.4)]'>
                             <Image src='/assets/images/logo/solutionLms.png' alt='wsts' width={150} height={19} />
                         </button>
-                        <button className='text-white rounded-full w-32 h-[44px] bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]'>
+                        <button className='text-white rounded-full lg:w-28 h-[44px] xl:w-32 xl:h-[44px] bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]'>
                             <Link href={'/apply'}>수강신청</Link>
                         </button>
                     </div>

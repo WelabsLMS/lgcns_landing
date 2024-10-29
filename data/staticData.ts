@@ -209,7 +209,7 @@ export const curriculumStepData = [
         {
             id: 4,
             title: 'Course 3',
-            subTitle: 'AM(Application\nModernization) 기술\n- MSA, Cloud, Agile',
+            subTitle: 'AM 기술\n- MSA, Cloud, Agile',
         },
         {
             id: 5,
@@ -234,43 +234,50 @@ export const curriculumData = [
         {
             id: 1,
             title: '클라우드와 AI 최신 트렌드 특강, \nDigital Insight 채우기',
-            desc: '실무에서의 클라우드 활용과 생성형 AI 시장에 대한 현직자의 생생한 특강을 통해 최신기술의 \n업계 트렌드의 이해를 돕습니다.',
+            desc: '실무에서의 클라우드 활용과 생성형 AI \n시장에 대한 현직자의 생생한 특강을 통해 \n최신기술의 업계 트렌드의 이해를 돕습니다.',
+            mobileDesc: '실무에서의 클라우드 활용과 \n생성형 AI 시장에 대한 현직자의 생생한 특강을 통해 \n최신기술의 업계 트렌드의 이해를 돕습니다.',
             img: 'assets/images/curriculum/curriculumstep/course1.svg'
         },
         {
             id: 2,
             title: '풀스택 개발자로 거듭나는 지름길,\nAI 서비스 개발을 통한 Course 2',
-            desc: '프론트엔드와 백엔드의 기초부터 심화, \n생성형 AI 이해를 바탕으로 코드퀄리티 플랫폼을 \n활용하여 AI 서비스 개발에 필요한 기술을 \n습득합니다.',
+            desc: '프론트엔드와 백엔드의 기초부터 심화, \n생성형 AI에 대한 이해를 바탕으로 \n코드퀄리티 플랫폼을 활용하여 \nAI 서비스 개발에 필요한 \n기술을 습득합니다.',
+            mobileDesc: '프론트엔드와 백엔드의 기초부터 심화, \n생성형 AI 이해를 바탕으로 코드퀄리티 플랫폼을 \n활용하여 AI 서비스 개발에 필요한 기술을 \n습득합니다.',
             img: 'assets/images/curriculum/curriculumstep/course2.svg'
         },
         {
             id: 3,
             title: 'AI 기반의 개인 맞춤형 \n뉴스 애플리케이션 개발로 기본기 잡기',
             desc: 'AI기반의 사용자 맞춤형 콘텐츠를 제공하는 \n애플리케이션 개발을 통해 배운 내용을 \n실제로 적용해보며 기본기를 갖춥니다.',
+            mobileDesc: 'AI기반의 사용자 맞춤형 콘텐츠를 제공하는 \n애플리케이션 개발을 통해 배운 내용을 \n실제로 적용해보며 기본기를 갖춥니다.',
             img: 'assets/images/curriculum/curriculumstep/mini1.svg'
         },
         {
             id: 4,
-            title: 'AM 기술의 모든 것, LG CNS의 Application Modernization',
-            desc: 'LG CNS 실무진의 CNS Agile 특강부터 \nMSA 기술 이해와 활용을 통해 AM 전문가로의 \n기반을 다집니다.',
+            title: 'AM 기술의 모든 것, \nLG CNS의 Application Modernization',
+            desc: 'LG CNS 실무진의 CNS Agile 특강부터 \nMSA 기술 이해와 활용을 통해 \nAM 전문가로의 기반을 다집니다.',
+            mobileDesc: 'LG CNS 실무진의 CNS Agile 특강부터 \nMSA 기술 이해와 활용을 통해 \nAM 전문가로의 기반을 다집니다.',
             img: 'assets/images/curriculum/curriculumstep/course3.svg'
         },
         {
             id: 5,
             title: 'AM 역량 굳히기 \nMSA 서비스 개발 및 운영환경 구축',
-            desc: '미니 프로젝트 1을 기반으로 MSA 서비스 운영환경 구축을 통해 풀스택 기술을 체화합니다.',
+            desc: '미니 프로젝트 2을 기반으로 \nMSA 서비스 운영환경 구축을 통해 \n풀스택 기술을 체화합니다.',
+            mobileDesc: '미니 프로젝트 2을 기반으로 \nMSA 서비스 운영환경 구축을 통해 \n풀스택 기술을 체화합니다.',
             img: 'assets/images/curriculum/curriculumstep/mini2.svg'
         },
         {
             id: 6,
             title: '프로젝트 전 Warming-up! \nAI를 활용한 서비스 개발',
             desc: 'LG CNS의 산업 도메인별 AI를 활용한 \n서비스 개발을 위한 해커톤을 수행하며 \n프로젝트 전 프로젝트 사이클을 경험합니다.',
+            mobileDesc: 'LG CNS의 산업 도메인별 AI를 활용한 \n서비스 개발을 위한 해커톤을 수행하며 \n프로젝트 전 프로젝트 사이클을 경험합니다.',
             img: 'assets/images/curriculum/curriculumstep/hackathon.svg'
         },
         {
             id: 7,
             title: 'LG CNS 실무진과 함께하는 \nAM 기반의 최종 프로젝트',
-            desc: 'LG CNS가 도출한 도메인별 시나리오를 \n기반으로 실무와 동일한 환경의 프로젝트 수행과 \n멘토링을 통해 AM 전문가로 성장을 돕습니다.',
+            desc: 'LG CNS가 도출한 도메인별 시나리오를 \n기반으로 실무와 동일한 환경의 프로젝트 \n수행과 멘토링을 통해 AM 전문가로 \n성장을 돕습니다.',
+            mobileDesc: 'LG CNS가 도출한 도메인별 시나리오를 \n기반으로 실무와 동일한 환경의 프로젝트 수행과 \n멘토링을 통해 AM 전문가로 성장을 돕습니다.',
             img: 'assets/images/curriculum/curriculumstep/final.svg'
         }
     ]
@@ -392,25 +399,25 @@ export const selectionProcedureData = [
         {
             id: 1,
             imgSrc: "assets/images/selection/resume.svg",
-            title: "지원서 작성",
+            title: "1.지원서 작성",
             desc: "홈페이지에서\n지원서 작성"
         },
         {
             id: 2,
             imgSrc: "assets/images/selection/docu.svg",
-            title: "서류전형",
+            title: "2.서류전형",
             desc: "내일배움카드 신청&발급\n합격자에 한해 개별 연락"
         },
         {
             id: 3,
             imgSrc: "assets/images/selection/interview.svg",
-            title: "면접전형",
+            title: "3.면접전형",
             desc: "합격자에 한해\n개별 인터뷰 진행"
         },
         {
             id: 4,
             imgSrc: "assets/images/selection/final.svg",
-            title: "최종 합격",
+            title: "4.최종 합격",
             desc: "최종 합격자에 한해\n교육 진행"
         },
     ]

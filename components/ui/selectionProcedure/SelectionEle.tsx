@@ -18,7 +18,7 @@ function SelectionEle({ selectionEle }: { selectionEle: SelectionEleProps }) {
                 <p className='text-2xl font-semibold text-nowrap'>{selectionEle.title}</p>
                 {
                     selectionEle.id !== 4 ?
-                        <div className='hidden lg:absolute -right-full w-full h-[3px] bg-[#DEE7FF]'></div> : null
+                        <div className='hidden lg:block lg:absolute -right-full w-full h-[3px] bg-[#DEE7FF]' /> : null
                 }
             </div>
             <p className='text-center whitespace-pre-line text-xl font-semibold'>{selectionEle.desc}</p>

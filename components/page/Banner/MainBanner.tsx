@@ -11,7 +11,7 @@ function MainBanner() {
                         mainBannerData.map((data, index) => (
                             <React.Fragment key={index}>
                                 <div className='rounded-2xl bg-white py-1 px-6 text-center mx-auto text-lg lg:text-xl font-semibold'>{data.title}</div>
-                                <p className='text-4xl lg:text-7xl my-2 font-bold whitespace-pre-line lg:whitespace-normal'>{data.subTitle}</p>
+                                <p className='text-4xl lg:text-6xl xl:text-7xl my-2 font-bold whitespace-pre-line lg:whitespace-normal'>{data.subTitle}</p>
                                 <p className='text-lg lg:text-3xl font-semibold'>{data.desc}</p>
                             </React.Fragment>
                         ))
@@ -34,7 +34,7 @@ function MainBanner() {
                 <div>
                     {
                         mainBannerDesc[0].map((data, index) => (
-                            <div className='flex flex-col gap-4 justify-center text-center items-center whitespace-pre-line'>
+                            <div key={index} className='flex flex-col gap-4 justify-center text-center items-center whitespace-pre-line'>
                                 <div className='flex items-center gap-4'>
                                     <Image src={data.img} alt="circlecheck" width={40} height={40} />
                                     <p className='text-xl font-bold text-[#5984EC]'>{data.title}</p>

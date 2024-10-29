@@ -9,7 +9,7 @@ function CenterImageList() {
             <SectionTitle title="교육장 사진" />
             <div className='container mx-auto'>
                 <div className='flex flex-col md:flex-col justify-center'>
-                    <div className='flex flex-col gap-5 md:gap-0 md:flex-row justify-center'>
+                    <div className='flex flex-col gap-5 md:flex-row justify-center'>
                         {
                             centerImagesData.first.map((image) => (
                                 <CampImageEle key={image.id} img={image.img} />
@@ -22,14 +22,14 @@ function CenterImageList() {
                     </div>
                 </div>
                 <div className='flex flex-col md:flex-col justify-center'>
-                    <div className='flex flex-col gap-5 md:gap-0 md:flex-row justify-center'>
+                    <div className='flex flex-col gap-5 md:flex-row justify-center'>
                         {
                             centerImagesData.second.map((image) => (
                                 <CampImageEle key={image.id} img={image.img} />
                             ))
                         }
                     </div>
-                    <div className='text-xl lg:text-[28px] text-center my-10 lg:mb-0'>
+                    <div className='text-xl lg:text-[28px] text-center my-10 lg:mb-0 leading-9'>
                         <p className='text-[#002278] font-bold lg:mb-4'>오프라인 교육장</p>
                         <p className='font-semibold'>서울시 중구 필동로1길 30</p>
                         <p className='font-semibold'>동국대학교 학술관</p>

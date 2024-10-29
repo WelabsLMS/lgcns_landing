@@ -6,7 +6,6 @@ import { faqData } from '@/data/staticData'
 function Faq() {
     return (
         <section id='faq' className="section">
-
             <SectionTitle title="FAQ" />
             <div className="relative container mx-auto lg:px-20 z-20">
                 <div className='absolute w-[192px] h-[192px] lg:w-[192px] lg:h-[384px] bg-[#5081FF] blur-[300px] left-0 top-1/3 lg:top-1/2' /> 

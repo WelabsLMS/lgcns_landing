@@ -46,7 +46,7 @@ function Curriculum() {
             </div>
 
             <div className='flex justify-center'>
-                <div className="hidden w-full md:flex items-start justify-between my-10 px-20">
+                <div className="hidden w-full lg:flex items-start justify-between xl:justify-center my-10 lg:px-5 xl:px-20">
                     {
                         curriculumStepData[0].map((data, index) => (
                             <CourseStepEle
@@ -59,7 +59,7 @@ function Curriculum() {
                             />
                         ))
                     }
-                    <div className='relative -top-7 w-20 h-20 md:h-24 lg:w-28 lg:h-28 flex-shrink-0'> {/* 이미지 크기 조정 및 마진 조정 */}
+                    <div className='relative -top-7 w-20 h-20 md:w-10 md:h-10 lg:w-28 lg:h-28 flex-shrink-0'> {/* 이미지 크기 조정 및 마진 조정 */}
                         <Image
                             src='assets/images/curriculum/curriculumstep/trophy.svg'
                             alt='curriculum'
@@ -98,9 +98,10 @@ function Curriculum() {
                                         <div className='text-xl md:text-3xl font-bold text-center'>
                                             <p>{data.title}</p>
                                         </div>
-                                        <div className='w-full text-center lg:text-start flex flex-col-reverse h-full items-center  lg:flex-row text-base md:text-2xl gap-14'>
-                                            <div className='font-semibold w-full lg:w-1/2 flex items-center justify-center'>{data.desc}</div>
-                                            <div className='relative h-[20vh] md:h-[30vh] lg:w-1/2 bg-white flex justify-center py-2'>
+                                        <div className='w-full text-center lg:text-start flex flex-col-reverse h-full items-center lg:flex-row text-base md:text-2xl justify-between'>
+                                            <div className='hidden font-semibold w-full lg:w-[55%] lg:flex items-center justify-center'>{data.desc}</div>
+                                            <div className='font-semibold w-full lg:w-[55%] flex lg:hidden items-center justify-center mt-10'>{data.mobileDesc}</div>
+                                            <div className='relative h-[20vh] md:h-[30vh] lg:w-[43%] bg-white flex justify-center py-2'>
                                                 <Image src={data.img} alt='curriculum_img' width={300} height={100} priority />
                                             </div>
                                         </div>
