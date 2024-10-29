@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Input from "@/components/ui/apply/Input";
 import ApplyTitle from "@/components/ui/apply/ApplyTitle";
 import { useRouter } from "next/navigation";
+import ApplySubmitModal from "@/components/ui/modal/ApplySubmitModal";
 
 // FormData 타입 정의
 interface FormData {
@@ -23,11 +24,11 @@ interface FormData {
     graduatedDate: string;
     latestStatus: string;
     remainingCredits: string;
-    eduFiles: File;
+    eduFiles: File | null;
     availableLanguages: string[];
     experience: string;
     certificate: string;
-    certFiles: File;
+    certFiles: File | null;
     introductionAndPlanGoal: string;
     personalStrengths: string;
     others: string;
@@ -36,8 +37,8 @@ interface FormData {
 }
 
 export default function ApplyForm() {
-    // 라우터
     const router = useRouter();
+    const [isModalOpen, setIsModalOpen] = useState<boolean>(true);
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [additionalText, setAdditionalText] = useState<{ sns: string; website: string; applyEtc: string, programEtc: string }>({
         sns: '',
@@ -71,11 +72,11 @@ export default function ApplyForm() {
         graduatedDate: '',
         latestStatus: '',
         remainingCredits: '',
-        eduFiles: null as any,
+        eduFiles: null as File | null,
         availableLanguages: [],
         experience: '',
         certificate: '',
-        certFiles: null as any,
+        certFiles: null as File | null,
         introductionAndPlanGoal: '',
         personalStrengths: '',
         others: '',
@@ -210,6 +211,8 @@ export default function ApplyForm() {
     }
 
     return (
+        <>
+        <ApplySubmitModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>
         <section className="min-h-screen mb-28">
             {/* 상단 배너 */}
             <div className="text-center h-max mb-16 bg-[#C2D3FF] py-16 px-2">
@@ -665,10 +668,9 @@ export default function ApplyForm() {
                             제출하기
                         </button>
                     </div>
-
                 </form>
-
             </div>
         </section>
+        </>
     );
 }

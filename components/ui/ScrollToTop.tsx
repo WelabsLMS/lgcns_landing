@@ -5,7 +5,7 @@ function ScrollToTop() {
     return (
         <div
             onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }) }}
-            className='fixed bottom-5 right-5 lg:bottom-10 lg:right-10 bg-[#C2D3FF] rounded-full w-10 h-10 lg:w-16 lg:h-16 flex items-center justify-center z-[10000] cursor-pointer border'>
+            className='fixed bottom-5 right-5 lg:bottom-10 lg:right-10 bg-[#C2D3FF] rounded-full w-10 h-10 lg:w-16 lg:h-16 flex items-center justify-center z-[1000] cursor-pointer border'>
             {/* generate scroll to top icon */}
             <svg
                 xmlns='http://www.w3.org/2000/svg'

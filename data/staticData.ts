@@ -519,3 +519,17 @@ export const centerImagesData = {
         },
     ],
 }
+
+// 수강신청 모달
+export const applyModalData = [{
+    success : {
+        img: "assets/images/thumbUp.svg",
+        title: "LG CNS AM Inspire Camp 1기 \n지원이 완료 되었습니다.",
+        desc: "이후 일정은 순차적으로 이메일로 \n개별 안내드릴 예정입니다.",
+    },
+    fail : {
+        img: "assets/images/applyFail.svg",
+        title: "지원서 제출에 실패하였습니다.",
+        desc: "관리자에게 문의해주시기 바랍니다.",
+    }
+}]
