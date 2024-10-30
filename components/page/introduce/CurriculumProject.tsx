@@ -51,7 +51,7 @@ function CurriculumProject() {
                     </div>
                 </div>
             </div>
-            <div className='flex flex-col lg:flex-row justify-center gap-8'>
+            <div className='flex flex-col lg:flex-row justify-center gap-4'>
                 <div className='w-full lg:w-2/5 flex lg:flex-col gap-5 text-center lg:text-start'>
                     <div className={`hacker h-auto w-1/2 md:w-full lg:h-1/2 flex flex-col justify-between gap-5 border-2 px-4 py-6 rounded-2xl cursor-pointer ${activeIndex === 0 ? 'bg-[#E0E9FF]' : ''}`}>
                         <p className='hacker text-lg md:text-3xl font-semibold text-nowrap'>해커톤</p>
@@ -59,7 +59,7 @@ function CurriculumProject() {
                     </div>
                     <div className={`last h-auto w-1/2 md:w-full lg:h-1/2 flex flex-col justify-between gap-5 border-2 px-4 py-6 rounded-2xl cursor-pointer ${activeIndex === 1 ? 'bg-[#E0E9FF]' : ''}`}>
                         <p className='last text-lg md:text-3xl font-semibold text-nowrap'>최종 프로젝트</p>
-                        <p className='hidden lg:block text-xl'>AM 기반의 최종 프로젝트를 통해 LG CNS만의 AM 기술과 Agile 개발방법론을 통해 AM 프로젝트 사이클을 경험하고 시스템을 구축합니다.</p>
+                        <p className='hidden lg:block text-xl'>AM 기반의 최종 프로젝트를 통해 LG CNS만의 AM 기술과 <br/>Agile 개발방법론을 통해 AM 프로젝트 사이클을 경험하고 <br/>시스템을 구축합니다.</p>
                     </div>
                 </div>
                 <div className='flex lg:h-[427px] xl:h-[447px] w-full lg:w-3/5 rounded-2xl'>

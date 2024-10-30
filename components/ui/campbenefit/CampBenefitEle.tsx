@@ -1,16 +1,26 @@
 import Image from 'next/image'
 import React from 'react'
 
-function CampBenefitEle({ content, img }: { content: string, img: string }) {
-    const imgName = img.split('/').slice(-1)[0].split('.')[0]
+interface CampBenefitEleProps {
+    id: number
+    imgSrc: string,
+    title: string,
+    content: string
+}
+
+function CampBenefitEle({ benefitData }: { benefitData: CampBenefitEleProps }) {
+    const imgName = benefitData.title.split('/').slice(-1)[0].split('.')[0]
 
     return (
-        <div className="w-full sm:w-1/2 lg:w-1/3 flex flex-col items-center gap-5 font-semibold">
-            <div className='relative bg-[#FFECEC] rounded-full w-32 h-32 md:w-36 md:h-36 flex justify-center'>
-                <Image src={img} alt={imgName} width={80} height={80} />
-            </div>
-            <div className='h-7'>
-                <p className='text-center text-lg lg:text-xl xl:text-2xl whitespace-break-spaces'>{content}</p>
+        <div className="w-full md:w-[49%] lg:w-[350px] lg:max-w-1/3 bg-gradient-to-b from-[#A2BCFF] to-[#DCE6FF] rounded-3xl py-4">
+            <div className='flex flex-col items-center gap-5 font-semibold '>
+                <div className='relative bg-white rounded-full w-32 h-32 flex justify-center'>
+                    <Image src={benefitData.imgSrc} alt={imgName} width={80} height={80} />
+                </div>
+                <div className='text-center'>
+                    <p className='font-bold text-2xl whitespace-break-spaces mb-4'>{benefitData.title}</p>
+                    <p className='text-xl whitespace-pre-line'>{benefitData.content}</p>
+                </div>
             </div>
         </div>
     )

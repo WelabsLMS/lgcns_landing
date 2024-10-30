@@ -1,13 +1,14 @@
 import React from 'react';
 
 function Input({
-    title, type, placeholder, required, checked, disabled, name, value, onChange }:
-    { title?: string, type?: string, placeholder?: string, required?: boolean, checked?: boolean, disabled?: boolean, name?: string, value?: string, onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void }) {
+    title, type, placeholder, required, checked, disabled, name, value, id, onChange }:
+    { title?: string, type?: string, placeholder?: string, required?: boolean, checked?: boolean, disabled?: boolean, name?: string, value?: string, id?:string, onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void }) {
     return (
         <div className="inline-flex items-center">
             <label className="flex items-center cursor-pointer relative mr-4">
                 <input
                     type={type}
+                    id={id}
                     name={name}
                     className="peer h-8 w-8 lg:h-9 lg:w-9 cursor-pointer transition-all appearance-none rounded-lg shadow hover:shadow-md border border-slate-300 checked:bg-[#B2A7FF] checked:border-[#D0C5FF]"
                     placeholder={placeholder}
@@ -26,7 +27,7 @@ function Input({
                     </svg>
                 </span>
             </label>
-            <label className="cursor-pointer text-xl lg:text-2xl font-semibold whitespace-pre-line">
+            <label htmlFor={id} className="cursor-pointer text-xl lg:text-2xl font-semibold whitespace-pre-line">
                 {title}
             </label>
         </div>
