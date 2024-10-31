@@ -7,7 +7,7 @@ import TechStack from './TechStack'
 function Introduce() {
     return (
         <section id="introduce" className="section">
-            <SectionTitle title="Camp소개" />
+            <SectionTitle title="Camp 소개" />
             <div className='container lg:px-28'>
                 <div className='text-center'>
                     <p className='mb-2 text-2xl md:text-3xl font-bold text-nowrap'>LG CNS의 <br className='lg:hidden' /> SW, AM<span className='text-base md:text-2xl'>(Application Modernization)</span><br className='xl:hidden' /> 인재 육성 노하우를 그대로 적용한</p>
@@ -19,8 +19,8 @@ function Introduce() {
                 </div>
                 <div className='w-full'>
                     <Summary />
-                    <EmploymentField />
                     <TechStack />
+                    <EmploymentField />
                 </div>
             </div>
         </section>

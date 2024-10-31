@@ -12,6 +12,7 @@ import { curriculumData, curriculumStepData } from '@/data/staticData'
 import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
+import InnerTitleBtrn from '@/components/ui/curriculum/InnerTitleBtrn'
 
 function Curriculum() {
     const [swiper, setSwiper] = useState<SwiperClass>()
@@ -40,12 +41,12 @@ function Curriculum() {
     return (
         <section className="relative mt-10 md:mt-20">
             <SectionTitle title="커리큘럼" />
-            <div className='text-center my-8 md:my-16'>
+            <div className='text-center my-8'>
                 <p className='mb-2 text-lg md:text-2xl font-bold'>기초부터 심화까지 <br className='md:hidden' /> 단계적으로 성장할 수 있도록 설계하였습니다.</p>
                 <span className="rounded-xl px-2 text-2xl md:text-4xl xl:text-5xl font-extrabold">단계별 프로젝트를 통해 <br className='md:hidden' /> 포트폴리오 완벽 준비!</span>
             </div>
 
-            <div className='w-full flex justify-center px-1 lg:px-10 xl:px-20'>
+            <div className='w-full flex justify-center px-1 lg:px-10 xl:px-24'>
                 <div className="w-full flex items-start justify-evenly mb-5 lg:my-10 ">
                     {
                         curriculumStepData[1].map((data, index) => (
@@ -72,16 +73,17 @@ function Curriculum() {
                 </div>
             </div>
 
-            <div className='container mx-auto px-4'>
+            <div className='container mx-auto px-4 xl:px-0'>
                 {/* Slider */}
                 <div className='relative flex items-center'>
                     <div className={`prev-button-wrap relative invisible md:visible left-5 w-8 h-8 md:w-10 md:h-10 md:left-0 rounded-xl ${isBeginning ? 'bg-[#C2D3FF50]' : 'bg-[#A5B4FC] cursor-pointer'}`}>
                         <div id='curriculumSwiper' className='button-prev'></div>
                     </div>
-                    <div className='bg-[#C2D3FF50] w-full px-4 md:px-0 md:w-4/5 lg:w-[80%] xl:w-[75%] lg:h-[65vh] xl:h-[70vh] mx-auto rounded-2xl whitespace-pre-line text-pretty'>
+                    <div className='bg-[#C2D3FF50] w-full px-4 md:px-0 md:w-4/5 lg:w-[80%] xl:w-[85%] lg:h-[65vh] xl:h-min mx-auto rounded-2xl whitespace-pre-line text-pretty'>
                         <Swiper
                             id='curriculumSwiper'
                             slidesPerView={1}
+                            autoHeight
                             pagination
                             modules={[Navigation, Pagination]}
                             navigation={{
@@ -93,17 +95,58 @@ function Curriculum() {
                             className='h-full'
                         >
                             {
-                                curriculumData[0].map((data, index) => (
-                                    <SwiperSlide key={index} className='py-8 md:py-10 md:px-14 lg:px-10 gap-6 lg:py-10'>
-                                        {/* <p className='text-xl font-bold md:hidden'>{curriculumStepData[0][index].title}</p> */}
-                                        <div className='text-xl md:text-3xl font-bold text-center'>
-                                            <p>{data.title}</p>
-                                        </div>
-                                        <div className='w-full text-center lg:text-start flex flex-col-reverse items-center lg:flex-row text-base md:text-2xl justify-around'>
+                                curriculumData[1].map((data, index) => (
+                                    <SwiperSlide key={index} className='py-8 md:py-10 md:px-14 lg:px-10 gap-6 lg:py-10 xl:px-9 xl:py-10 h-full'>
+                                        <div className='flex flex-col justify-around h-full'>
+                                            {/* <p className='text-xl font-bold md:hidden'>{curriculumStepData[0][index].title}</p> */}
+                                            <div className='relative text-2xl md:text-4xl font-bold text-center mb-5 xl:mb-10'>
+                                                <p>{data.title}</p>
+                                                <Image src='/assets/images/curriculum/impact_star.svg' alt='curriculum' className='absolute left-0 -top-5' width={50} height={50} />
+                                            </div>
+                                            {/* <div className='w-full text-center lg:text-start flex flex-col-reverse items-center lg:flex-row text-base md:text-2xl justify-around'>
                                             <div className='hidden font-semibold w-full lg:w-[55%] lg:flex items-center justify-center'>{data.desc}</div>
                                             <div className='font-semibold w-full lg:w-[55%] flex lg:hidden items-center justify-center mt-10'>{data.mobileDesc}</div>
                                             <div className='relative h-[20vh] md:h-[30vh] lg:w-[43%] bg-white flex justify-center py-2'>
                                                 <Image src={data.img} alt='curriculum_img' width={300} height={100} priority />
+                                            </div>
+                                        </div> */}
+
+                                            <div className='text-base lg:text-2xl'>
+                                                {data.inner && 'goal' in data.inner &&
+                                                    <div className='mb-10 space-y-5'>
+                                                        <InnerTitleBtrn title={'학습목표'} />
+                                                        <p className='text-xl lg:text-3xl font-semibold whitespace-pre-line px-5'>{data.inner.goal}</p>
+                                                    </div>
+                                                }
+                                                {data.inner && 'subject' in data.inner &&
+                                                    <div className='mb-10 space-y-5'>
+                                                        <InnerTitleBtrn title={'교과목'} />
+                                                        <p className='text-xl lg:text-3xl font-semibold whitespace-pre-line px-5'>{data.inner.subject}</p>
+                                                    </div>
+                                                }
+
+                                                {data.inner && 'tech' in data.inner &&
+                                                    <div className='mb-5 space-y-5'>
+                                                        <InnerTitleBtrn title={'기술스택'} />
+                                                        <p className='text-xl lg:text-3xl font-semibold whitespace-pre-line px-5'>{data.inner.tech}</p>
+                                                    </div>
+                                                }
+
+                                                {
+                                                    data.inner && 'pjt' in data.inner &&
+                                                    <div className='mb-5 space-y-5'>
+                                                        <InnerTitleBtrn title={'프로젝트'} />
+                                                        <div className=''>
+                                                            <ol className='space-y-3'>
+                                                                {
+                                                                    data.inner.pjt && data.inner.pjt.map((project, index) => (
+                                                                        <li key={index} className='text-xl lg:text-3xl font-semibold px-5'>{project}</li>
+                                                                    ))
+                                                                }
+                                                            </ol>
+                                                        </div>
+                                                    </div>
+                                                }
                                             </div>
                                         </div>
                                     </SwiperSlide>
@@ -119,7 +162,6 @@ function Curriculum() {
                 <CurriculumProject />
             </div>
         </section>
-
     )
 }
 

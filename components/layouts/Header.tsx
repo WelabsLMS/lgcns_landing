@@ -38,7 +38,7 @@ function Header() {
                             <Image src='/assets/images/logo/solutionLms.png' alt='wsts' width={150} height={19} />
                         </button>
                         <button className='text-white rounded-full lg:w-28 h-[44px] xl:w-32 xl:h-[44px] bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]'>
-                            <Link href={'/apply'}>수강신청</Link>
+                            <Link href={'/apply'}>교육신청</Link>
                         </button>
                     </div>
                 </div>
@@ -82,7 +82,7 @@ function Header() {
                             className='text-white w-[120px] h-[38px] flex items-center justify-center rounded-full px-4 bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] font-semibold'
                             onClick={() => setSubMenuOpen(!subMenuOpen)}
                         >
-                            <Link href={'/apply'}>수강신청</Link>
+                            <Link href={'/apply'}>교육신청</Link>
                         </li>
                     </ul>
                 </div>

@@ -21,7 +21,7 @@ function SelectionEle({ selectionEle }: { selectionEle: SelectionEleProps }) {
                         <div className='absolute -right-full w-full h-[3px] bg-[#DEE7FF]' /> : null
                 }
             </div>
-            <p className='text-center whitespace-pre-line text-[9px] lg:text-lg xl:text-xl font-semibold'>{selectionEle.desc}</p>
+            <p className='text-center whitespace-pre-line text-[9px] md:text-base lg:text-lg xl:text-xl font-semibold'>{selectionEle.desc}</p>
         </div>
     )
 }
