@@ -5,7 +5,7 @@ import Image from 'next/image'
 function MainBanner() {
     return (
         <section className='h-max bg-[#E0E9FF] px-4 py-10 lg:px-40 lg:py-20'>
-            <div className='container mx-auto h-full flex flex-col gap-10'>
+            <div className='container mx-auto h-full flex flex-col gap-4 lg:gap-8'>
                 <div className='text-center lg:text-left flex flex-col items-center'>
                     {
                         mainBannerData.map((data, index) => (
@@ -18,13 +18,13 @@ function MainBanner() {
                     }
                 </div>
                 <div className="flex flex-col items-center justify-center ">
-                    <div className="w-full md:py-8 rounded-[30px] shadow-lg border-[3px] border-[#000080] ">
-                        <div className="grid grid-cols-2 md:grid-cols-4 text-center font-medium divide-y md:divide-x md:divide-y-0 divide-[#00227830] px-8 md:px-0">
+                    <div className="w-4/5 md:py-8 rounded-[30px] shadow-lg border-[3px] border-[#000080] ">
+                        <div className="grid grid-cols-2 md:grid-cols-4 text-center font-medium divide-y md:divide-x md:divide-y-0 divide-[#00227830] px-4 lg:px-8 md:px-0">
                             {
                                 mainBannerOverview[0].map((data, index) => (
-                                    <div key={index} className='py-4 lg:py-4 lg:text-2xl'>
-                                        <p className='mb-4 lg:mb-7 font-bold text-2xl'>{data.title}</p>
-                                        <p className="whitespace-pre-line text-xl">{data.content}</p>
+                                    <div key={index} className='py-4 lg:py-4'>
+                                        <p className='mb-4 lg:mb-7 font-bold text-xl lg:text-2xl'>{data.title}</p>
+                                        <p className="whitespace-pre-line text-base lg:text-xl">{data.content}</p>
                                     </div>
                                 ))
                             }

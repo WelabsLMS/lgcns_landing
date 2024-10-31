@@ -6,7 +6,7 @@ function TechStack() {
     return (
         <div className='mt-10 md:mt-20 rounded-[30px] px-2 py-3 flex flex-col items-center bg-[#E0E9FF]'>
             {/* 제목 부분 */}
-            <div className='rounded-full bg-white px-14 py-4 mb-10'>
+            <div className='rounded-full bg-white px-14 py-4 mb-5'>
                 <p className='text-2xl lg:text-3xl font-extrabold text-[#5984EC]'>기술스택</p>
             </div>
 

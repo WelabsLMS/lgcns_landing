@@ -4,7 +4,7 @@ import React from 'react'
 function EmploymentField() {
     return (
         <div className='w-full mt-10 md:mt-20 rounded-[30px] py-3 flex flex-col items-center bg-[#E0E9FF]'>
-            <div className='rounded-full bg-white px-14 py-4 mb-10'>
+            <div className='rounded-full bg-white px-14 py-4 mb-5'>
                 <p className='text-2xl lg:text-3xl font-extrabold text-[#5984EC]'>취업분야</p>
             </div>
             <div className='w-full flex items-center justify-center font-medium'>

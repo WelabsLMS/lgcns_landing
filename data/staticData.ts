@@ -309,7 +309,7 @@ export const curriculumData = [
         {
             id: 7,
             title: 'LG CNS 실무진과 함께하는 \nAM 기반의 최종 프로젝트',
-            desc: '현업 전문가가 도출한 도메인별 시나리오를 \n기반으로 실무와 동일한 환경의 프로젝트 \n수행과 멘토링을 통해 AM 전문가로 \n성장을 돕습니다.',
+            desc: '현업 전문가가 도출한 도메인별 \n시나리오를 기반으로 실무와 동일한 환경의 프로젝트 수행과 멘토링을 \n통해 AM 전문가로 성장을 돕습니다.',
             mobileDesc: '현업 전문가가 도출한 도메인별 시나리오를 \n기반으로 실무와 동일한 환경의 프로젝트 수행과 \n멘토링을 통해 AM 전문가로 성장을 돕습니다.',
             img: 'assets/images/curriculum/curriculumstep/final.svg'
         }
@@ -432,7 +432,7 @@ export const selectionProcedureData = [
         {
             id: 1,
             imgSrc: "assets/images/selection/resume.svg",
-            title: "1.교육 신청서 작성",
+            title: "1.신청서 작성",
             desc: "교육 신청서 작성"
         },
         {
@@ -445,7 +445,7 @@ export const selectionProcedureData = [
             id: 3,
             imgSrc: "assets/images/selection/interview.svg",
             title: "3.면접전형",
-            desc: "개별 연락을 통해 온라인 인터뷰 진행 \n/ 내일배움카드 신청 & 발급"
+            desc: "개별 온라인 인터뷰 진행 \n/ 내일배움카드 신청 & 발급"
         },
         {
             id: 4,
@@ -481,7 +481,7 @@ export const campbenefitData = [
         {
             id:4, 
             imgSrc: "assets/images/campbenefit/mentor.svg",
-            title: "LG CNS 전문가 멘토링&포트폴리오",
+            title: "LG CNS 전문가\n멘토링&포트폴리오",
             content: "LG CNS 현업 전문가와\n함께하는 실무 프로젝트 멘토링과\n멘토링 기반 포트폴리오 제작"
         },
         {

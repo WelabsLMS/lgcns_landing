@@ -42,11 +42,11 @@ function Curriculum() {
             <SectionTitle title="커리큘럼" />
             <div className='text-center my-8 md:my-16'>
                 <p className='mb-2 text-lg md:text-2xl font-bold'>기초부터 심화까지 <br className='md:hidden' /> 단계적으로 성장할 수 있도록 설계하였습니다.</p>
-                <span className="rounded-xl px-2 text-3xl md:text-4xl xl:text-5xl font-extrabold">단계별 프로젝트를 통해 <br className='md:hidden' /> 포트폴리오 완벽 준비!</span>
+                <span className="rounded-xl px-2 text-2xl md:text-4xl xl:text-5xl font-extrabold">단계별 프로젝트를 통해 <br className='md:hidden' /> 포트폴리오 완벽 준비!</span>
             </div>
 
-            <div className='w-full flex justify-center px-4 lg:px-10 xl:px-20'>
-                <div className="w-full flex items-start justify-between xl:justify-center mb-4 md:mb-0 lg:my-10 ">
+            <div className='w-full flex justify-center px-1 lg:px-10 xl:px-20'>
+                <div className="w-full flex items-start justify-evenly mb-5 lg:my-10 ">
                     {
                         curriculumStepData[1].map((data, index) => (
                             <CourseStepEle
@@ -69,7 +69,6 @@ function Curriculum() {
                             className='object-contain' // 이미지가 잘리지 않도록 설정
                         />
                     </div> */}
-
                 </div>
             </div>
 
@@ -79,7 +78,7 @@ function Curriculum() {
                     <div className={`prev-button-wrap relative invisible md:visible left-5 w-8 h-8 md:w-10 md:h-10 md:left-0 rounded-xl ${isBeginning ? 'bg-[#C2D3FF50]' : 'bg-[#A5B4FC] cursor-pointer'}`}>
                         <div id='curriculumSwiper' className='button-prev'></div>
                     </div>
-                    <div className='bg-[#C2D3FF50] w-full px-4 md:px-0 md:w-4/5 lg:h-[50vh] mx-auto rounded-2xl whitespace-pre-line text-pretty'>
+                    <div className='bg-[#C2D3FF50] w-full px-4 md:px-0 md:w-4/5 lg:w-[80%] xl:w-[75%] lg:h-[65vh] xl:h-[70vh] mx-auto rounded-2xl whitespace-pre-line text-pretty'>
                         <Swiper
                             id='curriculumSwiper'
                             slidesPerView={1}
@@ -100,7 +99,7 @@ function Curriculum() {
                                         <div className='text-xl md:text-3xl font-bold text-center'>
                                             <p>{data.title}</p>
                                         </div>
-                                        <div className='w-full text-center lg:text-start flex flex-col-reverse h-full items-center lg:flex-row text-base md:text-2xl justify-between'>
+                                        <div className='w-full text-center lg:text-start flex flex-col-reverse items-center lg:flex-row text-base md:text-2xl justify-around'>
                                             <div className='hidden font-semibold w-full lg:w-[55%] lg:flex items-center justify-center'>{data.desc}</div>
                                             <div className='font-semibold w-full lg:w-[55%] flex lg:hidden items-center justify-center mt-10'>{data.mobileDesc}</div>
                                             <div className='relative h-[20vh] md:h-[30vh] lg:w-[43%] bg-white flex justify-center py-2'>
