@@ -35,7 +35,7 @@ function CourseStepEle({ title, subtitle, index, activeSlide, handleCourseClick 
             </div>
             {
                 index !== 6 &&
-                <span className={`absolute right-1 lg:right-0 w-4 lg:w-8 h-0.5 top-[6.5px] lg:top-3 ${index < activeSlide ? 'bg-[#002278]' : 'bg-[#E0E0E0]'} transform translate-x-4`}></span>
+                <span className={`absolute -right-1 md:-right-1/3 md:translate-x-1/2 xl:-right-1 md:w-8 lg:right-0 w-4 lg:w-12 xl:w-16 h-0.5 top-[6.5px] md:top-[9px] lg:top-3 ${index < activeSlide ? 'bg-[#002278]' : 'bg-[#E0E0E0]'} transform translate-x-1/2`}></span>
             }
         </div>
     );

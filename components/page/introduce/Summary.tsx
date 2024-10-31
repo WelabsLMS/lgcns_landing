@@ -3,7 +3,7 @@ import React from 'react'
 function Summary() {
     return (
         <div className='mt-10 md:mt-20 rounded-[30px] py-3 flex flex-col items-center bg-[#E0E9FF]'>
-            <div className='rounded-full bg-white px-10 py-2 lg:px-14 lg:py-4 mb-5 lg:mb-10'>
+            <div className='rounded-full bg-white px-10 py-2 lg:px-14 lg:py-4 mb-5 lg:mb-5'>
                 <p className='text-2xl lg:text-3xl font-extrabold text-[#5984EC]'>강의개요</p>
             </div>
             <ol className='lg:list-disc text-center lg:text-start py-5 lg:px-12 text-xl lg:text-2xl font-medium'>

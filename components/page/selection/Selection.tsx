@@ -8,7 +8,7 @@ function Selection() {
         <section id="selection" className="section">
             <SectionTitle title='선발절차' />
             <div className='container mx-auto'>
-                <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 lg:mt-12'>
+                <div className='flex justify-evenly lg:gap-12 lg:mt-12'>
                     {
                         selectionProcedureData[0].map((data, index) => (
                             <SelectionEle key={index} selectionEle={data} />
