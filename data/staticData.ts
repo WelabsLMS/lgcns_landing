@@ -22,7 +22,7 @@ export const mainBannerOverview = [
         {
             id: 3,
             title: "교육장소",
-            content: "온오프라인\n메타버스/동국대학교"
+            content: "온·오프라인\n메타버스/동국대학교"
         },
         {
             id: 4,
@@ -69,7 +69,7 @@ export const overviewData = [
         {
             id: 5,
             title: "교육장소",
-            content: "서울시 중구 필동 1길 30 \n동국대학교",
+            content: "온라인 메타버스\n오프라인 동국대 서울캠퍼스",
         },
         {
             id: 6,
@@ -121,11 +121,7 @@ export const courseEmployFieldData = [
         },
         {
             id: 10,
-            title: "SM 개발자",
-        },
-        {
-            id: 11,
-            title: "Product Manager",
+            title: "PM",
         },
     ]
 ]
@@ -223,8 +219,45 @@ export const curriculumStepData = [
         },
         {
             id: 7,
-            title: '최종프로젝트',
+            title: '최종PJT',
             subTitle: 'AM 기반의\n최종 프로젝트',
+        }
+    ],
+    [
+        {
+            id: 1,
+            title: 'Course 1',
+            subTitle: '캠프소개 \n& 특강',
+        },
+        {
+            id: 2,
+            title: 'Course 2',
+            subTitle: 'Full-Stack\nAI 서비스',
+        },
+        {
+            id: 3,
+            title: '미니PJT 1',
+            subTitle: 'AI 활용\n뉴스 App',
+        },
+        {
+            id: 4,
+            title: 'Course 3',
+            subTitle: 'AM 기술\nMSA, Cloud',
+        },
+        {
+            id: 5,
+            title: '미니PJT 2',
+            subTitle: 'MSA\n서비스구축',
+        },
+        {
+            id: 6,
+            title: '해커톤',
+            subTitle: 'AI활용\n아이디어톤',
+        },
+        {
+            id: 7,
+            title: '최종프로젝트',
+            subTitle: 'AM 기반\n프로젝트',
         }
     ]
 ]
@@ -234,13 +267,13 @@ export const curriculumData = [
         {
             id: 1,
             title: '클라우드와 AI 최신 트렌드 특강, \nDigital Insight 채우기',
-            desc: '실무에서의 클라우드 활용과 생성형 AI \n시장에 대한 현직자의 생생한 특강을 통해 \n최신기술의 업계 트렌드의 이해를 돕습니다.',
-            mobileDesc: '실무에서의 클라우드 활용과 \n생성형 AI 시장에 대한 현직자의 생생한 특강을 통해 \n최신기술의 업계 트렌드의 이해를 돕습니다.',
+            desc: '실무에서의 클라우드 활용과 생성형 AI \n시장에 대한 현직자의 생생한 특강을 통해 \n최신기술 트렌드의 이해를 돕습니다.',
+            mobileDesc: '실무에서의 클라우드 활용과 \n생성형 AI 시장에 대한 현직자의 생생한 특강을 통해 \n최신기술 트렌드의 이해를 돕습니다.',
             img: 'assets/images/curriculum/curriculumstep/course1.svg'
         },
         {
             id: 2,
-            title: '풀스택 개발자로 거듭나는 지름길,\nAI 서비스 개발을 통한 Course 2',
+            title: 'AI 서비스 개발을 통한 \n풀스택 개발자로 거듭나는 지름길',
             desc: '프론트엔드와 백엔드의 기초부터 심화, \n생성형 AI에 대한 이해를 바탕으로 \n코드퀄리티 플랫폼을 활용하여 \nAI 서비스 개발에 필요한 \n기술을 습득합니다.',
             mobileDesc: '프론트엔드와 백엔드의 기초부터 심화, \n생성형 AI 이해를 바탕으로 코드퀄리티 플랫폼을 \n활용하여 AI 서비스 개발에 필요한 기술을 \n습득합니다.',
             img: 'assets/images/curriculum/curriculumstep/course2.svg'
@@ -255,29 +288,29 @@ export const curriculumData = [
         {
             id: 4,
             title: 'AM 기술의 모든 것, \nLG CNS의 Application Modernization',
-            desc: 'LG CNS 실무진의 CNS Agile 특강부터 \nMSA 기술 이해와 활용을 통해 \nAM 전문가로의 기반을 다집니다.',
-            mobileDesc: 'LG CNS 실무진의 CNS Agile 특강부터 \nMSA 기술 이해와 활용을 통해 \nAM 전문가로의 기반을 다집니다.',
+            desc: 'LG CNS 실무진의 AM Agile 특강부터 \nMSA 기술 이해와 활용을 통해 \nAM 전문가로의 기반을 다집니다.',
+            mobileDesc: 'LG CNS 실무진의 AM Agile 특강부터 \nMSA 기술 이해와 활용을 통해 \nAM 전문가로의 기반을 다집니다.',
             img: 'assets/images/curriculum/curriculumstep/course3.svg'
         },
         {
             id: 5,
             title: 'AM 역량 굳히기 \nMSA 서비스 개발 및 운영환경 구축',
-            desc: '미니 프로젝트 2을 기반으로 \nMSA 서비스 운영환경 구축을 통해 \n풀스택 기술을 체화합니다.',
-            mobileDesc: '미니 프로젝트 2을 기반으로 \nMSA 서비스 운영환경 구축을 통해 \n풀스택 기술을 체화합니다.',
+            desc: '미니 프로젝트 2을 기반으로 \nMSA 서비스 운영환경 구축을 통해 \n풀스택 기술을 내재화합니다.',
+            mobileDesc: '미니 프로젝트 2을 기반으로 \nMSA 서비스 운영환경 구축을 통해 \n풀스택 기술을 내재화합니다.',
             img: 'assets/images/curriculum/curriculumstep/mini2.svg'
         },
         {
             id: 6,
-            title: '프로젝트 전 Warming-up! \nAI를 활용한 서비스 개발',
-            desc: 'LG CNS의 산업 도메인별 AI를 활용한 \n서비스 개발을 위한 해커톤을 수행하며 \n프로젝트 전 프로젝트 사이클을 경험합니다.',
-            mobileDesc: 'LG CNS의 산업 도메인별 AI를 활용한 \n서비스 개발을 위한 해커톤을 수행하며 \n프로젝트 전 프로젝트 사이클을 경험합니다.',
+            title: '최종 프로젝트 전 Warming-up! \nAI 기반의 서비스 구현',
+            desc: 'LG CNS의 산업 도메인별 AI 기반 \n서비스 개발을 위한 해커톤을 통해 \n프로젝트 사이클을 경험합니다.',
+            mobileDesc: 'LG CNS의 산업 도메인별 AI 기반 \n서비스 개발을 위한 해커톤을 통해 \n프로젝트 사이클을 경험합니다.',
             img: 'assets/images/curriculum/curriculumstep/hackathon.svg'
         },
         {
             id: 7,
             title: 'LG CNS 실무진과 함께하는 \nAM 기반의 최종 프로젝트',
-            desc: 'LG CNS가 도출한 도메인별 시나리오를 \n기반으로 실무와 동일한 환경의 프로젝트 \n수행과 멘토링을 통해 AM 전문가로 \n성장을 돕습니다.',
-            mobileDesc: 'LG CNS가 도출한 도메인별 시나리오를 \n기반으로 실무와 동일한 환경의 프로젝트 수행과 \n멘토링을 통해 AM 전문가로 성장을 돕습니다.',
+            desc: '현업 전문가가 도출한 도메인별 시나리오를 \n기반으로 실무와 동일한 환경의 프로젝트 \n수행과 멘토링을 통해 AM 전문가로 \n성장을 돕습니다.',
+            mobileDesc: '현업 전문가가 도출한 도메인별 시나리오를 \n기반으로 실무와 동일한 환경의 프로젝트 수행과 \n멘토링을 통해 AM 전문가로 성장을 돕습니다.',
             img: 'assets/images/curriculum/curriculumstep/final.svg'
         }
     ]
@@ -399,26 +432,26 @@ export const selectionProcedureData = [
         {
             id: 1,
             imgSrc: "assets/images/selection/resume.svg",
-            title: "1.지원서 작성",
-            desc: "홈페이지에서\n지원서 작성"
+            title: "1.교육 신청서 작성",
+            desc: "교육 신청서 작성"
         },
         {
             id: 2,
             imgSrc: "assets/images/selection/docu.svg",
             title: "2.서류전형",
-            desc: "내일배움카드 신청&발급\n합격자에 한해 개별 연락"
+            desc: "합격자 이메일 개별 연락"
         },
         {
             id: 3,
             imgSrc: "assets/images/selection/interview.svg",
             title: "3.면접전형",
-            desc: "합격자에 한해\n개별 인터뷰 진행"
+            desc: "개별 연락을 통해 온라인 인터뷰 진행 \n/ 내일배움카드 신청 & 발급"
         },
         {
             id: 4,
             imgSrc: "assets/images/selection/final.svg",
             title: "4.최종 합격",
-            desc: "최종 합격자에 한해\n교육 진행"
+            desc: "최종 합격자 교육 입과"
         },
     ]
 
@@ -435,33 +468,33 @@ export const campbenefitData = [
         },
         {
             id:2, 
-            imgSrc: "assets/images/campbenefit/notebook.svg",
-            title: "LG 노트북 무상 지원",
-            content: "교육에 집중할 수 있도록\n노트북을 교육기간 중 무상 지원"
-        },
-        {
-            id:3, 
             imgSrc: "assets/images/campbenefit/cert.svg",
             title: "LG CNS 인증 수료증",
             content: "교육 과정을 끝까지 완주한 수료생에게\nLG CNS 인증 수료증을 수여"
         },
         {
-            id:4, 
+            id:3, 
             imgSrc: "assets/images/campbenefit/sup.svg",
             title: "취업지원 프로그램",
             content: "성공적인 취업을 위한\nMeet Up Day, 채용설명회 개최"
         },
         {
-            id:5, 
+            id:4, 
             imgSrc: "assets/images/campbenefit/mentor.svg",
             title: "LG CNS 전문가 멘토링&포트폴리오",
             content: "LG CNS 현업 전문가와\n함께하는 실무 프로젝트 멘토링과\n멘토링 기반 포트폴리오 제작"
         },
         {
-            id:6, 
+            id:5, 
             imgSrc: "assets/images/campbenefit/infra.svg",
             title: "최적 학습환경&인프라 지원",
             content: "교육에 집중할 수 있는 학습환경과\n클라우드, 선도기업 제공 인프라 지원"
+        },
+        {
+            id:6, 
+            imgSrc: "assets/images/campbenefit/notebook.svg",
+            title: "LG 노트북 무상 지원",
+            content: "교육에 집중할 수 있도록\n노트북을 교육기간 중 노트북 대여"
         },
     ]
 ]
@@ -474,6 +507,10 @@ export const faqData = [
             answer: '내일배움카드 발급이 가능하며,\n국내외 대학(원) 졸업(예정)자 및 미취업자라면 \n모두 지원할 수 있습니다.\n나이, 학력 및 전공 제한없이 모두 지원 가능합니다.',
         },
         {
+            question: '내일배움카드가 있어야 교육을 받을 수 있나요?',
+            answer: '해당 교육과정은 KDT 과정으로 교육 입과 전 \n내일배움카드를 발급 받으셔야 수강이 가능합니다.\n\n자세한 발급 방법은 고용노동부(1350) 또는 \n직업훈련포털(www.work24.go.kr)에서 확인해주세요.',
+        },
+        {
             question: '비전공자도 지원 가능할까요?',
             answer: '프로그래밍 관련 경험이 있다면 \n비전공자도 지원 가능합니다.\n\n교육에 대한 의지와 성장 가능성 있는 지원자를 \n선발하므로 지원서에 잘 기입해주시기 바랍니다.',
         },
@@ -482,12 +519,8 @@ export const faqData = [
             answer: '국민취업지원제도와 KDT 과정은 병행 가능합니다.\n고용센터 담당자와 상담 후 수강 신청 가능하므로 \n빠른 신청을 권장합니다.',
         },
         {
-            question: '내일배움카드가 있어야 교육을 받을 수 있나요?',
-            answer: '해당 교육과정은 KDT 과정으로 교육 입과 전 \n내일배움카드를 발급 받으셔야 수강이 가능합니다.\n\n자세한 발급 방법은 고용노동부(1350) 또는 \n직업훈련포털(www.work24.go.kr)에서 확인해주세요.',
-        },
-        {
             question: '개인 노트북이 있어야 지원 가능한가요?',
-            answer: '교육에 집중할 수 있도록 LG의 노트북을 지원해드립니다.',
+            answer: '교육에 집중할 수 있도록 LG의 노트북을 대여 해드립니다.',
         },
         {
             question: 'KDT 과정을 이전에 수강한 적이 있는데 \n지원 가능한가요?',

@@ -15,7 +15,7 @@ function SelectionEle({ selectionEle }: { selectionEle: SelectionEleProps }) {
                 <div className='relative mb-3 w-20 h-20'>
                     <Image src={selectionEle.imgSrc} alt={selectionEle.title} fill />
                 </div>
-                <p className='text-2xl font-semibold text-nowrap'>{selectionEle.title}</p>
+                <p className='text-xl font-bold text-nowrap'>{selectionEle.title}</p>
                 {
                     selectionEle.id !== 4 ?
                         <div className='hidden lg:block lg:absolute -right-full w-full h-[3px] bg-[#DEE7FF]' /> : null
