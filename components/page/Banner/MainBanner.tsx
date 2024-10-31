@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 function MainBanner() {
     return (
-        <section className='h-max bg-[#E0E9FF] px-4 py-10 lg:px-40 lg:py-20'>
+        <section className='h-max bg-[#E0E9FF] px-4 py-10 lg:px-12 lg:py-20'>
             <div className='container mx-auto h-full flex flex-col gap-4 lg:gap-8'>
                 <div className='text-center lg:text-left flex flex-col items-center'>
                     {
