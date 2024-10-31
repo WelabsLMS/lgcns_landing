@@ -25,6 +25,7 @@ function MainBanner() {
                                     <div key={index} className='py-4 lg:py-4'>
                                         <p className='mb-4 lg:mb-7 font-bold text-xl lg:text-2xl'>{data.title}</p>
                                         <p className="whitespace-pre-line text-base lg:text-xl">{data.content}</p>
+                                        <p className='text-lg text-red-500'>{data.notice}</p>
                                     </div>
                                 ))
                             }

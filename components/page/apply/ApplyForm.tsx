@@ -2,12 +2,11 @@
 import React, { useState } from "react";
 import Input from "@/components/ui/apply/Input";
 import ApplyTitle from "@/components/ui/apply/ApplyTitle";
-import { useRouter } from "next/navigation";
 import ApplySubmitModal from "@/components/ui/modal/ApplySubmitModal";
 import axios from "axios";
 
 // FormData 타입 정의
-interface FormData {
+interface FormValues {
     name: string;
     gender: string;
     birthday: string;
@@ -38,7 +37,7 @@ interface FormData {
 }
 
 export default function ApplyForm() {
-    const router = useRouter();
+    
     const applyRouteRef = React.useRef<HTMLDivElement>(null);
     const languagesRouteRef = React.useRef<HTMLDivElement>(null);
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -57,7 +56,7 @@ export default function ApplyForm() {
     });
 
     // 상태 관리
-    const [formData, setFormData] = useState<FormData>({
+    const [formData, setFormData] = useState<FormValues>({
         name: '',
         gender: '',
         birthday: '',
@@ -75,11 +74,11 @@ export default function ApplyForm() {
         graduatedDate: '',
         latestStatus: '',
         remainingCredits: '',
-        eduFiles: null as File | null,
+        eduFiles: null,
         availableLanguages: [],
         experience: '',
         certificate: '',
-        certFiles: null as File | null,
+        certFiles: null,
         introductionAndPlanGoal: '',
         personalStrengths: '',
         others: '',
@@ -133,21 +132,22 @@ export default function ApplyForm() {
     // 입력 값 업데이트 핸들러
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value, type } = e.target;
+        const { checked } = e.target as HTMLInputElement;
         const files = (e.target as HTMLInputElement).files;
-
-        if (files) {
-            if (name === 'eduFiles') {
-                setFormData(prev => ({ ...prev, eduFiles: files[0] }));
-                setUploadFileName(prev => ({ ...prev, eduFiles: files[0].name }));
-            } else {
-                setFormData(prev => ({ ...prev, certFiles: files[0] }));
-                setUploadFileName(prev => ({ ...prev, certFiles: files[0].name }));
-            }
-        }
 
         if (type === 'checkbox') {
             const target = e.target as HTMLInputElement; // 타입 단언
             if (name === 'availableLanguages') {
+                const updatedArray = checked
+                    ? [...formData[name], value]
+                    : formData[name].filter(item => item !== value);
+
+                // 지원경로 및 사용 가능한 언어 중 하나라도 체크되면 나머지 체크박스에 required 속성 적용
+                const checkboxes = document.getElementsByName(name);
+                for (let i = 0; i < checkboxes.length; i++) {
+                    (checkboxes[i] as HTMLInputElement).required = updatedArray.length === 0;
+                }
+
                 setFormData(prev => ({
                     ...prev,
                     availableLanguages: target.checked
@@ -162,12 +162,21 @@ export default function ApplyForm() {
                     setFormData(prev => ({ ...prev, availableLanguages: prev.availableLanguages.filter(lang => lang !== value) }));
                 }
             } else if (name === 'applyRoute') {
+                const updatedApplyRoute = checked
+                    ? [...formData.applyRoute, value]
+                    : formData.applyRoute.filter(route => route !== value);
+
+                const applyRouteCheckboxes = document.getElementsByName('applyRoute');
+                for (let i = 0; i < applyRouteCheckboxes.length; i++) {
+                    (applyRouteCheckboxes[i] as HTMLInputElement).required = updatedApplyRoute.length === 0;
+                }
                 setFormData(prev => ({
                     ...prev,
                     applyRoute: target.checked
                         ? [...(Array.isArray(prev.applyRoute) ? prev.applyRoute : []), value]
                         : (Array.isArray(prev.applyRoute) ? prev.applyRoute : []).filter(route => route !== value),
                 }));
+
                 if (!target.checked) {
                     if (value === 'SNS 광고') {
                         setAdditionalText(prev => ({ ...prev, sns: '' }));
@@ -197,79 +206,91 @@ export default function ApplyForm() {
             } else {
                 setFormData(prev => ({ ...prev, [name]: target.checked }));
             }
+        } else if (type === 'file') {
+            if (files && files.length > 0) {
+                setFormData(prev => ({ ...prev, [name]: files[0] }));
+                setUploadFileName(prev => ({ ...prev, [name]: files[0].name }));
+            }
         } else {
             setFormData(prev => ({ ...prev, [name]: value }));
         }
-    };
+    }
 
     const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
         // 필수 항목 검사
         if (!formData.name) {
-            alert('이름을 입력해 주세요.');
             return;
         }
         if (!formData.gender) {
-            alert('성별을 선택해 주세요.');
             return;
         }
         if (!formData.birthday) {
-            alert('생년월일을 입력해 주세요.');
             return;
         }
         if (!formData.phoneNumber) {
-            alert('연락처를 입력해 주세요.');
             return;
         }
         if (!formData.email) {
-            alert('이메일을 입력해 주세요.');
             return;
         }
         if (formData.applyRoute.length === 0) {
-            alert('지원경로를 최소 1개 이상 선택해야 합니다.');
-            const offsetTop = applyRouteRef.current?.offsetTop || 0;
-            window.scrollTo({ top: offsetTop - 100, behavior: 'smooth' }); // 100px 위로 스크롤
+            document.getElementById('applyRoute')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
             return;
         }
         if (formData.availableLanguages.length === 0) {
-            alert('사용 가능한 언어를 최소 1개 이상 선택해야 합니다.');
-            const offsetTop = languagesRouteRef.current?.offsetTop || 0;
-            window.scrollTo({ top: offsetTop - 100, behavior: 'smooth' }); // 100px 위로 스크롤
             return;
         }
         if (formData.agreeCheck === 0) {
-            alert('약관에 동의해 주세요.');
             return;
         }
-        const newFormData = new FormData();
-        newFormData.append('courseName', 'LG CNS AM Inspire Camp 1기' );
-        newFormData.append('classId', '1');
-        Object.entries(formData).forEach(([key, value]:[key:string, value:any]) => {
-            if (Array.isArray(value)) {
-                value.forEach((v: string) => {
-                    newFormData.append(key, v);
-                });
-            } else {
-                newFormData.append(key, value);
-            }
-        });
 
-        console.log('newFormData', newFormData);
+        // // FormData 생성
+        // const formDataToSend = new FormData();
+        // formDataToSend.append('classId', '1');
+        // formDataToSend.append('courseName', 'LG CNS AM Inspire Camp 1기');
+        // (Object.keys(formData) as Array<keyof FormValues>).forEach((key) => {
+        //     const value = formData[key];
+
+        //     if (value instanceof File) {
+        //         formDataToSend.append(key, value);
+        //     } else if (Array.isArray(value)) {
+        //         value.forEach((item) => {
+        //             if (typeof item === 'string') {
+        //                 formDataToSend.append(key, item);
+        //             } else {
+        //                 Object.entries(item).forEach(([subKey, subValue]) => {
+        //                     formDataToSend.append(`${key}:[${subKey}]`, subValue);
+        //                 });
+        //             }
+        //         });
+        //     } else if (value !== undefined && value !== null) {
+        //         formDataToSend.append(key, value.toString());
+        //     }
+        // });
+
+        // if (formData.certFiles) {
+        //     console.log(`certFiles type: ${typeof formData.certFiles}`);
+        //     if (Array.isArray(formData.certFiles)) {
+        //         formData.certFiles.forEach((file, index) => {
+        //             if (file instanceof File) {
+        //                 console.log(`certFiles[${index}] type: ${file.type}`);
+        //             }
+        //         });
+        //     }
+        // }
 
         try {
-            const res = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_API_URL}/api/landing/account/saveClassApplyInfo`, newFormData, {
+            const res = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_API_URL}/api/landing/account/saveClassApplyInfo`, formData, {
                 headers: {
                     'Content-Type': `multipart/form-data`,
                 }
             });
 
-            console.log('res', res);
-
             if (res.status === 200) {
-                e.preventDefault();
                 setIsModalOpen(true);
             }
         } catch (error) {
-            console.error('Error submitting form', error);
         }
     }
 
@@ -285,7 +306,7 @@ export default function ApplyForm() {
                     <p className="text-2xl mt-2 font-semibold"><span className="text-red-500">*</span>표시는 필수 입력사항입니다.</p>
                 </div>
                 <div className='container mx-auto px-2 lg:px-52 xl:px-64'>
-                    <div className="mb-10">
+                    {/* <div className="mb-10">
                         <button
                             type="button"
                             className="flex items-center text-3xl font-bold"
@@ -296,8 +317,8 @@ export default function ApplyForm() {
                             </svg>
                             뒤로가기
                         </button>
-                    </div>
-                    <form className="space-y-14">
+                    </div> */}
+                    <form className="space-y-14" onSubmit={handleSubmit}>
                         {/* 지원과정 */}
                         <div>
                             <ApplyTitle title="지원과정" />
@@ -397,7 +418,7 @@ export default function ApplyForm() {
                         <div>
                             <ApplyTitle title="지원경로" subTitle="(최소 1개 선택, 복수 선택 가능합니다.)" required />
                             <div className="flex flex-col space-y-2 mt-1" ref={applyRouteRef}>
-                                <Input type="checkbox" id="friendApply" name="applyRoute" title="지인추천" onChange={handleChange} value="지인추천" />
+                                <Input type="checkbox" id="friendApply" name="applyRoute" required title="지인추천" onChange={handleChange} value="지인추천" />
                                 <Input type="checkbox" id="colleage" name="applyRoute" title="대학교 설명" onChange={handleChange} value="대학교 설명" />
                                 <Input type="checkbox" id="sns" name="applyRoute" title="SNS 광고 (인스타그램, 블로그 등)" onChange={handleChange} value="SNS 광고" />
                                 {formData.applyRoute.includes('SNS 광고') && (
@@ -574,7 +595,7 @@ export default function ApplyForm() {
                         <div>
                             <ApplyTitle title="활용 가능한 프로그래밍 언어" subTitle="(최소 1개 선택, 복수 선택 가능합니다.)" required />
                             <div className="flex flex-col space-y-2 mt-1" ref={languagesRouteRef}>
-                                <Input type="checkbox" id="python" name="availableLanguages" title="Python" checked={formData.availableLanguages.includes('Python')} value="Python" onChange={handleChange} />
+                                <Input type="checkbox" id="python" required name="availableLanguages" title="Python" checked={formData.availableLanguages.includes('Python')} value="Python" onChange={handleChange} />
                                 <Input type="checkbox" id="java" name="availableLanguages" title="Java" checked={formData.availableLanguages.includes('Java')} value="Java" onChange={handleChange} />
                                 <Input type="checkbox" id="javascript" name="availableLanguages" title="JavaScript" checked={formData.availableLanguages.includes('JavaScript')} value="JavaScript" onChange={handleChange} />
                                 <Input type="checkbox" id="typescript" name="availableLanguages" title="TypeScript" checked={formData.availableLanguages.includes('TypeScript')} value="TypeScript" onChange={handleChange} />
@@ -622,7 +643,7 @@ export default function ApplyForm() {
                             />
                         </div>
 
-                        {/* 자격증 증빙성류 */}
+                        {/* 자격증 증빙서류 */}
                         <div>
                             <ApplyTitle title="자격증 및 경력 증빙 서류 첨부" subTitle="zip 파일로 압축하여 업로드해주세요." />
                             <div className="mt-4 flex items-center">
@@ -630,7 +651,7 @@ export default function ApplyForm() {
                                 <input
                                     type="file"
                                     id="certFiles"
-                                    className="applyContent hidden"
+                                    className="hidden"
                                     name="certFiles"
                                     accept=".zip"
                                     onChange={handleChange}
@@ -728,7 +749,7 @@ export default function ApplyForm() {
                         </div>
                         {/* 제출 버튼 */}
                         <div className="w-full flex justify-center mt-20">
-                            <button onClick={handleSubmit} type="submit" title={!formData.agreeCheck || !formData.confirm ? "필수항목에 동의해주세요." : ""} className="w-48 h-16 bg-[#002278] text-white font-bold text-3xl p-2 rounded-lg disabled:bg-gray-500" disabled={!formData.agreeCheck || !formData.confirm}>
+                            <button type="submit" title={!formData.agreeCheck || !formData.confirm ? "필수항목에 동의해주세요." : ""} className="w-48 h-16 bg-[#002278] text-white font-bold text-3xl p-2 rounded-lg disabled:bg-gray-500" disabled={!formData.agreeCheck || !formData.confirm}>
                                 제출하기
                             </button>
                         </div>

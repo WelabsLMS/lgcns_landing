@@ -12,12 +12,12 @@ export const mainBannerOverview = [
         {
             id: 1,
             title: "교육기간",
-            content: "2024.12.20~\n2025.06.25"
+            content: "2024.12.20 ~\n2025.06.25"
         },
         {
             id: 2,
             title: "모집대상",
-            content: "국내외 대학(원)\n졸업(예정)자"
+            content: "국내외 대학(원)\n졸업(예정)자\n내일배움카드 발급 가능자"
         },
         {
             id: 3,
@@ -26,8 +26,9 @@ export const mainBannerOverview = [
         },
         {
             id: 4,
-            title: "교육시간",
-            content: "09:00-18:00\n총 960시간"
+            title: "모집기간",
+            content: "11/6(수) ~ 12/8(일) 23:59",
+            notice:"※조기마감 될 수 있음"
         },
     ]
 ]
@@ -76,6 +77,28 @@ export const overviewData = [
             title: "교육비",
             content: "전액무료 \n매월 훈련장려금 지원",
         },
+    ],
+    [
+        {
+            id: 1,
+            title: "과정명",
+            content: "LG CNS AM Insprire Camp",
+        },
+        {
+            id: 2,
+            title: "교육기간",
+            content: "2024.12.20 ~ 2025.06.25",
+        },
+        {
+            id: 3,
+            title: "모집기간",
+            content: "11/6(수) ~ 12/8(일) 23:59",
+        },
+        {
+            id: 4,
+            title: "교육비",
+            content: "전액무료 \n매월 훈련장려금 지급",
+        },
     ]
 ]
 
@@ -89,39 +112,31 @@ export const courseEmployFieldData = [
         },
         {
             id: 2,
-            title: "DevOps 엔지니어",
-        },
-        {
-            id: 3,
             title: "클라우드 아키텍트",
         },
         {
+            id: 3,
+            title: "DevOps 엔지니어",
+        },
+        {
             id: 4,
-            title: "프론트엔드 개발자",
-        },
-        {
-            id: 5,
-            title: "풀스택 개발자",
-        },
-        {
-            id: 6,
-            title: "IT 컨설턴트",
-        },
-        {
-            id: 7,
             title: "AI 엔지니어",
         },
         {
-            id: 8,
+            id: 5,
+            title: "프론트엔드 개발자",
+        },
+        {
+            id: 7,
             title: "백엔드 개발자",
+        },
+        {
+            id: 8,
+            title: "풀스택 개발자",
         },
         {
             id: 9,
             title: "SI 개발자",
-        },
-        {
-            id: 10,
-            title: "PM",
         },
     ]
 ]
@@ -267,9 +282,13 @@ export const curriculumData = [
         {
             id: 1,
             title: '클라우드와 AI 최신 트렌드 특강, \nDigital Insight 채우기',
-            desc: '실무에서의 클라우드 활용과 생성형 AI \n시장에 대한 현직자의 생생한 특강을 통해 \n최신기술 트렌드의 이해를 돕습니다.',
+            desc: '실무에서의 클라우드 활용과 생성형 AI 시장에 대한 현직자의 생생한 특강을 통해 \n최신기술 트렌드의 이해를 돕습니다.',
             mobileDesc: '실무에서의 클라우드 활용과 \n생성형 AI 시장에 대한 현직자의 생생한 특강을 통해 \n최신기술 트렌드의 이해를 돕습니다.',
-            img: 'assets/images/curriculum/curriculumstep/course1.svg'
+            img: 'assets/images/curriculum/curriculumstep/course1.svg',
+            inner: {
+                title: "클라우드와 AI 최신 트렌드 특강, Digital Insight 채우기",
+                desc: "실무에서의 클라우드 활용과 생성형 AI 시장에 대한 현직자의 생생한 특강을 통해 최신기술 트렌드의 이해를 돕습니다.",
+            }
         },
         {
             id: 2,
@@ -313,7 +332,95 @@ export const curriculumData = [
             mobileDesc: '현업 전문가가 도출한 도메인별 시나리오를 \n기반으로 실무와 동일한 환경의 프로젝트 수행과 \n멘토링을 통해 AM 전문가로 성장을 돕습니다.',
             img: 'assets/images/curriculum/curriculumstep/final.svg'
         }
-    ]
+    ],[
+        {
+            id: 1,
+            title: '클라우드와 AI 최신 트렌드 특강, \nDigital Insight 채우기',
+            desc: '실무에서의 클라우드 활용과 생성형 AI 시장에 대한 현직자의 생생한 특강을 통해 \n최신기술 트렌드의 이해를 돕습니다.',
+            mobileDesc: '실무에서의 클라우드 활용과 \n생성형 AI 시장에 대한 현직자의 생생한 특강을 통해 \n최신기술 트렌드의 이해를 돕습니다.',
+            img: 'assets/images/curriculum/curriculumstep/course1.svg',
+            inner: {
+                goal: "클라우드와 AI 최신 트렌드 특강, Digital Insight 채우기",
+                subject: "실무에서의 클라우드 활용과 생성형 AI 시장에 대한 현직자의 생생한 특강을 통해\n최신기술 트렌드의 이해를 돕습니다.",
+            }
+        },
+        {
+            id: 2,
+            title: 'AI 서비스 개발을 통한 \n풀스택 개발자로 거듭나는 지름길',
+            desc: '프론트엔드와 백엔드의 기초부터 심화, \n생성형 AI에 대한 이해를 바탕으로 \n코드퀄리티 플랫폼을 활용하여 \nAI 서비스 개발에 필요한 \n기술을 습득합니다.',
+            mobileDesc: '프론트엔드와 백엔드의 기초부터 심화, \n생성형 AI 이해를 바탕으로 코드퀄리티 플랫폼을 \n활용하여 AI 서비스 개발에 필요한 기술을 \n습득합니다.',
+            img: 'assets/images/curriculum/curriculumstep/course2.svg',
+            inner: {
+                goal: "프론트엔드와 백엔드의 기초부터 심화, 생성형 AI에 대한 이해를 바탕으로 \n코드 퀄리티 플랫폼을 활용하여 AI 서비스 개발에 필요한 기술 습득",
+                subject: "Digital Insight 2 서비스 개발을 위한 DevOps Tools, AI 서비스 개발을 위한 \n프론트엔드·백엔드, 코드 퀄리티 플랫폼 기반의 생성형 AI를 활용한 REST API 개발",
+                tech:"HTML/CSS, JavaScript, React.js, Java, Spring Boot, Spring AI, MySQL, Git, Grafana, Prometheus"
+            }
+        },
+        {
+            id: 3,
+            title: 'AI 기반의 개인 맞춤형 \n뉴스 애플리케이션 개발로 기본기 잡기',
+            desc: 'AI기반의 사용자 맞춤형 콘텐츠를 제공하는 \n애플리케이션 개발을 통해 배운 내용을 \n실제로 적용해보며 기본기를 갖춥니다.',
+            mobileDesc: 'AI기반의 사용자 맞춤형 콘텐츠를 제공하는 \n애플리케이션 개발을 통해 배운 내용을 \n실제로 적용해보며 기본기를 갖춥니다.',
+            img: 'assets/images/curriculum/curriculumstep/mini1.svg',
+            inner: {
+                goal: "AI 기반 사용자 맞춤형 콘텐츠를 제공하는 애플리케이션 개발 \n배운 내용을 실제 적용해보며 기본기 갖추기",
+                subject: "AI 기반 초개인화 맞춤형 뉴스 서비스 플랫폼 개발",
+            }
+        },
+        {
+            id: 4,
+            title: 'AM 기술의 모든 것, \nLG CNS의 Application Modernization',
+            desc: 'LG CNS 실무진의 AM Agile 특강부터 \nMSA 기술 이해와 활용을 통해 \nAM 전문가로의 기반을 다집니다.',
+            mobileDesc: 'LG CNS 실무진의 AM Agile 특강부터 \nMSA 기술 이해와 활용을 통해 \nAM 전문가로의 기반을 다집니다.',
+            img: 'assets/images/curriculum/curriculumstep/course3.svg',
+            inner: {
+                goal: "LG CNS 실무진의 AM Agile 특강부터 MSA 기술 이해와 활용을 통해 \nAM 전문가로의 기반을 다집니다.",
+                subject: "Digital Insight 3 CNS AM Agile, AM 기반의 MSA 기술",
+                tech: "AWS, Linux, Docker, Kubernetes"
+            }
+        },
+        {
+            id: 5,
+            title: 'AM 역량 굳히기 \nMSA 서비스 개발 및 운영환경 구축',
+            desc: '미니 프로젝트 2을 기반으로 \nMSA 서비스 운영환경 구축을 통해 \n풀스택 기술을 내재화합니다.',
+            mobileDesc: '미니 프로젝트 2을 기반으로 \nMSA 서비스 운영환경 구축을 통해 \n풀스택 기술을 내재화합니다.',
+            img: 'assets/images/curriculum/curriculumstep/mini2.svg',
+            inner: {
+                goal: "MSA 서비스 운영환경 구축, AM 전문가로의 역량 굳히기",
+                subject: "미니 PJT 1을 기반으로 한 MSA 서비스 구축",
+            }
+        },
+        {
+            id: 6,
+            title: '최종 프로젝트 전 Warming-up! \nAI 기반의 서비스 구현',
+            desc: 'LG CNS의 산업 도메인별 AI 기반 \n서비스 개발을 위한 해커톤을 통해 \n프로젝트 사이클을 경험합니다.',
+            mobileDesc: 'LG CNS의 산업 도메인별 AI 기반 \n서비스 개발을 위한 해커톤을 통해 \n프로젝트 사이클을 경험합니다.',
+            img: 'assets/images/curriculum/curriculumstep/hackathon.svg',
+            inner: {
+                goal: "LG CNS의 산업 도메인별 AI 기반 서비스 개발, 프로젝트 사이클 경험",
+                subject: "아이디어톤 기반의 도메인별 AI를 활용한 서비스 구현",
+            }
+        },
+        {
+            id: 7,
+            title: 'LG CNS 실무진과 함께하는 \nAM 기반의 최종 프로젝트',
+            desc: '현업 전문가가 도출한 도메인별 \n시나리오를 기반으로 실무와 동일한 환경의 프로젝트 수행과 멘토링을 \n통해 AM 전문가로 성장을 돕습니다.',
+            mobileDesc: '현업 전문가가 도출한 도메인별 시나리오를 \n기반으로 실무와 동일한 환경의 프로젝트 수행과 \n멘토링을 통해 AM 전문가로 성장을 돕습니다.',
+            img: 'assets/images/curriculum/curriculumstep/final.svg',
+            inner: {
+                goal: "현업 전문가가 도출한 도메인별 시나리오 기반 프로젝트와 멘토링 수행, \nAM 전문가로의 성장",
+                subject: "아이디어톤 기반의 도메인별 AI를 활용한 서비스 구현",
+                pjt: [
+                    "1. 클라우드 기반 무인 스마트스토어 자동 발주 서비스 개발",
+                    "2. MSA 기반 공공기관 대규모 모바일 사원증 관리 시스템 구축",
+                    "3. GenAI 기반 초개인화 학습 성취도 진단 서비스 개발",
+                    "4. IoT 장비를 활용한 스마트팩토리 환경설비 관리 시스템 개발",
+                    "5. 클라우드 IoT 플랫폼 기반 모빌리티 데이터를 활용한 자율주행 안전성 개선 모델 구축",
+                    '6. Kubernetes를 활용한 금융서비스 장애대응 모니터링 시스템 구축'
+                ]
+            }
+        }
+    ],
 ]
 
 // 커리큘럼 프로젝트 데이터
@@ -329,8 +436,8 @@ export const curriculumProjectData = [
         title: '최종 프로젝트',
         img: 'assets/images/curriculum/project/project_final.svg',
         desc: 'AM 기반의 최종 프로젝트를 통해 \nLG CNS만의 AM 기술과 Agile 개발방법론을 \n활용하여 AM 프로젝트 사이클을 경험하고 \n시스템을 구축합니다.',
-        width: { default: 700, md: 800, sm: 600 },
-        height: { default: 300, md: 200, sm: 200 }
+        width: { default: 700, md: 600, sm: 600 },
+        height: { default: 600, md: 700, sm: 600 }
     },
     // 추가 슬라이드 데이터
 ]
@@ -432,26 +539,26 @@ export const selectionProcedureData = [
         {
             id: 1,
             imgSrc: "assets/images/selection/resume.svg",
-            title: "1.신청서 작성",
-            desc: "교육 신청서 작성"
+            title: "서류전형",
+            desc: "합격자 이메일 개별 연락\n1차 : 11.6(수)~11.20(수) 23:59\n2차 : 11.21(목)~12.6(수) 23:59"
         },
         {
             id: 2,
             imgSrc: "assets/images/selection/docu.svg",
-            title: "2.서류전형",
-            desc: "합격자 이메일 개별 연락"
+            title: "면접전형",
+            desc: "개별 온라인 인터뷰 진행\n1차 : 11.25(월)~11.29(금)\n2차 : 12.9(월)~12.13(금)"
         },
         {
             id: 3,
             imgSrc: "assets/images/selection/interview.svg",
-            title: "3.면접전형",
-            desc: "개별 온라인 인터뷰 진행 \n/ 내일배움카드 신청 & 발급"
+            title: "합격자 발표",
+            desc: "12.16(월)"
         },
         {
             id: 4,
             imgSrc: "assets/images/selection/final.svg",
-            title: "4.최종 합격",
-            desc: "최종 합격자 교육 입과"
+            title: "오리엔테이션",
+            desc: "12.20(금)"
         },
     ]
 

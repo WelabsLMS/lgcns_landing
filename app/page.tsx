@@ -16,8 +16,8 @@ export default function Home() {
   return (
     <main>
       <MainBanner />
-      <OverView />
       <Introduce />
+      <OverView />
       <Curriculum />
       {/* <MainApply /> */}
       <CampBenefit />

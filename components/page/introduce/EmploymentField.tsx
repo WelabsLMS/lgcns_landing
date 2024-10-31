@@ -1,17 +1,16 @@
+import BoxTitle from '@/components/ui/introduce/BoxTitle'
 import { courseEmployFieldData } from '@/data/staticData'
 import React from 'react'
 
 function EmploymentField() {
     return (
-        <div className='w-full mt-10 md:mt-20 rounded-[30px] py-3 flex flex-col items-center bg-[#E0E9FF]'>
-            <div className='rounded-full bg-white px-14 py-4 mb-5'>
-                <p className='text-2xl lg:text-3xl font-extrabold text-[#5984EC]'>취업분야</p>
-            </div>
-            <div className='w-full flex items-center justify-center font-medium'>
-                <ol className='list-disc w-full lg:gap-x-10 py-4 lg:py-5 lg:px-20 xl:px-28 text-xl md:text-2xl leading-7 md:leading-10 grid grid-rows-5 lg:grid-rows-4 grid-flow-col justify-evenly lg:justify-between'>
+        <div className='mt-10 rounded-[30px] px-2 py-3 flex flex-col items-center bg-[#E0E9FF]'>
+            <BoxTitle title='취업분야' />
+            <div className='w-full rounded-xl md:rounded-[30px] py-3 md:py-5 flex flex-col bg-white font-medium'>
+                <ol className='list-disc w-full lg:gap-x-10 lg:px-20 xl:pr-12 xl:pl-32 text-xl md:text-2xl md:leading-10 grid grid-rows-4 lg:grid-rows-none lg:grid-cols-4 grid-flow-row justify-evenly lg:justify-between gap-4'>
                     {
                         courseEmployFieldData[0].map((data, index) => (
-                            <li key={index} className='mb-4'>
+                            <li key={index}>
                                 {data.title}
                             </li>
                         ))

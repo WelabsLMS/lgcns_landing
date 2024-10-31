@@ -59,7 +59,7 @@ function CurriculumProject() {
                     </div>
                     <div className={`last h-auto w-1/2 md:w-full lg:h-1/2 flex flex-col justify-between gap-5 border-2 px-4 py-6 rounded-2xl cursor-pointer ${activeIndex === 1 ? 'bg-[#E0E9FF]' : ''}`}>
                         <p className='last text-lg md:text-3xl font-semibold text-nowrap'>최종 프로젝트</p>
-                        <p className='hidden lg:block text-xl'>AM 기반의 최종 프로젝트를 통해 LG CNS만의 AM 기술과 <br/>Agile 개발방법론을 통해 AM 프로젝트 사이클을 경험하고 <br/>시스템을 구축합니다.</p>
+                        <p className='hidden lg:block text-xl'>AM 기반의 최종프로젝트를 통해 LG CNS만의 AM 기술과 <br className='hidden xl:block'/>Agile 개발방법론을 통해 <br className='hidden lg:block xl:hidden'/> AM 프로젝트 사이클을 경험하고 <br/>시스템을 구축합니다.</p>
                     </div>
                 </div>
                 <div className='flex lg:h-[427px] xl:h-[447px] w-full lg:w-3/5 rounded-2xl'>
@@ -75,7 +75,7 @@ function CurriculumProject() {
                         {
                             curriculumProjectData.map((data, index) => (
                                 <SwiperSlide key={index}>
-                                    <div className='mb-8 md:mb-12 lg:mb-0 w-full flex justify-center'>
+                                    <div className='mb-8 md:mb-12 lg:mb-0 w-full h-full flex justify-center'>
                                         <Image src={data.img} alt={data.title} width={imageSizes[index].width} height={imageSizes[index].height} priority />
                                     </div>
                                     <p className='lg:hidden text-lg md:text-2xl font-semibold text-center whitespace-pre-line'>{data.desc}</p>
