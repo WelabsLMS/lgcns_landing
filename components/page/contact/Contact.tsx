@@ -4,7 +4,7 @@ import React from 'react'
 
 function Contact() {
     return (
-        <section id='contact' className="section">
+        <section id='contact' className="section mb-20">
             <SectionTitle title="문의처" />
             <div className='flex flex-col gap-8 lg:gap-16'>
                 {/* 1 */}
@@ -15,8 +15,7 @@ function Contact() {
                         </div>
                         <div className='ml-4 lg:ml-10 text-base lg:text-xl font-bold'>
                             <p>문의처 : 위랩스페이스</p>
-                            <p>이메일 : hnlee@welabs.kr</p>
-                            <p>문의시간 : 평일 09:00 - 18:00</p>
+                            <p>이메일 : contact@welabs.kr</p>
                         </div>
                     </div>
                 </div>
@@ -30,7 +29,7 @@ function Contact() {
                         <div className='ml-4 lg:ml-8 text-base lg:text-xl font-bold'>
                             <p>문의처 : 고용노동부</p>
                             <p>전화번호 : 1350</p>
-                            <p>문의시간 : 평일 09:00 - 18:00</p>
+                            <p>가능시간 : 평일 09:00 - 18:00</p>
                         </div>
                     </div>
                 </div>

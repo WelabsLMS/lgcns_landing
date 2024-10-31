@@ -45,10 +45,10 @@ function Curriculum() {
                 <span className="rounded-xl px-2 text-3xl md:text-4xl xl:text-5xl font-extrabold">단계별 프로젝트를 통해 <br className='md:hidden' /> 포트폴리오 완벽 준비!</span>
             </div>
 
-            <div className='flex justify-center'>
-                <div className="hidden w-full lg:flex items-start justify-between xl:justify-center my-10 lg:px-5 xl:px-20">
+            <div className='w-full flex justify-center px-4 lg:px-10 xl:px-20'>
+                <div className="w-full flex items-start justify-between xl:justify-center mb-4 md:mb-0 lg:my-10 ">
                     {
-                        curriculumStepData[0].map((data, index) => (
+                        curriculumStepData[1].map((data, index) => (
                             <CourseStepEle
                                 key={index}
                                 title={data.title}
@@ -59,7 +59,8 @@ function Curriculum() {
                             />
                         ))
                     }
-                    <div className='relative -top-7 w-20 h-20 md:w-10 md:h-10 lg:w-28 lg:h-28 flex-shrink-0'> {/* 이미지 크기 조정 및 마진 조정 */}
+
+                    {/* <div className='relative -top-7 w-20 h-20 md:w-10 md:h-10 lg:w-28 lg:h-28 flex-shrink-0'> 
                         <Image
                             src='assets/images/curriculum/curriculumstep/trophy.svg'
                             alt='curriculum'
@@ -67,7 +68,8 @@ function Curriculum() {
                             height={150} // 이미지 높이 조정
                             className='object-contain' // 이미지가 잘리지 않도록 설정
                         />
-                    </div>
+                    </div> */}
+
                 </div>
             </div>
 
@@ -93,8 +95,8 @@ function Curriculum() {
                         >
                             {
                                 curriculumData[0].map((data, index) => (
-                                    <SwiperSlide key={index} className='py-8 mb-8 md:py-10 md:px-14 lg:px-10 gap-6 lg:py-10'>
-                                        <p className='text-xl font-bold md:hidden'>{curriculumStepData[0][index].title}</p>
+                                    <SwiperSlide key={index} className='py-8 md:py-10 md:px-14 lg:px-10 gap-6 lg:py-10'>
+                                        {/* <p className='text-xl font-bold md:hidden'>{curriculumStepData[0][index].title}</p> */}
                                         <div className='text-xl md:text-3xl font-bold text-center'>
                                             <p>{data.title}</p>
                                         </div>

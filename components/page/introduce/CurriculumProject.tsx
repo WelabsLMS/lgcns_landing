@@ -37,7 +37,7 @@ function CurriculumProject() {
         <div>
             <div className='text-center my-10 md:my-20'>
                 <div className='rounded-xl px-2 text-2xl md:text-5xl font-bold'>
-                    <p className="">LG CNS 전문가와 함께하는 </p>
+                    <p className="">현업 전문가와 함께하는 </p>
                     <p>산업 도메인별 프로젝트</p>
                 </div>
                 <div className='md:text-2xl font-semibold my-10 w-max flex flex-col items-center mx-auto'>
@@ -46,7 +46,7 @@ function CurriculumProject() {
                         AM 전문가로 성장하기 위한 첫 걸음
                     </div>
                     <div className='relative'>
-                        실무 경험이 풍부한 실무 전문가에게 배우세요!
+                        실무 경험이 풍부한 현업 전문가에게 배우세요!
                         <Image className='absolute -bottom-2 -right-6 w-3' src='assets/images/curriculum/project/quotes_right.svg' alt='curriculum' width={15} height={25} />
                     </div>
                 </div>

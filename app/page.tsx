@@ -1,4 +1,4 @@
-import Footer from "@/components/layouts/Footer";
+// import Footer from "@/components/layouts/Footer";
 import MainBanner from "@/components/page/Banner/MainBanner";
 import CampBenefit from "@/components/page/campbenefit/CampBenefit";
 import Contact from "@/components/page/contact/Contact";
@@ -27,7 +27,7 @@ export default function Home() {
       {/* <Location /> */}
       <CenterImageList />
       <Contact />
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }
