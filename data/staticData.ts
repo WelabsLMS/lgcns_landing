@@ -64,7 +64,7 @@ export const overviewData = [
         {
             id: 4,
             title: "모집기간",
-            content: "2024.10월 예정",
+            content: "1차 2024.11.04 ~ 2024.11.22\n2차 2024.11.25 ~ 2024.12.06",
         },
         {
             id: 5,
