@@ -38,9 +38,9 @@ export const mainBannerDesc = [
         {
             id: 1,
             img: "assets/images/introduce/circle_check.svg",
-            title: "AM(Application Modernization)이란?",
+            title: "AM(Application Modernization) 이란?",
             desc: "IT 인프라, 플랫폼, 내부 아키텍처, 기존 기능을 최신 기술 스택을 활용하여\n새로운 비즈니스 가치를 창출하도록 클라우드 네이티브 환경으로 현대화하는 프로세스",
-            mobileDesc: "IT 인프라, 플랫폼, 내부 아키텍처, 기존 기능을 \n최신 기술 스택을 활용하여 새로운 비즈니스 가치를 \n창출하도록 클라우드 네이티브 환경으로 현대화하는 \n프로세스"
+            mobileDesc: "IT 인프라, 플랫폼, 내부 아키텍처, 기존 기능을 \n최신 기술 스택을 활용하여 \n새로운 비즈니스 가치를 창출하도록 \n클라우드 네이티브 환경으로 현대화하는 프로세스"
         }
     ]
 ]
@@ -538,25 +538,25 @@ export const selectionProcedureData = [
     [
         {
             id: 1,
-            imgSrc: "assets/images/selection/resume.svg",
+            imgSrc: "assets/images/selection/docu.svg",
             title: "서류전형",
             desc: "합격자 이메일 개별 연락\n1차 : 11.6(수)~11.20(수) 23:59\n2차 : 11.21(목)~12.6(수) 23:59"
         },
         {
             id: 2,
-            imgSrc: "assets/images/selection/docu.svg",
+            imgSrc: "assets/images/selection/interview.svg",
             title: "면접전형",
             desc: "개별 온라인 인터뷰 진행\n1차 : 11.25(월)~11.29(금)\n2차 : 12.9(월)~12.13(금)"
         },
         {
             id: 3,
-            imgSrc: "assets/images/selection/interview.svg",
+            imgSrc: "assets/images/selection/noti.svg",
             title: "합격자 발표",
             desc: "12.16(월)"
         },
         {
             id: 4,
-            imgSrc: "assets/images/selection/final.svg",
+            imgSrc: "assets/images/selection/orient.svg",
             title: "오리엔테이션",
             desc: "12.20(금)"
         },

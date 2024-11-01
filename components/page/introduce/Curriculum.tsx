@@ -39,7 +39,7 @@ function Curriculum() {
     };
 
     return (
-        <section className="relative mt-10 md:mt-20">
+        <section className="relative mt-10">
             <SectionTitle title="커리큘럼" />
             <div className='text-center my-8'>
                 <p className='mb-2 text-lg md:text-2xl font-bold'>기초부터 심화까지 <br className='md:hidden' /> 단계적으로 성장할 수 있도록 설계하였습니다.</p>
@@ -79,11 +79,10 @@ function Curriculum() {
                     <div className={`prev-button-wrap relative invisible md:visible left-5 w-8 h-8 md:w-10 md:h-10 md:left-0 rounded-xl ${isBeginning ? 'bg-[#C2D3FF50]' : 'bg-[#A5B4FC] cursor-pointer'}`}>
                         <div id='curriculumSwiper' className='button-prev'></div>
                     </div>
-                    <div className='bg-[#C2D3FF50] w-full px-4 md:px-0 md:w-4/5 lg:w-[80%] xl:w-[85%] lg:h-[65vh] xl:h-min mx-auto rounded-2xl whitespace-pre-line text-pretty'>
+                    <div className={`bg-[#C2D3FF50] w-full px-4 md:px-0 md:w-4/5 lg:w-[80%] xl:w-[85%]  ${slideIndex === 6 ? "h-max":"lg:h-[55vh] h-[76vh]"}  xl:h-min mx-auto rounded-2xl whitespace-pre-line text-pretty`}>
                         <Swiper
                             id='curriculumSwiper'
                             slidesPerView={1}
-                            autoHeight
                             pagination
                             modules={[Navigation, Pagination]}
                             navigation={{
@@ -96,12 +95,12 @@ function Curriculum() {
                         >
                             {
                                 curriculumData[1].map((data, index) => (
-                                    <SwiperSlide key={index} className='py-8 md:py-10 md:px-14 lg:px-10 gap-6 lg:py-10 xl:px-9 xl:py-10 h-full'>
-                                        <div className='flex flex-col justify-around h-full'>
+                                    <SwiperSlide key={index} className='py-8 md:py-10 md:px-14 lg:px-10 gap-6 lg:py-10 xl:px-9 xl:py-10 h-full overflow-hidden'>
+                                        <div className='flex flex-col justify-around '>
                                             {/* <p className='text-xl font-bold md:hidden'>{curriculumStepData[0][index].title}</p> */}
-                                            <div className='relative text-2xl md:text-4xl font-bold text-center mb-5 xl:mb-10'>
+                                            <div className='relative w-max mx-auto text-xl md:text-[28px] font-bold text-center mb-5 xl:mb-10'>
                                                 <p>{data.title}</p>
-                                                <Image src='/assets/images/curriculum/impact_star.svg' alt='curriculum' className='absolute left-0 -top-5' width={50} height={50} />
+                                                <Image src='/assets/images/curriculum/impact_star.svg' alt='curriculum' className='absolute -left-8 lg:-left-10 -top-5 w-10 h-10' width={50} height={50} />
                                             </div>
                                             {/* <div className='w-full text-center lg:text-start flex flex-col-reverse items-center lg:flex-row text-base md:text-2xl justify-around'>
                                             <div className='hidden font-semibold w-full lg:w-[55%] lg:flex items-center justify-center'>{data.desc}</div>
@@ -115,20 +114,20 @@ function Curriculum() {
                                                 {data.inner && 'goal' in data.inner &&
                                                     <div className='mb-10 space-y-5'>
                                                         <InnerTitleBtrn title={'학습목표'} />
-                                                        <p className='text-xl lg:text-3xl font-semibold whitespace-pre-line px-5'>{data.inner.goal}</p>
+                                                        <p className='text-base lg:text-xl font-semibold md:whitespace-pre-line px-2 md:px-5'>{data.inner.goal}</p>
                                                     </div>
                                                 }
                                                 {data.inner && 'subject' in data.inner &&
                                                     <div className='mb-10 space-y-5'>
                                                         <InnerTitleBtrn title={'교과목'} />
-                                                        <p className='text-xl lg:text-3xl font-semibold whitespace-pre-line px-5'>{data.inner.subject}</p>
+                                                        <p className='text-base lg:text-xl font-semibold md:whitespace-pre-line px-2 md:px-5'>{data.inner.subject}</p>
                                                     </div>
                                                 }
 
                                                 {data.inner && 'tech' in data.inner &&
                                                     <div className='mb-5 space-y-5'>
                                                         <InnerTitleBtrn title={'기술스택'} />
-                                                        <p className='text-xl lg:text-3xl font-semibold whitespace-pre-line px-5'>{data.inner.tech}</p>
+                                                        <p className='text-base lg:text-xl font-semibold md:whitespace-pre-line px-2 md:px-5'>{data.inner.tech}</p>
                                                     </div>
                                                 }
 
@@ -140,7 +139,7 @@ function Curriculum() {
                                                             <ol className='space-y-3'>
                                                                 {
                                                                     data.inner.pjt && data.inner.pjt.map((project, index) => (
-                                                                        <li key={index} className='text-xl lg:text-3xl font-semibold px-5'>{project}</li>
+                                                                        <li key={index} className='text-xl lg:text-xl font-semibold px-2 md:px-5'>{project}</li>
                                                                     ))
                                                                 }
                                                             </ol>

@@ -79,7 +79,7 @@ function Header() {
                             </button>
                         </li>
                         <li
-                            className='text-white w-[120px] h-[38px] flex items-center justify-center rounded-full px-4 bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] font-semibold'
+                            className='text-white w-[120px] h-[38px] flex items-center justify-center rounded-full px-4 bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] font-bold'
                             onClick={() => setSubMenuOpen(!subMenuOpen)}
                         >
                             <Link href={'/apply'}>교육신청</Link>
