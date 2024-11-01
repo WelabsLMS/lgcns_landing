@@ -51,13 +51,13 @@ function ApplySubmitModal({ isModalOpen, setIsModalOpen, isSuccess }: { isModalO
                                 isSuccess ? <>
                                     <Image src={applyModalData[0].success.img} width={100} height={100} alt='apply_submit' />
                                     <p className='text-3xl md:text-4xl font-bold whitespace-pre-line text-center'>{applyModalData[0].success.title}</p> </> : <>
-                                    <Image src={applyModalData[0].fail.img} width={100} height={100} alt='apply_submit' />
-                                    <p className='text-3xl md:text-4xl font-bold whitespace-pre-line text-center mt-10'>{applyModalData[0].fail.title}</p>
+                                    <Image src={applyModalData[0].success.img} width={100} height={100} alt='apply_submit' />
+                                    <p className='text-3xl md:text-4xl font-bold whitespace-pre-line text-center mt-10'>이미 신청한 지원자입니다!</p>
                                 </>
                             }
                             {/* <p className='text-3xl md:text-4xl font-bold'></p> */}
                         </div>
-                        <p className='text-xl md:text-3xl font-semibold mt-2 text-center whitespace-pre-line'>{isSuccess ? applyModalData[0].success.desc : "이미 신청한 지원자입니다!"}</p>
+                        <p className='text-xl md:text-3xl font-semibold mt-2 text-center whitespace-pre-line'>{isSuccess ? applyModalData[0].success.desc : ""}</p>
                         <button onClick={() => setIsModalOpen(!isModalOpen)} className='bg-[#002278] text-2xl text-white font-semibold rounded-2xl px-7 py-3 mt-6'>확인</button>
                     </div>
                     {/* 스파클 효과 수정

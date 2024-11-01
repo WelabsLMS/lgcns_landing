@@ -319,7 +319,7 @@ export default function ApplyForm() {
                 setIsSuccess(true);
             }
         } catch (error) {
-            if ((error as any).response?.data?.errorCode === "DUPLICATE") {
+            if (axios.isAxiosError(error) && error.response?.data?.errorCode === "DUPLICATE") {
                 setIsModalOpen(true);
                 setIsSuccess(false);
             }
