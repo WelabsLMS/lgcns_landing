@@ -40,6 +40,7 @@ export default function ApplyForm() {
     
     const applyRouteRef = React.useRef<HTMLDivElement>(null);
     const languagesRouteRef = React.useRef<HTMLDivElement>(null);
+    const [isSuccess, setIsSuccess] = useState<boolean>(false);
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [additionalText, setAdditionalText] = useState<{ sns: string; website: string; applyEtc: string, programEtc: string }>({
@@ -218,32 +219,58 @@ export default function ApplyForm() {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // 필수 항목 검사
-        if (!formData.name) {
-            return;
-        }
-        if (!formData.gender) {
-            return;
-        }
-        if (!formData.birthday) {
-            return;
-        }
-        if (!formData.phoneNumber) {
-            return;
-        }
-        if (!formData.email) {
-            return;
-        }
-        if (formData.applyRoute.length === 0) {
-            document.getElementById('applyRoute')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            return;
-        }
-        if (formData.availableLanguages.length === 0) {
-            return;
-        }
-        if (formData.agreeCheck === 0) {
-            return;
-        }
+
+        const formDataToSend = new FormData(e.target as HTMLFormElement);
+        formDataToSend.append('classId', '1');
+        formDataToSend.append('courseName', 'LG CNS AM Inspire Camp 1기');
+        const availableLanguages = formDataToSend.getAll('availableLanguages');
+        const applyRoute = formDataToSend.getAll('applyRoute');
+
+        Object.entries(formDataToSend).forEach(([key, value]) => {
+            if (key === 'sns' || key === 'website' || key === 'applyEtc') {
+                // sns, website, applyEtc 내용을 applyRoute에 추가 후 삭제
+                if (key === 'sns') {
+                    applyRoute.push(`SNS 광고:${value}`);
+                } else if (key === 'website') {
+                    applyRoute.push(`웹사이트:${value}`);
+                } else if (key === 'applyEtc') {
+                    applyRoute.push(`지원기타:${value}`);
+                }
+                formDataToSend.delete(key);
+
+            } else if (key === 'programEtc') {
+                availableLanguages.push(`프로그램기타:${value}`);
+                formDataToSend.delete(key);
+            }
+        });
+
+        // e.preventDefault();
+        // // 필수 항목 검사
+        // if (!formData.name) {
+        //     return;
+        // }
+        // if (!formData.gender) {
+        //     return;
+        // }
+        // if (!formData.birthday) {
+        //     return;
+        // }
+        // if (!formData.phoneNumber) {
+        //     return;
+        // }
+        // if (!formData.email) {
+        //     return;
+        // }
+        // if (formData.applyRoute.length === 0) {
+        //     document.getElementById('applyRoute')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        //     return;
+        // }
+        // if (formData.availableLanguages.length === 0) {
+        //     return;
+        // }
+        // if (formData.agreeCheck === 0) {
+        //     return;
+        // }
 
         // // FormData 생성
         // const formDataToSend = new FormData();
@@ -281,7 +308,7 @@ export default function ApplyForm() {
         // }
 
         try {
-            const res = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_API_URL}/api/landing/account/saveClassApplyInfo`, formData, {
+            const res = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_API_URL}/api/landing/account/saveClassApplyInfo`, formDataToSend, {
                 headers: {
                     'Content-Type': `multipart/form-data`,
                 }
@@ -289,20 +316,27 @@ export default function ApplyForm() {
 
             if (res.status === 200) {
                 setIsModalOpen(true);
+                setIsSuccess(true);
             }
         } catch (error) {
+            if ((error as any).response?.data?.errorCode === "DUPLICATE") {
+                setIsModalOpen(true);
+                setIsSuccess(false);
+            }
         }
     }
 
+
     return (
         <>
-            <ApplySubmitModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+            <ApplySubmitModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} isSuccess={isSuccess} />
             <section className="min-h-screen mb-28">
                 {/* 상단 배너 */}
                 <div className="text-center h-max mb-16 bg-[#C2D3FF] py-16 px-2">
                     <h2 className="text-4xl lg:text-5xl font-bold">LG CNS AM* Inspire Camp 1기 지원</h2>
                     <p className='text-3xl mb-6'>(Application Modernization)</p>
-                    <p className="text-2xl font-semibold">LG CNS AM Inspire Camp <br className="lg:hidden" /> 1기 지원 페이지입니다.<br />지원서 제출은 1회로 제한하며, 제출 후 수정이 불가하니 신중을 기해 주세요.</p>
+                    <p className="text-2xl font-semibold">LG CNS AM Inspire Camp 1기 <br className="lg:hidden" />지원 페이지입니다.</p>
+                    {/* <p className="text-2xl font-semibold">지원서 제출은 1회로 제한하며, 제출 후 수정이 불가하니 신중을 기해 주세요.</p> */}
                     <p className="text-2xl mt-2 font-semibold"><span className="text-red-500">*</span>표시는 필수 입력사항입니다.</p>
                 </div>
                 <div className='container mx-auto px-2 lg:px-52 xl:px-64'>
