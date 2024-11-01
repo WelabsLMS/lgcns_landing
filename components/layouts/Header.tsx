@@ -37,7 +37,7 @@ function Header() {
                         <button className='flex lg:w-28 h-[44px] xl:w-32 xl:h-[44px] items-center justify-center px-4 rounded-full bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] shadow-[0_4px_10px_rgba(255,95,109,0.4)]'>
                             <Image src='/assets/images/logo/solutionLms.png' alt='wsts' width={150} height={19} />
                         </button>
-                        <button className='text-white rounded-full lg:w-28 h-[44px] xl:w-32 xl:h-[44px] bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]'>
+                        <button className='text-white font-bold rounded-full lg:w-28 h-[44px] xl:w-32 xl:h-[44px] bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]'>
                             <Link href={'/apply'}>교육신청</Link>
                         </button>
                     </div>
