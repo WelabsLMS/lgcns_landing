@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/layouts/Header";
+import ScrollToTop from "@/components/ui/ScrollToTop";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -64,6 +65,7 @@ export default function RootLayout({
         className={`${lgFont.className} antialiased`}
       >
         <Header />
+        <ScrollToTop />
         {children}
       </body>
     </html>

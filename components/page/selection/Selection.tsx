@@ -1,26 +1,24 @@
 import SectionTitle from '@/components/ui/SectionTitle'
-import Curve from '@/components/ui/selectionProcedure/Curve'
 import SelectionEle from '@/components/ui/selectionProcedure/SelectionEle'
-import { selectionProcedureData } from '@/data/selection/selectionProcedureData'
+import { selectionProcedureData } from '@/data/staticData'
 import React from 'react'
 
 function Selection() {
     return (
-        <section className="pt-20">
+        <section id="selection" className="section">
             <SectionTitle title='선발절차' />
-            <div className='flex justify-center container mx-auto gap-0 my-16'>
-                {
-                    selectionProcedureData.map((data) => (
-                        <React.Fragment key={data.id}>
-                            <SelectionEle title={data.title} />
-                            <Curve id={data.id} />
-                        </React.Fragment>
-                    ))
-                }
-            </div>
-            <div className='container mx-auto px-64 text-xl'>
-                <p>교육과정 신청 후 순차적으로 이메일 안내 진행 예정입니다.</p>
-                <p>내일배움카드는 교육 시작 전 발급 필수이며, 상세내용은 FAQ 확인 또는 문의처로 문의 부탁드립니다.</p>
+            <div className='container'>
+                <div className='w-full flex xl:justify-evenly xl:gap-12 lg:mt-6 mb-4 md:mb-6 lg:mb-16'>
+                    {
+                        selectionProcedureData[0].map((data, index) => (
+                            <SelectionEle key={index} selectionEle={data} />
+                        ))
+                    }
+                </div>
+                <div className='text-center font-semibold text-lg md:text-2xl'>
+                    <p className='mb-4'>졸업예정자의 경우 25년 2월 졸업인 <br className='md:hidden'/> 경우에만 지원 가능합니다.</p>
+                    <p>위 일정은 선발 진행 절차에 따라 변동될 수 있습니다.</p>
+                </div>
             </div>
         </section>
     )

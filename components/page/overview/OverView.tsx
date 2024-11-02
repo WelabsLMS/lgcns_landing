@@ -1,21 +1,21 @@
 import React from 'react'
-
-import { overviewData } from '@/data/overview/overviewData'
+import { overviewData } from '@/data/staticData'
 import SectionTitle from '@/components/ui/SectionTitle'
 import OverViewEle from '@/components/ui/overview/OverViewEle'
-
 
 function OverView() {
     return (
         <section className="section">
             <SectionTitle title={'모집개요'} />
-            <div className='w-4/5 mx-auto  bg-[#C2D3FF50] rounded-[40px] py-16 pl-28'>
-                <div className='flex flex-wrap gap-y-20'>
-                    {
-                        overviewData.map((data) => (
-                            <OverViewEle key={data.id} title={data.title} contents={data.content} />
-                        ))
-                    }
+            <div className='container mx-auto lg:px-28 mt-10'>
+                <div className='bg-[#C2D3FF50] rounded-[20px] py-4 lg:py-12 lg:pl-14 md:px-4'>
+                    <div className='grid grid-cols-2 md:grid-cols-4 gap-y-2 lg:gap-y-20 justify-center md:gap-20 lg:gap-4'>
+                        {
+                            overviewData[1].map((data) => (
+                                <OverViewEle key={data.id} title={data.title} contents={data.content} />
+                            ))
+                        }
+                    </div>
                 </div>
             </div>
         </section>

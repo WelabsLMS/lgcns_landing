@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 interface FAQItemProps {
     question: string;
@@ -8,18 +8,33 @@ interface FAQItemProps {
 
 export default function FaqItem({ question, answer }: FAQItemProps) {
     const [isOpen, setIsOpen] = useState(false);
+    const contentRef = useRef<HTMLDivElement>(null); // 콘텐츠 높이를 계산하기 위한 참조
+
+    const toggleAccordion = () => {
+        setIsOpen(!isOpen);
+    };
+
+    useEffect(() => {
+        if (contentRef.current) {
+            // 높이 설정을 통해 애니메이션 성능 개선
+            contentRef.current.style.height = isOpen
+                ? `${contentRef.current.scrollHeight}px`
+                : '0px';
+        }
+    }, [isOpen]);
+
     return (
-        <div className="border-b border-gray-300 bg-white w-full h-15">
+        <div className="bg-white w-full h-auto px-2 lg:px-4">
             <button
                 className="w-full text-left py-4 focus:outline-none flex justify-between items-center"
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={toggleAccordion}
             >
                 <div>
-                    <span className="text-2xl font-bold mr-4">Q</span>
-                    <span className="text-lg font-semibold">{question}</span>
+                    <span className="lg:text-2xl font-bold mr-2 lg:mr-4">Q</span>
+                    <span className="lg:text-xl font-semibold whitespace-pre-line md:whitespace-normal">{question}</span>
                 </div>
                 <svg
-                    className={`w-6 h-6 transform transition-transform duration-300 ${isOpen ? '-rotate-180' : ''}`}
+                    className={`w-5 h-4 transform transition-transform duration-300 ${isOpen ? '-rotate-180' : ''}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -34,10 +49,13 @@ export default function FaqItem({ question, answer }: FAQItemProps) {
                 </svg>
             </button>
             <div
-                className={`transition-max-height duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-40' : 'max-h-0'}`}
+                ref={contentRef} // 콘텐츠 높이 참조
+                className={`transition-all duration-300 ease-in-out overflow-hidden text-gray-700 flex`}
+                style={{ height: '0px' }} // 기본 높이를 0으로 설정
             >
-                <p className="py-2 text-gray-700 whitespace-pre-line">{answer}</p>
+                {/* <span className="py-2 lg:text-2xl font-bold mr-2 lg:mr-4">A</span> */}
+                <span className="w-full py-2 md:text-lg whitespace-pre-line">{answer}</span>
             </div>
         </div>
-    )
+    );
 }
