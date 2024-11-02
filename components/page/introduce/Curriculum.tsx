@@ -112,7 +112,7 @@ function Curriculum() {
 
                                             <div className='text-base lg:text-2xl'>
                                                 {data.inner && 'goal' in data.inner &&
-                                                    <div className='mb-10 space-y-5'>
+                                                    <div className='mt-4 mb-10 space-y-5'>
                                                         <InnerTitleBtrn title={'학습목표'} />
                                                         <p className='text-base lg:text-xl font-semibold md:whitespace-pre-line px-2 md:px-5'>{data.inner.goal}</p>
                                                     </div>

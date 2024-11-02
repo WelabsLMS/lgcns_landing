@@ -19,7 +19,7 @@ function MainBanner() {
                 </div>
                 <div className="flex flex-col items-center justify-center ">
                     <div className="w-4/5 md:py-8 rounded-[30px] shadow-lg border-[3px] border-[#000080] ">
-                        <div className="grid grid-cols-2 md:grid-cols-4 text-center font-medium divide-y md:divide-x md:divide-y-0 divide-[#00227830] px-0 lg:px-0 lg:mr-4 xl:mr-8 md:px-0">
+                        <div className="grid grid-cols-2 md:grid-cols-4 text-center font-medium divide-y divide-x md:divide-y-0 divide-[#00227830] divide-dotted px-0 lg:px-0 lg:mr-4 xl:mr-8 md:px-0">
                             {
                                 mainBannerOverview[0].map((data, index) => (
                                     <div key={index} className='py-4 lg:py-4'>

@@ -27,7 +27,7 @@ export const mainBannerOverview = [
         {
             id: 4,
             title: "모집기간",
-            content: "11/6(수) ~ 12/8(일) 23:59",
+            content: "11/6(수) ~ 12/3(화) 23:59",
             notice:"※조기마감 될 수 있음"
         },
     ]
@@ -82,7 +82,7 @@ export const overviewData = [
         {
             id: 1,
             title: "과정명",
-            content: "LG CNS AM Insprire Camp",
+            content: "LG CNS AM \nInsprire Camp",
         },
         {
             id: 2,
@@ -92,7 +92,7 @@ export const overviewData = [
         {
             id: 3,
             title: "모집기간",
-            content: "11/6(수) ~ 12/8(일) 23:59",
+            content: "11/6(수) ~ \n12/3(화) 23:59",
         },
         {
             id: 4,
@@ -336,12 +336,12 @@ export const curriculumData = [
         {
             id: 1,
             title: '클라우드와 AI 최신 트렌드 특강, \nDigital Insight 채우기',
-            desc: '실무에서의 클라우드 활용과 생성형 AI 시장에 대한 현직자의 생생한 특강을 통해 \n최신기술 트렌드의 이해를 돕습니다.',
+            desc: '실무에서의 클라우드 활용과 생성형 AI 시장에 대한 현직자의 생생한 특강을 통해 \n최신기술 트렌드의 이해를 돕습니다.\n - 정보서비스 분야에서의 클라우드 활용 사례\n - 클라우드 기반 데이터 공유 및 확산 서비스 \n - 생성형 AI Value Chain 이란?\n - 생성형 AI 개발 현황 - Big Players',
             mobileDesc: '실무에서의 클라우드 활용과 \n생성형 AI 시장에 대한 현직자의 생생한 특강을 통해 \n최신기술 트렌드의 이해를 돕습니다.',
             img: 'assets/images/curriculum/curriculumstep/course1.svg',
             inner: {
                 goal: "클라우드와 AI 최신 트렌드 특강, Digital Insight 채우기",
-                subject: "실무에서의 클라우드 활용과 생성형 AI 시장에 대한 현직자의 생생한 특강을 통해\n최신기술 트렌드의 이해를 돕습니다.",
+                subject: "실무에서의 클라우드 활용과 생성형 AI 시장에 대한 현직자의 생생한 특강을 통해 \n최신기술 트렌드의 이해를 돕습니다.\n- 정보서비스 분야에서의 클라우드 활용 사례\n- 클라우드 기반 데이터 공유 및 확산 서비스 \n- 생성형 AI Value Chain 이란?\n- 생성형 AI 개발 현황 - Big Players",
             }
         },
         {
@@ -364,7 +364,7 @@ export const curriculumData = [
             img: 'assets/images/curriculum/curriculumstep/mini1.svg',
             inner: {
                 goal: "AI 기반 사용자 맞춤형 콘텐츠를 제공하는 애플리케이션 개발 \n배운 내용을 실제 적용해보며 기본기 갖추기",
-                subject: "AI 기반 초개인화 맞춤형 뉴스 서비스 플랫폼 개발",
+                subject: "반응형 웹 구축 정의 및 기술셋 활용\n - React 기반 프론트엔드\n - Spring Boot 기반 백엔드\n - Spring AI 활용\n - 보안가이드 적용 웹보안 실시\n - 로그 수집 및 분석",
             }
         },
         {
@@ -375,8 +375,8 @@ export const curriculumData = [
             img: 'assets/images/curriculum/curriculumstep/course3.svg',
             inner: {
                 goal: "LG CNS 실무진의 AM Agile 특강부터 MSA 기술 이해와 활용을 통해 \nAM 전문가로의 기반을 다집니다.",
-                subject: "Digital Insight 3 CNS AM Agile, AM 기반의 MSA 기술",
-                tech: "AWS, Linux, Docker, Kubernetes"
+                subject: "- Agile 애자일 스크럼과 JIRA 활용\n- Public Cloud 응용 & 멀티클라우드 활용(AWS, NCP)\n- MSA 데이터 동기화 패턴과 분산 트랜잭션 처리\n- 서비스 인프라 구성 (Docker, Kubernetes, CI/CD, Prometheus 등)",
+                // tech: "AWS, Linux, Docker, Kubernetes"
             }
         },
         {
@@ -387,7 +387,7 @@ export const curriculumData = [
             img: 'assets/images/curriculum/curriculumstep/mini2.svg',
             inner: {
                 goal: "MSA 서비스 운영환경 구축, AM 전문가로의 역량 굳히기",
-                subject: "미니 PJT 1을 기반으로 한 MSA 서비스 구축",
+                subject: "미니PJT 1기반 MSA 서비스 구축\n - Inner/Outer Architeture 이해\n - Kafka활용 데이터 동기화\n - 컨테이너 및 오케스트레이션 도구 활용\n - IaC 이해 및 Terraform 을 활용한 인프라 자동화",
             }
         },
         {
@@ -398,7 +398,7 @@ export const curriculumData = [
             img: 'assets/images/curriculum/curriculumstep/hackathon.svg',
             inner: {
                 goal: "LG CNS의 산업 도메인별 AI 기반 서비스 개발, 프로젝트 사이클 경험",
-                subject: "아이디어톤 기반의 도메인별 AI를 활용한 서비스 구현",
+                subject: "아이디어톤 기반의 도메인별 AI 활용 서비스 구현\n - 요구사항 분석/설계\n - 협업 및 의사소통 능력\n - 문제 해결 능력\n - SE, CDS 직무",
             }
         },
         {
@@ -539,25 +539,33 @@ export const selectionProcedureData = [
         {
             id: 1,
             imgSrc: "assets/images/selection/docu.svg",
-            title: "서류전형",
-            desc: "합격자 이메일 개별 연락\n1차 : 11.6(수)~11.20(수) 23:59\n2차 : 11.21(목)~12.6(수) 23:59"
+            title: "모집",
+            desc: "모집기간\n11.6(수)~12.3(화) 23:59"
         },
         {
             id: 2,
-            imgSrc: "assets/images/selection/interview.svg",
-            title: "면접전형",
-            desc: "개별 온라인 인터뷰 진행\n1차 : 11.25(월)~11.29(금)\n2차 : 12.9(월)~12.13(금)"
+            imgSrc: "assets/images/selection/docu.svg",
+            title: "서류전형",
+            // desc: "합격자 이메일 개별 연락(이메일)\n1차 : 11.6(수)~11.20(수) 23:59\n2차 : 11.21(목)~12.6(금) 23:59"
+            desc: "서류전형 일정(3일간)\n12.4(수)~12.6(금)\n*서류전형 통과 시 개별 연락(이메일)"
         },
         {
             id: 3,
+            imgSrc: "assets/images/selection/interview.svg",
+            title: "면접전형",
+            // desc: "개별 온라인 인터뷰 진행\n1차 : 11.25(월)~11.29(금)\n2차 : 12.9(월)~12.13(금)"
+            desc: "면접전형 일정(3일간)\n12.9(월)~12.12(목)\n*면접전형 통과 시 개별연락(이메일)"
+        },
+        {
+            id: 4,
             imgSrc: "assets/images/selection/noti.svg",
             title: "합격자 발표",
             desc: "12.16(월)"
         },
         {
-            id: 4,
+            id: 5,
             imgSrc: "assets/images/selection/orient.svg",
-            title: "오리엔테이션",
+            title: "교육시작\n(오리엔테이션)",
             desc: "12.20(금)"
         },
     ]
@@ -619,7 +627,7 @@ export const faqData = [
         },
         {
             question: '비전공자도 지원 가능할까요?',
-            answer: '프로그래밍 관련 경험이 있다면 \n비전공자도 지원 가능합니다.\n\n교육에 대한 의지와 성장 가능성 있는 지원자를 \n선발하므로 지원서에 잘 기입해주시기 바랍니다.',
+            answer: '프로그래밍 관련 경험이 있다면 \n비전공자도 지원 가능합니다.\n\n교육에 대한 의지와 성장 가능성 있는 지원자를 \n선발하므로 지원서에 상세히 기입해주시기 바랍니다.',
         },
         {
             question: '국민취업지원제도와 병행 가능한가요?',
