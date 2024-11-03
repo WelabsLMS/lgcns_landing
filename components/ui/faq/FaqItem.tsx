@@ -50,7 +50,7 @@ export default function FaqItem({ question, answer }: FAQItemProps) {
             </button>
             <div
                 ref={contentRef} // 콘텐츠 높이 참조
-                className={`transition-all duration-300 ease-in-out overflow-hidden text-gray-700 flex`}
+                className={`transition-all duration-300 ease-in-out overflow-hidden text-gray-700 flex ${isOpen && 'mb-2'}`}
                 style={{ height: '0px' }} // 기본 높이를 0으로 설정
             >
                 {/* <span className="py-2 lg:text-2xl font-bold mr-2 lg:mr-4">A</span> */}

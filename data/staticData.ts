@@ -547,14 +547,14 @@ export const selectionProcedureData = [
             imgSrc: "assets/images/selection/docu.svg",
             title: "서류전형",
             // desc: "합격자 이메일 개별 연락(이메일)\n1차 : 11.6(수)~11.20(수) 23:59\n2차 : 11.21(목)~12.6(금) 23:59"
-            desc: "서류전형 일정(3일간)\n12.4(수)~12.6(금)\n*서류전형 통과 시 개별 연락(이메일)"
+            desc: "서류전형 일정\n12.4(수)~12.6(금)\n*서류전형 통과 시 개별 연락(이메일)"
         },
         {
             id: 3,
             imgSrc: "assets/images/selection/interview.svg",
             title: "면접전형",
             // desc: "개별 온라인 인터뷰 진행\n1차 : 11.25(월)~11.29(금)\n2차 : 12.9(월)~12.13(금)"
-            desc: "면접전형 일정(3일간)\n12.9(월)~12.12(목)\n*면접전형 통과 시 개별연락(이메일)"
+            desc: "면접전형 일정\n12.9(월)~12.12(목)"
         },
         {
             id: 4,
@@ -565,7 +565,7 @@ export const selectionProcedureData = [
         {
             id: 5,
             imgSrc: "assets/images/selection/orient.svg",
-            title: "교육시작\n(오리엔테이션)",
+            title: "오리엔테이션",
             desc: "12.20(금)"
         },
     ]

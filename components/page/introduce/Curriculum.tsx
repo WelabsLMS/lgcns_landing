@@ -41,7 +41,7 @@ function Curriculum() {
     return (
         <section className="relative mt-10">
             <SectionTitle title="커리큘럼" />
-            <div className='text-center my-8'>
+            <div className='text-center mt-8'>
                 <p className='mb-2 text-lg md:text-2xl font-bold'>기초부터 심화까지 <br className='md:hidden' /> 단계적으로 성장할 수 있도록 설계하였습니다.</p>
                 <span className="rounded-xl px-2 text-2xl md:text-4xl xl:text-5xl font-extrabold">단계별 프로젝트를 통해 <br className='md:hidden' /> 포트폴리오 완벽 준비!</span>
             </div>
@@ -76,10 +76,10 @@ function Curriculum() {
             <div className='container mx-auto px-4 xl:px-0'>
                 {/* Slider */}
                 <div className='relative flex items-center'>
-                    <div className={`prev-button-wrap relative invisible md:visible left-5 w-8 h-8 md:w-10 md:h-10 md:left-0 rounded-xl ${isBeginning ? 'bg-[#C2D3FF50]' : 'bg-[#A5B4FC] cursor-pointer'}`}>
+                    <div className={`prev-button-wrap relative invisible md:visible left-5 w-8 h-8 md:w-10 md:h-10 md:left-0 rounded-xl ${isBeginning ? 'bg-[#adb5c850]' : 'bg-[#A5B4FC] cursor-pointer'}`}>
                         <div id='curriculumSwiper' className='button-prev'></div>
                     </div>
-                    <div className={`bg-[#C2D3FF50] w-full px-4 md:px-0 md:w-4/5 lg:w-[80%] xl:w-[85%]  ${slideIndex === 6 ? "h-max":"lg:h-[55vh] h-[76vh]"}  xl:h-min mx-auto rounded-2xl whitespace-pre-line text-pretty`}>
+                    <div className={`bg-[#C2D3FF50] w-full px-4 md:px-0 md:w-4/5 lg:w-[80%] xl:w-[85%] ${slideIndex === 6 ? "h-max" : "lg:h-[70vh] h-[60vh]"} xl:h-min mx-auto rounded-2xl whitespace-pre-line text-pretty`}>
                         <Swiper
                             id='curriculumSwiper'
                             slidesPerView={1}
@@ -95,7 +95,7 @@ function Curriculum() {
                         >
                             {
                                 curriculumData[1].map((data, index) => (
-                                    <SwiperSlide key={index} className='py-8 md:py-10 md:px-14 lg:px-10 gap-6 lg:py-10 xl:px-9 xl:py-10 h-full overflow-hidden'>
+                                    <SwiperSlide key={index} className='py-8 md:py-10 md:px-14 lg:px-10 gap-6 lg:py-10 xl:px-9 xl:py-10 h-full'>
                                         <div className='flex flex-col justify-around '>
                                             {/* <p className='text-xl font-bold md:hidden'>{curriculumStepData[0][index].title}</p> */}
                                             <div className='relative w-max mx-auto text-xl md:text-[28px] font-bold text-center mb-5 xl:mb-10'>
