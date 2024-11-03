@@ -55,7 +55,7 @@ function CurriculumProject() {
                 <div className='w-full lg:w-2/5 flex lg:flex-col gap-5 text-center lg:text-start'>
                     <div className={`hacker h-auto w-1/2 md:w-full lg:h-1/2 flex flex-col justify-between gap-5 border-2 px-4 py-6 rounded-2xl cursor-pointer ${activeIndex === 0 ? 'bg-[#E0E9FF]' : ''}`}>
                         <p className='hacker text-lg md:text-3xl font-semibold text-nowrap'>해커톤</p>
-                        <p className='hidden lg:block text-xl'>공공, 리테일, 금융, 교육, 스마트팩토리,<br/>스마트모빌리티 분야의 각 산업별 도메인에 따라 <br className='lg:hidden xl:block'/>AI를 활용한 서비스를 개발합니다.</p>
+                        <p className='hidden lg:block text-xl font-medium'>공공, 리테일, 금융, 교육, 스마트팩토리,<br/>스마트모빌리티 분야의 각 산업별 도메인에 따라 <br className='lg:hidden xl:block'/>AI를 활용한 서비스를 개발합니다.</p>
                     </div>
                     <div className={`last h-auto w-1/2 md:w-full lg:h-1/2 flex flex-col justify-between gap-5 border-2 px-4 py-6 rounded-2xl cursor-pointer ${activeIndex === 1 ? 'bg-[#E0E9FF]' : ''}`}>
                         <p className='last text-lg md:text-3xl font-semibold text-nowrap'>최종 프로젝트</p>

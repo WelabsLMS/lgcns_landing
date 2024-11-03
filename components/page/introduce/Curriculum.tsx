@@ -102,7 +102,7 @@ function Curriculum() {
                     <div className={`prev-button-wrap relative invisible md:visible left-5 w-8 h-8 md:w-10 md:h-10 md:left-0 rounded-xl ${isBeginning ? 'bg-[#adb5c850]' : 'bg-[#A5B4FC] cursor-pointer'}`}>
                         <div id='curriculumSwiper' className='button-prev'></div>
                     </div>
-                    <div className={`bg-[#C2D3FF50] w-full px-4 md:px-0 md:w-4/5 lg:w-[85%] xl:w-[60%] ${slideIndex === 6 ? "h-max" : "h-[57vh] lg:h-[70vh]"} xl:h-min mx-auto rounded-2xl text-pretty`}>
+                    <div className={`bg-[#C2D3FF50] w-full px-4 md:px-0 md:w-4/5 lg:w-[85%] xl:w-[60%] ${slideIndex === 6 ? "h-max" : "h-[57vh] lg:h-[67vh]"} xl:h-min mx-auto rounded-2xl text-pretty`}>
                         <Swiper
                             id='curriculumSwiper'
                             slidesPerView={1}
@@ -148,22 +148,22 @@ function Curriculum() {
                                                 {data.inner && 'goal' in data.inner &&
                                                     <div className='mt-4 mb-10 space-y-5'>
                                                         <InnerTitleBtrn title={'학습목표'} />
-                                                        <p className='hidden lg:block text-base lg:text-2xl font-semibold md:whitespace-pre-line px-1 md:px-5'>{data.inner.goal}</p>
-                                                        <p className='lg:hidden text-base lg:text-2xl font-semibold md:whitespace-pre-line px-1 md:px-5'>{data.inner.mobileGoal}</p>
+                                                        <p className='hidden lg:block text-base lg:text-2xl font-semibold px-1 md:px-5'>{data.inner.goal}</p>
+                                                        <p className='lg:hidden text-base lg:text-2xl font-semibold px-1 md:px-5'>{data.inner.mobileGoal}</p>
                                                     </div>
                                                 }
                                                 {data.inner && 'subject' in data.inner &&
                                                     <div className='mb-10 space-y-5'>
                                                         <InnerTitleBtrn title={'교과목'} />
-                                                        <p className='hidden xl:block text-base lg:text-2xl font-semibold md:whitespace-pre-line px-1 md:px-5'>{data.inner.subject}</p>
-                                                        <p className='xl:hidden text-base lg:text-2xl font-semibold md:whitespace-pre-line px-1 md:px-5'>{data.inner.mobileSubject}</p>
+                                                        <p className='hidden lg:block text-base lg:text-2xl font-semibold px-1 md:px-5'>{data.inner.subject}</p>
+                                                        <p className='lg:hidden text-base lg:text-2xl font-semibold px-1 md:px-5'>{data.inner.mobileSubject}</p>
                                                     </div>
                                                 }
 
                                                 {data.inner && 'tech' in data.inner &&
                                                     <div className='mb-5 space-y-5'>
                                                         <InnerTitleBtrn title={'기술스택'} />
-                                                        <p className='text-base lg:text-2xl font-semibold md:whitespace-pre-line px-1 md:px-5'>{data.inner.tech}</p>
+                                                        <p className='text-base lg:text-2xl font-semibold px-1 md:px-5'>{data.inner.tech}</p>
                                                         <p ></p>
                                                     </div>
                                                 }

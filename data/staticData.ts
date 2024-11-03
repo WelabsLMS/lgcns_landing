@@ -344,7 +344,7 @@ export const curriculumData = [
             inner: {
                 goal: "클라우드와 AI 최신 트렌드 특강 Insight 채우기",
                 mobileGoal: "클라우드와 AI 최신 트렌드 특강 Insight 채우기",
-                subject: "실무에서의 클라우드 활용과 생성형 AI 시장에 대한 현직자의 생생한 특강을 통해 \n최신기술 트렌드의 이해를 돕습니다.\n\n- 정보서비스 분야에서의 클라우드 활용 사례\n- 클라우드 기반 데이터 공유 및 확산 서비스 \n- 생성형 AI Value Chain 이란?\n- 생성형 AI 개발 현황 - Big Players",
+                subject: "실무에서의 클라우드 활용과 생성형 AI 시장에 대한 \n현직자의 생생한 특강을 통해 최신기술 트렌드의 이해를 돕습니다.\n\n- 정보서비스 분야에서의 클라우드 활용 사례\n- 클라우드 기반 데이터 공유 및 확산 서비스 \n- 생성형 AI Value Chain 이란?\n- 생성형 AI 개발 현황 - Big Players",
                 mobileSubject: "실무에서의 클라우드 활용과 \n생성형 AI 시장에 대한 현직자의 \n생생한 특강을 통해 최신기술 트렌드의 \n이해를 돕습니다.\n\n- 정보서비스 분야에서의 클라우드 활용 사례\n- 클라우드 기반 데이터 공유 및 확산 서비스 \n- 생성형 AI Value Chain 이란?\n- 생성형 AI 개발 현황 - Big Players",
             }
         },
@@ -358,7 +358,7 @@ export const curriculumData = [
             inner: {
                 goal: "프론트엔드와 백엔드의 기초부터 심화, 생성형 AI에 대한 이해를 바탕으로 \n코드 퀄리티 플랫폼을 활용하여 AI 서비스 개발에 필요한 기술 습득",
                 mobileGoal: "프론트엔드와 백엔드의 기초부터 심화, \n생성형 AI에 대한 이해를 바탕으로 \n코드 퀄리티 플랫폼을 활용하여 \nAI 서비스 개발에 필요한 기술 습득",
-                subject: "Digital Insight 2 \nDevOps Tools, AI 서비스 개발을 위한 \n프론트엔드·백엔드, 코드 퀄리티 플랫폼 기반의 생성형 AI를 활용한 REST API 개발",
+                subject: "Digital Insight 2 \nDevOps Tools, AI 서비스 개발을 위한 \n프론트엔드·백엔드, 코드 퀄리티 플랫폼 기반의 \n생성형 AI를 활용한 REST API 개발",
                 mobileSubject: "Digital Insight 2 \nDevOps Tools, AI 서비스 개발을 위한 \n프론트엔드·백엔드, 코드 퀄리티 플랫폼 기반의 \n생성형 AI를 활용한 REST API 개발",
                 tech: "HTML/CSS, JavaScript, React.js, Java, Spring Boot, Spring AI, MySQL, Git, Grafana, Prometheus"
             }
@@ -402,10 +402,12 @@ export const curriculumData = [
             mobileDesc: '미니 프로젝트 2을 기반으로 \nMSA 서비스 운영환경 구축을 통해 \n풀스택 기술을 내재화합니다.',
             img: 'assets/images/curriculum/curriculumstep/mini2.svg',
             inner: {
-                goal: "MSA 서비스 운영환경 구축, AM 전문가로의 역량 굳히기",
-                mobileGoal: "MSA 서비스 운영환경 구축, \nAM 전문가로의 역량 굳히기",
-                subject: "미니PJT 1기반 MSA 서비스 구축\n - Inner/Outer Architeture 이해\n - Kafka활용 데이터 동기화\n - 컨테이너 및 오케스트레이션 도구 활용\n - IaC 이해 및 Terraform 을 활용한 인프라 자동화",
-                mobileSubject: "미니PJT 1기반 MSA 서비스 구축\n - Inner/Outer Architeture 이해\n - Kafka활용 데이터 동기화\n - 컨테이너 및 오케스트레이션 도구 활용\n - IaC 이해 및 Terraform 을 활용한 \n\b\b\b인프라 자동화",
+                goal: "MSA 서비스 운영환경 구축 \nAM 전문가로의 역량 굳히기",
+                mobileGoal: "MSA 서비스 운영환경 구축 \nAM 전문가로의 역량 굳히기",
+                subject: "- Inner/Outer Architeture 이해\n - Kafka활용 데이터 동기화\n - 컨테이너 및 오케스트레이션 도구 활용\n - IaC 이해 및 Terraform을 활용한 인프라 자동화",
+                mobileSubject: "- Inner/Outer Architeture 이해\n - Kafka활용 데이터 동기화\n - 컨테이너 및 오케스트레이션 도구 활용\n - IaC 이해 및 Terraform을 활용한 \n\b\b\b인프라 자동화",
+                pjt: ["미니PJT 1기반 MSA 서비스 개발 및 운영환경 구축"],
+                mobilePjt: ["미니PJT 1기반 MSA 서비스 개발 및 \n운영환경 구축"]
             }
         },
         {
@@ -572,7 +574,7 @@ export const selectionProcedureData = [
     [
         {
             id: 1,
-            imgSrc: "assets/images/selection/docu.svg",
+            imgSrc: "assets/images/selection/find.svg",
             title: "모집",
             desc: "모집기간\n11.6(수)~12.3(화) 23:59"
         },
