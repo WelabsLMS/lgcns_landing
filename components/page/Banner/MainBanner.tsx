@@ -23,9 +23,9 @@ function MainBanner() {
                         <div className="grid grid-cols-2 md:grid-cols-4 text-center font-medium lg:px-0 lg:mr-4 xl:mr-8 md:px-0">
                             {
                                 mainBannerOverview[0].map((data, index) => (
-                                    <div key={index} className={`${data.id == 1 && 'border-r border-b md:border-b-0'} ${data.id == 2 && 'md:border-r border-b md:border-b-0'} ${data.id == 3 && 'border-r'} border-dotted border-[#00227830] p-2`}>
+                                    <div key={index} className={`${data.id == 1 && 'border-r-2 border-b-2 md:border-b-0'} ${data.id == 2 && 'md:border-r-2 border-b-2 md:border-b-0'} ${data.id == 3 && 'border-r-2'} border-dotted border-[#00227830] p-2`}>
                                         <p className='mb-4 lg:mb-7 font-bold text-xl lg:text-2xl'>{data.title}</p>
-                                        <p className="whitespace-pre-line text-sm xl:text-xl">{data.content}</p>
+                                        <p className="whitespace-pre-line text-sm font-semibold xl:text-xl">{data.content}</p>
                                         <p className='text-sm lg:text-lg text-red-500'>{data.notice}</p>
                                     </div>
                                 ))
@@ -42,8 +42,8 @@ function MainBanner() {
                                     <Image src={data.img} alt="circlecheck" width={25} height={25} className='hidden md:block'/>
                                     <p className='text-lg md:text-xl font-bold text-[#5984EC]'>{data.title}</p>
                                 </div>
-                                <p className='hidden md:block text-xl font-semibold leading-8'>{data.desc}</p>
-                                <p className='md:hidden text-base font-semibold leading-8'>{data.mobileDesc}</p>
+                                <p className='hidden md:block text-2xl font-semibold leading-8'>{data.desc}</p>
+                                <p className='md:hidden text-base font-semibold leading-7'>{data.mobileDesc}</p>
                             </div>
                         ))
                     }

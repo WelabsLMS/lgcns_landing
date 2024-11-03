@@ -15,7 +15,7 @@ function Selection() {
                         ))
                     }
                 </div>
-                <div className='w-full flex mb-4 justify-center md:hidden'>
+                <div className='w-full flex mb-4 mt-5 justify-center md:hidden'>
                     {
                         selectionProcedureData[0].map((data, index) => (
                             index <= 2 && <SelectionEle key={index} selectionEle={data} />

@@ -9,7 +9,7 @@ import Curriculum from "@/components/page/introduce/Curriculum";
 import Introduce from "@/components/page/introduce/Introduce";
 // import Location from "@/components/page/location/Location";
 // import MainApply from "@/components/page/mainApply/MainApply";
-import OverView from "@/components/page/overview/OverView";
+// import OverView from "@/components/page/overview/OverView";
 import Selection from "@/components/page/selection/Selection"; 
 
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
     <main>
       <MainBanner />
       <Introduce />
-      <OverView />
+      {/* <OverView /> */}
       <Curriculum />
       {/* <MainApply /> */}
       <CampBenefit />

@@ -28,7 +28,7 @@ export const mainBannerOverview = [
             id: 4,
             title: "모집기간",
             content: "11/6(수) ~ 12/3(화) 23:59",
-            notice:"※조기마감 될 수 있음"
+            notice: "※조기마감 될 수 있음"
         },
     ]
 ]
@@ -282,6 +282,7 @@ export const curriculumData = [
         {
             id: 1,
             title: '클라우드와 AI 최신 트렌드 특강, \nDigital Insight 채우기',
+            subtitle:"",
             desc: '실무에서의 클라우드 활용과 생성형 AI 시장에 대한 현직자의 생생한 특강을 통해 \n최신기술 트렌드의 이해를 돕습니다.',
             mobileDesc: '실무에서의 클라우드 활용과 \n생성형 AI 시장에 대한 현직자의 생생한 특강을 통해 \n최신기술 트렌드의 이해를 돕습니다.',
             img: 'assets/images/curriculum/curriculumstep/course1.svg',
@@ -332,92 +333,125 @@ export const curriculumData = [
             mobileDesc: '현업 전문가가 도출한 도메인별 시나리오를 \n기반으로 실무와 동일한 환경의 프로젝트 수행과 \n멘토링을 통해 AM 전문가로 성장을 돕습니다.',
             img: 'assets/images/curriculum/curriculumstep/final.svg'
         }
-    ],[
+    ], [
         {
             id: 1,
-            title: '클라우드와 AI 최신 트렌드 특강, \nDigital Insight 채우기',
+            title: '클라우드와 AI 최신 트렌드 특강',
+            subtitle: 'Digital Insight 채우기',
             desc: '실무에서의 클라우드 활용과 생성형 AI 시장에 대한 현직자의 생생한 특강을 통해 \n최신기술 트렌드의 이해를 돕습니다.\n - 정보서비스 분야에서의 클라우드 활용 사례\n - 클라우드 기반 데이터 공유 및 확산 서비스 \n - 생성형 AI Value Chain 이란?\n - 생성형 AI 개발 현황 - Big Players',
             mobileDesc: '실무에서의 클라우드 활용과 \n생성형 AI 시장에 대한 현직자의 생생한 특강을 통해 \n최신기술 트렌드의 이해를 돕습니다.',
             img: 'assets/images/curriculum/curriculumstep/course1.svg',
             inner: {
-                goal: "클라우드와 AI 최신 트렌드 특강, Digital Insight 채우기",
-                subject: "실무에서의 클라우드 활용과 생성형 AI 시장에 대한 현직자의 생생한 특강을 통해 \n최신기술 트렌드의 이해를 돕습니다.\n- 정보서비스 분야에서의 클라우드 활용 사례\n- 클라우드 기반 데이터 공유 및 확산 서비스 \n- 생성형 AI Value Chain 이란?\n- 생성형 AI 개발 현황 - Big Players",
+                goal: "클라우드와 AI 최신 트렌드 특강 Insight 채우기",
+                mobileGoal: "클라우드와 AI 최신 트렌드 특강 Insight 채우기",
+                subject: "실무에서의 클라우드 활용과 생성형 AI 시장에 대한 현직자의 생생한 특강을 통해 \n최신기술 트렌드의 이해를 돕습니다.\n\n- 정보서비스 분야에서의 클라우드 활용 사례\n- 클라우드 기반 데이터 공유 및 확산 서비스 \n- 생성형 AI Value Chain 이란?\n- 생성형 AI 개발 현황 - Big Players",
+                mobileSubject: "실무에서의 클라우드 활용과 \n생성형 AI 시장에 대한 현직자의 \n생생한 특강을 통해 최신기술 트렌드의 \n이해를 돕습니다.\n\n- 정보서비스 분야에서의 클라우드 활용 사례\n- 클라우드 기반 데이터 공유 및 확산 서비스 \n- 생성형 AI Value Chain 이란?\n- 생성형 AI 개발 현황 - Big Players",
             }
         },
         {
             id: 2,
-            title: 'AI 서비스 개발을 통한 \n풀스택 개발자로 거듭나는 지름길',
+            title: 'AI 서비스 개발을 통한',
+            subtitle: '풀스택(Full-Stack) 개발자로 거듭나는 지름길',
             desc: '프론트엔드와 백엔드의 기초부터 심화, \n생성형 AI에 대한 이해를 바탕으로 \n코드퀄리티 플랫폼을 활용하여 \nAI 서비스 개발에 필요한 \n기술을 습득합니다.',
             mobileDesc: '프론트엔드와 백엔드의 기초부터 심화, \n생성형 AI 이해를 바탕으로 코드퀄리티 플랫폼을 \n활용하여 AI 서비스 개발에 필요한 기술을 \n습득합니다.',
             img: 'assets/images/curriculum/curriculumstep/course2.svg',
             inner: {
                 goal: "프론트엔드와 백엔드의 기초부터 심화, 생성형 AI에 대한 이해를 바탕으로 \n코드 퀄리티 플랫폼을 활용하여 AI 서비스 개발에 필요한 기술 습득",
-                subject: "Digital Insight 2 서비스 개발을 위한 DevOps Tools, AI 서비스 개발을 위한 \n프론트엔드·백엔드, 코드 퀄리티 플랫폼 기반의 생성형 AI를 활용한 REST API 개발",
-                tech:"HTML/CSS, JavaScript, React.js, Java, Spring Boot, Spring AI, MySQL, Git, Grafana, Prometheus"
+                mobileGoal: "프론트엔드와 백엔드의 기초부터 심화, \n생성형 AI에 대한 이해를 바탕으로 \n코드 퀄리티 플랫폼을 활용하여 \nAI 서비스 개발에 필요한 기술 습득",
+                subject: "Digital Insight 2 \nDevOps Tools, AI 서비스 개발을 위한 \n프론트엔드·백엔드, 코드 퀄리티 플랫폼 기반의 생성형 AI를 활용한 REST API 개발",
+                mobileSubject: "Digital Insight 2 \nDevOps Tools, AI 서비스 개발을 위한 \n프론트엔드·백엔드, 코드 퀄리티 플랫폼 기반의 \n생성형 AI를 활용한 REST API 개발",
+                tech: "HTML/CSS, JavaScript, React.js, Java, Spring Boot, Spring AI, MySQL, Git, Grafana, Prometheus"
             }
         },
         {
             id: 3,
-            title: 'AI 기반의 개인 맞춤형 \n뉴스 애플리케이션 개발로 기본기 잡기',
+            title: 'AI 기반의 개인 맞춤형',
+            subtitle: '뉴스 애플리케이션 개발로 기본기 잡기',
             desc: 'AI기반의 사용자 맞춤형 콘텐츠를 제공하는 \n애플리케이션 개발을 통해 배운 내용을 \n실제로 적용해보며 기본기를 갖춥니다.',
             mobileDesc: 'AI기반의 사용자 맞춤형 콘텐츠를 제공하는 \n애플리케이션 개발을 통해 배운 내용을 \n실제로 적용해보며 기본기를 갖춥니다.',
             img: 'assets/images/curriculum/curriculumstep/mini1.svg',
             inner: {
-                goal: "AI 기반 사용자 맞춤형 콘텐츠를 제공하는 애플리케이션 개발 \n배운 내용을 실제 적용해보며 기본기 갖추기",
+                goal: "React 디자인 패턴 적용 화면 설계 및 구현 \nSpring Boot를 활용한 API 기능 구현 \n배운 내용을 실제 적용해보며 기본기 갖추기",
+                mobileGoal: "AI 기반 사용자 맞춤형 콘텐츠를 \n제공하는 애플리케이션 개발 \n배운 내용을 실제 적용해보며 기본기 갖추기",
                 subject: "반응형 웹 구축 정의 및 기술셋 활용\n - React 기반 프론트엔드\n - Spring Boot 기반 백엔드\n - Spring AI 활용\n - 보안가이드 적용 웹보안 실시\n - 로그 수집 및 분석",
+                mobileSubject: "반응형 웹 구축 정의 및 기술셋 활용\n - React 기반 프론트엔드\n - Spring Boot 기반 백엔드\n - Spring AI 활용\n - 보안가이드 적용 웹보안 실시\n - 로그 수집 및 분석",
+                pjt: ["AI 기반 사용자 맞춤형 콘텐츠를 제공하는 애플리케이션 개발"],
+                mobilePjt: ["AI 기반 사용자 맞춤형 콘텐츠를 제공하는 애플리케이션 개발"]
             }
         },
         {
             id: 4,
-            title: 'AM 기술의 모든 것, \nLG CNS의 Application Modernization',
+            title: 'AM 기술의 모든 것',
+            subtitle: 'LG CNS의 Application Modernization',
             desc: 'LG CNS 실무진의 AM Agile 특강부터 \nMSA 기술 이해와 활용을 통해 \nAM 전문가로의 기반을 다집니다.',
             mobileDesc: 'LG CNS 실무진의 AM Agile 특강부터 \nMSA 기술 이해와 활용을 통해 \nAM 전문가로의 기반을 다집니다.',
             img: 'assets/images/curriculum/curriculumstep/course3.svg',
             inner: {
                 goal: "LG CNS 실무진의 AM Agile 특강부터 MSA 기술 이해와 활용을 통해 \nAM 전문가로의 기반을 다집니다.",
-                subject: "- Agile 애자일 스크럼과 JIRA 활용\n- Public Cloud 응용 & 멀티클라우드 활용(AWS, NCP)\n- MSA 데이터 동기화 패턴과 분산 트랜잭션 처리\n- 서비스 인프라 구성 (Docker, Kubernetes, CI/CD, Prometheus 등)",
+                mobileGoal: "LG CNS 실무진의 AM Agile 특강부터 \nMSA 기술 이해와 활용을 통해 \nAM 전문가로의 기반을 다집니다.",
+                subject: "- Agile 애자일 스크럼과 JIRA 활용\n- Public Cloud 응용 & 멀티클라우드 활용(AWS, NCP)\n- MSA 데이터 동기화 패턴과 분산 트랜잭션 처리\n- 서비스 인프라 구성 (Docker, Kubernetes, CI/CD, Prometheus)",
+                mobileSubject: "- Agile 애자일 스크럼과 JIRA 활용\n- Public Cloud 응용 & 멀티클라우드 활용(AWS, NCP)\n- MSA 데이터 동기화 패턴과 분산 트랜잭션 처리\n- 서비스 인프라 구성\n(Docker, Kubernetes, CI/CD, Prometheus)",
                 // tech: "AWS, Linux, Docker, Kubernetes"
             }
         },
         {
             id: 5,
-            title: 'AM 역량 굳히기 \nMSA 서비스 개발 및 운영환경 구축',
+            title: 'AM 역량 굳히기',
+            subtitle: 'MSA 서비스 개발 및 운영환경 구축',
             desc: '미니 프로젝트 2을 기반으로 \nMSA 서비스 운영환경 구축을 통해 \n풀스택 기술을 내재화합니다.',
             mobileDesc: '미니 프로젝트 2을 기반으로 \nMSA 서비스 운영환경 구축을 통해 \n풀스택 기술을 내재화합니다.',
             img: 'assets/images/curriculum/curriculumstep/mini2.svg',
             inner: {
                 goal: "MSA 서비스 운영환경 구축, AM 전문가로의 역량 굳히기",
+                mobileGoal: "MSA 서비스 운영환경 구축, \nAM 전문가로의 역량 굳히기",
                 subject: "미니PJT 1기반 MSA 서비스 구축\n - Inner/Outer Architeture 이해\n - Kafka활용 데이터 동기화\n - 컨테이너 및 오케스트레이션 도구 활용\n - IaC 이해 및 Terraform 을 활용한 인프라 자동화",
+                mobileSubject: "미니PJT 1기반 MSA 서비스 구축\n - Inner/Outer Architeture 이해\n - Kafka활용 데이터 동기화\n - 컨테이너 및 오케스트레이션 도구 활용\n - IaC 이해 및 Terraform 을 활용한 \n\b\b\b인프라 자동화",
             }
         },
         {
             id: 6,
-            title: '최종 프로젝트 전 Warming-up! \nAI 기반의 서비스 구현',
+            title: '최종 프로젝트 전 Warming-up!',
+            subtitle: 'AI 기반의 서비스 구현',
             desc: 'LG CNS의 산업 도메인별 AI 기반 \n서비스 개발을 위한 해커톤을 통해 \n프로젝트 사이클을 경험합니다.',
             mobileDesc: 'LG CNS의 산업 도메인별 AI 기반 \n서비스 개발을 위한 해커톤을 통해 \n프로젝트 사이클을 경험합니다.',
             img: 'assets/images/curriculum/curriculumstep/hackathon.svg',
             inner: {
-                goal: "LG CNS의 산업 도메인별 AI 기반 서비스 개발, 프로젝트 사이클 경험",
+                goal: "LG CNS의 산업 도메인별 AI 기반 서비스 개발 \n프로젝트 사이클 경험 \n학습한 AM Agile 방법론 적용 \n스크럼 방식 방식을 도입하여 프로젝트 관리 능력 향상",
+                mobileGoal: "LG CNS의 산업 도메인별 AI 기반 서비스 개발, 프로젝트 사이클 경험",
                 subject: "아이디어톤 기반의 도메인별 AI 활용 서비스 구현\n - 요구사항 분석/설계\n - 협업 및 의사소통 능력\n - 문제 해결 능력\n - SE, CDS 직무",
+                mobileSubject: "아이디어톤 기반의 도메인별 AI 활용 서비스 구현\n - 요구사항 분석/설계\n - 협업 및 의사소통 능력\n - 문제 해결 능력\n - SE, CDS 직무",
+                pjt: ["공공, 리테일, 금융, 교육, 스마트팩토리, 스마트모빌리티 분야의 \n각 산업별 도메인에 따라 AI를 활용한 서비스를 개발합니다."],
+                mobilePjt: ["공공, 리테일, 금융, 교육, 스마트팩토리, \n스마트모빌리티 분야의 각 산업별 도메인에 따라 \nAI를 활용한 서비스를 개발합니다."]
             }
         },
         {
             id: 7,
-            title: 'LG CNS 실무진과 함께하는 \nAM 기반의 최종 프로젝트',
+            title: 'LG CNS 실무진과 함께하는',
+            subtitle: 'AM 기반의 최종 프로젝트',
             desc: '현업 전문가가 도출한 도메인별 \n시나리오를 기반으로 실무와 동일한 환경의 프로젝트 수행과 멘토링을 \n통해 AM 전문가로 성장을 돕습니다.',
             mobileDesc: '현업 전문가가 도출한 도메인별 시나리오를 \n기반으로 실무와 동일한 환경의 프로젝트 수행과 \n멘토링을 통해 AM 전문가로 성장을 돕습니다.',
             img: 'assets/images/curriculum/curriculumstep/final.svg',
             inner: {
-                goal: "현업 전문가가 도출한 도메인별 시나리오 기반 프로젝트와 멘토링 수행, AM 전문가로의 성장",
+                goal: "현업 전문가가 도출한 도메인별 시나리오 기반 프로젝트와 멘토링 수행, \nAM 전문가로의 성장",
+                mobileGoal: "현업 전문가가 도출한 도메인별 시나리오 기반 \n프로젝트와 멘토링 수행, AM 전문가로의 성장",
                 subject: "아이디어톤 기반의 도메인별 AI를 활용한 서비스 구현",
+                mobileSubject: "아이디어톤 기반의 도메인별 AI를 활용한 \n서비스 구현",
                 pjt: [
                     "1. 클라우드 기반 무인 스마트스토어 자동 발주 서비스 개발",
                     "2. MSA 기반 공공기관 대규모 모바일 사원증 관리 시스템 구축",
                     "3. GenAI 기반 초개인화 학습 성취도 진단 서비스 개발",
                     "4. IoT 장비를 활용한 스마트팩토리 환경설비 관리 시스템 개발",
-                    "5. 클라우드 IoT 플랫폼 기반 모빌리티 데이터를 활용한 자율주행 안전성 개선 모델 구축",
+                    "5. 클라우드 IoT 플랫폼 기반 모빌리티 데이터를 활용한 \n자율주행 안전성 개선 모델 구축",
                     '6. Kubernetes를 활용한 금융서비스 장애대응 모니터링 시스템 구축'
-                ]
+                ],
+                mobilePjt: [
+                    "1. 클라우드 기반 무인 스마트스토어 \n\b\b\b자동 발주 서비스 개발",
+                    "2. MSA 기반 공공기관 대규모 모바일 사원증 \n\b\b\b\b관리 시스템 구축",
+                    "3. GenAI 기반 초개인화 학습 성취도 진단 \n\b\b\b서비스 개발",
+                    "4. IoT 장비를 활용한 스마트팩토리 환경설비 \n\b\b\b관리 시스템 개발",
+                    "5. 클라우드 IoT 플랫폼 기반 모빌리티 데이터를 \n\b\b\b\b활용한 자율주행 안전성 개선 모델 구축",
+                    '6. Kubernetes를 활용한 금융서비스 \n\b\b\b\b장애대응 모니터링 시스템 구축'
+                ],
             }
         }
     ],
@@ -430,14 +464,14 @@ export const curriculumProjectData = [
         img: 'assets/images/curriculum/project/project_hackathon.svg',
         desc: '공공, 리테일, 금융, 교육, 스마트팩토리, \n스마트모빌리티 분야의 각 산업별 도메인에 따라 \nAI를 활용한 서비스를 개발합니다.',
         width: { default: 600, md: 600, sm: 500 },
-        height: { default: 200, md: 200, sm: 100 }
+        height: { default: 410, md: 700, sm: 500 }
     },
     {
         title: '최종 프로젝트',
         img: 'assets/images/curriculum/project/project_final.svg',
         desc: 'AM 기반의 최종 프로젝트를 통해 \nLG CNS만의 AM 기술과 Agile 개발방법론을 \n활용하여 AM 프로젝트 사이클을 경험하고 \n시스템을 구축합니다.',
         width: { default: 700, md: 600, sm: 600 },
-        height: { default: 600, md: 700, sm: 600 }
+        height: { default: 410, md: 700, sm: 500 }
     },
     // 추가 슬라이드 데이터
 ]
@@ -547,7 +581,7 @@ export const selectionProcedureData = [
             imgSrc: "assets/images/selection/docu.svg",
             title: "서류전형",
             // desc: "합격자 이메일 개별 연락(이메일)\n1차 : 11.6(수)~11.20(수) 23:59\n2차 : 11.21(목)~12.6(금) 23:59"
-            desc: "서류전형 일정\n12.4(수)~12.6(금)\n*서류전형 통과 시 개별 연락(이메일)"
+            desc: "서류전형 일정\n12.4(수)~12.6(금)\n*서류전형 통과 시 개별 연락"
         },
         {
             id: 3,
@@ -560,7 +594,7 @@ export const selectionProcedureData = [
             id: 4,
             imgSrc: "assets/images/selection/noti.svg",
             title: "합격자 발표",
-            desc: "12.16(월)"
+            desc: "12.16(월)\n*합격자 개별 연락"
         },
         {
             id: 5,
@@ -576,40 +610,40 @@ export const selectionProcedureData = [
 export const campbenefitData = [
     [
         {
-            id:1, 
+            id: 1,
             imgSrc: "assets/images/campbenefit/add.svg",
             title: "LG CNS 채용 가산점",
             content: "우수 수료생 대상 LG CNS 채용 시\n서류전형 가산점 부여",
         },
         {
-            id:2, 
+            id: 2,
             imgSrc: "assets/images/campbenefit/cert.svg",
             title: "LG CNS 인증 수료증",
             content: "교육 과정을 끝까지 완주한 수료생에게\nLG CNS 인증 수료증을 수여"
         },
         {
-            id:3, 
+            id: 3,
             imgSrc: "assets/images/campbenefit/sup.svg",
             title: "취업지원 프로그램",
             content: "성공적인 취업을 위한\nMeet Up Day, 채용설명회 개최"
         },
         {
-            id:4, 
-            imgSrc: "assets/images/campbenefit/mentor.svg",
+            id: 4,
+            imgSrc: "assets/images/campbenefit/mentoring.svg",
             title: "LG CNS 전문가\n멘토링&포트폴리오",
             content: "LG CNS 현업 전문가와\n함께하는 실무 프로젝트 멘토링과\n멘토링 기반 포트폴리오 제작"
         },
         {
-            id:5, 
-            imgSrc: "assets/images/campbenefit/infra.svg",
-            title: "최적 학습환경&인프라 지원",
-            content: "교육에 집중할 수 있는 학습환경과\n클라우드, 선도기업 제공 인프라 지원"
+            id: 5,
+            imgSrc: "assets/images/campbenefit/sup2.svg",
+            title: "교육비 전액지원 및\n 훈련장려금 지급",
+            content: "매월 훈련장려금 지급\n(*단위기간 별 최대 316,000원)"
         },
         {
-            id:6, 
+            id: 6,
             imgSrc: "assets/images/campbenefit/notebook.svg",
-            title: "LG 노트북 무상 지원",
-            content: "교육에 집중할 수 있도록\n노트북을 교육기간 중 노트북 대여"
+            title: "교육용 장비\nLG 노트북 무상 지원",
+            content: "교육에 집중할 수 있도록\n교육기간 중 노트북 대여"
         },
     ]
 ]
@@ -635,7 +669,7 @@ export const faqData = [
         },
         {
             question: '개인 노트북이 있어야 지원 가능한가요?',
-            answer: '교육에 집중할 수 있도록 LG의 노트북을 대여 해드립니다.',
+            answer: '교육에 집중할 수 있도록 LG 노트북을 대여 해드립니다.',
         },
         {
             question: 'KDT 과정을 이전에 수강한 적이 있는데 \n지원 가능한가요?',
@@ -670,14 +704,14 @@ export const centerImagesData = {
 
 // 수강신청 모달
 export const applyModalData = [{
-    success : {
+    success: {
         img: "assets/images/thumbUp.svg",
         title: "LG CNS AM Inspire Camp 1기 \n지원이 완료 되었습니다.",
         desc: "이후 일정은 순차적으로 이메일로 \n개별 안내드릴 예정입니다.",
     },
-    fail : {
-        img: "assets/images/applyFail.svg",
+    fail: {
+        img: "assets/images/applyfail.svg",
         title: "지원서 제출에 실패하였습니다.",
-        desc: "관리자에게 문의해주시기 바랍니다.",
+        desc: "기타 문의사항이 있으신분은 \n관리자에게 문의해주시기 바랍니다.",
     }
 }]

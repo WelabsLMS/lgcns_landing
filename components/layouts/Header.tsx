@@ -8,6 +8,7 @@ function Header() {
     const [subMenuOpen, setSubMenuOpen] = React.useState(false)
     const pathname = usePathname()
     if (pathname === '/apply') return null
+
     return (
         <>
             <header className='w-full sticky top-0 left-0 bg-white border border-gray-200 z-[999] lg:px-5 xl:px-20 h-[80px] lg:h-[100px] flex items-center '>
@@ -82,7 +83,7 @@ function Header() {
                             className='text-white w-[120px] h-[38px] flex items-center justify-center rounded-full px-4 bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] font-bold'
                             onClick={() => setSubMenuOpen(!subMenuOpen)}
                         >
-                            <Link href={'/apply'}>교육신청</Link>
+                            <Link href={'/apply'}>지원하기</Link>
                         </li>
                     </ul>
                 </div>

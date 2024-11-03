@@ -46,10 +46,26 @@ const lgFont = localFont({
 
 
 export const metadata: Metadata = {
-  title: "LGCNSCAMP",
-  description: "LGCNSCAMP",
+  title: "LG CNS AM Inspire Camp",
+  description: "LG CNS AM Inspire Camp ",
   icons: {
     icon: "../public/assets/logo/cropped-logo-32x32.png",
+  },
+  openGraph: {
+    type: "website",
+    locale: "ko_KR",
+    url: "https://lgcnscmap.kr/",
+    title: "LG CNS AM Inspire Camp",
+    siteName: "LG CNS AM Inspire Camp",
+    description : "LG CNS의 SW, AM(Application Modernization) 인재 육성 노하우를 그대로 적용한 LG CNS AM 전문가 양성과정",
+    images: [
+      {
+        url: "https://lgcnscmap.kr/assets/logo/lgcns_og.png",
+        width: 32,
+        height: 32,
+        alt: "LG CNS AM Inspire Camp",
+      },
+    ],
   },
 };
 

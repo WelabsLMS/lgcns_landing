@@ -14,6 +14,26 @@ import "swiper/css/navigation"
 import "swiper/css/pagination"
 import InnerTitleBtrn from '@/components/ui/curriculum/InnerTitleBtrn'
 
+interface curriculumData {
+    id: number;
+    title: string;
+    subtitle?: string;
+    desc: string;
+    mobileDesc: string;
+    img: string;
+    inner?: {
+        title: string;
+        desc: string;
+        goal?: string;
+        subject?: string;
+        tech?: string;
+        pjt?: string[];
+        mobileGoal?: string;
+        mobileSubject?: string;
+        mobilePjt?: string[];
+    };
+}
+
 function Curriculum() {
     const [swiper, setSwiper] = useState<SwiperClass>()
     const [isBeginning, setIsBeginning] = useState(true);
@@ -21,6 +41,7 @@ function Curriculum() {
     const [slideIndex, setSlideIndex] = useState(0);
 
     useEffect(() => {
+
         if (swiper) {
             setIsBeginning(swiper.isBeginning);
             setIsEnd(swiper.isEnd);
@@ -46,22 +67,23 @@ function Curriculum() {
                 <span className="rounded-xl px-2 text-2xl md:text-4xl xl:text-5xl font-extrabold">단계별 프로젝트를 통해 <br className='md:hidden' /> 포트폴리오 완벽 준비!</span>
             </div>
 
-            <div className='w-full flex justify-center px-1 lg:px-10 xl:px-24'>
-                <div className="w-full flex items-start justify-evenly mb-5 lg:my-10 ">
-                    {
-                        curriculumStepData[1].map((data, index) => (
-                            <CourseStepEle
-                                key={index}
-                                title={data.title}
-                                subtitle={data.subTitle}
-                                index={data.id - 1}
-                                activeSlide={slideIndex}
-                                handleCourseClick={handleCourseClick}
-                            />
-                        ))
-                    }
+            <div className='container mx-auto px-1 lg:px-10'>
+                <div className='w-full mt-5 flex justify-center '>
+                    <div className="w-full flex items-center justify-around mb-5 lg:my-10 ">
+                        {
+                            curriculumStepData[1].map((data, index) => (
+                                <CourseStepEle
+                                    key={index}
+                                    title={data.title}
+                                    subtitle={data.subTitle}
+                                    index={data.id - 1}
+                                    activeSlide={slideIndex}
+                                    handleCourseClick={handleCourseClick}
+                                />
+                            ))
+                        }
 
-                    {/* <div className='relative -top-7 w-20 h-20 md:w-10 md:h-10 lg:w-28 lg:h-28 flex-shrink-0'> 
+                        {/* <div className='relative -top-7 w-20 h-20 md:w-10 md:h-10 lg:w-28 lg:h-28 flex-shrink-0'> 
                         <Image
                             src='assets/images/curriculum/curriculumstep/trophy.svg'
                             alt='curriculum'
@@ -70,16 +92,17 @@ function Curriculum() {
                             className='object-contain' // 이미지가 잘리지 않도록 설정
                         />
                     </div> */}
+                    </div>
                 </div>
             </div>
 
-            <div className='container mx-auto px-4 xl:px-0'>
+            <div className='container mx-auto px-4 lg:px-10 xl:px-0'>
                 {/* Slider */}
                 <div className='relative flex items-center'>
                     <div className={`prev-button-wrap relative invisible md:visible left-5 w-8 h-8 md:w-10 md:h-10 md:left-0 rounded-xl ${isBeginning ? 'bg-[#adb5c850]' : 'bg-[#A5B4FC] cursor-pointer'}`}>
                         <div id='curriculumSwiper' className='button-prev'></div>
                     </div>
-                    <div className={`bg-[#C2D3FF50] w-full px-4 md:px-0 md:w-4/5 lg:w-[80%] xl:w-[85%] ${slideIndex === 6 ? "h-max" : "lg:h-[70vh] h-[60vh]"} xl:h-min mx-auto rounded-2xl whitespace-pre-line text-pretty`}>
+                    <div className={`bg-[#C2D3FF50] w-full px-4 md:px-0 md:w-4/5 lg:w-[85%] xl:w-[60%] ${slideIndex === 6 ? "h-max" : "h-[57vh] lg:h-[70vh]"} xl:h-min mx-auto rounded-2xl text-pretty`}>
                         <Swiper
                             id='curriculumSwiper'
                             slidesPerView={1}
@@ -94,13 +117,24 @@ function Curriculum() {
                             className='h-full'
                         >
                             {
-                                curriculumData[1].map((data, index) => (
-                                    <SwiperSlide key={index} className='py-8 md:py-10 md:px-14 lg:px-10 gap-6 lg:py-10 xl:px-9 xl:py-10 h-full'>
+                                curriculumData[1].map((data,index)  => (
+                                    <SwiperSlide key={index} className='py-8 md:py-10 md:px-14 lg:px-10 gap-6 lg:py-12 xl:px-9 xl:py-16 h-full whitespace-pre-line '>
                                         <div className='flex flex-col justify-around '>
                                             {/* <p className='text-xl font-bold md:hidden'>{curriculumStepData[0][index].title}</p> */}
+                                            <div className='relative w-max mx-auto text-xl md:text-[28px] font-bold text-center mb-2'>
+                                                <div>
+                                                    {data.title}
+                                                    <Image 
+                                                    src='/assets/images/curriculum/accent.svg' 
+                                                    alt='accent' 
+                                                    width={50} 
+                                                    height={50} 
+                                                    className='absolute -top-5 -right-5 rotate-12'
+                                                    />
+                                                    </div>
+                                            </div>
                                             <div className='relative w-max mx-auto text-xl md:text-[28px] font-bold text-center mb-5 xl:mb-10'>
-                                                <p>{data.title}</p>
-                                                <Image src='/assets/images/curriculum/impact_star.svg' alt='curriculum' className='absolute -left-8 lg:-left-10 -top-5 w-10 h-10' width={50} height={50} />
+                                                {data.subtitle && <p>{data.subtitle}</p>}
                                             </div>
                                             {/* <div className='w-full text-center lg:text-start flex flex-col-reverse items-center lg:flex-row text-base md:text-2xl justify-around'>
                                             <div className='hidden font-semibold w-full lg:w-[55%] lg:flex items-center justify-center'>{data.desc}</div>
@@ -110,24 +144,27 @@ function Curriculum() {
                                             </div>
                                         </div> */}
 
-                                            <div className='text-base lg:text-2xl'>
+                                            <div className='text-base lg:text-2xl whitespace-pre-line'>
                                                 {data.inner && 'goal' in data.inner &&
                                                     <div className='mt-4 mb-10 space-y-5'>
                                                         <InnerTitleBtrn title={'학습목표'} />
-                                                        <p className='text-base lg:text-xl font-semibold md:whitespace-pre-line px-2 md:px-5'>{data.inner.goal}</p>
+                                                        <p className='hidden lg:block text-base lg:text-2xl font-semibold md:whitespace-pre-line px-1 md:px-5'>{data.inner.goal}</p>
+                                                        <p className='lg:hidden text-base lg:text-2xl font-semibold md:whitespace-pre-line px-1 md:px-5'>{data.inner.mobileGoal}</p>
                                                     </div>
                                                 }
                                                 {data.inner && 'subject' in data.inner &&
                                                     <div className='mb-10 space-y-5'>
                                                         <InnerTitleBtrn title={'교과목'} />
-                                                        <p className='text-base lg:text-xl font-semibold md:whitespace-pre-line px-2 md:px-5'>{data.inner.subject}</p>
+                                                        <p className='hidden xl:block text-base lg:text-2xl font-semibold md:whitespace-pre-line px-1 md:px-5'>{data.inner.subject}</p>
+                                                        <p className='xl:hidden text-base lg:text-2xl font-semibold md:whitespace-pre-line px-1 md:px-5'>{data.inner.mobileSubject}</p>
                                                     </div>
                                                 }
 
                                                 {data.inner && 'tech' in data.inner &&
                                                     <div className='mb-5 space-y-5'>
                                                         <InnerTitleBtrn title={'기술스택'} />
-                                                        <p className='text-base lg:text-xl font-semibold md:whitespace-pre-line px-2 md:px-5'>{data.inner.tech}</p>
+                                                        <p className='text-base lg:text-2xl font-semibold md:whitespace-pre-line px-1 md:px-5'>{data.inner.tech}</p>
+                                                        <p ></p>
                                                     </div>
                                                 }
 
@@ -135,11 +172,20 @@ function Curriculum() {
                                                     data.inner && 'pjt' in data.inner &&
                                                     <div className='mb-5 space-y-5'>
                                                         <InnerTitleBtrn title={'프로젝트'} />
-                                                        <div className=''>
+                                                        <div className='hidden lg:block'>
                                                             <ol className='space-y-3'>
                                                                 {
                                                                     data.inner.pjt && data.inner.pjt.map((project, index) => (
-                                                                        <li key={index} className='text-base lg:text-xl font-semibold px-2 md:px-5'>{project}</li>
+                                                                        <li key={index} className='text-base lg:text-2xl font-semibold px-1 md:px-5'>{project}</li>
+                                                                    ))
+                                                                }
+                                                            </ol>
+                                                        </div>
+                                                        <div className='lg:hidden'>
+                                                            <ol className='space-y-3'>
+                                                                {
+                                                                    data.inner.mobilePjt && data.inner.mobilePjt.map((project, index) => (
+                                                                        <li key={index} className='text-base lg:text-xl font-semibold px-1 md:px-5'>{project}</li>
                                                                     ))
                                                                 }
                                                             </ol>
