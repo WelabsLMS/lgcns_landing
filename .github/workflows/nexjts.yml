@@ -25,7 +25,10 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 18
-
+      - name: .env setting
+        run: |
+          echo "API_URL=${{ secrets.API_URL }}" >> .env
+          echo "NEXT_PUBLIC_BACKEND_API_URL=${{ secrets.NEXT_PUBLIC_BACKEND_API_URL }}" >> .env
       - name: Install Yarn
         run: npm install -g yarn
 
