@@ -12,10 +12,10 @@ function CampBenefitEle({ benefitData }: { benefitData: CampBenefitEleProps }) {
     const imgName = benefitData.title.split('/').slice(-1)[0].split('.')[0]
 
     return (
-        <div className="w-full md:w-[49%] lg:w-[350px] lg:max-w-1/3 bg-[#A5B4FC] rounded-3xl py-4">
+        <div className="w-full md:w-[49%] lg:w-[350px] lg:max-w-1/3 bg-[#C2D3FF50] rounded-3xl py-4">
             <div className='flex flex-col items-center gap-5 font-semibold'>
-                <div className='relative bg-white rounded-full w-32 h-32 flex justify-center'>
-                    <Image src={benefitData.imgSrc} alt={imgName} width={80} height={80} />
+                <div className='relative bg-white rounded-full w-16 h-16 flex justify-center'>
+                    <Image src={benefitData.imgSrc} alt={imgName} width={35} height={35} />
                 </div>
                 <div className='text-center'>
                     <p className='font-bold text-2xl whitespace-break-spaces mb-4'>{benefitData.title}</p>

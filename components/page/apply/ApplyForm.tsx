@@ -42,6 +42,7 @@ export default function ApplyForm() {
     const languagesRouteRef = React.useRef<HTMLDivElement>(null);
     const [isSuccess, setIsSuccess] = useState<boolean>(false);
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+    const [modalMessage, setModalMessage] = useState<string>('');
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [additionalText, setAdditionalText] = useState<{ sns: string; website: string; applyEtc: string, programEtc: string }>({
         sns: '',
@@ -315,13 +316,20 @@ export default function ApplyForm() {
             });
 
             if (res.status === 200) {
-                setIsModalOpen(true);
                 setIsSuccess(true);
+                setModalMessage('이후 일정은 순차적으로 이메일로 \n개별 안내드릴 예정입니다.');
+                setIsModalOpen(true);
             }
         } catch (error) {
             if (axios.isAxiosError(error) && error.response?.data?.errorCode === "DUPLICATE") {
-                setIsModalOpen(true);
                 setIsSuccess(false);
+                setModalMessage('이미 지원한 이력이 있습니다. 관리자에게 문의해주세요.');
+                setIsModalOpen(true);
+            }
+            else {
+                setIsSuccess(false);
+                setModalMessage('관리자에게 문의 부탁드립니다.');
+                setIsModalOpen(true);
             }
         }
     }
@@ -329,7 +337,7 @@ export default function ApplyForm() {
 
     return (
         <>
-            <ApplySubmitModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} isSuccess={isSuccess} />
+            <ApplySubmitModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} isSuccess={isSuccess} message={modalMessage} />
             <section className="min-h-screen mb-28">
                 {/* 상단 배너 */}
                 <div className="text-center h-max mb-16 bg-[#C2D3FF] py-16 px-2">
@@ -390,6 +398,7 @@ export default function ApplyForm() {
                             <input
                                 type="date"
                                 className="applyContent"
+                                placeholder="생년월일을 입력해주세요."
                                 name="birthday"
                                 value={formData.birthday}
                                 onChange={handleChange}
@@ -404,6 +413,7 @@ export default function ApplyForm() {
                                 type="tel"
                                 className="applyContent"
                                 placeholder="하이픈(-)을 포함하여 작성해주세요."
+                                maxLength={13}
                                 name="phoneNumber"
                                 value={formData.phoneNumber}
                                 onChange={handleChange}
@@ -465,7 +475,7 @@ export default function ApplyForm() {
                                         className="mt-2 border-b border-gray-300 p-2 text-xl font-semibold rounded focus:outline-none focus:border-t-0"
                                     />
                                 )}
-                                <Input type="checkbox" id="website" name="applyRoute" title={`웹사이트 (링크드인, 서치닷컴, 부트캠프 등)`} onChange={handleChange} value="웹사이트" />
+                                <Input type="checkbox" id="website" name="applyRoute" title={`웹사이트 \n(링크드인, 서치닷컴, 부트캠프 등)`} onChange={handleChange} value="웹사이트" />
                                 {formData.applyRoute.includes('웹사이트') && (
                                     <input
                                         type="text"
@@ -570,6 +580,7 @@ export default function ApplyForm() {
                                 type="date"
                                 className="applyContent"
                                 name="graduatedDate"
+                                placeholder="졸업(예정)일을 입력해주세요."
                                 value={formData.graduatedDate}
                                 onChange={handleChange}
                                 required
@@ -612,17 +623,16 @@ export default function ApplyForm() {
                                 <input
                                     type="file"
                                     id="eduFiles"
-                                    className="hidden"
+                                    className="w-0 h-0"
                                     name="eduFiles"
                                     accept=".zip"
                                     onChange={handleChange}
                                     required
                                 />
-                                <div className="ml-4 text-[#969696] font-semibold text-xl lg:text-2xl">
+                                <div className="ml-4 font-semibold text-xl lg:text-2xl">
                                     {uploadFileName.eduFiles}
                                 </div>
                             </div>
-
                         </div>
 
                         {/* 활용 가능한 프로그래밍 언어 */}
@@ -685,13 +695,12 @@ export default function ApplyForm() {
                                 <input
                                     type="file"
                                     id="certFiles"
-                                    className="hidden"
                                     name="certFiles"
                                     accept=".zip"
+                                    className="w-0 h-0"
                                     onChange={handleChange}
-                                    required
                                 />
-                                <div className="ml-4 text-[#969696] font-semibold text-xl lg:text-2xl text-ellipsis">
+                                <div className="ml-4 font-semibold text-xl lg:text-2xl text-ellipsis">
                                     {uploadFileName.certFiles}
                                 </div>
                             </div>
@@ -776,7 +785,7 @@ export default function ApplyForm() {
                         <div className="flex flex-col space-y-4">
                             <ApplyTitle
                                 title="제출 전 확인사항"
-                                subTitle={`지원서 제출 후 수정이 불가하므로 확인 후 제출해주시기 바랍니다.\n*정확한 이메일 주소를 작성해주셔야 프로세스 안내가 가능합니다.`}
+                                subTitle={`지원서 제출 후 수정이 불가하므로 \n확인 후 제출해주시기 바랍니다.\n*정확한 이메일 주소를 작성해주셔야 \n프로세스 안내가 가능합니다.`}
                                 required
                             />
                             <Input type="checkbox" id="confirm" title="네, 확인했습니다!" name="confirm" checked={formData.confirm} onChange={handleChange} required />

@@ -15,10 +15,10 @@ function SelectionEle({ selectionEle }: { selectionEle: SelectionEleProps }) {
                 <div className='relative mb-3 w-6 h-6 lg:w-20 lg:h-20'>
                     <Image src={selectionEle.imgSrc} alt={selectionEle.title} fill />
                 </div>
-                <p className='text-[10px] md:text-xl font-bold text-nowrap'>{selectionEle.title}</p>
+                <p className='text-[10px] md:text-xl font-bold text-nowrap whitespace-pre-line text-center'>{selectionEle.title}</p>
                 {
-                    selectionEle.id !== 4 ?
-                        <div className='absolute -right-full w-full h-[3px] bg-[#DEE7FF]' /> : null
+                    selectionEle.id !== 5 ?
+                        <div className={`absolute -right-full w-full h-[3px] bg-[#DEE7FF] ${selectionEle.id == 3 && 'hidden md:block'}`} /> : null
                 }
             </div>
             <p className='text-center whitespace-pre-line text-[9px] md:text-base lg:text-lg xl:text-xl font-semibold'>{selectionEle.desc}</p>
