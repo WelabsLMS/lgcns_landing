@@ -27,7 +27,7 @@ function Input({
                     </svg>
                 </span>
             </label>
-            <label htmlFor={id} className="cursor-pointer text-xl lg:text-2xl font-semibold whitespace-pre-line">
+            <label htmlFor={id} className="cursor-pointer text-xl lg:text-2xl font-semibold whitespace-pre-line md:whitespace-normal">
                 {title}
             </label>
         </div>

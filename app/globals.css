@@ -34,6 +34,7 @@ body {
   flex-direction: column;
   position: relative;
   padding: 4.5rem 0;
+  scroll-margin-top: 4.5rem;
 }
 
 /* #curriculumSwiper .swiper-slide {

@@ -24,12 +24,12 @@ export default function FaqItem({ question, answer }: FAQItemProps) {
     }, [isOpen]);
 
     return (
-        <div className="bg-white w-full h-auto px-2 lg:px-4">
+        <div className="bg-white w-full h-auto px-1 lg:px-4">
             <button
                 className="w-full text-left py-4 focus:outline-none flex justify-between items-center"
                 onClick={toggleAccordion}
             >
-                <div>
+                <div className=''>
                     <span className="lg:text-2xl font-bold mr-2 lg:mr-4">Q</span>
                     <span className="lg:text-xl font-semibold whitespace-pre-line md:whitespace-normal">{question}</span>
                 </div>
@@ -50,11 +50,11 @@ export default function FaqItem({ question, answer }: FAQItemProps) {
             </button>
             <div
                 ref={contentRef} // 콘텐츠 높이 참조
-                className={`transition-all duration-300 ease-in-out overflow-hidden text-gray-700 flex`}
+                className={`transition-all duration-300 ease-in-out overflow-hidden font-semibold flex ${isOpen && 'mb-2'}`}
                 style={{ height: '0px' }} // 기본 높이를 0으로 설정
             >
                 {/* <span className="py-2 lg:text-2xl font-bold mr-2 lg:mr-4">A</span> */}
-                <span className="w-full py-2 md:text-lg whitespace-pre-line">{answer}</span>
+                <span className="w-full py-2 text-base md:text-lg whitespace-pre-line">{answer}</span>
             </div>
         </div>
     );

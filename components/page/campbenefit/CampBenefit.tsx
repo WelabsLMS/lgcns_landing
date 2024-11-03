@@ -8,9 +8,9 @@ function CampBenefit() {
         <section id="benefit" className="section">
             <SectionTitle title="훈련생 혜택" />
             <div className='container mx-auto lg:px-20'>
-                <div className='flex flex-col items-center mb-10 text-2xl lg:text-[40px] font-semibold text-center lg:text-start'>
+                <div className='flex flex-col items-center mb-10 text-2xl lg:text-[40px] lg:leading-[3rem] font-semibold text-center lg:text-start '>
                     <p><span className='text-[#AA1239] font-bold'>LG CNS</span><br className='md:hidden'/> AM Inspire Camp만의</p>
-                    <p>훈련생 혜택</p>
+                    <p>특별한 혜택</p>
                 </div>
                 <div className='flex flex-wrap justify-between gap-y-10 md:gap-y-16'>
                     {

@@ -13,7 +13,7 @@ function CenterImageList() {
                         <p className='text-[#002278] font-bold lg:mb-4'>온라인 교육장</p>
                         <p className='font-semibold'>메타버스 게더타운 강의실</p>
                     </div>
-                    <div className='flex flex-col gap-5 md:flex-row justify-center'>
+                    <div className='flex flex-col gap-4 md:gap-0 md:flex-row justify-center'>
                         {
                             centerImagesData.first.map((image) => (
                                 <CampImageEle key={image.id} img={image.img} />
@@ -28,7 +28,7 @@ function CenterImageList() {
                         <p className='font-semibold'>동국대학교 서울캠퍼스</p>
                         <p className='font-semibold'>(동대입구역 도보 5분)</p>
                     </div>
-                    <div className='flex flex-col gap-5 md:flex-row justify-center'>
+                    <div className='flex flex-col gap-4 md:gap-0 md:flex-row justify-center'>
                         {
                             centerImagesData.second.map((image) => (
                                 <CampImageEle key={image.id} img={image.img} />

@@ -8,15 +8,29 @@ function Selection() {
         <section id="selection" className="section">
             <SectionTitle title='선발절차' />
             <div className='container'>
-                <div className='w-full flex xl:justify-evenly xl:gap-12 lg:mt-6 mb-4 md:mb-6 lg:mb-16'>
+                <div className='w-full hidden md:flex xl:justify-evenly xl:gap-12 lg:mt-6 mb-4 md:mb-6 lg:mb-16'>
                     {
                         selectionProcedureData[0].map((data, index) => (
                             <SelectionEle key={index} selectionEle={data} />
                         ))
                     }
                 </div>
-                <div className='text-center font-semibold text-lg md:text-2xl'>
-                    <p className='mb-4'>졸업예정자의 경우 25년 2월 졸업인 <br className='md:hidden'/> 경우에만 지원 가능합니다.</p>
+                <div className='w-full flex mb-4 mt-5 justify-center md:hidden'>
+                    {
+                        selectionProcedureData[0].map((data, index) => (
+                            index <= 2 && <SelectionEle key={index} selectionEle={data} />
+                        ))
+                    }
+                </div>
+                <div className='w-full flex mb-4 justify-center md:hidden'>
+                    {
+                        selectionProcedureData[0].map((data, index) => (
+                            index > 2 && <SelectionEle key={index} selectionEle={data} />
+                        ))
+                    }
+                </div>
+                <div className='text-center font-semibold text-base md:text-2xl'>
+                    <p className='mb-4'>졸업예정자의 경우 25년 2월 혹은 8월 졸업인 <br className='md:hidden' /> 경우에만 지원 가능합니다.</p>
                     <p>위 일정은 선발 진행 절차에 따라 변동될 수 있습니다.</p>
                 </div>
             </div>
