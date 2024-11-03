@@ -408,7 +408,7 @@ export const curriculumData = [
             mobileDesc: '현업 전문가가 도출한 도메인별 시나리오를 \n기반으로 실무와 동일한 환경의 프로젝트 수행과 \n멘토링을 통해 AM 전문가로 성장을 돕습니다.',
             img: 'assets/images/curriculum/curriculumstep/final.svg',
             inner: {
-                goal: "현업 전문가가 도출한 도메인별 시나리오 기반 프로젝트와 멘토링 수행, \nAM 전문가로의 성장",
+                goal: "현업 전문가가 도출한 도메인별 시나리오 기반 프로젝트와 멘토링 수행, AM 전문가로의 성장",
                 subject: "아이디어톤 기반의 도메인별 AI를 활용한 서비스 구현",
                 pjt: [
                     "1. 클라우드 기반 무인 스마트스토어 자동 발주 서비스 개발",

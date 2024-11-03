@@ -139,7 +139,7 @@ function Curriculum() {
                                                             <ol className='space-y-3'>
                                                                 {
                                                                     data.inner.pjt && data.inner.pjt.map((project, index) => (
-                                                                        <li key={index} className='text-xl lg:text-xl font-semibold px-2 md:px-5'>{project}</li>
+                                                                        <li key={index} className='text-base lg:text-xl font-semibold px-2 md:px-5'>{project}</li>
                                                                     ))
                                                                 }
                                                             </ol>
