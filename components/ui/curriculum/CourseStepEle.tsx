@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 
 function CourseStepEle({ title, subtitle, index, activeSlide, handleCourseClick }:
     { title: string, subtitle: string, index: number, activeSlide: number, handleCourseClick: (index: number) => void }) {
