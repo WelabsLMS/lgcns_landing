@@ -351,7 +351,7 @@ export const curriculumData = [
         {
             id: 2,
             title: 'AI 서비스 개발을 통한',
-            subtitle: '풀스택(Full-Stack) 개발자로 거듭나는 지름길',
+            subtitle: '풀스택 개발자로 거듭나는 지름길',
             desc: '프론트엔드와 백엔드의 기초부터 심화, \n생성형 AI에 대한 이해를 바탕으로 \n코드퀄리티 플랫폼을 활용하여 \nAI 서비스 개발에 필요한 \n기술을 습득합니다.',
             mobileDesc: '프론트엔드와 백엔드의 기초부터 심화, \n생성형 AI 이해를 바탕으로 코드퀄리티 플랫폼을 \n활용하여 AI 서비스 개발에 필요한 기술을 \n습득합니다.',
             img: 'assets/images/curriculum/curriculumstep/course2.svg',
@@ -376,13 +376,13 @@ export const curriculumData = [
                 subject: "반응형 웹 구축 정의 및 기술셋 활용\n - React 기반 프론트엔드\n - Spring Boot 기반 백엔드\n - Spring AI 활용\n - 보안가이드 적용 웹보안 실시\n - 로그 수집 및 분석",
                 mobileSubject: "반응형 웹 구축 정의 및 기술셋 활용\n - React 기반 프론트엔드\n - Spring Boot 기반 백엔드\n - Spring AI 활용\n - 보안가이드 적용 웹보안 실시\n - 로그 수집 및 분석",
                 pjt: ["AI 기반 사용자 맞춤형 콘텐츠를 제공하는 애플리케이션 개발"],
-                mobilePjt: ["AI 기반 사용자 맞춤형 콘텐츠를 제공하는 애플리케이션 개발"]
+                mobilePjt: ["AI 기반 사용자 맞춤형 콘텐츠를 제공하는 \n애플리케이션 개발"]
             }
         },
         {
             id: 4,
             title: 'AM 기술의 모든 것',
-            subtitle: 'LG CNS의 Application Modernization',
+            subtitle: 'LG CNS의 \nApplication Modernization',
             desc: 'LG CNS 실무진의 AM Agile 특강부터 \nMSA 기술 이해와 활용을 통해 \nAM 전문가로의 기반을 다집니다.',
             mobileDesc: 'LG CNS 실무진의 AM Agile 특강부터 \nMSA 기술 이해와 활용을 통해 \nAM 전문가로의 기반을 다집니다.',
             img: 'assets/images/curriculum/curriculumstep/course3.svg',
