@@ -224,6 +224,9 @@ export default function ApplyForm() {
         const formDataToSend = new FormData(e.target as HTMLFormElement);
         formDataToSend.append('classId', '1');
         formDataToSend.append('courseName', 'LG CNS AM Inspire Camp 1기');
+        if(formData.gender === '여자') {
+            formDataToSend.append('military', '면제');
+        }
         const availableLanguages = formDataToSend.getAll('availableLanguages');
         const applyRoute = formDataToSend.getAll('applyRoute');
 
@@ -243,6 +246,8 @@ export default function ApplyForm() {
                 availableLanguages.push(`프로그램기타:${value}`);
                 formDataToSend.delete(key);
             }
+            
+
         });
 
         // e.preventDefault();
@@ -394,11 +399,11 @@ export default function ApplyForm() {
 
                         {/* 생년월일 */}
                         <div>
-                            <ApplyTitle title="생년월일" required />
+                            <ApplyTitle title="생년월일" ex="- YYYY.MM.DD" required />
                             <input
-                                type="date"
+                                type="text"
                                 className="applyContent"
-                                placeholder="생년월일을 입력해주세요."
+                                placeholder="생년월일을 입력해주세요 (ex) 2004.09.18)."
                                 name="birthday"
                                 value={formData.birthday}
                                 onChange={handleChange}
@@ -408,12 +413,12 @@ export default function ApplyForm() {
 
                         {/* 연락처 */}
                         <div>
-                            <ApplyTitle title="연락처" required />
+                            <ApplyTitle title="연락처" ex=" - 01012341234" required />
                             <input
                                 type="tel"
                                 className="applyContent"
-                                placeholder="하이픈(-)을 포함하여 작성해주세요."
-                                maxLength={13}
+                                placeholder="하이픈을 제외하고 작성해주세요."
+                                maxLength={11}
                                 name="phoneNumber"
                                 value={formData.phoneNumber}
                                 onChange={handleChange}
@@ -501,6 +506,8 @@ export default function ApplyForm() {
                         </div>
 
                         {/* 병역구분 */}
+                        {
+                            formData.gender === '남자' &&
                         <div>
                             <ApplyTitle title="병역구분" required />
                             <select className="applyContent" name="military" onChange={handleChange} required>
@@ -510,6 +517,7 @@ export default function ApplyForm() {
                                 <option value="면제">면제</option>
                             </select>
                         </div>
+                        }
 
                         {/* 장애 여부 */}
                         <div>
@@ -554,7 +562,7 @@ export default function ApplyForm() {
                             <input
                                 type="text"
                                 className="applyContent"
-                                placeholder="ex) 4.5"
+                                placeholder="ex) 4.0 / 4.5"
                                 name="finalCredits"
                                 value={formData.finalCredits}
                                 onChange={handleChange}
@@ -575,12 +583,12 @@ export default function ApplyForm() {
 
                         {/* 졸업예정일 */}
                         <div>
-                            <ApplyTitle title="졸업(예정)일" required />
+                            <ApplyTitle title="졸업(예정)일" ex="ex)YYYY.MM.DD" required />
                             <input
-                                type="date"
+                                type="text"
                                 className="applyContent"
                                 name="graduatedDate"
-                                placeholder="졸업(예정)일을 입력해주세요."
+                                placeholder="졸업(예정)일을 입력해주세요.(2025.02.24)"
                                 value={formData.graduatedDate}
                                 onChange={handleChange}
                                 required
@@ -607,7 +615,7 @@ export default function ApplyForm() {
                             <input
                                 type="text"
                                 className="applyContent"
-                                placeholder="ex) 3학점, 0학점"
+                                placeholder="ex) 3학점, 졸업"
                                 name="remainingCredits"
                                 value={formData.remainingCredits}
                                 onChange={handleChange}
@@ -617,9 +625,9 @@ export default function ApplyForm() {
 
                         {/* 학력사항관련 증빙 서류 */}
                         <div>
-                            <ApplyTitle title="학력사항 관련 증빙 서류" subTitle={`(재학증명서/졸업증명서, 성적증명서) \n- .zip 파일로 압축하여 업로드 해주세요.`} notice="서류 합격 후 필수 제출" required />
+                            <ApplyTitle title="학력사항 관련 증빙 서류" subTitle={`(재학증명서/졸업증명서, 성적증명서)`} notice="- 서류 합격 후 필수 제출" />
                             <div className="mt-4 flex items-center">
-                                <label htmlFor="eduFiles" className="border border-[#9F9F9F] text-2xl font-semibold cursor-pointer px-4 py-3 rounded-[10px] text-nowrap">파일 첨부</label>
+                                {/* <label htmlFor="eduFiles" className="border border-[#9F9F9F] text-2xl font-semibold cursor-pointer px-4 py-3 rounded-[10px] text-nowrap">파일 첨부</label>
                                 <input
                                     type="file"
                                     id="eduFiles"
@@ -631,7 +639,7 @@ export default function ApplyForm() {
                                 />
                                 <div className="ml-4 font-semibold text-xl lg:text-2xl">
                                     {uploadFileName.eduFiles}
-                                </div>
+                                </div> */}
                             </div>
                         </div>
 

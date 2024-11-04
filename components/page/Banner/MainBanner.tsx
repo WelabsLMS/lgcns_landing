@@ -42,7 +42,7 @@ function MainBanner() {
                                     <Image src={data.img} alt="circlecheck" width={25} height={25} className='hidden md:block' />
                                     <p className='text-lg md:text-xl font-bold text-[#5984EC]'>{data.title}</p>
                                 </div>
-                                <p className='hidden md:block text-2xl font-semibold leading-8'>{data.desc}</p>
+                                <p className='hidden md:block md:text-xl lg:text-2xl font-semibold leading-8'>{data.desc}</p>
                                 <p className='md:hidden text-base font-semibold leading-7'>{data.mobileDesc}</p>
                             </div>
                         ))

@@ -3,7 +3,7 @@ import React from 'react'
 
 function CampImageEle({ img }: { img: string }) {
     return (
-        <div className='relative w-full h-80 md:w-[40%] md:h-72 lg:h-80'>
+        <div className='relative w-full h-72 md:h-80 lg:h-96 xl:h-[28rem]'>
             <Image src={img} alt='camp image' fill />
         </div>
     )
