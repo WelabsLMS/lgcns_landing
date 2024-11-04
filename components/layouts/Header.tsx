@@ -7,7 +7,8 @@ import { usePathname } from 'next/navigation'
 function Header() {
     const [subMenuOpen, setSubMenuOpen] = React.useState(false)
     const pathname = usePathname()
-    if (pathname === '/apply') return null
+    if (pathname.includes('apply')) return null
+    
 
     return (
         <>
@@ -47,7 +48,7 @@ function Header() {
                 <div className='w-full relative lg:hidden'>
                     <div className='flex justify-between px-4 items-center w-full'>
                         <div className=''>
-                            <Link href='#'>
+                            <Link href='/'>
                                 <Image src={'/assets/images/logo/lg/LGCNS_ROW_ENG.png'} width={150} height={100} alt='lgcns_logo' />
                             </Link>
                         </div>
