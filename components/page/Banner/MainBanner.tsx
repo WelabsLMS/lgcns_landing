@@ -23,9 +23,9 @@ function MainBanner() {
                         <div className="grid grid-cols-2 md:grid-cols-4 text-center font-medium lg:px-0 lg:mr-4 xl:mr-8 md:px-0">
                             {
                                 mainBannerOverview[0].map((data, index) => (
-                                    <div key={index} className={`py-3 ${data.id === 1 && 'border-r-2 border-b-2 md:border-b-0'} ${data.id === 2 && 'md:border-r-2 border-b-2 md:border-b-0'} ${data.id === 3 && 'border-r-2 md:w-[110%] lg:w-full'} border-dotted border-[#00227830] p-1`}>
+                                    <div key={index} className={`py-3 ${data.id === 1 && 'border-r-2 border-b-2 md:border-b-0'} ${data.id === 2 && 'md:border-r-2 border-b-2 md:border-b-0'} ${data.id === 3 && 'border-r-2 md:w-[105%] lg:w-full'} border-dotted border-[#00227830] p-1`}>
                                         <p className='mb-3 lg:mb-7 font-bold text-xl lg:text-2xl'>{data.title}</p>
-                                        <p className={`whitespace-pre-line text-sm font-semibold ${index === 2 ? "text-xs lg:text-sm" : "lg:text-base"} xl:text-lg`}>{data.content}</p>
+                                        <p className={`whitespace-pre-line text-sm font-semibold ${index === 2 ? "text-xs md:text-sm lg:text-sm" : "lg:text-base"} xl:text-lg`}>{data.content}</p>
                                         <p className='text-sm lg:text-lg text-red-500'>{data.notice}</p>
                                     </div>
                                 ))
