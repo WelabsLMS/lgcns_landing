@@ -617,7 +617,7 @@ export default function ApplyForm() {
 
                         {/* 학력사항관련 증빙 서류 */}
                         <div>
-                            <ApplyTitle title="학력사항 관련 증빙 서류" subTitle={`(재학증명서/졸업증명서, 성적증명서) - .zip 파일로 압축하여 업로드`} notice="서류 합격 후 필수 제출" required />
+                            <ApplyTitle title="학력사항 관련 증빙 서류" subTitle={`(재학증명서/졸업증명서, 성적증명서) \n- .zip 파일로 압축하여 업로드 해주세요.`} notice="서류 합격 후 필수 제출" required />
                             <div className="mt-4 flex items-center">
                                 <label htmlFor="eduFiles" className="border border-[#9F9F9F] text-2xl font-semibold cursor-pointer px-4 py-3 rounded-[10px] text-nowrap">파일 첨부</label>
                                 <input
@@ -729,7 +729,7 @@ export default function ApplyForm() {
                             <ApplyTitle title="자격증" />
                             <input
                                 className="applyContent"
-                                placeholder="자격증 내용을 입력해주세요 (ex) 정보처리기사/한국산업인력공단/2024.03.20.)"
+                                placeholder="(ex) 정보처리기사/한국산업인력공단/2024.03.20.)"
                                 type="text"
                                 name="certificate"
                                 value={formData.certificate}
@@ -785,7 +785,7 @@ export default function ApplyForm() {
                         <div className="flex flex-col space-y-4">
                             <ApplyTitle
                                 title="제출 전 확인사항"
-                                subTitle={`지원서 제출 후 수정이 불가하므로 \n확인 후 제출해주시기 바랍니다.\n*정확한 이메일 주소를 작성해주셔야 \n프로세스 안내가 가능합니다.`}
+                                subTitle={`지원서 제출 후 수정이 불가하므로 확인 후 제출해주시기 바랍니다.\n*정확한 이메일 주소를 작성해주셔야 프로세스 안내가 가능합니다.`}
                                 required
                             />
                             <Input type="checkbox" id="confirm" title="네, 확인했습니다!" name="confirm" checked={formData.confirm} onChange={handleChange} required />

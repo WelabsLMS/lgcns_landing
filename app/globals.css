@@ -92,12 +92,12 @@ body {
 }
 
 .applyTitle {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 600;
 }
 
 .applyContent {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   width: 100%;
   margin-top: 0.25rem;
@@ -156,12 +156,12 @@ body {
   }
 
   .applyTitle {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
   }
 
   .applyContent {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
     width: 100%;
     margin-top: 0.25rem;
