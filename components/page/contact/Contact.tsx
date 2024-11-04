@@ -1,12 +1,13 @@
 import SectionTitle from '@/components/ui/SectionTitle'
 import Image from 'next/image'
+import Link from 'next/link';
 import React from 'react'
 
 function Contact() {
     return (
         <section id='contact' className="section mb-20">
             <SectionTitle title="문의처" />
-            <div className='flex flex-col gap-8 lg:gap-16'>
+            <div className='flex flex-col gap-8 lg:gap-16 items-center'>
                 {/* 1 */}
                 <div className='w-full lg:w-[33rem] h-auto lg:h-32 bg-[#C2D3FF] rounded-2xl shadow-[8px_8px_rgba(194,194,194,1)] p-4 flex items-center justify-center'>
                     <div className='flex flex-col md:flex-row gap-5 md:gap-0 justify-center items-center'>
@@ -45,7 +46,13 @@ function Contact() {
                         </div>
                     </div>
                 </div>
+                <div
+                    className='text-white w-52 h-16 flex items-center text-2xl justify-center rounded-full px-4 bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] font-bold'
+                >
+                    <Link href={'/apply'}>지원하기</Link>
+                </div>
             </div>
+
         </section>
     )
 }
