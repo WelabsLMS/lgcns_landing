@@ -22,7 +22,7 @@ export const mainBannerOverview = [
         {
             id: 3,
             title: "교육장소",
-            content: "오리엔테이션(LG 사이언스파크)\n정규교과(메타버스 강의장)\n프로젝트(동국대학교 서울캠퍼스)"
+            content: "OT/특강(LG CNS 본사)\n정규교과(메타버스 강의장)\n프로젝트(동국대학교 서울캠퍼스)"
         },
         {
             id: 4,
@@ -682,7 +682,7 @@ export const faqData = [
 
 // 교육장사진 리스트
 export const centerImagesData = {
-    first: [
+    online: [
         {
             id: 1,
             img: "assets/images/centerimages/center_gatherOutside.svg"
@@ -692,13 +692,23 @@ export const centerImagesData = {
             img: "assets/images/centerimages/center_gatherInside.svg"
         },
     ],
-    second: [
+    LG :[
         {
-            id: 3,
+            id: 1,
+            img: "assets/images/centerimages/lgcns_center1.svg"
+        },
+        {
+            id: 2,
+            img: "assets/images/centerimages/lgcns_center2.svg"
+        }
+    ],
+    DGU: [
+        {
+            id: 1,
             img: "assets/images/centerimages/center_291.svg"
         },
         {
-            id: 4,
+            id: 2,
             img: "assets/images/centerimages/center_294.svg"
         },
     ],

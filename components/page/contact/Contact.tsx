@@ -12,7 +12,7 @@ function Contact() {
                 <div className='w-full lg:w-[33rem] h-auto lg:h-32 bg-[#C2D3FF] rounded-2xl shadow-[8px_8px_rgba(194,194,194,1)] p-4 flex items-center justify-center'>
                     <div className='flex flex-col md:flex-row gap-5 md:gap-0 justify-center items-center'>
                         <div className='text-xl lg:text-3xl font-extrabold'>
-                            <p>교육신청 문의</p>
+                            <p>교육지원 문의</p>
                         </div>
                         <div className='ml-4 lg:ml-10 text-base lg:text-xl font-bold'>
                             <p>문의처 : 위랩스페이스</p>
