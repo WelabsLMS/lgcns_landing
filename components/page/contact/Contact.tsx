@@ -15,7 +15,7 @@ function Contact() {
                         </div>
                         <div className='ml-4 lg:ml-10 text-base lg:text-xl font-bold'>
                             <p>문의처 : 위랩스페이스</p>
-                            <p>이메일 : contact@welabs.kr</p>
+                            <p>이메일 : welabs2023@gmail.com</p>
                         </div>
                     </div>
                 </div>
