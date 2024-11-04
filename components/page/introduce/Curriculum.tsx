@@ -102,7 +102,7 @@ function Curriculum() {
                     <div className={`prev-button-wrap relative invisible md:visible left-5 w-8 h-8 md:w-10 md:h-10 md:left-0 rounded-xl ${isBeginning ? 'bg-[#adb5c850]' : 'bg-[#A5B4FC] cursor-pointer'}`}>
                         <div id='curriculumSwiper' className='button-prev'></div>
                     </div>
-                    <div className={`bg-[#C2D3FF50] w-full px-4 md:px-0 md:w-4/5 lg:w-[85%] xl:w-[60%] ${slideIndex === 6 ? "h-max" : "h-[90vh] lg:h-[100vh]"} xl:h-min mx-auto rounded-2xl text-pretty`}>
+                    <div className={`bg-[#C2D3FF50] w-full px-4 md:px-0 md:w-4/5 lg:w-[85%] xl:w-[60%] ${slideIndex === 6 ? "h-max" : "h-max"} xl:h-min mx-auto rounded-2xl text-pretty`}>
                         <Swiper
                             id='curriculumSwiper'
                             slidesPerView={1}
