@@ -12,7 +12,7 @@ function Summary() {
                 </li>
                 <li>
                     {/* 실무 중심 교육으로 현업 환경을 직접 <br className='md:hidden'/>경험함으로써 실무에 <br className='hidden md:block xl:hidden'/> 즉시 투입 가능한 <br className='md:hidden'/> 현장형 인재 양성 */}
-                    현업 환경을 경험할 수 있는 실무 중심 교육으로 <br className='md:hidden'/>현장에 즉시 투입 가능한 인재 양성
+                    현업 환경을 경험할 수 있는 실무 중심 교육으로 <br className='md:hidden'/>현장에 즉시 투입 가능한 <br className='hidden lg:block'/> 인재 양성
                 </li>
             </ol>
         </div>
