@@ -593,7 +593,7 @@ export default function ApplyForm() {
                             <input
                                 type="text"
                                 className="applyContent"
-                                placeholder="ex) 4학년 2학기"
+                                placeholder="ex) 4학년 2학기, 졸업"
                                 name="latestStatus"
                                 value={formData.latestStatus}
                                 onChange={handleChange}
@@ -607,7 +607,7 @@ export default function ApplyForm() {
                             <input
                                 type="text"
                                 className="applyContent"
-                                placeholder="ex) 3학점"
+                                placeholder="ex) 3학점, 0학점"
                                 name="remainingCredits"
                                 value={formData.remainingCredits}
                                 onChange={handleChange}
@@ -617,7 +617,7 @@ export default function ApplyForm() {
 
                         {/* 학력사항관련 증빙 서류 */}
                         <div>
-                            <ApplyTitle title="학력사항 관련 증빙 서류" subTitle="zip 파일로 압축하여 업로드해주세요." required />
+                            <ApplyTitle title="학력사항 관련 증빙 서류" subTitle={`(재학증명서/졸업증명서, 성적증명서) - .zip 파일로 압축하여 업로드`} notice="서류 합격 후 필수 제출" required />
                             <div className="mt-4 flex items-center">
                                 <label htmlFor="eduFiles" className="border border-[#9F9F9F] text-2xl font-semibold cursor-pointer px-4 py-3 rounded-[10px] text-nowrap">파일 첨부</label>
                                 <input
@@ -658,12 +658,62 @@ export default function ApplyForm() {
                             </div>
                         </div>
 
+                        {/* 지원 동기 */}
+                        <div>
+                            <ApplyTitle title="지원 동기" required />
+                            <textarea
+                                className="applyContent h-44"
+                                placeholder="지원 동기를 입력해주세요."
+                                maxLength={200}
+                                name="introductionAndPlanGoal"
+                                value={formData.introductionAndPlanGoal}
+                                onChange={handleChange}
+                                required
+                            />
+                            <div className="text-right text-sm text-gray-500">
+                                {formData.introductionAndPlanGoal.length} / 200
+                            </div>
+                        </div>
+
+                        {/* 장점 */}
+                        <div>
+                            <ApplyTitle title="본인의 특/장점" required />
+                            <textarea
+                                className="applyContent h-44"
+                                placeholder="본인의 특징 및 장점을 입력해주세요."
+                                name="personalStrengths"
+                                maxLength={500}
+                                value={formData.personalStrengths}
+                                onChange={handleChange}
+                                required
+                            />
+                            <div className="text-right text-sm text-gray-500">
+                                {formData.personalStrengths.length} / 500
+                            </div>
+                        </div>
+
+                        {/* 교육 이력 */}
+                        <div>
+                            <ApplyTitle title="타 교육 수강 이력" />
+                            <textarea
+                                className="applyContent h-44"
+                                maxLength={200}
+                                placeholder="관련 교육 이수 경험이 있다면 해당 교육명과 기간을 작성해주시기 바랍니다. "
+                                name="others"
+                                value={formData.others}
+                                onChange={handleChange}
+                            />
+                            <div className="text-right text-sm text-gray-500">
+                                {formData.others.length}/200
+                            </div>
+                        </div>
+
                         {/* 경력 */}
                         <div>
                             <ApplyTitle title="경력" />
                             <textarea
                                 className="applyContent h-44"
-                                placeholder="경력 내용을 입력해주세요."
+                                placeholder="경력 내용을 입력해주세요(ex) 인턴, 회사경력)"
                                 maxLength={200}
                                 name="experience"
                                 value={formData.experience}
@@ -703,56 +753,6 @@ export default function ApplyForm() {
                                 <div className="ml-4 font-semibold text-xl lg:text-2xl text-ellipsis">
                                     {uploadFileName.certFiles}
                                 </div>
-                            </div>
-                        </div>
-
-                        {/* 지원 동기 */}
-                        <div>
-                            <ApplyTitle title="지원 동기" required />
-                            <textarea
-                                className="applyContent h-44"
-                                placeholder="지원 동기를 입력해주세요."
-                                maxLength={200}
-                                name="introductionAndPlanGoal"
-                                value={formData.introductionAndPlanGoal}
-                                onChange={handleChange}
-                                required
-                            />
-                            <div className="text-right text-sm text-gray-500">
-                                {formData.introductionAndPlanGoal.length} / 200
-                            </div>
-                        </div>
-
-                        {/* 장점 */}
-                        <div>
-                            <ApplyTitle title="본인의 특/장점" required />
-                            <textarea
-                                className="applyContent h-44"
-                                placeholder="본인의 특징 및 장점을 입력해주세요."
-                                name="personalStrengths"
-                                maxLength={200}
-                                value={formData.personalStrengths}
-                                onChange={handleChange}
-                                required
-                            />
-                            <div className="text-right text-sm text-gray-500">
-                                {formData.personalStrengths.length} / 200
-                            </div>
-                        </div>
-
-                        {/* 교육 이력 */}
-                        <div>
-                            <ApplyTitle title="타 교육 수강 이력" />
-                            <textarea
-                                className="applyContent h-44"
-                                maxLength={200}
-                                placeholder="관련 교육 이수 경험이 있다면 해당 교육명과 기간을 작성해주시기 바랍니다. "
-                                name="others"
-                                value={formData.others}
-                                onChange={handleChange}
-                            />
-                            <div className="text-right text-sm text-gray-500">
-                                {formData.others.length}/200
                             </div>
                         </div>
 
