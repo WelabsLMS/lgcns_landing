@@ -1,6 +1,4 @@
 'use client'
-import { useState, useRef, useEffect } from 'react';
-
 interface FAQItemProps {
     index: number;
     question: string;
@@ -8,12 +6,6 @@ interface FAQItemProps {
 }
 
 export default function FaqItem({ index, question, answer }: FAQItemProps) {
-    const [isOpen, setIsOpen] = useState(false);
-    const contentRef = useRef<HTMLDivElement>(null); // 콘텐츠 높이를 계산하기 위한 참조
-
-    // const toggleAccordion = () => {
-    //     setIsOpen(!isOpen);
-    // };
 
     const toggleAccordion = (index: number) => {
         const content = document.getElementById('content-'+index);
@@ -26,15 +18,6 @@ export default function FaqItem({ index, question, answer }: FAQItemProps) {
             icon.classList.toggle('rotate-180');
         }
     }
-
-    useEffect(() => {
-        if (contentRef.current) {
-            // 높이 설정을 통해 애니메이션 성능 개선
-            contentRef.current.style.height = isOpen
-                ? `${contentRef.current.scrollHeight}px`
-                : '0px';
-        }
-    }, [isOpen]);
 
     return (
         <div className="bg-white font-bold px-1">
