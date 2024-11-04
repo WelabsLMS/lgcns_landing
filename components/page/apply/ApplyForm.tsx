@@ -328,7 +328,7 @@ export default function ApplyForm() {
         } catch (error) {
             if (axios.isAxiosError(error) && error.response?.data?.errorCode === "DUPLICATE") {
                 setIsSuccess(false);
-                setModalMessage('이미 지원한 이력이 있습니다. 관리자에게 문의해주세요.');
+                setModalMessage('이미 지원한 이력이 있습니다. \n관리자에게 문의해주세요.');
                 setIsModalOpen(true);
             }
             else {
