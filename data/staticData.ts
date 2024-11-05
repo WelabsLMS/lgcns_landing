@@ -12,7 +12,7 @@ export const mainBannerOverview = [
         {
             id: 1,
             title: "교육기간",
-            content: "2024.12.20 ~\n2025.06.25"
+            content: "2024.12.20 ~\n2025.06.26"
         },
         {
             id: 2,
@@ -695,11 +695,13 @@ export const centerImagesData = {
     LG :[
         {
             id: 1,
-            img: "assets/images/centerimages/lgcns_center1.svg"
+            title: "LG CNS 본사 \n(발산역 도보 5분)",
+            img: "assets/images/centerimages/lgcns_center3.svg"
         },
         {
             id: 2,
-            img: "assets/images/centerimages/lgcns_center2.svg"
+            title: "동국대학교 서울캠퍼스 \n(동대입구역 도보 5분)",
+            img: "assets/images/centerimages/center_294.svg"
         }
     ],
     DGU: [
