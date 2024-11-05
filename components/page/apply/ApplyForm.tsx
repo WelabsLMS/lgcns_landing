@@ -37,13 +37,12 @@ interface FormValues {
 }
 
 export default function ApplyForm() {
-    
+
     const applyRouteRef = React.useRef<HTMLDivElement>(null);
     const languagesRouteRef = React.useRef<HTMLDivElement>(null);
     const [isSuccess, setIsSuccess] = useState<boolean>(false);
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
     const [modalMessage, setModalMessage] = useState<string>('');
-    const [isOpen, setIsOpen] = useState<boolean>(false);
     const [additionalText, setAdditionalText] = useState<{ sns: string; website: string; applyEtc: string, programEtc: string }>({
         sns: '',
         website: '',
@@ -88,14 +87,15 @@ export default function ApplyForm() {
         confirm: false,
     });
 
-    function toggleAccordion() {
-        const content = document.getElementById("accordion-content");
-        const arrow = document.getElementById("arrow");
-
-        if (content && arrow) {
-            setIsOpen(!isOpen);
-            content.style.maxHeight = isOpen ? content.scrollHeight + "px" : "0";
-            arrow.style.transform = isOpen ? "rotate(180deg)" : "rotate(0)";
+    const toggleAccordion = () => {
+        const content = document.getElementById('applyFaq-content');
+        const icon = document.getElementById('applyFaq-icon');
+        if (content) {
+            content.classList.toggle('max-h-0');
+            content.classList.toggle('overflow-hidden');
+        }
+        if (icon) {
+            icon.classList.toggle('rotate-180');
         }
     }
 
@@ -224,7 +224,7 @@ export default function ApplyForm() {
         const formDataToSend = new FormData(e.target as HTMLFormElement);
         formDataToSend.append('classId', '1');
         formDataToSend.append('courseName', 'LG CNS AM Inspire Camp 1기');
-        if(formData.gender === '여자') {
+        if (formData.gender === '여자') {
             formDataToSend.append('military', '면제');
         }
         const availableLanguages = formDataToSend.getAll('availableLanguages');
@@ -246,7 +246,7 @@ export default function ApplyForm() {
                 availableLanguages.push(`프로그램기타:${value}`);
                 formDataToSend.delete(key);
             }
-            
+
 
         });
 
@@ -352,7 +352,7 @@ export default function ApplyForm() {
                     {/* <p className="text-2xl font-semibold">지원서 제출은 1회로 제한하며, 제출 후 수정이 불가하니 신중을 기해 주세요.</p> */}
                     <p className="text-2xl mt-2 font-semibold"><span className="text-red-500">*</span>표시는 필수 입력사항입니다.</p>
                 </div>
-                <div className='container mx-auto px-2 lg:px-52 xl:px-64'>
+                <div className='container mx-auto px-2 md:px-20 lg:px-52 xl:px-64'>
                     {/* <div className="mb-10">
                         <button
                             type="button"
@@ -508,15 +508,15 @@ export default function ApplyForm() {
                         {/* 병역구분 */}
                         {
                             formData.gender === '남자' &&
-                        <div>
-                            <ApplyTitle title="병역구분" required />
-                            <select className="applyContent" name="military" onChange={handleChange} required>
-                                <option value="">선택해주세요</option>
-                                <option value="군필">군필</option>
-                                <option value="미필">미필</option>
-                                <option value="면제">면제</option>
-                            </select>
-                        </div>
+                            <div>
+                                <ApplyTitle title="병역구분" required />
+                                <select className="applyContent" name="military" onChange={handleChange} required>
+                                    <option value="">선택해주세요</option>
+                                    <option value="군필">군필</option>
+                                    <option value="미필">미필</option>
+                                    <option value="면제">면제</option>
+                                </select>
+                            </div>
                         }
 
                         {/* 장애 여부 */}
@@ -749,7 +749,7 @@ export default function ApplyForm() {
                         <div>
                             <ApplyTitle title="자격증 및 경력 증빙 서류 첨부" subTitle="zip 파일로 압축하여 업로드해주세요." />
                             <div className="mt-4 flex items-center">
-                                <label htmlFor="certFiles" className="border border-[#9F9F9F] text-2xl font-semibold cursor-pointer px-4 py-3 rounded-[10px] text-nowrap">파일 첨부</label>
+                                <label htmlFor="certFiles" className="border border-[#9F9F9F] text-xl font-semibold cursor-pointer px-2 py-1 lg:px-4 lg:py-3 lg:text-2xl rounded-[10px] text-nowrap">파일 첨부</label>
                                 <input
                                     type="file"
                                     id="certFiles"
@@ -770,11 +770,11 @@ export default function ApplyForm() {
                             <div className="w-full bg-white rounded-lg shadow-lg">
                                 <div className="flex justify-between items-center p-4 cursor-pointer" id="accordion-header" onClick={() => toggleAccordion()}>
                                     <Input type="checkbox" id="agree" title="동의합니다!" name="agreeCheck" checked={formData.agreeCheck === 1} value="1" onChange={handleChange} required />
-                                    <svg id="arrow" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <svg id="applyFaq-icon" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                                     </svg>
                                 </div>
-                                <div id="accordion-content" className="max-h-0 overflow-hidden transition-all duration-300">
+                                <div id="applyFaq-content" className="max-h-0 overflow-hidden transition-all duration-300">
                                     <div className="w-full text-lg p-4 rounded mt-2">
                                         <p>LG CNS와 ㈜위랩스페이스는 2024년 LG CNS AM Inspire Camp 1기 선발을 위하여 <br />하기와 같이 귀하의 정보를 수집 및 이용하고자 합니다.</p>
                                         <br />
