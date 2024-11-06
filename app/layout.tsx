@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/layouts/Header";
 import ScrollToTop from "@/components/ui/ScrollToTop";
+import KaKaoNav from "@/components/ui/KaKaoNav";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -81,6 +82,7 @@ export default function RootLayout({
         className={`${lgFont.className} antialiased`}
       >
         <Header />
+        <KaKaoNav />
         <ScrollToTop />
         {children}
       </body>
