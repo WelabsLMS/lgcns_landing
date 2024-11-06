@@ -40,6 +40,7 @@ export default function ApplyForm() {
 
     const applyRouteRef = React.useRef<HTMLDivElement>(null);
     const languagesRouteRef = React.useRef<HTMLDivElement>(null);
+    const [isSubmit, setIsSubmit] = useState<boolean>(false);
     const [isSuccess, setIsSuccess] = useState<boolean>(false);
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
     const [modalMessage, setModalMessage] = useState<string>('');
@@ -220,7 +221,7 @@ export default function ApplyForm() {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-
+        setIsSubmit(true);
         const formDataToSend = new FormData(e.target as HTMLFormElement);
         formDataToSend.append('classId', '1');
         formDataToSend.append('courseName', 'LG CNS AM Inspire Camp 1기');
@@ -241,77 +242,11 @@ export default function ApplyForm() {
                     applyRoute.push(`지원기타:${value}`);
                 }
                 formDataToSend.delete(key);
-
             } else if (key === 'programEtc') {
                 availableLanguages.push(`프로그램기타:${value}`);
                 formDataToSend.delete(key);
             }
-
-
         });
-
-        // e.preventDefault();
-        // // 필수 항목 검사
-        // if (!formData.name) {
-        //     return;
-        // }
-        // if (!formData.gender) {
-        //     return;
-        // }
-        // if (!formData.birthday) {
-        //     return;
-        // }
-        // if (!formData.phoneNumber) {
-        //     return;
-        // }
-        // if (!formData.email) {
-        //     return;
-        // }
-        // if (formData.applyRoute.length === 0) {
-        //     document.getElementById('applyRoute')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        //     return;
-        // }
-        // if (formData.availableLanguages.length === 0) {
-        //     return;
-        // }
-        // if (formData.agreeCheck === 0) {
-        //     return;
-        // }
-
-        // // FormData 생성
-        // const formDataToSend = new FormData();
-        // formDataToSend.append('classId', '1');
-        // formDataToSend.append('courseName', 'LG CNS AM Inspire Camp 1기');
-        // (Object.keys(formData) as Array<keyof FormValues>).forEach((key) => {
-        //     const value = formData[key];
-
-        //     if (value instanceof File) {
-        //         formDataToSend.append(key, value);
-        //     } else if (Array.isArray(value)) {
-        //         value.forEach((item) => {
-        //             if (typeof item === 'string') {
-        //                 formDataToSend.append(key, item);
-        //             } else {
-        //                 Object.entries(item).forEach(([subKey, subValue]) => {
-        //                     formDataToSend.append(`${key}:[${subKey}]`, subValue);
-        //                 });
-        //             }
-        //         });
-        //     } else if (value !== undefined && value !== null) {
-        //         formDataToSend.append(key, value.toString());
-        //     }
-        // });
-
-        // if (formData.certFiles) {
-        //     console.log(`certFiles type: ${typeof formData.certFiles}`);
-        //     if (Array.isArray(formData.certFiles)) {
-        //         formData.certFiles.forEach((file, index) => {
-        //             if (file instanceof File) {
-        //                 console.log(`certFiles[${index}] type: ${file.type}`);
-        //             }
-        //         });
-        //     }
-        // }
 
         try {
             const res = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_API_URL}/api/landing/account/saveClassApplyInfo`, formDataToSend, {
@@ -337,6 +272,7 @@ export default function ApplyForm() {
                 setIsModalOpen(true);
             }
         }
+        setIsSubmit(false)
     }
 
 
@@ -800,7 +736,7 @@ export default function ApplyForm() {
                         </div>
                         {/* 제출 버튼 */}
                         <div className="w-full flex justify-center mt-20">
-                            <button type="submit" title={!formData.agreeCheck || !formData.confirm ? "필수항목에 동의해주세요." : ""} className="w-48 h-16 bg-[#002278] text-white font-bold text-3xl p-2 rounded-lg disabled:bg-gray-500" disabled={!formData.agreeCheck || !formData.confirm}>
+                            <button type="submit" title={!formData.agreeCheck || !formData.confirm ? "필수항목에 동의해주세요." : ""} className="w-48 h-16 bg-[#002278] text-white font-bold text-3xl p-2 rounded-lg disabled:bg-gray-500" disabled={!formData.agreeCheck || !formData.confirm || isSubmit}>
                                 제출하기
                             </button>
                         </div>
