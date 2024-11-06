@@ -42,7 +42,7 @@ function ApplySubmitModal({ isModalOpen, setIsModalOpen, isSuccess, message }: {
     return (
         <>
             <div className='w-screen h-screen fixed top-0 left-0 bg-gray-400/80 z-[1001]' />
-            <div className='fixed w-screen h-screen flex items-center justify-center px-2 md:px-0 z-[1002]' onClick={() => setIsModalOpen(!isModalOpen)}>
+            <div className='fixed w-screen h-screen flex items-center justify-center px-2 md:px-0 z-[1002]' >
                 <div
                     className='relative w-full h-[40vh] md:w-[40vw] md:h-[50vh] md:min-w-[600px] md:min-h-[265px] rounded-xl bg-white animate-fadeIn overflow-hidden'
                     onClick={(e) => e.stopPropagation()}>
