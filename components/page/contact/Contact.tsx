@@ -36,21 +36,27 @@ function Contact() {
                 </div>
 
                 {/* 3 */}
-                <div className='w-full lg:w-[33rem] h-auto md:h-28 lg:h-32 bg-[#FEE500] rounded-2xl shadow-[8px_8px_rgba(194,194,194,1)] p-4 flex items-center justify-center'>
-                    <div className='flex flex-col md:flex-row md:gap-0 justify-center items-center'>
-                        <div className='relative w-20 h-20 lg:w-24 lg:h-24'>
-                            <Image src={'/assets/images/contact/kakaotalk.svg'} alt='kakaotalk' fill />
-                        </div>
-                        <div className='text-xl lg:text-3xl font-bold'>
-                            <p>카카오톡 1:1 상담</p>
+                <Link href='https://pf.kakao.com/_wbxkln'>
+                    <div className='w-full lg:w-[33rem] h-auto md:h-28 lg:h-32 bg-[#FEE500] rounded-2xl shadow-[8px_8px_rgba(194,194,194,1)] p-4 flex items-center justify-center'>
+                        <div className='flex flex-col md:flex-row md:gap-0 justify-center items-center'>
+                            <div className='relative w-20 h-20 lg:w-24 lg:h-24'>
+                                <Image src={'/assets/images/contact/kakaotalk.svg'} alt='kakaotalk' fill />
+                            </div>
+                            <div className='text-xl lg:text-3xl font-bold'>
+                                <p>카카오톡 1:1 상담</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div
-                    className='text-white w-52 h-16 flex items-center text-2xl justify-center rounded-full px-4 bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] font-bold'
-                >
-                    <Link href={'/apply'}>지원하기</Link>
-                </div>
+                </Link>
+
+                {/* 4 */}
+                <Link href={'/apply'}>
+                    <div
+                        className='text-white w-52 h-16 flex items-center text-2xl justify-center rounded-full px-4 bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] font-bold'
+                    >
+                        지원하기
+                    </div>
+                </Link>
             </div>
 
         </section>
