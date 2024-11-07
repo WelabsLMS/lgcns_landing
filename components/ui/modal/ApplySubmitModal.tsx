@@ -38,7 +38,12 @@ function ApplySubmitModal({ isModalOpen, setIsModalOpen, isSuccess, message }: {
     //         <path d="M12 .587l3.668 7.431 8.209 1.193-5.938 5.789 1.401 8.167L12 18.896l-7.34 3.858 1.401-8.167L.093 9.211l8.209-1.193z" />
     //     </svg>
     // )
-
+    const handleClick = () => {
+        setIsModalOpen(!isModalOpen)
+        if(isSuccess){
+            window.location.href = '/'
+        }
+    }
     return (
         <>
             <div className='w-screen h-screen fixed top-0 left-0 bg-gray-400/80 z-[1001]' />
@@ -60,7 +65,7 @@ function ApplySubmitModal({ isModalOpen, setIsModalOpen, isSuccess, message }: {
                             {/* <p className='text-3xl md:text-4xl font-bold'></p> */}
                         </div>
                         <p className='text-xl md:text-3xl font-semibold mt-2 text-center whitespace-pre-line'>{message}</p>
-                        <button onClick={() => setIsModalOpen(!isModalOpen)} className='bg-[#002278] text-2xl text-white font-semibold rounded-2xl px-7 py-3 mt-6'>확인</button>
+                        <button onClick={handleClick} className='bg-[#002278] text-2xl text-white font-semibold rounded-2xl px-7 py-3 mt-6'>확인</button>
                     </div>
                     {/* 스파클 효과 수정
                     <div className='absolute inset-0 pointer-events-none'>
