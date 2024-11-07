@@ -4,6 +4,7 @@ import Input from "@/components/ui/apply/Input";
 import ApplyTitle from "@/components/ui/apply/ApplyTitle";
 import ApplySubmitModal from "@/components/ui/modal/ApplySubmitModal";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 
 // FormData 타입 정의
 interface FormValues {
@@ -37,6 +38,7 @@ interface FormValues {
 }
 
 export default function ApplyForm() {
+    const router = useRouter();
 
     const applyRouteRef = React.useRef<HTMLDivElement>(null);
     const languagesRouteRef = React.useRef<HTMLDivElement>(null);
@@ -254,19 +256,50 @@ export default function ApplyForm() {
                     'Content-Type': `multipart/form-data`,
                 }
             });
-
             if (res.status === 200) {
                 setIsSuccess(true);
                 setModalMessage('이후 일정은 순차적으로 이메일로 \n개별 안내드릴 예정입니다.');
                 setIsModalOpen(true);
+                setFormData({
+                    name: '',
+                    gender: '',
+                    birthday: '',
+                    phoneNumber: '',
+                    address: '',
+                    email: '',
+                    learningCardStatus: '',
+                    applyRoute: [],
+                    military: '',
+                    disability: '',
+                    educationStatus: '',
+                    schoolName: '',
+                    major: '',
+                    finalCredits: '',
+                    graduatedDate: '',
+                    latestStatus: '',
+                    remainingCredits: '',
+                    eduFiles: null,
+                    availableLanguages: [],
+                    experience: '',
+                    certificate: '',
+                    certFiles: null,
+                    introductionAndPlanGoal: '',
+                    personalStrengths: '',
+                    others: '',
+                    agreeCheck: 0,
+                    confirm: false,
+                });
+                setUploadFileName({
+                    eduFiles: '',
+                    certFiles: '',
+                });
             }
         } catch (error) {
             if (axios.isAxiosError(error) && error.response?.data?.errorCode === "DUPLICATE") {
                 setIsSuccess(false);
                 setModalMessage('이미 지원한 이력이 있습니다. \n관리자에게 문의해주세요.');
                 setIsModalOpen(true);
-            }
-            else {
+            } else {
                 setIsSuccess(false);
                 setModalMessage('관리자에게 문의 부탁드립니다.');
                 setIsModalOpen(true);
@@ -274,7 +307,6 @@ export default function ApplyForm() {
         }
         setIsSubmit(false)
     }
-
 
     return (
         <>
@@ -403,9 +435,9 @@ export default function ApplyForm() {
                         <div>
                             <ApplyTitle title="지원경로" subTitle="(최소 1개 선택, 복수 선택 가능합니다.)" required />
                             <div className="flex flex-col space-y-2 mt-1" ref={applyRouteRef}>
-                                <Input type="checkbox" id="friendApply" name="applyRoute" required title="지인추천" onChange={handleChange} value="지인추천" />
-                                <Input type="checkbox" id="colleage" name="applyRoute" title="대학교 설명" onChange={handleChange} value="대학교 설명" />
-                                <Input type="checkbox" id="sns" name="applyRoute" title="SNS 광고 (인스타그램, 블로그 등)" onChange={handleChange} value="SNS 광고" />
+                                <Input type="checkbox" id="friendApply" name="applyRoute" required title="지인추천" onChange={handleChange} value="지인추천" checked={formData.applyRoute.includes('지인추천')} />
+                                <Input type="checkbox" id="colleage" name="applyRoute" title="대학교 설명" onChange={handleChange} value="대학교 설명" checked={formData.applyRoute.includes('대학교 설명')} />
+                                <Input type="checkbox" id="sns" name="applyRoute" title="SNS 광고 (인스타그램, 블로그 등)" onChange={handleChange} value="SNS 광고" checked={formData.applyRoute.includes('SNS 광고')} />
                                 {formData.applyRoute.includes('SNS 광고') && (
                                     <input
                                         type="text"
@@ -416,7 +448,7 @@ export default function ApplyForm() {
                                         className="mt-2 border-b border-gray-300 p-2 text-xl font-semibold rounded focus:outline-none focus:border-t-0"
                                     />
                                 )}
-                                <Input type="checkbox" id="website" name="applyRoute" title={`웹사이트 \n(링크드인, 서치닷컴, 부트캠프 등)`} onChange={handleChange} value="웹사이트" />
+                                <Input type="checkbox" id="website" name="applyRoute" title={`웹사이트 \n(링크드인, 서치닷컴, 부트캠프 등)`} onChange={handleChange} value="웹사이트" checked={formData.applyRoute.includes('웹사이트')} />
                                 {formData.applyRoute.includes('웹사이트') && (
                                     <input
                                         type="text"
@@ -427,7 +459,7 @@ export default function ApplyForm() {
                                         className="mt-2 border-b border-gray-300 p-2 text-xl font-semibold rounded focus:outline-none focus:border-t-0"
                                     />
                                 )}
-                                <Input type="checkbox" id="applyEtc" name="applyRoute" title="기타" onChange={handleChange} value="기타" />
+                                <Input type="checkbox" id="applyEtc" name="applyRoute" title="기타" onChange={handleChange} value="기타" checked={formData.applyRoute.includes('기타')} />
                                 {formData.applyRoute.includes('기타') && (
                                     <input
                                         type="text"
