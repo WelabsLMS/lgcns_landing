@@ -4,7 +4,6 @@ import Input from "@/components/ui/apply/Input";
 import ApplyTitle from "@/components/ui/apply/ApplyTitle";
 import ApplySubmitModal from "@/components/ui/modal/ApplySubmitModal";
 import axios from "axios";
-import { useRouter } from "next/navigation";
 
 // FormData 타입 정의
 interface FormValues {
@@ -38,7 +37,6 @@ interface FormValues {
 }
 
 export default function ApplyForm() {
-    const router = useRouter();
 
     const applyRouteRef = React.useRef<HTMLDivElement>(null);
     const languagesRouteRef = React.useRef<HTMLDivElement>(null);
