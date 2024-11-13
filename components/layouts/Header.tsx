@@ -35,12 +35,12 @@ function Header() {
                         </ul>
                     </nav>
                     <div className='basis-1/6 flex justify-evenly text-2xl font-semibold lg:gap-4'>
-                        <Link href={'https://lms.wsts.kr/'} className='flex lg:w-28 h-[44px] xl:w-32 xl:h-[44px] items-center justify-center px-4 rounded-full bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] shadow-[0_4px_10px_rgba(255,95,109,0.4)]'>
-                            <Image src='/assets/images/logo/solutionLms.png' alt='wsts' width={150} height={19} />
-                        </Link>
                         <button className='text-white font-bold rounded-full lg:w-28 h-[44px] xl:w-32 xl:h-[44px] bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]'>
                             <Link href={'/apply'}>지원하기</Link>
                         </button>
+                        <Link href={'https://lms.wsts.kr/'} className='flex lg:w-28 h-[44px] xl:w-32 xl:h-[44px] items-center justify-center px-4 rounded-full bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] shadow-[0_4px_10px_rgba(255,95,109,0.4)]'>
+                            <Image src='/assets/images/logo/solutionLms.png' alt='wsts' width={150} height={19} />
+                        </Link>
                     </div>
                 </div>
                 {/* mobile */}
@@ -74,16 +74,16 @@ function Header() {
                         <li onClick={() => setSubMenuOpen(!subMenuOpen)}>
                             <Link href='#faq'>FAQ</Link>
                         </li>
-                        <li onClick={() => setSubMenuOpen(!subMenuOpen)}>
-                            <button className='flex w-[120px] h-[38px] items-center justify-center px-4 rounded-full bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] shadow-[0_4px_10px_rgba(255,95,109,0.4)]'>
-                                <Link href={'https://wsts.kr'}><Image src='/assets/images/logo/solutionLms.png' alt='wsts' width={65} height={19} /></Link>
-                            </button>
-                        </li>
                         <li
                             className='text-white w-[120px] h-[38px] flex items-center justify-center rounded-full px-4 bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] font-bold'
                             onClick={() => setSubMenuOpen(!subMenuOpen)}
                         >
                             <Link href={'/apply'}>지원하기</Link>
+                        </li>
+                        <li onClick={() => setSubMenuOpen(!subMenuOpen)}>
+                            <button className='flex w-[120px] h-[38px] items-center justify-center px-4 rounded-full bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] shadow-[0_4px_10px_rgba(255,95,109,0.4)]'>
+                                <Link href={'https://wsts.kr'}><Image src='/assets/images/logo/solutionLms.png' alt='wsts' width={65} height={19} /></Link>
+                            </button>
                         </li>
                     </ul>
                 </div>
