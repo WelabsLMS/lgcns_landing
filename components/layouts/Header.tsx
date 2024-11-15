@@ -12,14 +12,14 @@ function Header() {
     return (
         <>
             <header className='w-full sticky top-0 left-0 bg-white border border-gray-200 z-[999] lg:px-5 xl:px-20 h-[80px] lg:h-[100px] flex items-center '>
-                <div className='w-full h-min container mx-auto py-5 flex-row hidden lg:flex justify-center items-center lg:gap-4 xl:gap-32'>
-                    <div className='basis-1/6'>
+                <div className='w-full h-min container mx-auto py-5 flex-row hidden lg:flex justify-between items-center lg:gap-4'>
+                    <div className=''>
                         <Link href='https://www.lgcns.com/'>
-                            <Image src={'/assets/images/logo/lg/LGCNS_ROW_ENG.png'} width={200} height={40} alt='lgcns_logo' />
+                            <Image src={'/assets/images/logo/lg/LGCNS_ROW_ENG.png'} width={180} height={40} alt='lgcns_logo' />
                         </Link>
                     </div>
                     <nav className='basis-3/6 text-xl'>
-                        <ul className='flex justify-evenly h-full items-center font-bold text-2xl '>
+                        <ul className='flex justify-between h-full items-center font-bold text-2xl '>
                             <li>
                                 <Link href='#introduce'>Camp 소개</Link>
                             </li>
@@ -32,14 +32,17 @@ function Header() {
                             <li>
                                 <Link href='#faq'>FAQ</Link>
                             </li>
+                            <li>
+                                <Link href='#briefing'>홍보 일정</Link>
+                            </li>
                         </ul>
                     </nav>
-                    <div className='basis-1/6 flex justify-evenly text-2xl font-semibold lg:gap-4'>
-                        <button className='text-white font-bold rounded-full lg:w-28 h-[44px] xl:w-32 xl:h-[44px] bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]'>
+                    <div className='basis-1/6 flex justify-evenly lg:gap-4'>
+                        <button className='text-2xl text-white font-bold rounded-full lg:w-28 h-[44px] xl:w-32 xl:h-[44px] bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]'>
                             <Link href={'/apply'}>지원하기</Link>
                         </button>
                         <Link href={'https://lms.wsts.kr/'} className='flex lg:w-28 h-[44px] xl:w-32 xl:h-[44px] items-center justify-center px-4 rounded-full bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] shadow-[0_4px_10px_rgba(255,95,109,0.4)]'>
-                            <Image src='/assets/images/logo/solutionLms.png' alt='wsts' width={150} height={19} />
+                            <Image src='/assets/images/logo/solutionLms.png' alt='wsts' width={150} height={20} />
                         </Link>
                     </div>
                 </div>
@@ -73,6 +76,9 @@ function Header() {
                         </li>
                         <li onClick={() => setSubMenuOpen(!subMenuOpen)}>
                             <Link href='#faq'>FAQ</Link>
+                        </li>
+                        <li onClick={() => setSubMenuOpen(!subMenuOpen)}>
+                            <Link href='#briefing'>홍보 일정</Link>
                         </li>
                         <li
                             className='text-white w-[120px] h-[38px] flex items-center justify-center rounded-full px-4 bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] font-bold'

@@ -674,11 +674,98 @@ export const faqData = [
             answer: '<p>교육에 집중할 수 있도록 LG 노트북을 대여 해드립니다.',
         },
         {
-            question: 'KDT 과정을 이전에 수강한 적이 있는데 지원 가능한가요?',
+            question: 'KDT 과정을 이전에 수강한 적이 있는데 \n지원 가능한가요?',
             answer: '<p>KDT 과정 수강 경험이 있는 분들은 개별적으로 고용센터에 문의하여 수강여부를 확인해주세요.</p>',
         },
     ]
 ];
+
+// 홍보일정
+export const BriefingScheduleData = {
+    headers : [
+        {
+            id:'university',
+            label: '구분',
+        },
+        {
+            id:'date',
+            label: '일자',
+        },
+        {
+            id:'location',
+            label: '장소',
+        },
+        {
+            id:'time',
+            label: '시간',
+        },
+    ],
+    rows : [
+        {
+            university: '건국대학교',
+            date: '11/19(화)',
+            mobileDate: '11/19(화)\n12:30~',
+            location: '공학관 B동 \n566호',
+            time: '12:30~',
+        },
+        {
+            university: '한국외국어대학교',
+            date: '11/20(수)',
+            mobileDate: '11/20(수)\n13:00~',
+            location: '서울캠퍼스 \n국제회의실',
+            time: '13:00~',
+        },
+        {
+            university: '경희대학교',
+            date: '11/20(수)',
+            mobileDate: '11/20(수)\n15:00~',
+            location: '추후 안내',
+            time: '15:00~',
+        },
+        {
+            university: '이화여자대학교',
+            date: '11/21(목)',
+            mobileDate: '11/21(목)\n',
+            location: '추후 안내',
+            time: '-',
+        },
+        {
+            university: '서울시립대학교',
+            date: '11/21(목)',
+            mobileDate: '11/21(목)\n12:00~',
+            location: '미래관 103호',
+            time: '12:00~',
+        },
+        {
+            university: '성균관대학교',
+            date: '11/22(금)',
+            mobileDate: '11/22(금)\n14:00~',
+            location: '인문사회캠퍼스 \n경영관 33B101 \n(온•오프라인 병행)',
+            time: '14:00~',
+        },
+        {
+            university: '한양대학교',
+            date: '11/26(화)',
+            mobileDate: '11/26(화)\n11:00~',
+            location: '양민용 커리어라운지 \nHIT관 1층',
+            time: '11:00~',
+        },
+        {
+            university: '중앙대학교',
+            date: '11/27(수)',
+            mobileDate: '11/27(수)\n15:00~',
+            location: '310관 201호',
+            time: '15:00~',
+        },
+        {
+            university: '서강대학교',
+            date: '11/28(목)',
+            mobileDate: '11/28(목)\n13:30~',
+            location: '베르크만스 우정원 \nBW316호',
+            time: '13:30~',
+        },
+    ]
+}
 
 // 교육장사진 리스트
 export const centerImagesData = {
