@@ -32,6 +32,9 @@ function Header() {
                             <li>
                                 <Link href='#faq'>FAQ</Link>
                             </li>
+                            <li>
+                                <Link href='#briefing'>홍보 일정</Link>
+                            </li>
                         </ul>
                     </nav>
                     <div className='basis-1/6 flex justify-evenly text-2xl font-semibold lg:gap-4'>
@@ -73,6 +76,9 @@ function Header() {
                         </li>
                         <li onClick={() => setSubMenuOpen(!subMenuOpen)}>
                             <Link href='#faq'>FAQ</Link>
+                        </li>
+                        <li onClick={() => setSubMenuOpen(!subMenuOpen)}>
+                            <Link href='#briefing'>홍보 일정</Link>
                         </li>
                         <li
                             className='text-white w-[120px] h-[38px] flex items-center justify-center rounded-full px-4 bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] font-bold'
