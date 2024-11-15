@@ -8,8 +8,9 @@ export default function BriefingSchedule() {
             <SectionTitle title='홍보 일정' />
             <div className='container mx-auto lg:px-20'>
                 <div className='mt-5 mb-10 text-center '>
-                    <p className='text-2xl md:text-[40px] mb-1 md:mb-4 font-bold' >DX 전문기업 <span className='text-[#AA1239] font-bold'>LG CNS</span>의 <br className='md:hidden' />첫 교육프로그램 런칭!</p>
-                    <p className='text-lg md:text-[30px] font-semibold'>LG CNS가 여러분을 찾아갑니다.</p>
+                <p className='text-lg md:text-4xl font-semibold mb-1 md:mb-4'>Digital Business Innovator</p>
+                    <p className='text-2xl md:text-[40px] mb-1 md:mb-4 font-bold' ><span className='text-[#AA1239] font-bold'>LG CNS</span>만의 <br className='md:hidden' />특별한 교육 프로그램으로</p>
+                    <p className='text-lg md:text-4xl font-semibold'>여러분을 직접 찾아갑니다!</p>
                 </div>
                 <table className='w-full text-center'>
                     <thead>
