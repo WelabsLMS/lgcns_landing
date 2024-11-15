@@ -38,10 +38,10 @@ function Header() {
                         </ul>
                     </nav>
                     <div className='basis-1/6 flex justify-evenly lg:gap-4'>
-                        <button className='text-xl text-white font-bold rounded-full lg:w-24 h-[44px] xl:w-28 xl:h-[44px] bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]'>
+                        <button className='text-2xl text-white font-bold rounded-full lg:w-28 h-[44px] xl:w-32 xl:h-[44px] bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]'>
                             <Link href={'/apply'}>지원하기</Link>
                         </button>
-                        <Link href={'https://lms.wsts.kr/'} className='flex lg:w-24 h-[44px] xl:w-28 xl:h-[44px] items-center justify-center px-4 rounded-full bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] shadow-[0_4px_10px_rgba(255,95,109,0.4)]'>
+                        <Link href={'https://lms.wsts.kr/'} className='flex lg:w-28 h-[44px] xl:w-32 xl:h-[44px] items-center justify-center px-4 rounded-full bg-gradient-to-r from-[#FFC371] to-[#FF5F6D] shadow-[0_4px_10px_rgba(255,95,109,0.4)]'>
                             <Image src='/assets/images/logo/solutionLms.png' alt='wsts' width={150} height={20} />
                         </Link>
                     </div>
