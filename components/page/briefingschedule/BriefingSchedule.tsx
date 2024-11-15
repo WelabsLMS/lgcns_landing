@@ -35,7 +35,7 @@ export default function BriefingSchedule() {
                         }
                     </tbody>
                 </table>
-                <p className='mt-10 text-base md:text-lg text-center font-semibold'>설명회 일정은 추가될 예정이며, <br className='md:hidden'/>참가에 관한 자세한 문의는 <br/>카카오톡 채널을 통해 부탁드립니다.</p>
+                <p className='mt-10 text-lg md:text-xl text-center font-semibold'>설명회 일정은 추가될 예정이며, <br className='md:hidden'/>참가에 관한 자세한 문의는 <br className='md:hidden'/>카카오톡 채널을 통해 부탁드립니다.</p>
             </div>
         </section>
     )
