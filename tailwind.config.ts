@@ -25,6 +25,7 @@ const config: Config = {
       animation: {
         fadeIn: "fadeIn 0.5s ease-in-out",
         sparkle: 'sparkle 1s ease-out infinite',
+        spinSlow: 'spin 3s linear infinite',
       },
     },
     screens: {
