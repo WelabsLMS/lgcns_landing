@@ -32,6 +32,9 @@ function Header() {
                             <li>
                                 <Link href='#faq'>FAQ</Link>
                             </li>
+                            <li>
+                                <Link href='#briefing'>홍보 일정</Link>
+                            </li>
                         </ul>
                     </nav>
                     <div className='basis-1/6 flex justify-evenly text-2xl font-semibold lg:gap-4'>

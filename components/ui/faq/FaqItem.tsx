@@ -21,7 +21,7 @@ export default function FaqItem({ index, question, answer }: FAQItemProps) {
 
     return (
         <div className="bg-white font-bold px-1">
-            <button onClick={() => toggleAccordion(index+1)} className="w-full flex justify-between items-center py-5">
+            <button onClick={() => toggleAccordion(index+1)} className="w-full flex justify-between items-center py-5 whitespace-pre md:whitespace-normal">
                 <span className='text-start md:text-xl lg:text-2xl'>Q. {question}</span>
                 <span id={`icon-${index+1}`} className="text-slate-800 transition-transform duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-6 h-5">

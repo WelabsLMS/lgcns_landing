@@ -1,5 +1,6 @@
 // import Footer from "@/components/layouts/Footer";
 import MainBanner from "@/components/page/Banner/MainBanner";
+import BriefingSchedule from "@/components/page/briefingschedule/BriefingSchedule";
 import CampBenefit from "@/components/page/campbenefit/CampBenefit";
 import Contact from "@/components/page/contact/Contact";
 // import CoreProgram from "@/components/page/coreprogram/CoreProgram";
@@ -10,7 +11,7 @@ import Introduce from "@/components/page/introduce/Introduce";
 // import Location from "@/components/page/location/Location";
 // import MainApply from "@/components/page/mainApply/MainApply";
 // import OverView from "@/components/page/overview/OverView";
-import Selection from "@/components/page/selection/Selection"; 
+import Selection from "@/components/page/selection/Selection";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       {/* <CoreProgram /> */}
       <Selection />
       <Faq />
+      <BriefingSchedule />
       {/* <Location /> */}
       <CenterImageList />
       <Contact />

@@ -674,11 +674,65 @@ export const faqData = [
             answer: '<p>교육에 집중할 수 있도록 LG 노트북을 대여 해드립니다.',
         },
         {
-            question: 'KDT 과정을 이전에 수강한 적이 있는데 지원 가능한가요?',
+            question: 'KDT 과정을 이전에 수강한 적이 있는데 \n지원 가능한가요?',
             answer: '<p>KDT 과정 수강 경험이 있는 분들은 개별적으로 고용센터에 문의하여 수강여부를 확인해주세요.</p>',
         },
     ]
 ];
+
+// 홍보일정
+export const BriefingScheduleData = {
+    headers : [
+        {
+            id:'university',
+            label: '구분',
+        },
+        {
+            id:'date',
+            label: '일자',
+        },
+        {
+            id:'location',
+            label: '장소',
+        },
+        {
+            id:'time',
+            label: '시간',
+        },
+    ],
+    rows : [
+        {
+            university: '동국대학교',
+            date: '2024.10.15(월)',
+            location: '동국대학교 서울캠퍼스',
+            time: '14:00 ~ 16:00',
+        },
+        {
+            university: '서울대학교',
+            date: '2024.10.16(화)',
+            location: '서울대학교',
+            time: '14:00 ~ 16:00',
+        },
+        {
+            university: '고려대학교',
+            date: '2024.10.17(수)',
+            location: '고려대학교',
+            time: '14:00 ~ 16:00',
+        },
+        {
+            university: '연세대학교',
+            date: '2024.10.18(목)',
+            location: '연세대학교',
+            time: '14:00 ~ 16:00',
+        },
+        {
+            university: '한양대학교',
+            date: '2024.10.19(금)',
+            location: '한양대학교',
+            time: '14:00 ~ 16:00',
+        },
+    ]
+}
 
 // 교육장사진 리스트
 export const centerImagesData = {
