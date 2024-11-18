@@ -611,8 +611,8 @@ export const selectionProcedureData = [
 ]
 
 // 캠프혜택
-export const campbenefitData = [
-    [
+export const campbenefitData = {
+    prev : [
         {
             id: 1,
             imgSrc: "assets/images/campbenefit/add.svg",
@@ -649,8 +649,42 @@ export const campbenefitData = [
             title: "교육용 장비\nLG 노트북 무상 지원",
             content: "교육에 집중할 수 있도록\n교육기간 중 노트북 대여"
         },
+    ],
+    first :[
+        {
+            id: 1,
+            imgSrc: "assets/images/campbenefit/cert.svg",
+            title: "LG CNS 인증 수료증",
+            content: "교육 과정을 끝까지 완주한 수료생에게\nLG CNS 인증 수료증을 수여"
+        },
+        {
+            id: 2,
+            imgSrc: "assets/images/campbenefit/sup.svg",
+            title: "취업지원 프로그램",
+            content: "성공적인 취업을 위한\nMeet Up Day, 채용설명회 개최"
+        },
+    ],
+    second : [  
+        {
+            id: 3,
+            imgSrc: "assets/images/campbenefit/mentoring.svg",
+            title: "LG CNS 전문가\n멘토링&포트폴리오",
+            content: "LG CNS 현업 전문가와\n함께하는 실무 프로젝트 멘토링과\n멘토링 기반 포트폴리오 제작"
+        },
+        {
+            id: 4,
+            imgSrc: "assets/images/campbenefit/sup2.svg",
+            title: "교육비 전액지원 및\n 훈련장려금 지급",
+            content: "매월 훈련장려금 지급\n(*단위기간 별 최대 316,000원)"
+        },
+        {
+            id: 5,
+            imgSrc: "assets/images/campbenefit/notebook.svg",
+            title: "교육용 장비\nLG 노트북 무상 지원",
+            content: "교육에 집중할 수 있도록\n교육기간 중 노트북 대여"
+        },
     ]
-]
+}
 
 // 자주하는질문(FAQ)
 export const faqData = [
