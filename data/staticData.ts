@@ -420,8 +420,8 @@ export const curriculumData = [
             mobileDesc: 'LG CNS의 산업 도메인별 AI 기반 \n서비스 개발을 위한 해커톤을 통해 \n프로젝트 사이클을 경험합니다.',
             img: 'assets/images/curriculum/curriculumstep/hackathon.svg',
             inner: {
-                goal: "LG CNS의 산업 도메인별 AI 기반 서비스 개발 \n프로젝트 사이클 경험 \n학습한 AM Agile 방법론 적용 \n스크럼 방식 방식을 도입하여 프로젝트 관리 능력 향상",
-                mobileGoal: "LG CNS의 산업 도메인별 AI 기반 서비스 개발, \n프로젝트 사이클 경험 \n학습한 AM Agile 방법론 적용 \n스크럼 방식 방식을 도입하여 프로젝트 관리 능력 향상",
+                goal: "LG CNS의 산업 도메인별 AI 기반 서비스 개발 \n프로젝트 사이클 경험 \n학습한 AM Agile 방법론 적용 \n스크럼 방식을 도입하여 프로젝트 관리 능력 향상",
+                mobileGoal: "LG CNS의 산업 도메인별 AI 기반 서비스 개발, \n프로젝트 사이클 경험 \n학습한 AM Agile 방법론 적용 \n스크럼 방식을 도입하여 프로젝트 관리 능력 향상",
                 subject: "아이디어톤 기반의 도메인별 AI 활용 서비스 구현\n - 요구사항 분석/설계\n - 협업 및 의사소통 능력\n - 문제 해결 능력\n - SE, CDS 직무",
                 mobileSubject: "아이디어톤 기반의 도메인별 AI 활용 서비스 구현\n - 요구사항 분석/설계\n - 협업 및 의사소통 능력\n - 문제 해결 능력\n - SE, CDS 직무",
                 pjt: ["공공, 리테일, 금융, 교육, 스마트팩토리, 스마트모빌리티 분야의 \n각 산업별 도메인에 따라 AI 서비스를 활용한 결과물 도출"],
@@ -472,7 +472,7 @@ export const curriculumProjectData = [
     },
     {
         title: '최종 프로젝트',
-        img: 'assets/images/curriculum/project/project_final.svg',
+        img: 'assets/images/curriculum/project/project_final.jpg',
         desc: 'AM 기반의 최종 프로젝트를 통해 \nLG CNS만의 AM 기술과 Agile 개발방법론을 \n활용하여 AM 프로젝트 사이클을 경험하고 \n시스템을 구축합니다.',
         width: { default: 700, md: 600, sm: 600 },
         height: { default: 410, md: 700, sm: 500 }
@@ -769,7 +769,7 @@ export const BriefingScheduleData = {
             university: '서울시립대학교',
             date: '11/21(목)',
             mobileDate: '11/21(목)\n12:00~',
-            location: '미래관 103호',
+            location: '미래관 B103호',
             time: '12:00~',
         },
         {
@@ -780,18 +780,18 @@ export const BriefingScheduleData = {
             time: '14:00~',
         },
         {
+            university: '단국대학교',
+            date: '11/25(월)',
+            mobileDate: '11/25(월)\n18:00~',
+            location: '죽전 글로컬산학협력관 \nB105호',
+            time: '18:00~',
+        },
+        {
             university: '한양대학교',
             date: '11/26(화)',
             mobileDate: '11/26(화)\n11:00~',
             location: '양민용 커리어라운지 \nHIT관 1층',
             time: '11:00~',
-        },
-        {
-            university: '단국대학교',
-            date: '11/26(화)',
-            mobileDate: '11/26(화)\n18:00~',
-            location: '죽전 글로컬산학협력관 \nB105호',
-            time: '18:00~',
         },
         {
             university: '중앙대학교',
