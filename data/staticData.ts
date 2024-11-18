@@ -358,8 +358,8 @@ export const curriculumData = [
             inner: {
                 goal: "프론트엔드와 백엔드의 기초부터 심화, 생성형 AI에 대한 이해를 바탕으로 AI 서비스 개발에 필요한 기술 습득",
                 mobileGoal: "프론트엔드와 백엔드의 기초부터 심화, \n생성형 AI에 대한 이해를 바탕으로 \nAI 서비스 개발에 필요한 기술 습득",
-                subject: "Digital Insight 2 \nAI 서비스 개발을 위한 DevOps Tools, 프론트엔드·백엔드, \n생성형 AI를 활용한 REST API 개발",
-                mobileSubject: "Digital Insight 2 \nAI 서비스 개발을 위한 DevOps Tools, \n프론트엔드·백엔드, 생성형 AI를 활용한 \nREST API 개발",
+                subject: "Digital Insight 2 DevOps Tools\nAI 서비스 개발을 위한 프론트엔드·백엔드 \n생성형 AI를 활용한 REST API 개발",
+                mobileSubject: "Digital Insight 2 DevOps Tools \nAI 서비스 개발을 위한 프론트엔드·백엔드 \n생성형 AI를 활용한 REST API 개발",
                 tech: "HTML/CSS, JavaScript, React, Java, Spring Boot, Spring AI, MySQL, Git, Grafana, Prometheus",
                 mobileTech: "HTML/CSS, JavaScript, React, Java, Spring Boot, Spring AI, MySQL, Git, Grafana, Prometheus",
             }
