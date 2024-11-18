@@ -465,7 +465,7 @@ export const curriculumData = [
 export const curriculumProjectData = [
     {
         title: '해커톤',
-        img: 'assets/images/curriculum/project/project_hackathon.svg',
+        img: 'assets/images/curriculum/project/project_hackathon.jpg',
         desc: '공공, 리테일, 금융, 교육, 스마트팩토리, \n스마트모빌리티 분야의 각 산업별 도메인에 따라 \nAI를 활용한 서비스를 개발합니다.',
         width: { default: 600, md: 600, sm: 500 },
         height: { default: 410, md: 700, sm: 500 }
