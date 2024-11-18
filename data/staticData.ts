@@ -374,8 +374,8 @@ export const curriculumData = [
             inner: {
                 goal: "React 디자인 패턴 적용 화면 설계 및 구현 \nSpring Boot를 활용한 API 기능 구현 \n배운 내용을 실제 적용해보며 기본기 갖추기",
                 mobileGoal: "AI 기반 사용자 맞춤형 콘텐츠를 \n제공하는 애플리케이션 개발 \n배운 내용을 실제 적용해보며 기본기 갖추기",
-                subject: "반응형 웹 구축 정의 및 기술셋 활용\n - React 기반 프론트엔드\n - Spring Boot 기반 백엔드\n - Spring AI 활용\n - 보안가이드 적용 웹보안 실시\n - 로그 수집 및 분석",
-                mobileSubject: "반응형 웹 구축 정의 및 기술셋 활용\n - React 기반 프론트엔드\n - Spring Boot 기반 백엔드\n - Spring AI 활용\n - 보안가이드 적용 웹보안 실시\n - 로그 수집 및 분석",
+                detail: "반응형 웹 구축 정의 및 기술셋 활용\n - React 기반 프론트엔드\n - Spring Boot 기반 백엔드\n - Spring AI 활용\n - 보안가이드 적용 웹보안 실시\n - 로그 수집 및 분석",
+                mobileDetail: "반응형 웹 구축 정의 및 기술셋 활용\n - React 기반 프론트엔드\n - Spring Boot 기반 백엔드\n - Spring AI 활용\n - 보안가이드 적용 웹보안 실시\n - 로그 수집 및 분석",
                 pjt: ["AI 기반 사용자 맞춤형 콘텐츠를 제공하는 애플리케이션 개발"],
                 mobilePjt: ["AI 기반 사용자 맞춤형 콘텐츠를 제공하는 \n애플리케이션 개발"]
             }
@@ -406,8 +406,8 @@ export const curriculumData = [
             inner: {
                 goal: "미니프로젝트 1 기반 MSA 서비스 개발 및 운영환경 구축 프로젝트를 \n진행하여 AM 전문가 역량 굳히기",
                 mobileGoal: "미니프로젝트 1 기반 MSA 서비스 개발 및 \n운영환경 구축 프로젝트를 진행하여 \nAM 전문가 역량 굳히기",
-                subject: "- Inner/Outer Architeture 이해\n - Kafka활용 데이터 동기화\n - 컨테이너 및 오케스트레이션 도구 활용\n - IaC 이해 및 Terraform을 활용한 인프라 자동화",
-                mobileSubject: "- Inner/Outer Architeture 이해\n - Kafka활용 데이터 동기화\n - 컨테이너 및 오케스트레이션 도구 활용\n - IaC 이해 및 Terraform을 활용한 인프라 자동화",
+                detail: "- Inner/Outer Architeture 이해\n - Kafka활용 데이터 동기화\n - 컨테이너 및 오케스트레이션 도구 활용\n - IaC 이해 및 Terraform을 활용한 인프라 자동화",
+                mobileDetail: "- Inner/Outer Architeture 이해\n - Kafka활용 데이터 동기화\n - 컨테이너 및 오케스트레이션 도구 활용\n - IaC 이해 및 Terraform을 활용한 인프라 자동화",
                 pjt: ["미니PJT 1기반 MSA 서비스 개발 및 운영환경 구축"],
                 mobilePjt: ["미니PJT 1기반 MSA 서비스 개발 및 \n운영환경 구축"]
             }
@@ -422,8 +422,8 @@ export const curriculumData = [
             inner: {
                 goal: "LG CNS의 산업 도메인별 AI 기반 서비스 개발 \n프로젝트 사이클 경험 \n학습한 AM Agile 방법론 적용 \n스크럼 방식을 도입하여 프로젝트 관리 능력 향상",
                 mobileGoal: "LG CNS의 산업 도메인별 AI 기반 서비스 개발, \n프로젝트 사이클 경험 \n학습한 AM Agile 방법론 적용 \n스크럼 방식을 도입하여 프로젝트 관리 능력 향상",
-                subject: "아이디어톤 기반의 도메인별 AI 활용 서비스 구현\n - 요구사항 분석/설계\n - 협업 및 의사소통 능력\n - 문제 해결 능력\n - SE, CDS 직무",
-                mobileSubject: "아이디어톤 기반의 도메인별 AI 활용 서비스 구현\n - 요구사항 분석/설계\n - 협업 및 의사소통 능력\n - 문제 해결 능력\n - SE, CDS 직무",
+                detail: "아이디어톤 기반의 도메인별 AI 활용 서비스 구현\n - 요구사항 분석/설계\n - 협업 및 의사소통 능력\n - 문제 해결 능력\n - SE, CDS 직무",
+                mobileDetail: "아이디어톤 기반의 도메인별 AI 활용 서비스 구현\n - 요구사항 분석/설계\n - 협업 및 의사소통 능력\n - 문제 해결 능력\n - SE, CDS 직무",
                 pjt: ["공공, 리테일, 금융, 교육, 스마트팩토리, 스마트모빌리티 분야의 \n각 산업별 도메인에 따라 AI 서비스를 활용한 결과물 도출"],
                 mobilePjt: ["공공, 리테일, 금융, 교육, 스마트팩토리, \n스마트모빌리티 분야의 각 산업별 도메인에 따라 \nAI 서비스를 활용한 결과물 도출."]
             }
@@ -436,10 +436,8 @@ export const curriculumData = [
             mobileDesc: '현업 전문가가 도출한 도메인별 시나리오를 \n기반으로 실무와 동일한 환경의 프로젝트 수행과 \n멘토링을 통해 AM 전문가로 성장을 돕습니다.',
             img: 'assets/images/curriculum/curriculumstep/final.svg',
             inner: {
-                goal: "현업 전문가가 도출한 도메인별 시나리오 기반 프로젝트와 멘토링 수행, \nAM 전문가로의 성장",
-                mobileGoal: "현업 전문가가 도출한 도메인별 시나리오 기반 \n프로젝트와 멘토링 수행, AM 전문가로의 성장",
-                subject: "아이디어톤 기반의 도메인별 AI를 활용한 서비스 구현",
-                mobileSubject: "아이디어톤 기반의 도메인별 AI를 활용한 \n서비스 구현",
+                goal: "현업 전문가가 도출한 도메인별 시나리오 기반 프로젝트와 멘토링 수행, \nAM 전문가로의 성장\n아이디어톤 기반의 도메인별 AI를 활용한 서비스 구현",
+                mobileGoal: "현업 전문가가 도출한 도메인별 시나리오 기반 \n프로젝트와 멘토링 수행, AM 전문가로의 성장\n아이디어톤 기반의 도메인별 AI를 활용한 서비스 구현",
                 pjt: [
                     "1. 클라우드 기반 무인 스마트스토어 자동 발주 서비스 개발",
                     "2. MSA 기반 공공기관 대규모 모바일 사원증 관리 시스템 구축",

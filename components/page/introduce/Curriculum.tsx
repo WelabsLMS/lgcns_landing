@@ -160,7 +160,14 @@ function Curriculum() {
                                                         <p className='md:hidden text-base md:text-2xl font-semibold px-1 md:px-5'>{data.inner.mobileSubject}</p>
                                                     </div>
                                                 }
-
+                                                {
+                                                    data.inner && 'detail' in data.inner &&
+                                                    <div className='mb-10 space-y-5'>
+                                                        <InnerTitleBtrn title={'세부내용'} />
+                                                        <p className='hidden md:block text-base lg:text-2xl font-semibold px-1 md:px-5'>{data.inner.detail}</p>
+                                                        <p className='md:hidden text-base lg:text-2xl font-semibold px-1 md:px-5'>{data.inner.mobileDetail}</p>
+                                                    </div>
+                                                }
                                                 {data.inner && 'tech' in data.inner &&
                                                     <div className='mb-5 space-y-5'>
                                                         <InnerTitleBtrn title={'기술스택'} />
@@ -174,7 +181,7 @@ function Curriculum() {
                                                     <div className='mb-5 space-y-5'>
                                                         <InnerTitleBtrn title={'프로젝트'} />
                                                         <div className='hidden lg:block'>
-                                                            <ol className='space-y-3'>
+                                                            <ol className='space-y-5'>
                                                                 {
                                                                     data.inner.pjt && data.inner.pjt.map((project, index) => (
                                                                         <li key={index} className='text-base lg:text-2xl font-semibold px-1 md:px-5'>{project}</li>
