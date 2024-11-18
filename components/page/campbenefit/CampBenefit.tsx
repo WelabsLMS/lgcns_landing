@@ -12,9 +12,16 @@ function CampBenefit() {
                     <p><span className='text-[#AA1239] font-bold'>LG CNS</span><br className='md:hidden'/> AM Inspire Camp만의</p>
                     <p>특별한 혜택</p>
                 </div>
-                <div className='flex flex-wrap justify-between gap-y-10 md:gap-y-16'>
+                <div className='flex flex-wrap justify-evenly gap-y-10 md:gap-y-16'>
                     {
-                        campbenefitData[0].map((benefit) => (
+                        campbenefitData.first.map((benefit) => (
+                            <CampBenefitEle key={benefit.id} benefitData={benefit} />
+                        ))
+                    }
+                </div>
+                <div className='flex flex-wrap justify-evenly gap-y-10 md:gap-y-16 mt-10'>
+                    {
+                        campbenefitData.second.map((benefit) => (
                             <CampBenefitEle key={benefit.id} benefitData={benefit} />
                         ))
                     }
