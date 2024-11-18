@@ -282,7 +282,7 @@ export const curriculumData = [
         {
             id: 1,
             title: '클라우드와 AI 최신 트렌드 특강, \nDigital Insight 채우기',
-            subtitle:"",
+            subtitle: "",
             desc: '실무에서의 클라우드 활용과 생성형 AI 시장에 대한 현직자의 생생한 특강을 통해 \n최신기술 트렌드의 이해를 돕습니다.',
             mobileDesc: '실무에서의 클라우드 활용과 \n생성형 AI 시장에 대한 현직자의 생생한 특강을 통해 \n최신기술 트렌드의 이해를 돕습니다.',
             img: 'assets/images/curriculum/curriculumstep/course1.svg',
@@ -352,15 +352,16 @@ export const curriculumData = [
             id: 2,
             title: 'AI 서비스 개발을 통한',
             subtitle: '풀스택 개발자로 거듭나는 지름길',
-            desc: '프론트엔드와 백엔드의 기초부터 심화, \n생성형 AI에 대한 이해를 바탕으로 \n코드퀄리티 플랫폼을 활용하여 \nAI 서비스 개발에 필요한 \n기술을 습득합니다.',
-            mobileDesc: '프론트엔드와 백엔드의 기초부터 심화, \n생성형 AI 이해를 바탕으로 코드퀄리티 플랫폼을 \n활용하여 AI 서비스 개발에 필요한 기술을 \n습득합니다.',
+            desc: '프론트엔드와 백엔드의 기초부터 심화, \n생성형 AI에 대한 이해를 바탕으로 \nAI 서비스 개발에 필요한 \n기술을 습득합니다.',
+            mobileDesc: '프론트엔드와 백엔드의 기초부터 심화, \n생성형 AI 이해를 바탕으로 AI 서비스 개발에 필요한 기술을 \n습득합니다.',
             img: 'assets/images/curriculum/curriculumstep/course2.svg',
             inner: {
-                goal: "프론트엔드와 백엔드의 기초부터 심화, 생성형 AI에 대한 이해를 바탕으로 \n코드 퀄리티 플랫폼을 활용하여 AI 서비스 개발에 필요한 기술 습득",
-                mobileGoal: "프론트엔드와 백엔드의 기초부터 심화, \n생성형 AI에 대한 이해를 바탕으로 \n코드 퀄리티 플랫폼을 활용하여 \nAI 서비스 개발에 필요한 기술 습득",
-                subject: "Digital Insight 2 \nDevOps Tools, AI 서비스 개발을 위한 \n프론트엔드·백엔드, 코드 퀄리티 플랫폼 기반의 \n생성형 AI를 활용한 REST API 개발",
-                mobileSubject: "Digital Insight 2 \nDevOps Tools, AI 서비스 개발을 위한 \n프론트엔드·백엔드, 코드 퀄리티 플랫폼 기반의 \n생성형 AI를 활용한 REST API 개발",
-                tech: "HTML/CSS, JavaScript, React.js, Java, Spring Boot, Spring AI, MySQL, Git, Grafana, Prometheus"
+                goal: "프론트엔드와 백엔드의 기초부터 심화, 생성형 AI에 대한 이해를 바탕으로 AI 서비스 개발에 필요한 기술 습득",
+                mobileGoal: "프론트엔드와 백엔드의 기초부터 심화, \n생성형 AI에 대한 이해를 바탕으로 \nAI 서비스 개발에 필요한 기술 습득",
+                subject: "Digital Insight 2 \nAI 서비스 개발을 위한 DevOps Tools, 프론트엔드·백엔드, \n생성형 AI를 활용한 REST API 개발",
+                mobileSubject: "Digital Insight 2 \nAI 서비스 개발을 위한 DevOps Tools, \n프론트엔드·백엔드, 생성형 AI를 활용한 \nREST API 개발",
+                tech: "HTML/CSS, JavaScript, React, Java, Spring Boot, Spring AI, MySQL, Git, Grafana, Prometheus",
+                mobileTech: "HTML/CSS, JavaScript, React, Java, Spring Boot, Spring AI, MySQL, Git, Grafana, Prometheus",
             }
         },
         {
@@ -383,15 +384,16 @@ export const curriculumData = [
             id: 4,
             title: 'AM 기술의 모든 것',
             subtitle: 'LG CNS의 \nApplication Modernization',
-            desc: 'LG CNS 실무진의 AM Agile 특강부터 \nMSA 기술 이해와 활용을 통해 \nAM 전문가로의 기반을 다집니다.',
-            mobileDesc: 'LG CNS 실무진의 AM Agile 특강부터 \nMSA 기술 이해와 활용을 통해 \nAM 전문가로의 기반을 다집니다.',
+            desc: 'AM 3대 필수 요소인 MSA(Microservice Architecture), 데브옵스(DevOps), 애자일(Agile) 등을 적극 활용하여 LG CNS 실무진의 AM Agile 특강부터 \nMSA 기술 이해와 활용을 통해 \nAM 전문가로의 기반을 다집니다.',
+            mobileDesc: 'AM 3대 필수 요소인 MSA(Microservice Architecture), 데브옵스(DevOps), 애자일(Agile) 등을 적극 활용하여 LG CNS 실무진의 AM Agile 특강부터 \nMSA 기술 이해와 활용을 통해 \nAM 전문가로의 기반을 다집니다.',
             img: 'assets/images/curriculum/curriculumstep/course3.svg',
             inner: {
-                goal: "LG CNS 실무진의 AM Agile 특강부터 MSA 기술 이해와 활용을 통해 \nAM 전문가로의 기반을 다집니다.",
-                mobileGoal: "LG CNS 실무진의 AM Agile 특강부터 \nMSA 기술 이해와 활용을 통해 \nAM 전문가로의 기반을 다집니다.",
+                goal: "AM 3대 필수 요소인 MSA(Microservice Architecture), \n데브옵스(DevOps), 애자일(Agile) 등을 적극 활용하여 \nLG CNS 실무진의 AM Agile 특강부터 MSA 기술 이해와 활용을 통해 \nAM 전문가로의 기반을 다집니다.",
+                mobileGoal: "AM 3대 필수 요소인 \nMSA(Microservice Architecture), \n데브옵스(DevOps), 애자일(Agile) 등을 \n적극 활용하여 LG CNS 실무진의 AM Agile \n특강부터 MSA 기술 이해와 활용을 통해 \nAM 전문가로의 기반을 다집니다.",
                 subject: "- Agile 애자일 스크럼과 JIRA 활용\n- Public Cloud 응용 & 멀티클라우드 활용(AWS, NCP)\n- MSA 데이터 동기화 패턴과 분산 트랜잭션 처리\n- 서비스 인프라 구성 (Docker, Kubernetes, CI/CD, Prometheus)",
                 mobileSubject: "- Agile 애자일 스크럼과 JIRA 활용\n- Public Cloud 응용 & 멀티클라우드 활용(AWS, NCP)\n- MSA 데이터 동기화 패턴과 분산 트랜잭션 처리\n- 서비스 인프라 구성\n(Docker, Kubernetes, CI/CD, Prometheus)",
-                // tech: "AWS, Linux, Docker, Kubernetes"
+                tech: "- Public Cloud 활용 (AWS, NCP) \n- MSA 디자인 패턴 (Saga, Event Sourcing, CQRS, BFF) \n- DevOps (Docker Container, K8s, CI/CD) \n- Agile",
+                mobileTech: "- Public Cloud 활용 (AWS, NCP) \n- MSA 디자인 패턴 \n\b\b(Saga, Event Sourcing, CQRS, BFF) \n- DevOps (Docker Container, K8s, CI/CD) \n- Agile"
             }
         },
         {
@@ -402,10 +404,10 @@ export const curriculumData = [
             mobileDesc: '미니 프로젝트 2을 기반으로 \nMSA 서비스 운영환경 구축을 통해 \n풀스택 기술을 내재화합니다.',
             img: 'assets/images/curriculum/curriculumstep/mini2.svg',
             inner: {
-                goal: "MSA 서비스 운영환경 구축 \nAM 전문가로의 역량 굳히기",
-                mobileGoal: "MSA 서비스 운영환경 구축 \nAM 전문가로의 역량 굳히기",
+                goal: "미니프로젝트 1 기반 MSA 서비스 개발 및 운영환경 구축 프로젝트를 \n진행하여 AM 전문가 역량 굳히기",
+                mobileGoal: "미니프로젝트 1 기반 MSA 서비스 개발 및 \n운영환경 구축 프로젝트를 진행하여 \nAM 전문가 역량 굳히기",
                 subject: "- Inner/Outer Architeture 이해\n - Kafka활용 데이터 동기화\n - 컨테이너 및 오케스트레이션 도구 활용\n - IaC 이해 및 Terraform을 활용한 인프라 자동화",
-                mobileSubject: "- Inner/Outer Architeture 이해\n - Kafka활용 데이터 동기화\n - 컨테이너 및 오케스트레이션 도구 활용\n - IaC 이해 및 Terraform을 활용한 \n\b\b\b인프라 자동화",
+                mobileSubject: "- Inner/Outer Architeture 이해\n - Kafka활용 데이터 동기화\n - 컨테이너 및 오케스트레이션 도구 활용\n - IaC 이해 및 Terraform을 활용한 인프라 자동화",
                 pjt: ["미니PJT 1기반 MSA 서비스 개발 및 운영환경 구축"],
                 mobilePjt: ["미니PJT 1기반 MSA 서비스 개발 및 \n운영환경 구축"]
             }
@@ -419,11 +421,11 @@ export const curriculumData = [
             img: 'assets/images/curriculum/curriculumstep/hackathon.svg',
             inner: {
                 goal: "LG CNS의 산업 도메인별 AI 기반 서비스 개발 \n프로젝트 사이클 경험 \n학습한 AM Agile 방법론 적용 \n스크럼 방식 방식을 도입하여 프로젝트 관리 능력 향상",
-                mobileGoal: "LG CNS의 산업 도메인별 AI 기반 서비스 개발, 프로젝트 사이클 경험",
+                mobileGoal: "LG CNS의 산업 도메인별 AI 기반 서비스 개발, \n프로젝트 사이클 경험 \n학습한 AM Agile 방법론 적용 \n스크럼 방식 방식을 도입하여 프로젝트 관리 능력 향상",
                 subject: "아이디어톤 기반의 도메인별 AI 활용 서비스 구현\n - 요구사항 분석/설계\n - 협업 및 의사소통 능력\n - 문제 해결 능력\n - SE, CDS 직무",
                 mobileSubject: "아이디어톤 기반의 도메인별 AI 활용 서비스 구현\n - 요구사항 분석/설계\n - 협업 및 의사소통 능력\n - 문제 해결 능력\n - SE, CDS 직무",
-                pjt: ["공공, 리테일, 금융, 교육, 스마트팩토리, 스마트모빌리티 분야의 \n각 산업별 도메인에 따라 AI를 활용한 서비스를 개발합니다."],
-                mobilePjt: ["공공, 리테일, 금융, 교육, 스마트팩토리, \n스마트모빌리티 분야의 각 산업별 도메인에 따라 \nAI를 활용한 서비스를 개발합니다."]
+                pjt: ["공공, 리테일, 금융, 교육, 스마트팩토리, 스마트모빌리티 분야의 \n각 산업별 도메인에 따라 AI 서비스를 활용한 결과물 도출"],
+                mobilePjt: ["공공, 리테일, 금융, 교육, 스마트팩토리, \n스마트모빌리티 분야의 각 산업별 도메인에 따라 \nAI 서비스를 활용한 결과물 도출."]
             }
         },
         {
@@ -443,7 +445,7 @@ export const curriculumData = [
                     "2. MSA 기반 공공기관 대규모 모바일 사원증 관리 시스템 구축",
                     "3. GenAI 기반 초개인화 학습 성취도 진단 서비스 개발",
                     "4. IoT 장비를 활용한 스마트팩토리 환경설비 관리 시스템 개발",
-                    "5. 클라우드 IoT 플랫폼 기반 모빌리티 데이터를 활용한 \n자율주행 안전성 개선 모델 구축",
+                    "5. 클라우드 IoT 플랫폼 기반 모빌리티 데이터를 활용한 \n\b\b\b\b자율주행 안전성 개선 모델 구축",
                     '6. Kubernetes를 활용한 금융서비스 장애대응 모니터링 시스템 구축'
                 ],
                 mobilePjt: [
@@ -682,25 +684,25 @@ export const faqData = [
 
 // 홍보일정
 export const BriefingScheduleData = {
-    headers : [
+    headers: [
         {
-            id:'university',
+            id: 'university',
             label: '구분',
         },
         {
-            id:'date',
+            id: 'date',
             label: '일자',
         },
         {
-            id:'location',
+            id: 'location',
             label: '장소',
         },
         {
-            id:'time',
+            id: 'time',
             label: '시간',
         },
     ],
-    rows : [
+    rows: [
         {
             university: '건국대학교',
             date: '11/19(화)',
@@ -717,10 +719,10 @@ export const BriefingScheduleData = {
         },
         {
             university: '경희대학교',
-            date: '11/20(수)',
-            mobileDate: '11/20(수)\n15:00~',
-            location: '추후 안내',
-            time: '15:00~',
+            date: '11/21(목)',
+            mobileDate: '11/21(목)\n11:30~',
+            location: '서울캠퍼스 오비스홀 \n202호',
+            time: '11:30~',
         },
         {
             university: '이화여자대학교',
@@ -751,6 +753,13 @@ export const BriefingScheduleData = {
             time: '11:00~',
         },
         {
+            university: '단국대학교',
+            date: '11/26(화)',
+            mobileDate: '11/26(화)\n18:00~',
+            location: '죽전 글로컬산학협력관 \nB105호',
+            time: '18:00~',
+        },
+        {
             university: '중앙대학교',
             date: '11/27(수)',
             mobileDate: '11/27(수)\n15:00~',
@@ -779,7 +788,7 @@ export const centerImagesData = {
             img: "assets/images/centerimages/center_gatherInside.svg"
         },
     ],
-    LG :[
+    LG: [
         {
             id: 1,
             title: "LG CNS 본사 \n(발산역 도보 5분)",
