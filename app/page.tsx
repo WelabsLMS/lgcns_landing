@@ -12,10 +12,12 @@ import Introduce from "@/components/page/introduce/Introduce";
 // import MainApply from "@/components/page/mainApply/MainApply";
 // import OverView from "@/components/page/overview/OverView";
 import Selection from "@/components/page/selection/Selection";
+import PosterPopup from "@/components/ui/modal/PosterPopup";
 
 export default function Home() {
   return (
     <main>
+      <PosterPopup />
       <MainBanner />
       <Introduce />
       {/* <OverView /> */}
