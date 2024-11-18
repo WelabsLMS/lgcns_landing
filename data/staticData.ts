@@ -746,18 +746,18 @@ export const BriefingScheduleData = {
             time: '14:00~',
         },
         {
+            university: '단국대학교',
+            date: '11/25(월)',
+            mobileDate: '11/25(월)\n18:00~',
+            location: '죽전 글로컬산학협력관 \nB105호',
+            time: '18:00~',
+        },
+        {
             university: '한양대학교',
             date: '11/26(화)',
             mobileDate: '11/26(화)\n11:00~',
             location: '양민용 커리어라운지 \nHIT관 1층',
             time: '11:00~',
-        },
-        {
-            university: '단국대학교',
-            date: '11/26(화)',
-            mobileDate: '11/26(화)\n18:00~',
-            location: '죽전 글로컬산학협력관 \nB105호',
-            time: '18:00~',
         },
         {
             university: '중앙대학교',
