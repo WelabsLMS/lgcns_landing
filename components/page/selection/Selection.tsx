@@ -6,7 +6,7 @@ import React from 'react'
 function Selection() {
     return (
         <section id="selection" className="section">
-            <SectionTitle title='선발절차' />
+            <SectionTitle title='선발 절차' />
             <div className='container'>
                 <div className='w-full hidden md:flex xl:justify-evenly xl:gap-12 lg:mt-6 mb-4 md:mb-6 lg:mb-16'>
                     {

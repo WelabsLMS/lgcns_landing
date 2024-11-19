@@ -27,7 +27,7 @@ function Header() {
                                 <Link href='#benefit'>훈련생 혜택</Link>
                             </li>
                             <li>
-                                <Link href='#selection'>선발절차</Link>
+                                <Link href='#selection'>선발 절차</Link>
                             </li>
                             <li>
                                 <Link href='#faq'>FAQ</Link>
@@ -72,7 +72,7 @@ function Header() {
                             <Link href='#benefit'>훈련생 혜택</Link>
                         </li>
                         <li onClick={() => setSubMenuOpen(!subMenuOpen)}>
-                            <Link href='#selection'>선발절차</Link>
+                            <Link href='#selection'>선발 절차</Link>
                         </li>
                         <li onClick={() => setSubMenuOpen(!subMenuOpen)}>
                             <Link href='#faq'>FAQ</Link>
