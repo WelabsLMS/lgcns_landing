@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     description: "LG CNS의 SW, AM(Application Modernization) 인재 육성 노하우를 그대로 적용한 LG CNS AM 전문가 양성과정",
     images: [
       {
-        url: "https://lgcnscmap.kr/assets/images/logo/lg/lgcns_og.png",
+        url: "https://lgcnscamp.kr/assets/images/logo/lg/lgcns_og.png",
         width: 64,
         height: 64,
         alt: "LG CNS AM Inspire Camp",
