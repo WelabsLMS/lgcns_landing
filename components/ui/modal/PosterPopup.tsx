@@ -34,7 +34,7 @@ export default function PosterPopup() {
     return (
         <div className='absolute inset-0 flex items-center justify-center z-[990]'>
             <div className='absolute w-[360px] md:w-[500px] lg:w-[650px] top-[80px] lg:top-[100px] border bg-white rounded-lg z-[990]'>
-                <Image src='/assets/images/poster/LGCNS_AM_POSTER.svg' alt='포스터 이미지' width={650} height={800} onClick={newWindow} className='cursor-pointer' />
+                <Image src='/assets/images/poster/LGCNS_AM_POSTER.svg' alt='포스터 이미지' width={650} height={800} onClick={newWindow} className='cursor-pointer' quality={100} />
                 <div className='flex'>
                     <button className='w-full bg-gray-400 border text-white font-bold text-lg py-2' onClick={closePopupToday}>오늘 그만보기</button>
                     <button className='w-full bg-gray-400 border text-white font-bold text-lg py-2' onClick={() => setIsShow(!isShow)} >닫기</button>

@@ -610,7 +610,7 @@ export const selectionProcedureData = [
 
 // 캠프혜택
 export const campbenefitData = {
-    prev : [
+    prev: [
         {
             id: 1,
             imgSrc: "assets/images/campbenefit/add.svg",
@@ -648,7 +648,7 @@ export const campbenefitData = {
             content: "교육에 집중할 수 있도록\n교육기간 중 노트북 대여"
         },
     ],
-    first :[
+    first: [
         {
             id: 1,
             imgSrc: "assets/images/campbenefit/cert.svg",
@@ -662,7 +662,7 @@ export const campbenefitData = {
             content: "성공적인 취업을 위한\nMeet Up Day, 채용설명회 개최"
         },
     ],
-    second : [  
+    second: [
         {
             id: 3,
             imgSrc: "assets/images/campbenefit/mentoring.svg",
@@ -757,13 +757,6 @@ export const BriefingScheduleData = {
             time: '11:30~',
         },
         {
-            university: '이화여자대학교',
-            date: '11/21(목)',
-            mobileDate: '11/21(목)\n',
-            location: '추후 안내',
-            time: '-',
-        },
-        {
             university: '서울시립대학교',
             date: '11/21(목)',
             mobileDate: '11/21(목)\n12:00~',
@@ -792,11 +785,25 @@ export const BriefingScheduleData = {
             time: '11:00~',
         },
         {
+            university: '숭실대학교',
+            date: '11/27(수)',
+            mobileDate: '11/27(수)\n11:30~',
+            location: '벤처관 2층 \n스타트업 펌프 벤처스튜디오',
+            time: '11:30~',
+        },
+        {
             university: '중앙대학교',
             date: '11/27(수)',
             mobileDate: '11/27(수)\n15:00~',
             location: '310관 201호',
             time: '15:00~',
+        },
+        {
+            university: '이화여자대학교',
+            date: '11/27(수)',
+            mobileDate: '11/27(수)\n17:00~',
+            location: '온라인 (ZOOM)',
+            time: '17:00~',
         },
         {
             university: '서강대학교',
