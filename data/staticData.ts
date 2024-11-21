@@ -99,6 +99,23 @@ export const overviewData = [
             title: "교육비",
             content: "전액무료 \n매월 훈련장려금 지급",
         },
+    ],
+    [
+        {
+            id: 1,
+            title: "과정명",
+            content: "LG CNS AM* Inspire Camp\n(Application Modernization)",
+        },
+        {
+            id: 2,
+            title: "일정",
+            content: "24.12.20(금) ~ 25.06.26(목) / 총 120일 \n9:00-18:00 (1일 총 8시간) / 총 960시간",
+        },
+        {
+            id: 3,
+            title: "상세일정",
+            content: "24.12.20(금) OT LG CNS 본사 \n24.12.23(월) ~ 25.04.02(수) \n온라인 메타버스 캠퍼스 \n25.04.07(월) ~ 25.06.26(목) \n오프라인 동국대 서울캠퍼스",
+        },
     ]
 ]
 
