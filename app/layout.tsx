@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layouts/Header";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 import KaKaoNav from "@/components/ui/KaKaoNav";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -79,6 +80,7 @@ export default function RootLayout({
     <html lang="kor" className="scroll-smooth">
       <head>
         <meta name="naver-site-verification" content="f10e15de50c65dff629e27994d9471335a414aa5" />
+        <GoogleTagManager gtmId={"GTM-M5P4BF79"} />
       </head>
       <body
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
