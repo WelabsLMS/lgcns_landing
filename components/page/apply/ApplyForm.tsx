@@ -713,8 +713,8 @@ export default function ApplyForm() {
 
                         {/* 자격증 증빙서류 */}
                         <div>
-                            <ApplyTitle title="자격증 및 경력 증빙 서류 첨부" subTitle="zip 파일로 압축하여 업로드해주세요." />
-                            <div className="mt-4 flex items-center">
+                            <ApplyTitle title="자격증 및 경력 증빙 서류" notice="- 서류 합격 후 제출" />
+                            {/* <div className="mt-4 flex items-center">
                                 <label htmlFor="certFiles" className="border border-[#9F9F9F] text-xl font-semibold cursor-pointer px-2 py-1 lg:px-4 lg:py-3 lg:text-2xl rounded-[10px] text-nowrap">파일 첨부</label>
                                 <input
                                     type="file"
@@ -727,7 +727,7 @@ export default function ApplyForm() {
                                 <div className="ml-4 font-semibold text-xl lg:text-2xl text-ellipsis">
                                     {uploadFileName.certFiles}
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
 
                         {/* 개인정보 수집 및 이용에 대한 동의 */}
