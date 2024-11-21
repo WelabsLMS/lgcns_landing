@@ -27,7 +27,7 @@ export default function PosterPopup() {
     }
 
     const newWindow = () => {
-        window.open('/assets/images/poster/LGCNS_AM_POSTER.pdf', '_blank')
+        window.open('/assets/images/poster/sungkyun.png', '_blank')
     }
 
     if (!isShow || !isCookieChecked) return null

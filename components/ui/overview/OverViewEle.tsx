@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-function OverViewEle({ title, contents, id }: { title: string, contents: string, id: number }) {
+function OverViewEle({ title, contents }: { title: string, contents: string, id: number }) {
     // 강조할 키워드 정의
     const highlightKeywords = ['온라인 메타버스 캠퍼스', '오프라인 동국대 서울캠퍼스'];
 
