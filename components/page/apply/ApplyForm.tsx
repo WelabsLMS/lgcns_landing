@@ -52,10 +52,10 @@ export default function ApplyForm() {
     }); // 추가 텍스트
 
     // 파일명 관리
-    const [uploadFileName, setUploadFileName] = useState<{ eduFiles: string; certFiles: string }>({
-        eduFiles: '',
-        certFiles: '',
-    });
+    // const [uploadFileName, setUploadFileName] = useState<{ eduFiles: string; certFiles: string }>({
+    //     eduFiles: '',
+    //     certFiles: '',
+    // });
 
     // 상태 관리
     const [formData, setFormData] = useState<FormValues>({
@@ -212,7 +212,7 @@ export default function ApplyForm() {
         } else if (type === 'file') {
             if (files && files.length > 0) {
                 setFormData(prev => ({ ...prev, [name]: files[0] }));
-                setUploadFileName(prev => ({ ...prev, [name]: files[0].name }));
+                // setUploadFileName(prev => ({ ...prev, [name]: files[0].name }));
             }
         } else {
             setFormData(prev => ({ ...prev, [name]: value }));
@@ -287,10 +287,10 @@ export default function ApplyForm() {
                     agreeCheck: 0,
                     confirm: false,
                 });
-                setUploadFileName({
-                    eduFiles: '',
-                    certFiles: '',
-                });
+                // setUploadFileName({
+                //     eduFiles: '',
+                //     certFiles: '',
+                // });
             }
         } catch (error) {
             if (axios.isAxiosError(error) && error.response?.data?.errorCode === "DUPLICATE") {
