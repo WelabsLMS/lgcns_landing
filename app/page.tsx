@@ -10,7 +10,8 @@ import Curriculum from "@/components/page/introduce/Curriculum";
 import Introduce from "@/components/page/introduce/Introduce";
 // import Location from "@/components/page/location/Location";
 // import MainApply from "@/components/page/mainApply/MainApply";
-// import OverView from "@/components/page/overview/OverView";
+import OverView from "@/components/page/overview/OverView";
+import RoadMap from "@/components/page/roadmap/RoadMap";
 import Selection from "@/components/page/selection/Selection";
 import PosterPopup from "@/components/ui/modal/PosterPopup";
 
@@ -19,14 +20,15 @@ export default function Home() {
     <main>
       <PosterPopup />
       <MainBanner />
+      <OverView />
       <Introduce />
-      {/* <OverView /> */}
       <Curriculum />
       {/* <MainApply /> */}
       <CampBenefit />
       {/* <CoreProgram /> */}
       <Selection />
       <Faq />
+      <RoadMap />
       <BriefingSchedule />
       {/* <Location /> */}
       <CenterImageList />
