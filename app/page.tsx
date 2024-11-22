@@ -18,7 +18,7 @@ import PosterPopup from "@/components/ui/modal/PosterPopup";
 export default function Home() {
   return (
     <main>
-      <PosterPopup />
+      {/* <PosterPopup /> */}
       <MainBanner />
       <OverView />
       <Introduce />
