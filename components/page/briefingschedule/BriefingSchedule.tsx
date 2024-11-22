@@ -25,8 +25,8 @@ export default function BriefingSchedule() {
                     <tbody>
                         {
                             BriefingScheduleData.rows.map((row, index) => (
-                                <tr key={index} className='text-base h-20 md:h-auto md:text-xl lg:text-2xl border-[2px] font-semibold divide-x-[2px]'>
-                                    <td className='py-3 md:py-4 text-nowrap'>{row.university}</td>
+                                <tr key={index} className='text-base h-20 md:h-auto md:text-lg lg:text-xl border-[2px] font-semibold divide-x-[2px]'>
+                                    <td className='py-3 md:py-4 whitespace-pre-wrap md:whitespace-normal text-nowrap'>{row.university}</td>
                                     <td className='py-3 md:py-4 hidden md:table-cell'>{row.date}</td>
                                     <td className='py-3 md:hidden whitespace-pre-line'>{row.mobileDate}</td>
                                     <td className='py-3 md:py-4 whitespace-pre-line text-nowrap md:whitespace-normal'>{row.location}</td>
