@@ -18,6 +18,7 @@ import PosterPopup from "@/components/ui/modal/PosterPopup";
 export default function Home() {
   return (
     <main>
+      {/* 포스터 팝업 제거 */}
       {/* <PosterPopup /> */}
       <MainBanner />
       <OverView />
