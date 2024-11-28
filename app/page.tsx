@@ -13,13 +13,13 @@ import Introduce from "@/components/page/introduce/Introduce";
 import OverView from "@/components/page/overview/OverView";
 import RoadMap from "@/components/page/roadmap/RoadMap";
 import Selection from "@/components/page/selection/Selection";
-// import PosterPopup from "@/components/ui/modal/PosterPopup";
+import PosterPopup from "@/components/ui/modal/PosterPopup";
 
 export default function Home() {
   return (
     <main>
       {/* 포스터 팝업 제거 */}
-      {/* <PosterPopup /> */}
+      <PosterPopup />
       <MainBanner />
       <OverView />
       <Introduce />
