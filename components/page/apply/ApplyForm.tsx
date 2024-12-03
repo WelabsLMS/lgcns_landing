@@ -36,6 +36,11 @@ interface FormValues {
     confirm: boolean;
 }
 
+const DEADLINE = new Date('2024-12-03T23:59:59+09:00');
+const now = new Date();
+const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+const kst = new Date(utc + (9 * 60 * 60 * 1000));
+
 export default function ApplyForm() {
 
     const applyRouteRef = React.useRef<HTMLDivElement>(null);
@@ -219,8 +224,20 @@ export default function ApplyForm() {
         }
     }
 
+
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        const now = new Date();
+        const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+        const submitDate = new Date(utc + (9 * 60 * 60 * 1000));
+        if (submitDate > DEADLINE) {
+            setIsSuccess(false);
+            setModalMessage('지원 기간이 종료되었습니다.');
+            setIsModalOpen(true);
+            return;
+        }
+
         setIsSubmit(true);
         const formDataToSend = new FormData(e.target as HTMLFormElement);
         formDataToSend.append('classId', '1');
@@ -309,7 +326,7 @@ export default function ApplyForm() {
     return (
         <>
             <ApplySubmitModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} isSuccess={isSuccess} message={modalMessage} />
-            <section className="min-h-screen mb-28">
+            <section className="min-h-screen mb-28" >
                 {/* 상단 배너 */}
                 <div className="text-center h-max mb-16 bg-[#C2D3FF] py-16 px-2">
                     <h2 className="text-4xl lg:text-5xl font-bold">LG CNS AM* Inspire Camp 1기 지원</h2>
@@ -318,7 +335,11 @@ export default function ApplyForm() {
                     {/* <p className="text-2xl font-semibold">지원서 제출은 1회로 제한하며, 제출 후 수정이 불가하니 신중을 기해 주세요.</p> */}
                     <p className="text-2xl mt-2 font-semibold"><span className="text-red-500">*</span>표시는 필수 입력사항입니다.</p>
                 </div>
-                <div className='container mx-auto px-2 md:px-20 lg:px-52 xl:px-64'>
+                {
+                    kst > DEADLINE &&
+                    <div className="text-2xl w-max mx-auto px-2 py-1 rounded bg-[#FF5F6D80] font-bold text-center mb-10">지원기간이 종료되었습니다. 관리자에게 문의 부탁드립니다.</div>
+                }
+                <div className={`container mx-auto px-2 md:px-20 lg:px-52 xl:px-64 ${kst > DEADLINE && "opacity-50 cursor-not-allowed"}`}>
                     {/* <div className="mb-10">
                         <button
                             type="button"
@@ -331,7 +352,8 @@ export default function ApplyForm() {
                             뒤로가기
                         </button>
                     </div> */}
-                    <form className="space-y-14" onSubmit={handleSubmit}>
+
+                    <form className={`space-y-14 ${kst > DEADLINE && 'pointer-events-none'} `} onSubmit={handleSubmit} >
                         {/* 지원과정 */}
                         <div>
                             <ApplyTitle title="지원과정" />
